@@ -240,3 +240,52 @@
   height: 180px !important;
   object-fit: cover !important;
 }
+/* ОРТга даярдануу бөлүмү */
+.ort-section {
+  padding: 70px 20px;
+  background: #f4f9f7;
+}
+
+.ort-section h2 {
+  text-align: center;
+  font-size: 38px;
+  color: #12395b;
+  margin-bottom: 15px;
+}
+
+.ort-section > .container > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.ort-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.ort-card {
+  background: white;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.ort-card:hover {
+  transform: translateY(-5px);
+}
+
+.ort-card h3 {
+  color: #0f6b4f;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.ort-card p {
+  color: #444;
+  line-height: 1.6;
+}
