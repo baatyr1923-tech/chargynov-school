@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ОРТ Математика тести | №35 Ж. Чаргынов мектеби</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f8f6;
+      color: #17324d;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #12395b;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .question {
+      background: white;
+      padding: 22px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .question h3 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      background: #0f6b4f;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #result {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #0f6b4f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a class="back" href="index.html#ort">← ОРТ бөлүмүнө кайтуу</a>
+
+  <h1>➗ ОРТ — Математика боюнча сыноо тест</h1>
+
+  <p class="intro">
+    Ар бир суроодо бир туура жооп бар.
+    Бардык суроолорго жооп бергенден кийин
+    «Жыйынтыкты көрүү» баскычын басыңыз.
+  </p>
+
+  <form id="quiz">
+
+    <div class="question">
+      <h3>1. 240 санынын 25% канча?</h3>
+      <label><input type="radio" name="q1" value="a"> 40</label>
+      <label><input type="radio" name="q1" value="b"> 50</label>
+      <label><input type="radio" name="q1" value="c"> 60</label>
+      <label><input type="radio" name="q1" value="d"> 80</label>
+    </div>
+
+    <div class="question">
+      <h3>2. 3x + 5 = 20 болсо, x канча?</h3>
+      <label><input type="radio" name="q2" value="a"> 3</label>
+      <label><input type="radio" name="q2" value="b"> 5</label>
+      <label><input type="radio" name="q2" value="c"> 7</label>
+      <label><input type="radio" name="q2" value="d"> 10</label>
+    </div>
+
+    <div class="question">
+      <h3>3. 3/4 + 1/2 канча?</h3>
+      <label><input type="radio" name="q3" value="a"> 1</label>
+      <label><input type="radio" name="q3" value="b"> 1 1/4</label>
+      <label><input type="radio" name="q3" value="c"> 1 1/2</label>
+      <label><input type="radio" name="q3" value="d"> 2</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Квадраттын жагы 6 см. Аянты канча?</h3>
+      <label><input type="radio" name="q4" value="a"> 12 см²</label>
+      <label><input type="radio" name="q4" value="b"> 24 см²</label>
+      <label><input type="radio" name="q4" value="c"> 30 см²</label>
+      <label><input type="radio" name="q4" value="d"> 36 см²</label>
+    </div>
+
+    <div class="question">
+      <h3>5. 2⁵ канча?</h3>
+      <label><input type="radio" name="q5" value="a"> 10</label>
+      <label><input type="radio" name="q5" value="b"> 16</label>
+      <label><input type="radio" name="q5" value="c"> 32</label>
+      <label><input type="radio" name="q5" value="d"> 64</label>
+    </div>
+
+    <button type="button" onclick="checkQuiz()">Жыйынтыкты көрүү</button>
+
+  </form>
+
+  <div id="result"></div>
+
+</div>
+
+<script>
+function checkQuiz() {
+  const answers = {
+    q1: "c",
+    q2: "b",
+    q3: "b",
+    q4: "d",
+    q5: "c"
+  };
+
+  let score = 0;
+
+  for (let question in answers) {
+    const selected =
+      document.querySelector('input[name="' + question + '"]:checked');
+
+    if (selected && selected.value === answers[question]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerHTML =
+    "Сиз 5 суроонун ичинен " + score +
+    " суроого туура жооп бердиңиз.";
+}
+</script>
+
+</body>
+</html>
