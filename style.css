@@ -289,3 +289,27 @@
   color: #444;
   line-height: 1.6;
 }
+#ort .ort-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+#ort .ort-card {
+  display: block !important;
+  background: #ffffff !important;
+  border: 1px solid #dfe7e3 !important;
+  border-radius: 18px !important;
+  padding: 28px !important;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08) !important;
+}
+
+#ort .ort-card h3 {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 800px) {
+  #ort .ort-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
