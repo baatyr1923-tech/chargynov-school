@@ -447,7 +447,35 @@
     </div>
   </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const botButton = document.getElementById("bot-button");
+  const botBox = document.getElementById("bot-box");
+  const botClose = document.getElementById("bot-close");
+  const botAnswer = document.getElementById("bot-answer");
 
+  if (botButton && botBox) {
+    botButton.onclick = function () {
+      botBox.style.display = "block";
+      botButton.style.display = "none";
+    };
+  }
+
+  if (botClose && botBox && botButton) {
+    botClose.onclick = function () {
+      botBox.style.display = "none";
+      botButton.style.display = "block";
+    };
+  }
+
+  document.querySelectorAll(".bot-question").forEach(function (button) {
+    button.onclick = function () {
+      botAnswer.innerHTML =
+        "<strong>Бот:</strong> " + button.getAttribute("data-answer");
+    };
+  });
+});
+</script>
 <script src="script.js?v=3"></script>
   
 </body>
