@@ -427,10 +427,10 @@
   margin-bottom: 30px;
 }
 
-.engineering-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+#engineering .engineering-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
 }
 
 .engineering-card {
@@ -447,8 +447,8 @@
 }
 
 @media (max-width: 800px) {
-  .engineering-grid {
-    grid-template-columns: 1fr;
+  #engineering .engineering-grid {
+    grid-template-columns: 1fr !important;
   }
 }
   
