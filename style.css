@@ -385,3 +385,31 @@
   border-radius: 8px;
   line-height: 1.5;
 }
+@media (max-width: 768px) {
+  #school-bot {
+    position: fixed !important;
+    right: 12px !important;
+    bottom: 20px !important;
+    z-index: 99999 !important;
+  }
+
+  #bot-button {
+    display: block;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #bot-box {
+    width: calc(100vw - 24px) !important;
+    max-width: 340px !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+  }
+
+  .bot-question,
+  #bot-close,
+  #bot-button {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+}
