@@ -359,9 +359,51 @@
     </section>
   </main>
 
-  <footer>
+  <footer
+    
     <div class="container">© 2026 №35-Жумабек Чаргынов атындагы орто билим берүү мектеби</div>
   </footer>
+  </footer>
+
+<!-- Мектеп жардамчысы -->
+<div id="school-bot">
+  <button id="bot-button">💬 Мектеп жардамчысы</button>
+
+  <div id="bot-box" style="display:none;">
+    <div class="bot-header">
+      <strong>Мектеп жардамчысы</strong>
+      <button id="bot-close">✕</button>
+    </div>
+
+    <div id="bot-messages">
+      <p><strong>Бот:</strong> Саламатсызбы! Сурооңузду тандаңыз:</p>
+
+      <button class="bot-question" data-answer="Мектептин дареги: Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай Ата көчөсү №8.">
+        📍 Мектептин дареги
+      </button>
+
+      <button class="bot-question" data-answer="ОРТга даярдануу бөлүмүндө тесттер, 4 жумалык даярдык планы жана видео сабактар бар.">
+        📘 ОРТга даярдануу
+      </button>
+
+      <button class="bot-question" data-answer="Мугалимдер тууралуу маалыматты сайттын «Мугалимдер» бөлүмүнөн көрө аласыз.">
+        👩‍🏫 Мугалимдер
+      </button>
+
+      <button class="bot-question" data-answer="Мектептин жаңылыктарын «Жаңылыктар» бөлүмүнөн көрө аласыз.">
+        📰 Жаңылыктар
+      </button>
+
+      <button class="bot-question" data-answer="Байланыш маалыматтары сайттын «Байланыш» бөлүмүндө көрсөтүлгөн.">
+        ☎️ Байланыш
+      </button>
+
+      <div id="bot-answer"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
