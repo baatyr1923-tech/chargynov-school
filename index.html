@@ -43,7 +43,52 @@
       </div>
       <img src="1b5042bb-6a7a-4c99-910e-c6a59b08b1f9.JPG" alt="№35 Жумабек Чаргынов атындагы мектеп">
     </section>
+</section>
 
+<!-- Мектеп жардамчысы -->
+<div id="school-bot">
+  <button id="bot-button">💬 Мектеп жардамчысы</button>
+
+  <div id="bot-box" style="display:none;">
+    <div class="bot-header">
+      <strong>Мектеп жардамчысы</strong>
+      <button id="bot-close">✕</button>
+    </div>
+
+    <div id="bot-messages">
+      <p><strong>Бот:</strong> Саламатсызбы! Сурооңузду тандаңыз:</p>
+
+      <button class="bot-question"
+        data-answer="Мектептин дареги: Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай Ата көчөсү №8.">
+        📍 Мектептин дареги
+      </button>
+
+      <button class="bot-question"
+        data-answer="ОРТга даярдануу бөлүмүндө тесттер, 4 жумалык даярдык планы жана видео сабактар бар.">
+        📘 ОРТга даярдануу
+      </button>
+
+      <button class="bot-question"
+        data-answer="Мугалимдер тууралуу маалыматты сайттын «Мугалимдер» бөлүмүнөн көрө аласыз.">
+        👩‍🏫 Мугалимдер
+      </button>
+
+      <button class="bot-question"
+        data-answer="Мектептин жаңылыктарын «Жаңылыктар» бөлүмүнөн көрө аласыз.">
+        📰 Жаңылыктар
+      </button>
+
+      <button class="bot-question"
+        data-answer="Байланыш маалыматтары сайттын «Байланыш» бөлүмүндө көрсөтүлгөн.">
+        ☎️ Байланыш
+      </button>
+
+      <div id="bot-answer"></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
     <section id="about">
       <div class="container">
         <h2>Мектеп жөнүндө</h2>
@@ -404,6 +449,6 @@
 </div>
 
 <script src="script.js"></script>
-  <script src="script.js"></script>
+  
 </body>
 </html>
