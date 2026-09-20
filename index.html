@@ -412,12 +412,16 @@
 
 <!-- Мектеп жардамчысы -->
 <div id="school-bot">
-  <button id="bot-button">💬 Мектеп жардамчысы</button>
+  <button id="bot-button" onclick="document.getElementById('bot-box').style.display='block'; this.style.display='none';">
+  💬 Мектеп жардамчысы
+</button>
 
   <div id="bot-box" style="display:none;">
     <div class="bot-header">
       <strong>Мектеп жардамчысы</strong>
-      <button id="bot-close">✕</button>
+      <button id="bot-close" onclick="document.getElementById('bot-box').style.display='none'; document.getElementById('bot-button').style.display='block';">
+  ✕
+</button>
     </div>
 
     <div id="bot-messages">
