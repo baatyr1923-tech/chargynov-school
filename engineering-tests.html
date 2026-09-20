@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Инженердик технологиялар — Тесттер</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f8f6;
+      color: #17324d;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #12395b;
+    }
+
+    .intro {
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    }
+
+    .question h3 {
+      color: #0f6b4f;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #0f6b4f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 14px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #0f6b4f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a class="back" href="engineering-materials.html">
+    ← Окуу материалдарына кайтуу
+  </a>
+
+  <h1>📝 Инженердик технологиялар — Тест</h1>
+
+  <p class="intro">
+    Тест 10 суроодон турат. Ар бир туура жооп үчүн 1 упай берилет.
+  </p>
+
+  <form id="quiz">
+
+    <div class="question">
+      <h3>1. Инженердик технология деген эмне?</h3>
+      <label><input type="radio" name="q1" value="a"> Музыка үйрөнүү</label>
+      <label><input type="radio" name="q1" value="b"> Техникалык маселелерди чечүү жана долбоорлоо</label>
+      <label><input type="radio" name="q1" value="c"> Спорттук машыгуу</label>
+      <label><input type="radio" name="q1" value="d"> Көркөм окуу</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Долбоорду баштоодогу биринчи кадам кайсы?</h3>
+      <label><input type="radio" name="q2" value="a"> Көйгөйдү аныктоо</label>
+      <label><input type="radio" name="q2" value="b"> Даяр буюмду сатуу</label>
+      <label><input type="radio" name="q2" value="c"> Баа коюу</label>
+      <label><input type="radio" name="q2" value="d"> Жарнама берүү</label>
+    </div>
+
+    <div class="question">
+      <h3>3. Техникалык чийме эмне үчүн керек?</h3>
+      <label><input type="radio" name="q3" value="a"> Ыр жазуу үчүн</label>
+      <label><input type="radio" name="q3" value="b"> Буюмдун формасын жана өлчөмүн көрсөтүү үчүн</label>
+      <label><input type="radio" name="q3" value="c"> Китеп окуу үчүн</label>
+      <label><input type="radio" name="q3" value="d"> Музыка угуу үчүн</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Өлчөөдө кайсы шайман колдонулат?</h3>
+      <label><input type="radio" name="q4" value="a"> Сызгыч</label>
+      <label><input type="radio" name="q4" value="b"> Кашык</label>
+      <label><input type="radio" name="q4" value="c"> Боёк</label>
+      <label><input type="radio" name="q4" value="d"> Китеп</label>
+    </div>
+
+    <div class="question">
+      <h3>5. Моделдөө деген эмне?</h3>
+      <label><input type="radio" name="q5" value="a"> Буюмдун үлгүсүн түзүү</label>
+      <label><input type="radio" name="q5" value="b"> Ыр жаттоо</label>
+      <label><input type="radio" name="q5" value="c"> Спорт ойноо</label>
+      <label><input type="radio" name="q5" value="d"> Сүрөт көчүрүү</label>
+    </div>
+
+    <div class="question">
+      <h3>6. Коопсуздук эрежелерин эмне үчүн сактоо керек?</h3>
+      <label><input type="radio" name="q6" value="a"> Убакытты өткөрүү үчүн</label>
+      <label><input type="radio" name="q6" value="b"> Жаракат албоо жана коопсуз иштөө үчүн</label>
+      <label><input type="radio" name="q6" value="c"> Сабакты токтотуу үчүн</label>
+      <label><input type="radio" name="q6" value="d"> Бааны көбөйтүү үчүн</label>
+    </div>
+
+    <div class="question">
+      <h3>7. Конструкция деген эмне?</h3>
+      <label><input type="radio" name="q7" value="a"> Буюмдун түзүлүшү</label>
+      <label><input type="radio" name="q7" value="b"> Ырдын тексти</label>
+      <label><input type="radio" name="q7" value="c"> Сабактын баасы</label>
+      <label><input type="radio" name="q7" value="d"> Китептин аталышы</label>
+    </div>
+
+    <div class="question">
+      <h3>8. Прототип деген эмне?</h3>
+      <label><input type="radio" name="q8" value="a"> Даяр продукциянын биринчи үлгүсү</label>
+      <label><input type="radio" name="q8" value="b"> Сабактын темасы</label>
+      <label><input type="radio" name="q8" value="c"> Телефондун номери</label>
+      <label><input type="radio" name="q8" value="d"> Мектептин дареги</label>
+    </div>
+
+    <div class="question">
+      <h3>9. Инженердик долбоордо эскиз эмнени көрсөтөт?</h3>
+      <label><input type="radio" name="q9" value="a"> Идеянын баштапкы көрүнүшүн</label>
+      <label><input type="radio" name="q9" value="b"> Сабактын баасын</label>
+      <label><input type="radio" name="q9" value="c"> Окуучунун жашын</label>
+      <label><input type="radio" name="q9" value="d"> Сабактын убактысын</label>
+    </div>
+
+    <div class="question">
+      <h3>10. Инженердин негизги милдеттеринин бири кайсы?</h3>
+      <label><input type="radio" name="q10" value="a"> Көйгөйлөргө техникалык чечим табуу</label>
+      <label><input type="radio" name="q10" value="b"> Ыр ырдоо</label>
+      <label><input type="radio" name="q10" value="c"> Жомок жазуу</label>
+      <label><input type="radio" name="q10" value="d"> Спорттук мелдеш өткөрүү</label>
+    </div>
+
+    <button class="button" type="button" onclick="checkQuiz()">
+      Жыйынтыкты көрүү
+    </button>
+
+  </form>
+
+  <div id="result"></div>
+
+</div>
+
+<script>
+function checkQuiz() {
+  const answers = {
+    q1: "b",
+    q2: "a",
+    q3: "b",
+    q4: "a",
+    q5: "a",
+    q6: "b",
+    q7: "a",
+    q8: "a",
+    q9: "a",
+    q10: "a"
+  };
+
+  let score = 0;
+
+  for (let q in answers) {
+    const selected = document.querySelector(
+      'input[name="' + q + '"]:checked'
+    );
+
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+
+  const percent = score * 10;
+
+  document.getElementById("result").innerHTML =
+    "Сиздин жыйынтык: " + score + " / 10 (" + percent + "%)";
+}
+</script>
+
+</body>
+</html>
