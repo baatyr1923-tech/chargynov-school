@@ -72,9 +72,7 @@
   onclick="window.location.href='#engineering'">
   🛠 Инженердик технологиялар
 </button>
-  data-answer='Инженердик технологиялар бөлүмүндө сабак материалдары, практикалык тапшырмалар, долбоорлор, презентациялар, видео сабактар жана тесттер бар. <br><br><a href="engineering-materials.html">Инженердик материалдарды ачуу</a>'>
-  🛠 Инженердик технологиялар
-</button>
+ 
 
       <button class="bot-question"
         data-answer="Мугалимдер тууралуу маалыматты сайттын «Мугалимдер» бөлүмүнөн көрө аласыз.">
@@ -516,7 +514,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  document.querySelectorAll(".bot-question").forEach(function (button) {
+  document.querySelectorAll(".bot-question[data-answer]").forEach(function (button) {
     button.onclick = function () {
       botAnswer.innerHTML =
         "<strong>Бот:</strong> " + button.getAttribute("data-answer");
