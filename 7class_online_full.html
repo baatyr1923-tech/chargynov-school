@@ -272,7 +272,14 @@ function checkTest(){
   else if(score>=5) message="👍 Дагы бир жолу кайталап көрүңүз.";
   else message="📚 Теманы кайра окуп, тестти дагы бир жолу тапшырыңыз.";
 
-  result.innerHTML="🎯 Сиздин жыйынтык: <strong>"+score+"/10</strong><br>"+message;
+  const studentName=document.querySelector('input[name="studentName"]').value;
+const studentClass=document.querySelector('select[name="studentClass"]').value;
+
+result.innerHTML=
+"👤 Окуучу: <strong>"+studentName+"</strong><br>"+
+"🏫 Класс: <strong>"+studentClass+"</strong><br>"+
+"🎯 Жыйынтык: <strong>"+score+"/10</strong><br>"+
+message;
 }
 </script>
 
