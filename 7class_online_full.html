@@ -118,7 +118,22 @@
 <p>Ар бир суроодон бир жооп тандаңыз. Аягында <strong>«Тестти текшерүү»</strong> баскычын басыңыз.</p>
 
 <form id="quiz">
+<div class="test-question">
+  <strong>👤 Окуучунун аты-жөнү:</strong>
+  <input type="text" name="studentName" placeholder="Аты-жөнүңүздү жазыңыз" required
+         style="width:100%; padding:12px; margin-top:8px; border:1px solid #ccc; border-radius:8px;">
+</div>
 
+<div class="test-question">
+  <strong>🏫 Класс:</strong>
+  <select name="studentClass" required
+          style="width:100%; padding:12px; margin-top:8px; border:1px solid #ccc; border-radius:8px;">
+    <option value="">Классты тандаңыз</option>
+    <option value="7-А">7-А</option>
+    <option value="7-Б">7-Б</option>
+    <option value="7-В">7-В</option>
+  </select>
+</div>
 <div class="test-question">
 <strong>1. Маалыматтын эң кичине өлчөө бирдиги кайсы?</strong>
 <label><input type="radio" name="q1" value="a"> Килобайт</label>
