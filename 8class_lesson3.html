@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-класс | 3-сабак | Санак системаларынын ортосунда конвертация</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+header{
+    background:#2563eb;
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:0 20px;
+}
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+h2{
+    color:#2563eb;
+}
+.example{
+    background:#eef4ff;
+    padding:15px;
+    border-left:5px solid #2563eb;
+    margin:15px 0;
+    border-radius:8px;
+    line-height:1.8;
+}
+.step{
+    background:#f8fafc;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+}
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:13px 22px;
+    text-decoration:none;
+    border-radius:8px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>8-класс | 3-сабак</h1>
+<p>Санак системаларынын ортосунда конвертация</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>🎯 Сабактын максаты</h2>
+
+<ul>
+<li>Бир санак системасынан экинчисине өтүүнү үйрөнүү.</li>
+<li>Экилик санды ондук системага которуу.</li>
+<li>Ондук санды экилик системага которуу.</li>
+<li>Сегиздик жана он алтылык системалар менен иштөө.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>📚 1. Конвертация деген эмне?</h2>
+
+<p>
+<strong>Конвертация</strong> — санды бир санак системасынан башка санак системасына которуу.
+</p>
+
+<p>
+Мисалы:
+</p>
+
+<div class="example">
+1010₂ = 10₁₀
+</div>
+
+<p>
+Бул жерде 1010 — экилик системадагы сан, ал эми 10 — ондук системадагы сан.
+</p>
+</div>
+
+<div class="card">
+<h2>🔢 2. Экиликтен ондукка өткөрүү</h2>
+
+<p>
+Экилик сандын ар бир цифрасы 2нин тиешелүү даражасына көбөйтүлөт.
+</p>
+
+<div class="example">
+
+<strong>Мисал:</strong> 1011₂ → ?₁₀
+
+<br><br>
+
+1011₂ =
+1×2³ + 0×2² + 1×2¹ + 1×2⁰
+
+<br>
+
+= 1×8 + 0×4 + 1×2 + 1×1
+
+<br>
+
+= 8 + 0 + 2 + 1
+
+<br>
+
+<strong>= 11₁₀</strong>
+
+</div>
+</div>
+
+<div class="card">
+<h2>🔄 3. Ондуктан экиликке өткөрүү</h2>
+
+<p>
+Ондук санды 2ге бөлөбүз жана калдыктарды жазып барабыз.
+Акырында калдыктарды төмөндөн жогору карай окуйбуз.
+</p>
+
+<div class="example">
+
+<strong>Мисал:</strong> 13₁₀ → ?₂
+
+<br><br>
+
+13 ÷ 2 = 6, калдык 1
+
+<br>
+6 ÷ 2 = 3, калдык 0
+
+<br>
+3 ÷ 2 = 1, калдык 1
+
+<br>
+1 ÷ 2 = 0, калдык 1
+
+<br><br>
+
+Калдыктарды төмөндөн жогору окуйбуз:
+
+<br>
+
+<strong>1101₂</strong>
+
+<br><br>
+
+Демек:
+
+<br>
+
+<strong>13₁₀ = 1101₂</strong>
+
+</div>
+</div>
+
+<div class="card">
+<h2>🔢 4. Ондуктан сегиздикке өткөрүү</h2>
+
+<div class="example">
+
+<strong>Мисал:</strong> 25₁₀ → ?₈
+
+<br><br>
+
+25 ÷ 8 = 3, калдык 1
+
+<br>
+3 ÷ 8 = 0, калдык 3
+
+<br><br>
+
+Калдыктарды төмөндөн жогору окуйбуз:
+
+<br>
+
+<strong>31₈</strong>
+
+<br><br>
+
+Демек:
+
+<strong>25₁₀ = 31₈</strong>
+
+</div>
+</div>
+
+<div class="card">
+<h2>🔷 5. Ондуктан он алтылыкка өткөрүү</h2>
+
+<div class="example">
+
+<strong>Мисал:</strong> 26₁₀ → ?₁₆
+
+<br><br>
+
+26 ÷ 16 = 1, калдык 10
+
+<br>
+
+Он алтылык системада 10 = A.
+
+<br><br>
+
+Демек:
+
+<strong>26₁₀ = 1A₁₆</strong>
+
+</div>
+</div>
+
+<div class="card">
+<h2>💡 Эсиңизде болсун!</h2>
+
+<div class="step">
+<strong>Экиликтен ондукка:</strong><br>
+2нин даражалары боюнча эсептейбиз.
+</div>
+
+<div class="step">
+<strong>Ондуктан экиликке:</strong><br>
+2ге бөлүп, калдыктарды тескери тартипте окуйбуз.
+</div>
+
+<div class="step">
+<strong>Ондуктан сегиздикке:</strong><br>
+8ге бөлүп, калдыктарды тескери тартипте окуйбуз.
+</div>
+
+<div class="step">
+<strong>Ондуктан он алтылыкка:</strong><br>
+16га бөлүп, калдыктарды тескери тартипте окуйбуз.
+</div>
+
+</div>
+
+<div class="card">
+<h2>🧠 Өзүңүздү текшериңиз</h2>
+
+<p>1. 1010₂ = ?₁₀</p>
+<p>2. 1100₂ = ?₁₀</p>
+<p>3. 10₁₀ = ?₂</p>
+<p>4. 20₁₀ = ?₈</p>
+<p>5. 16₁₀ = ?₁₆</p>
+
+</div>
+
+<div style="text-align:center;margin:30px;">
+
+<a class="btn" href="8class_lesson2.html">
+⬅️ 2-сабак
+</a>
+
+<a class="btn" href="8class_informatika.html">
+📚 Бардык сабактар
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
