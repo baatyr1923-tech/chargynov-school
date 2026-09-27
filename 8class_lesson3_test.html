@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-класс | 3-сабак | Тест</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.question{
+    margin-bottom:25px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+input[type="text"]{
+    width:90%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:7px;
+}
+
+.result{
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📝 8-класс | 3-сабак</h1>
+<p>Санак системаларынын ортосунда конвертация</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Окуучунун маалыматы</h2>
+
+<input type="text" id="studentName" placeholder="Аты-жөнү">
+
+<br>
+
+<input type="text" id="studentClass" placeholder="Классы">
+
+</div>
+
+<div class="card">
+
+<form id="testForm">
+
+<div class="question">
+<strong>1. 1010₂ саны ондук системада канча?</strong><br>
+<label><input type="radio" name="q1" value="a"> 8</label><br>
+<label><input type="radio" name="q1" value="b"> 10</label><br>
+<label><input type="radio" name="q1" value="c"> 12</label><br>
+<label><input type="radio" name="q1" value="d"> 14</label>
+</div>
+
+<div class="question">
+<strong>2. 1100₂ = ?₁₀</strong><br>
+<label><input type="radio" name="q2" value="a"> 10</label><br>
+<label><input type="radio" name="q2" value="b"> 11</label><br>
+<label><input type="radio" name="q2" value="c"> 12</label><br>
+<label><input type="radio" name="q2" value="d"> 14</label>
+</div>
+
+<div class="question">
+<strong>3. 13₁₀ саны экилик системада кандай жазылат?</strong><br>
+<label><input type="radio" name="q3" value="a"> 1010₂</label><br>
+<label><input type="radio" name="q3" value="b"> 1100₂</label><br>
+<label><input type="radio" name="q3" value="c"> 1101₂</label><br>
+<label><input type="radio" name="q3" value="d"> 1110₂</label>
+</div>
+
+<div class="question">
+<strong>4. 25₁₀ саны сегиздик системада канча?</strong><br>
+<label><input type="radio" name="q4" value="a"> 21₈</label><br>
+<label><input type="radio" name="q4" value="b"> 30₈</label><br>
+<label><input type="radio" name="q4" value="c"> 31₈</label><br>
+<label><input type="radio" name="q4" value="d"> 32₈</label>
+</div>
+
+<div class="question">
+<strong>5. 26₁₀ саны он алтылык системада кандай?</strong><br>
+<label><input type="radio" name="q5" value="a"> 1A₁₆</label><br>
+<label><input type="radio" name="q5" value="b"> 1B₁₆</label><br>
+<label><input type="radio" name="q5" value="c"> 2A₁₆</label><br>
+<label><input type="radio" name="q5" value="d"> 2B₁₆</label>
+</div>
+
+<div class="question">
+<strong>6. Ондуктан экиликке өткөрүүдө санды кайсы санга бөлөбүз?</strong><br>
+<label><input type="radio" name="q6" value="a"> 2</label><br>
+<label><input type="radio" name="q6" value="b"> 8</label><br>
+<label><input type="radio" name="q6" value="c"> 10</label><br>
+<label><input type="radio" name="q6" value="d"> 16</label>
+</div>
+
+<div class="question">
+<strong>7. 10₁₀ саны экилик системада канча?</strong><br>
+<label><input type="radio" name="q7" value="a"> 1001₂</label><br>
+<label><input type="radio" name="q7" value="b"> 1010₂</label><br>
+<label><input type="radio" name="q7" value="c"> 1100₂</label><br>
+<label><input type="radio" name="q7" value="d"> 1110₂</label>
+</div>
+
+<div class="question">
+<strong>8. 20₁₀ саны сегиздик системада канча?</strong><br>
+<label><input type="radio" name="q8" value="a"> 22₈</label><br>
+<label><input type="radio" name="q8" value="b"> 23₈</label><br>
+<label><input type="radio" name="q8" value="c"> 24₈</label><br>
+<label><input type="radio" name="q8" value="d"> 25₈</label>
+</div>
+
+<div class="question">
+<strong>9. Он алтылык системада A тамгасы кайсы санды билдирет?</strong><br>
+<label><input type="radio" name="q9" value="a"> 8</label><br>
+<label><input type="radio" name="q9" value="b"> 9</label><br>
+<label><input type="radio" name="q9" value="c"> 10</label><br>
+<label><input type="radio" name="q9" value="d"> 11</label>
+</div>
+
+<div class="question">
+<strong>10. 16₁₀ саны он алтылык системада канча?</strong><br>
+<label><input type="radio" name="q10" value="a"> 10₁₆</label><br>
+<label><input type="radio" name="q10" value="b"> 11₁₆</label><br>
+<label><input type="radio" name="q10" value="c"> A₁₆</label><br>
+<label><input type="radio" name="q10" value="d"> 1A₁₆</label>
+</div>
+
+<button type="button" onclick="checkTest()">✅ Тестти текшерүү</button>
+
+</form>
+
+<div id="result" class="result"></div>
+
+</div>
+
+</div>
+
+<script>
+
+const answers = {
+q1:"b",
+q2:"c",
+q3:"c",
+q4:"c",
+q5:"a",
+q6:"a",
+q7:"b",
+q8:"c",
+q9:"c",
+q10:"a"
+};
+
+function checkTest(){
+
+let score=0;
+
+for(let i=1;i<=10;i++){
+
+let answer=document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+if(answer && answer.value===answers["q"+i]){
+score++;
+}
+
+}
+
+let name=document.getElementById("studentName").value;
+let studentClass=document.getElementById("studentClass").value;
+
+document.getElementById("result").innerHTML=
+"Жыйынтык: "+score+" / 10 🎯<br><br>"+
+(name ? "Окуучу: "+name+"<br>" : "")+
+(studentClass ? "Класс: "+studentClass : "");
+
+}
+
+</script>
+
+</body>
+</html>
