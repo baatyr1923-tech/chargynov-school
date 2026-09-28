@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-класс | 4-сабак | Логикалык элементтер</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0 0 10px;
+    font-size:30px;
+}
+
+header p{
+    margin:0;
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.lesson{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.lesson h2{
+    color:#2563eb;
+    margin-top:0;
+}
+
+.logic-box{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+.example{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🧠 8-класс | Информатика</h1>
+<p>4-сабак: Негизги логикалык элементтер</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="8class_informatika.html">
+← Бардык сабактарга кайтуу
+</a>
+
+<div class="lesson">
+
+<h2>🎯 Сабактын максаты</h2>
+
+<p>
+Бул сабакта окуучулар негизги логикалык элементтер
+<strong>ЖАНА (AND), ЖЕ (OR), ЭМЕС (NOT)</strong>
+менен таанышат жана алардын иштөө принциптерин түшүнүшөт.
+</p>
+
+<ul>
+<li>Логикалык элемент деген эмне экенин түшүнүү;</li>
+<li>AND, OR, NOT элементтерин айырмалоо;</li>
+<li>Чындык таблицасын түзүү;</li>
+<li>Жөнөкөй логикалык схемаларды талдоо.</li>
+</ul>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>📖 Логикалык элемент деген эмне?</h2>
+
+<p>
+<strong>Логикалык элемент</strong> — бул киргизилген маалыматтардын
+негизинде белгилүү бир логикалык операцияны аткарган электрондук элемент.
+</p>
+
+<p>
+Компьютерлерде жана башка санариптик түзүлүштөрдө логикалык
+элементтер маалыматты иштетүү үчүн колдонулат.
+</p>
+
+<div class="example">
+
+<strong>Мисал:</strong>
+
+<p>
+Эгер эки шарт тең аткарылса гана түзмөк иштеши керек болсо,
+<strong>AND (ЖАНА)</strong> логикалык элементи колдонулат.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🔵 1. ЖАНА — AND</h2>
+
+<p>
+AND операциясында бардык кирүүчү шарттар <strong>1</strong> болгондо гана
+натыйжа <strong>1</strong> болот.
+</p>
+
+<div class="logic-box">
+
+<strong>Мисал:</strong>
+
+<p>
+Компьютерге кирүү үчүн логин да, пароль да туура болушу керек.
+</p>
+
+</div>
+
+<table>
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🟢 2. ЖЕ — OR</h2>
+
+<p>
+OR операциясында шарттардын жок дегенде бири <strong>1</strong> болсо,
+натыйжа <strong>1</strong> болот.
+</p>
+
+<div class="logic-box">
+
+<strong>Мисал:</strong>
+
+<p>
+Эгер окуучу информатика же математика олимпиадасына катышса,
+анда «олимпиадага катышкан» деген шарт аткарылат.
+</p>
+
+</div>
+
+<table>
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A OR B</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🔴 3. ЭМЕС — NOT</h2>
+
+<p>
+NOT операциясы киргизилген маанини тескерисине өзгөртөт.
+</p>
+
+<p>
+<strong>0 → 1</strong><br>
+<strong>1 → 0</strong>
+</p>
+
+<table>
+
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>💡 Күнүмдүк жашоодон мисал</h2>
+
+<div class="example">
+
+<p>
+🚪 <strong>AND:</strong> Эшик ачылышы үчүн карта да, туура PIN-код да керек.
+</p>
+
+<p>
+💡 <strong>OR:</strong> Бөлмөдө лампаны биринчи же экинчи өчүргүч менен күйгүзүүгө болот.
+</p>
+
+<p>
+🔄 <strong>NOT:</strong> «Жарык күйүп турат» деген шарттын тескериси
+«Жарык өчүк» болот.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🧠 Өзүңүздү текшериңиз</h2>
+
+<p><strong>1.</strong> AND операциясында натыйжа 1 качан болот?</p>
+
+<p><strong>2.</strong> OR операциясында натыйжа 0 качан болот?</p>
+
+<p><strong>3.</strong> NOT операциясы 1 маанисин эмнеге өзгөртөт?</p>
+
+<p><strong>4.</strong> AND логикалык элементине күнүмдүк жашоодон мисал келтириңиз.</p>
+
+<p><strong>5.</strong> OR логикалык элементи кайсы учурда колдонулушу мүмкүн?</p>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>📝 Практикалык тапшырма</h2>
+
+<p>
+Төмөнкү таблицаларды толтуруңуз:
+</p>
+
+<ul>
+<li>A = 1, B = 1 → A AND B = ?</li>
+<li>A = 1, B = 0 → A AND B = ?</li>
+<li>A = 0, B = 1 → A OR B = ?</li>
+<li>A = 0 → NOT A = ?</li>
+</ul>
+
+</div>
+
+
+<div class="lesson" style="text-align:center;">
+
+<a class="btn" href="8class_informatika.html">
+📚 Бардык сабактар
+</a>
+
+</div>
+
+</div>
+
+<footer>
+№35 Жумабек Чаргынов атындагы орто билим берүү мектеби
+</footer>
+
+</body>
+</html>
