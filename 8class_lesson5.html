@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-класс | 5-сабак | Логикалык схемалар</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0 0 10px;
+    font-size:30px;
+}
+
+header p{
+    margin:0;
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.lesson{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.lesson h2{
+    color:#2563eb;
+    margin-top:0;
+}
+
+.example{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.scheme{
+    background:#f8fafc;
+    padding:25px;
+    margin:20px 0;
+    border-radius:12px;
+    text-align:center;
+    font-size:20px;
+}
+
+.box{
+    display:inline-block;
+    padding:15px 25px;
+    margin:10px;
+    border:2px solid #2563eb;
+    border-radius:10px;
+    background:white;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:25px;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+.task{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:10px;
+    margin:12px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🧠 8-класс | Информатика</h1>
+<p>5-сабак: Логикалык схемаларды түзүү жана талдоо</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="8class_informatika.html">
+← Бардык сабактарга кайтуу
+</a>
+
+<div class="lesson">
+
+<h2>🎯 Сабактын максаты</h2>
+
+<p>
+Бул сабакта окуучулар логикалык элементтерди бириктирип,
+жөнөкөй логикалык схемаларды түзүүнү жана алардын
+чыгышындагы натыйжаны аныктоону үйрөнүшөт.
+</p>
+
+<ul>
+<li>Логикалык схема жөнүндө түшүнүк алуу;</li>
+<li>AND, OR, NOT элементтерин схемага бириктирүү;</li>
+<li>Кириш жана чыгыш сигналдарын аныктоо;</li>
+<li>Логикалык схеманын иштөөсүн талдоо.</li>
+</ul>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>📖 Логикалык схема деген эмне?</h2>
+
+<p>
+<strong>Логикалык схема</strong> — бир нече логикалык элементтерди
+бириктирүү аркылуу маалыматты иштетүүчү схема.
+</p>
+
+<p>
+Схемада кириш сигналдары берилет. Логикалык элементтер
+ошол сигналдарды иштетип, чыгыш сигналын түзөт.
+</p>
+
+<div class="example">
+
+<strong>Жөнөкөй түшүнүк:</strong>
+
+<p>
+Кириш → Логикалык элемент → Чыгыш
+</p>
+
+</div>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🔌 1. Жөнөкөй AND схемасы</h2>
+
+<p>
+Эки кириш сигналы AND элементине берилсин:
+<strong>A = 1</strong>, <strong>B = 1</strong>.
+</p>
+
+<div class="scheme">
+
+<div class="box">A = 1</div>
+
+<span class="arrow">→</span>
+
+<div class="box">AND</div>
+
+<span class="arrow">→</span>
+
+<div class="box">Y = ?</div>
+
+<br>
+
+<div class="box">B = 1</div>
+
+</div>
+
+<p>
+AND үчүн эки кириш тең 1 болгондо чыгыш 1 болот.
+</p>
+
+<p>
+<strong>Жооп: Y = 1</strong>
+</p>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🔵 2. AND схемасын талдоо</h2>
+
+<p>
+Эми <strong>A = 1</strong>, <strong>B = 0</strong> болсун.
+</p>
+
+<table>
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+</table>
+
+<p>
+Кирүүлөрдүн бири 0 болгондуктан, AND элементинин
+чыгышы <strong>0</strong> болот.
+</p>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🟢 3. OR схемасы</h2>
+
+<p>
+OR элементинде кириштердин жок дегенде бири 1 болсо,
+чыгыш 1 болот.
+</p>
+
+<div class="scheme">
+
+<div class="box">A = 0</div>
+
+<span class="arrow">→</span>
+
+<div class="box">OR</div>
+
+<span class="arrow">→</span>
+
+<div class="box">Y = ?</div>
+
+<br>
+
+<div class="box">B = 1</div>
+
+</div>
+
+<p>
+Бул жерде A = 0, B = 1.
+Кирүүлөрдүн бири 1 болгондуктан:
+</p>
+
+<p>
+<strong>Y = 1</strong>
+</p>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🔴 4. NOT схемасы</h2>
+
+<p>
+NOT элементи бир гана кириш сигналын кабыл алат
+жана анын маанисин тескерисине өзгөртөт.
+</p>
+
+<div class="scheme">
+
+<div class="box">A = 1</div>
+
+<span class="arrow">→</span>
+
+<div class="box">NOT</div>
+
+<span class="arrow">→</span>
+
+<div class="box">Y = 0</div>
+
+</div>
+
+<p>
+Демек:
+</p>
+
+<p>
+<strong>NOT 1 = 0</strong>
+</p>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🧩 5. Бир нече элементтен турган схема</h2>
+
+<p>
+Эми эки логикалык элементти бириктирели.
+</p>
+
+<div class="scheme">
+
+<div class="box">A = 1</div>
+
+<span class="arrow">→</span>
+
+<div class="box">AND</div>
+
+<span class="arrow">→</span>
+
+<div class="box">OR</div>
+
+<span class="arrow">→</span>
+
+<div class="box">Y = ?</div>
+
+<br>
+
+<div class="box">B = 1</div>
+
+<br>
+
+<div class="box">C = 0</div>
+
+</div>
+
+<p>
+Алгач AND операциясын эсептейбиз:
+</p>
+
+<p>
+<strong>A AND B = 1 AND 1 = 1</strong>
+</p>
+
+<p>
+Андан кийин OR операциясын эсептейбиз:
+</p>
+
+<p>
+<strong>1 OR C = 1 OR 0 = 1</strong>
+</p>
+
+<div class="example">
+
+<strong>Жооп: Y = 1</strong>
+
+</div>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>📊 6. Схеманы талдоонун тартиби</h2>
+
+<ol>
+<li>Кириш сигналдарын аныктаңыз.</li>
+<li>Биринчи логикалык элементти эсептеңиз.</li>
+<li>Анын чыгышын кийинки элементке өткөрүңүз.</li>
+<li>Кийинки операцияны эсептеңиз.</li>
+<li>Акыркы чыгыш сигналын табыңыз.</li>
+</ol>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>🧠 Өзүңүздү текшериңиз</h2>
+
+<div class="task">
+<strong>1.</strong> A = 1, B = 1 болсо, A AND B = ?
+</div>
+
+<div class="task">
+<strong>2.</strong> A = 0, B = 1 болсо, A OR B = ?
+</div>
+
+<div class="task">
+<strong>3.</strong> A = 0 болсо, NOT A = ?
+</div>
+
+<div class="task">
+<strong>4.</strong> A = 1, B = 0 болсо, A AND B = ?
+</div>
+
+<div class="task">
+<strong>5.</strong> Логикалык схемада чыгыш сигналы эмнени көрсөтөт?
+</div>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>📝 Практикалык тапшырма</h2>
+
+<p>
+Төмөнкү схемалардын чыгышын эсептеңиз:
+</p>
+
+<div class="task">
+<strong>1.</strong> A = 1, B = 1 → AND → Y = ?
+</div>
+
+<div class="task">
+<strong>2.</strong> A = 0, B = 1 → OR → Y = ?
+</div>
+
+<div class="task">
+<strong>3.</strong> A = 1 → NOT → Y = ?
+</div>
+
+<div class="task">
+<strong>4.</strong> A = 1, B = 1 → AND → OR менен C = 0 → Y = ?
+</div>
+
+</div>
+
+
+<div class="lesson" style="text-align:center;">
+
+<a class="btn" href="8class_informatika.html">
+📚 Бардык сабактар
+</a>
+
+</div>
+
+</div>
+
+<footer>
+№35 Жумабек Чаргынов атындагы орто билим берүү мектеби
+</footer>
+
+</body>
+</html>
