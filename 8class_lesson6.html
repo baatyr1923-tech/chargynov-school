@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-класс | 6-сабак | Логикалык туюнтмаларды түзүү жана эсептөө</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0 0 10px;
+    font-size:30px;
+}
+
+header p{
+    margin:0;
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    margin-bottom:25px;
+    border-radius:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h2{
+    color:#2563eb;
+    margin-top:0;
+    font-size:26px;
+}
+
+.card h3{
+    color:#2563eb;
+}
+
+.example{
+    background:#f4f6f9;
+    padding:18px;
+    margin:15px 0;
+    border-radius:12px;
+    font-size:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+ul,ol{
+    line-height:1.8;
+    font-size:17px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:10px;
+    font-size:17px;
+    margin:5px;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🧠 8-класс | Информатика</h1>
+<p>6-сабак: Логикалык туюнтмаларды түзүү жана эсептөө</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>🎯 Сабактын максаты</h2>
+
+<ul>
+<li>Логикалык туюнтма жөнүндө түшүнүк алуу;</li>
+<li>AND, OR, NOT амалдарын колдонуу;</li>
+<li>Логикалык туюнтмалардын маанисин эсептөө;</li>
+<li>Бир нече логикалык элементтерден турган туюнтмаларды талдоо.</li>
+</ul>
+</div>
+
+
+<div class="card">
+<h2>📘 Логикалык туюнтма деген эмне?</h2>
+
+<p>
+Логикалык туюнтма — бул логикалык маанилер
+<strong>0</strong> жана <strong>1</strong> менен иштеген туюнтма.
+</p>
+
+<p>
+Логикалык туюнтмаларда негизги амалдар:
+<strong>AND</strong>, <strong>OR</strong>, <strong>NOT</strong>.
+</p>
+
+<div class="example">
+<strong>Мисал:</strong><br><br>
+A AND B
+<br><br>
+Бул туюнтманын мааниси A жана B маанилерине жараша аныкталат.
+</div>
+</div>
+
+
+<div class="card">
+<h2>🔵 1. AND менен туюнтма</h2>
+
+<p>
+AND амалынын жыйынтыгы эки кириш тең 1 болгондо гана 1 болот.
+</p>
+
+<table>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+
+<div class="example">
+<strong>Мисал:</strong><br>
+A = 1, B = 0<br><br>
+
+A AND B = 1 AND 0 = <strong>0</strong>
+</div>
+</div>
+
+
+<div class="card">
+<h2>🟢 2. OR менен туюнтма</h2>
+
+<p>
+OR амалынын жыйынтыгы кириштердин жок дегенде бири 1 болсо, 1 болот.
+</p>
+
+<table>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A OR B</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+
+<div class="example">
+<strong>Мисал:</strong><br>
+A = 0, B = 1<br><br>
+
+A OR B = 0 OR 1 = <strong>1</strong>
+</div>
+</div>
+
+
+<div class="card">
+<h2>🟠 3. NOT менен туюнтма</h2>
+
+<p>
+NOT амалы берилген маанини тескерисине өзгөртөт.
+</p>
+
+<table>
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</table>
+
+<div class="example">
+<strong>Мисал:</strong><br>
+A = 1<br><br>
+
+NOT A = <strong>0</strong>
+</div>
+</div>
+
+
+<div class="card">
+<h2>🧩 4. Татаал логикалык туюнтма</h2>
+
+<p>
+Бир нече логикалык амалдарды бир туюнтмада колдонууга болот.
+</p>
+
+<div class="example">
+<strong>Мисал:</strong><br><br>
+
+Y = (A AND B) OR C
+</div>
+
+<h3>Эсептейбиз:</h3>
+
+<ol>
+<li>A = 1, B = 1, C = 0 деп алабыз.</li>
+<li>Алгач A AND B эсептейбиз.</li>
+<li>1 AND 1 = 1</li>
+<li>Андан кийин 1 OR C эсептейбиз.</li>
+<li>1 OR 0 = 1</li>
+</ol>
+
+<div class="example">
+<strong>Жооп: Y = 1</strong>
+</div>
+</div>
+
+
+<div class="card">
+<h2>📝 5. Дагы бир мисал</h2>
+
+<div class="example">
+<strong>Y = (A OR B) AND C</strong>
+</div>
+
+<p>
+A = 0, B = 1, C = 1 болсун.
+</p>
+
+<ol>
+<li>A OR B = 0 OR 1 = 1</li>
+<li>1 AND C = 1 AND 1 = 1</li>
+</ol>
+
+<div class="example">
+<strong>Жооп: Y = 1</strong>
+</div>
+</div>
+
+
+<div class="card">
+<h2>🔎 Өз алдынча текшерүү</h2>
+
+<ol>
+<li>A = 1, B = 0 болсо, A AND B = ?</li>
+<li>A = 0, B = 1 болсо, A OR B = ?</li>
+<li>A = 0 болсо, NOT A = ?</li>
+<li>Y = (A AND B) OR C, A=1, B=1, C=0 болсо Y = ?</li>
+<li>Y = (A OR B) AND C, A=0, B=1, C=1 болсо Y = ?</li>
+</ol>
+</div>
+
+
+<div class="card">
+<h2>✏️ Практикалык тапшырма</h2>
+
+<p>Төмөнкү туюнтмалардын маанисин эсептегиле:</p>
+
+<div class="example">
+<strong>1.</strong> A = 1, B = 0 → A AND B = ?
+</div>
+
+<div class="example">
+<strong>2.</strong> A = 0, B = 0 → A OR B = ?
+</div>
+
+<div class="example">
+<strong>3.</strong> A = 1 → NOT A = ?
+</div>
+
+<div class="example">
+<strong>4.</strong> A = 1, B = 1, C = 0 → (A AND B) OR C = ?
+</div>
+
+<div class="example">
+<strong>5.</strong> A = 0, B = 1, C = 1 → (A OR B) AND C = ?
+</div>
+</div>
+
+
+<div class="card" style="text-align:center;">
+
+<a class="btn" href="8class_lesson6_test.html">
+📝 Тест тапшыруу
+</a>
+
+<a class="btn" href="8class_informatika.html">
+📚 Бардык сабактар
+</a>
+
+</div>
+
+</div>
+
+<footer>
+№35 Жумабек Чаргынов атындагы орто билим берүү мектеби
+</footer>
+
+</body>
+</html>
