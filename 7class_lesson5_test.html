@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-класс — 5-сабактын тести</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #1d4ed8;
+}
+
+.student-info {
+    background: #eef5ff;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.student-info label {
+    display: block;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.student-info input {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.test-question {
+    background: #fafafa;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.test-question h3 {
+    margin-top: 0;
+}
+
+.option {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #eef5ff;
+    border-radius: 6px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 18px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📝 7-класс — 5-сабактын тести</h1>
+
+<h2>Тема: Программалык камсыздоо</h2>
+
+<div class="student-info">
+    <h3>👨‍🎓 Окуучу жөнүндө маалымат</h3>
+
+    <label>
+        Аты-жөнү:
+        <input type="text" id="studentName" placeholder="Аты-жөнүңүздү жазыңыз">
+    </label>
+
+    <label>
+        Классы:
+        <input type="text" id="studentClass" placeholder="Мисалы: 7-А">
+    </label>
+</div>
+
+<form id="quizForm">
+
+<div class="test-question">
+<h3>1. Программалык камсыздоо деген эмне?</h3>
+<label class="option"><input type="radio" name="q1" value="A"> A) Компьютердин сырткы корпусу</label>
+<label class="option"><input type="radio" name="q1" value="B"> Б) Программалардын жыйындысы</label>
+<label class="option"><input type="radio" name="q1" value="C"> В) Клавиатура</label>
+<label class="option"><input type="radio" name="q1" value="D"> Г) Монитор</label>
+</div>
+
+<div class="test-question">
+<h3>2. Операциялык система кайсы түргө кирет?</h3>
+<label class="option"><input type="radio" name="q2" value="A"> A) Системалык программалык камсыздоо</label>
+<label class="option"><input type="radio" name="q2" value="B"> Б) Колдонмо программа</label>
+<label class="option"><input type="radio" name="q2" value="C"> В) Оюн</label>
+<label class="option"><input type="radio" name="q2" value="D"> Г) Графикалык файл</label>
+</div>
+
+<div class="test-question">
+<h3>3. Колдонмо программалар эмнеге арналган?</h3>
+<label class="option"><input type="radio" name="q3" value="A"> A) Компьютерди күйгүзүүгө гана</label>
+<label class="option"><input type="radio" name="q3" value="B"> Б) Электр энергиясын башкарууга</label>
+<label class="option"><input type="radio" name="q3" value="C"> В) Колдонуучунун конкреттүү иштерин аткарууга</label>
+<label class="option"><input type="radio" name="q3" value="D"> Г) Компьютердин корпусун жасоого</label>
+</div>
+
+<div class="test-question">
+<h3>4. Windows кайсы программага мисал болот?</h3>
+<label class="option"><input type="radio" name="q4" value="A"> A) Графикалык файл</label>
+<label class="option"><input type="radio" name="q4" value="B"> Б) Операциялык система</label>
+<label class="option"><input type="radio" name="q4" value="C"> В) Музыкалык файл</label>
+<label class="option"><input type="radio" name="q4" value="D"> Г) Компьютердик оюн</label>
+</div>
+
+<div class="test-question">
+<h3>5. Microsoft Word кайсы программага кирет?</h3>
+<label class="option"><input type="radio" name="q5" value="A"> A) Колдонмо программа</label>
+<label class="option"><input type="radio" name="q5" value="B"> Б) Операциялык система</label>
+<label class="option"><input type="radio" name="q5" value="C"> В) Антивирус жабдыгы</label>
+<label class="option"><input type="radio" name="q5" value="D"> Г) Компьютердин бөлүгү</label>
+</div>
+
+<div class="test-question">
+<h3>6. Антивирустук программа эмне үчүн колдонулат?</h3>
+<label class="option"><input type="radio" name="q6" value="A"> A) Вирустарды табуу жана коргоо үчүн</label>
+<label class="option"><input type="radio" name="q6" value="B"> Б) Музыка жазуу үчүн гана</label>
+<label class="option"><input type="radio" name="q6" value="C"> В) Мониторду оңдоо үчүн</label>
+<label class="option"><input type="radio" name="q6" value="D"> Г) Клавиатура жасоо үчүн</label>
+</div>
+
+<div class="test-question">
+<h3>7. Төмөнкүлөрдүн кайсынысы операциялык системага кирет?</h3>
+<label class="option"><input type="radio" name="q7" value="A"> A) Linux</label>
+<label class="option"><input type="radio" name="q7" value="B"> Б) Paint</label>
+<label class="option"><input type="radio" name="q7" value="C"> В) Word</label>
+<label class="option"><input type="radio" name="q7" value="D"> Г) Calculator</label>
+</div>
+
+<div class="test-question">
+<h3>8. Архиватор программасы эмне үчүн колдонулат?</h3>
+<label class="option"><input type="radio" name="q8" value="A"> A) Видео тартуу үчүн</label>
+<label class="option"><input type="radio" name="q8" value="B"> Б) Файлдарды архивдөө жана кысуу үчүн</label>
+<label class="option"><input type="radio" name="q8" value="C"> В) Компьютерди өчүрүү үчүн</label>
+<label class="option"><input type="radio" name="q8" value="D"> Г) Интернетке туташуу үчүн гана</label>
+</div>
+
+<div class="test-question">
+<h3>9. Драйвер деген эмне?</h3>
+<label class="option"><input type="radio" name="q9" value="A"> A) Түзмөктүн иштешин камсыз кылган программа</label>
+<label class="option"><input type="radio" name="q9" value="B"> Б) Сүрөт файлы</label>
+<label class="option"><input type="radio" name="q9" value="C"> В) Компьютердин корпусу</label>
+<label class="option"><input type="radio" name="q9" value="D"> Г) Музыкалык файл</label>
+</div>
+
+<div class="test-question">
+<h3>10. Программалык камсыздоонун негизги милдети эмне?</h3>
+<label class="option"><input type="radio" name="q10" value="A"> A) Компьютерде ар кандай иштерди аткарууга шарт түзүү</label>
+<label class="option"><input type="radio" name="q10" value="B"> Б) Мониторду гана күйгүзүү</label>
+<label class="option"><input type="radio" name="q10" value="C"> В) Клавиатураны гана башкаруу</label>
+<label class="option"><input type="radio" name="q10" value="D"> Г) Компьютердин түсүн өзгөртүү</label>
+</div>
+
+<button type="button" onclick="checkTest()">Тестти бүтүрүү</button>
+
+</form>
+
+<div id="result"></div>
+
+<a class="back" href="7class_lesson5.html">⬅️ 5-сабакка кайтуу</a>
+
+</div>
+
+<script>
+
+function checkTest() {
+
+    const studentName = document.getElementById("studentName").value.trim();
+    const studentClass = document.getElementById("studentClass").value.trim();
+
+    if (!studentName || !studentClass) {
+        alert("Аты-жөнүңүздү жана классыңызды жазыңыз!");
+        return;
+    }
+
+    const answers = {
+        q1: "B",
+        q2: "A",
+        q3: "C",
+        q4: "B",
+        q5: "A",
+        q6: "A",
+        q7: "A",
+        q8: "B",
+        q9: "A",
+        q10: "A"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const percent = score * 10;
+
+    document.getElementById("result").innerHTML =
+        "👨‍🎓 Окуучу: " + studentName +
+        "<br>🏫 Класс: " + studentClass +
+        "<br><br>Туура жооптор: " + score + " / 10" +
+        "<br>Жыйынтык: " + percent + "%";
+}
+
+</script>
+
+</body>
+</html>
