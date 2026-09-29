@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>7-класс | 6-сабак — Компьютер жана мобилдик түзүлүштөрдөгү логикалык операциялар</title>
+
+<link rel="stylesheet" href="style.css?v=2">
+
+<style>
+.lesson-page{
+    padding:45px 20px;
+    background:#f5f8fc;
+    min-height:70vh;
+}
+
+.lesson-wrap{
+    max-width:1100px;
+    margin:auto;
+}
+
+.lesson-title{
+    text-align:center;
+    color:#173653;
+}
+
+.lesson-subtitle{
+    text-align:center;
+    color:#52677a;
+    margin-bottom:35px;
+}
+
+.lesson-card{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    margin-bottom:22px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.lesson-card h2{
+    color:#173653;
+}
+
+.lesson-card h3{
+    color:#173653;
+}
+
+.topic{
+    border:1px solid #e1e8ef;
+    border-radius:14px;
+    padding:20px;
+    margin-top:15px;
+}
+
+.note{
+    background:#eef7f0;
+    border-left:5px solid #2e8b57;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.example{
+    background:#f7f9fb;
+    border:1px solid #e1e8ef;
+    border-radius:10px;
+    padding:15px;
+    margin:15px 0;
+}
+
+.task{
+    background:#fff8e7;
+    border-left:5px solid #e0a800;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.logic-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.logic-table th,
+.logic-table td{
+    border:1px solid #d9e1e8;
+    padding:12px;
+    text-align:center;
+}
+
+.logic-table th{
+    background:#173653;
+    color:white;
+}
+
+.test-question{
+    border:1px solid #e1e8ef;
+    border-radius:12px;
+    padding:18px;
+    margin:14px 0;
+    background:#f9fbfd;
+}
+
+.answer{
+    display:none;
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+    background:#173653;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.back-link:hover{
+    opacity:.9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<div class="brand">
+<div class="logo">35</div>
+
+<div>
+<strong>№35–Жумабек Чаргынов атындагы</strong>
+<span>орто билим берүү мектеби</span>
+</div>
+</div>
+
+</div>
+</header>
+
+
+<main class="lesson-page">
+
+<div class="lesson-wrap">
+
+<h1 class="lesson-title">
+💻 7-класс — 6-сабак
+</h1>
+
+<p class="lesson-subtitle">
+<strong>
+Тема: Компьютер жана мобилдик түзүлүштөрдөгү логикалык операциялардын негиздери
+</strong>
+</p>
+
+
+<section class="lesson-card">
+
+<h2>🎯 Сабактын максаты</h2>
+
+<p>
+Окуучулар логикалык операциялар жөнүндө түшүнүк алышат жана
+компьютер менен мобилдик түзүлүштөрдүн иштөөсүндө логиканын
+кандай роль аткарарын түшүнүшөт.
+</p>
+
+<p>
+Окуучулар <strong>ЖАНА (AND), ЖЕ (OR), ЭМЕС (NOT)</strong>
+логикалык операцияларын айырмалай алышат жана жөнөкөй
+логикалык шарттарды түзө алышат.
+</p>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🧠 1. Логика деген эмне?</h2>
+
+<p>
+<strong>Логика</strong> — туура ой жүгүртүүнүн жана белгилүү
+шарттардын негизинде чечим чыгаруунун эрежелерин изилдөөчү тармак.
+</p>
+
+<p>
+Компьютерлер да маалыматтарды иштетүүдө логикалык эрежелерди
+колдонот.
+</p>
+
+<div class="note">
+
+<strong>Эсте сакта!</strong>
+
+<p>
+Компьютер үчүн логикалык маанилер көбүнчө эки түрдө көрсөтүлөт:
+</p>
+
+<p>
+<strong>1 — чын (TRUE)</strong>
+</p>
+
+<p>
+<strong>0 — жалган (FALSE)</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🔗 2. ЖАНА (AND) операциясы</h2>
+
+<p>
+<strong>AND</strong> операциясында бардык шарттар туура болгондо гана
+жыйынтык туура болот.
+</p>
+
+<table class="logic-table">
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>Мисал:</strong>
+
+<p>
+Телефон интернетке туташып, Wi-Fi күйгүзүлгөндө гана
+онлайн кызмат иштейт деп элестетели.
+</p>
+
+<p>
+Бул жерде эки шарт тең аткарылышы керек.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🔀 3. ЖЕ (OR) операциясы</h2>
+
+<p>
+<strong>OR</strong> операциясында шарттардын жок дегенде бири туура
+болсо, жыйынтык туура болот.
+</p>
+
+<table class="logic-table">
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A OR B</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>Мисал:</strong>
+
+<p>
+Компьютерге интернет Wi-Fi аркылуу же кабель аркылуу
+туташса болот.
+</p>
+
+<p>
+Эки жолдун бирөөсү иштесе да байланыш түзүлүшү мүмкүн.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🚫 4. ЭМЕС (NOT) операциясы</h2>
+
+<p>
+<strong>NOT</strong> операциясы логикалык маанини тескерисине өзгөртөт.
+</p>
+
+<table class="logic-table">
+
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>Мисал:</strong>
+
+<p>
+Эгер «интернет өчүк» деген шарт 1 болсо,
+NOT операциясынан кийин «интернет өчүк эмес» мааниси 0 болот.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>💻 5. Компьютердеги логика</h2>
+
+<p>
+Компьютер маалыматты иштетүүдө көптөгөн логикалык операцияларды
+колдонот.
+</p>
+
+<div class="topic">
+
+<h3>⚙️ Логикалык схемалар</h3>
+
+<p>
+Компьютердин процессорунда жана башка электрондук түзүлүштөрүндө
+логикалык элементтер колдонулат.
+</p>
+
+<p>
+Негизги логикалык элементтер:
+<strong>AND, OR, NOT</strong>.
+</p>
+
+</div>
+
+<div class="example">
+
+<strong>Мисал:</strong>
+
+<p>
+Эгер компьютерде пароль туура киргизилип
+<strong>ЖАНА</strong> колдонуучу уруксат алган болсо,
+система файлды ачууга уруксат бере алат.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>📱 6. Мобилдик түзүлүштөрдөгү логика</h2>
+
+<p>
+Смартфон жана планшеттер да логикалык шарттардын негизинде
+көптөгөн аракеттерди аткарат.
+</p>
+
+<div class="example">
+
+<p>📱 Экран кулпусун ачуу үчүн туура PIN-код текшерилет.</p>
+
+<p>📶 Wi-Fi күйгүзүлгөндө түзмөк жеткиликтүү тармактарды издейт.</p>
+
+<p>🔋 Батареянын заряды азайганда үнөмдөө режими сунушталышы мүмкүн.</p>
+
+<p>🔔 Белгилүү шарт аткарылганда билдирүү көрсөтүлөт.</p>
+
+<p>📍 Колдонмо уруксат берилсе гана айрым түзмөк функцияларын колдоно алат.</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>⚙️ 7. Логика жана иштөө принциптери</h2>
+
+<p>
+Компьютер же смартфон белгилүү маалыматты кабыл алып,
+аны иштетип, шартка жараша натыйжа чыгарат.
+</p>
+
+<div class="topic">
+
+<h3>1️⃣ Киргизүү</h3>
+
+<p>
+Колдонуучу маалымат берет.
+Мисалы: пароль киргизет.
+</p>
+
+</div>
+
+<div class="topic">
+
+<h3>2️⃣ Иштетүү</h3>
+
+<p>
+Түзүлүш алынган маалыматты текшерет жана логикалык шарттарды
+колдонот.
+</p>
+
+</div>
+
+<div class="topic">
+
+<h3>3️⃣ Натыйжа</h3>
+
+<p>
+Түзүлүш шартка жараша жооп берет.
+Мисалы: пароль туура болсо — система ачылат.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🛠️ 8. Практикалык иш</h2>
+
+<p>
+<strong>
+Компьютер менен мобилдик түзүлүштөрдүн логикасын жана иштөө
+принциптерин изилдөө
+</strong>
+</p>
+
+<div class="task">
+
+<h3>1-тапшырма</h3>
+
+<p>
+Компьютерден же телефондон төмөнкү аракеттердин бирин байкагыла:
+</p>
+
+<p>
+• экрандын кулпусун ачуу;<br>
+• Wi-Fi күйгүзүү;<br>
+• үнүн көбөйтүү;<br>
+• Bluetooth күйгүзүү;<br>
+• программа ачуу.
+</p>
+
+<p>
+Бул аракетте кандай шарт аткарылып жатканын жазгыла.
+</p>
+
+</div>
+
+<div class="task">
+
+<h3>2-тапшырма</h3>
+
+<p>
+Төмөнкү шарттардын жыйынтыгын аныктагыла:
+</p>
+
+<p>
+<strong>A = 1, B = 0</strong>
+</p>
+
+<p>
+A AND B = ?<br>
+A OR B = ?<br>
+NOT A = ?
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Жооп:</strong>
+
+<p>
+A AND B = 0
+</p>
+
+<p>
+A OR B = 1
+</p>
+
+<p>
+NOT A = 0
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>📝 9. Тест</h2>
+
+
+<div class="test-question">
+
+<strong>1. Логика эмнени изилдейт?</strong>
+
+<p>
+A) Компьютердин түсүн<br>
+Б) Туура ой жүгүртүү жана шарттардын эрежелерин<br>
+В) Монитордун өлчөмүн<br>
+Г) Клавиатуранын түзүлүшүн
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>2. Компьютерде TRUE көбүнчө кайсы сан менен белгиленет?</strong>
+
+<p>
+A) 0<br>
+Б) 1<br>
+В) 2<br>
+Г) 10
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>3. AND операциясында жыйынтык качан 1 болот?</strong>
+
+<p>
+A) Эки шарт тең 1 болгондо<br>
+Б) Эки шарт тең 0 болгондо<br>
+В) Бир шарт 0 болгондо<br>
+Г) Ар дайым
+</p>
+
+<p class="answer">Жооп: А</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>4. OR операциясында жыйынтык качан 1 болот?</strong>
+
+<p>
+A) Эки шарт тең 0 болгондо<br>
+Б) Жок дегенде бир шарт 1 болгондо<br>
+В) Ар дайым 0 болгондо<br>
+Г) Эч качан
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>5. NOT операциясы эмне кылат?</strong>
+
+<p>
+A) Маанини тескерисине өзгөртөт<br>
+Б) Маанини өчүрөт<br>
+В) Файлды сактайт<br>
+Г) Интернетти күйгүзөт
+</p>
+
+<p class="answer">Жооп: А</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>6. AND операциясынын натыйжасы: 1 AND 0 = ?</strong>
+
+<p>
+A) 1<br>
+Б) 0<br>
+В) 10<br>
+Г) 2
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>7. OR операциясынын натыйжасы: 1 OR 0 = ?</strong>
+
+<p>
+A) 0<br>
+Б) 1<br>
+В) 10<br>
+Г) 2
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>8. NOT 1 = ?</strong>
+
+<p>
+A) 1<br>
+Б) 0<br>
+В) 2<br>
+Г) 10
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>9. Смартфондо PIN-кодду текшерүүдө эмне колдонулат?</strong>
+
+<p>
+A) Шартты текшерүү жана логикалык салыштыруу<br>
+Б) Монитордун түсү<br>
+В) Клавиатуранын өлчөмү<br>
+Г) Кагаз
+</p>
+
+<p class="answer">Жооп: А</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>10. Компьютердин логикалык иштөөсүндө кайсы операциялар негизги болуп саналат?</strong>
+
+<p>
+A) AND, OR, NOT<br>
+Б) Word, Excel, Paint<br>
+В) JPG, PNG, MP3<br>
+Г) USB, HDMI, VGA
+</p>
+
+<p class="answer">Жооп: А</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>💡 Сабактын негизги жыйынтыгы</h2>
+
+<div class="note">
+
+<p>
+Компьютер жана мобилдик түзүлүштөр маалыматты иштетүүдө
+логикалык операцияларды колдонушат.
+</p>
+
+<p>
+<strong>AND</strong> — бардык шарттар туура болгондо 1 берет.
+</p>
+
+<p>
+<strong>OR</strong> — жок дегенде бир шарт туура болсо 1 берет.
+</p>
+
+<p>
+<strong>NOT</strong> — логикалык маанини тескерисине өзгөртөт.
+</p>
+
+<p>
+Логикалык операциялар компьютерлердин, смартфондордун,
+тиркемелердин жана электрондук системалардын иштөөсүндө маанилүү
+роль ойнойт.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🏠 Үй тапшырмасы</h2>
+
+<p>
+1. AND, OR жана NOT операцияларына күнүмдүк турмуштан
+бирден мисал келтирүү.
+</p>
+
+<p>
+2. Компьютерде же смартфондо логикалык шарт колдонулган
+3 аракетти жазып келүү.
+</p>
+
+<p>
+3. Төмөнкү мисалдарды чыгаруу:
+</p>
+
+<div class="example">
+
+<p>
+A = 1, B = 1
+</p>
+
+<p>
+A AND B = ?</p>
+
+<p>
+A OR B = ?</p>
+
+<p>
+NOT A = ?</p>
+
+</div>
+
+</section>
+
+
+<a href="7class_online_full.html" class="back-link">
+← 7-класстын сабактарына кайтуу
+</a>
+
+</div>
+
+</main>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const questions = document.querySelectorAll(".test-question");
+
+    questions.forEach(function(question, index){
+
+        const strong = question.querySelector("strong");
+        const optionP = question.querySelector("p:not(.answer)");
+        const answerP = question.querySelector(".answer");
+
+        if(!strong || !optionP || !answerP) return;
+
+        const questionText = strong.textContent;
+
+        const correctAnswer =
+            answerP.textContent.replace("Жооп:", "").trim();
+
+        const options = optionP.innerHTML
+            .split(/<br\s*\/?>/i)
+            .map(function(item){
+                return item.replace(/<[^>]+>/g, "").trim();
+            })
+            .filter(function(item){
+                return item.length > 0;
+            });
+
+        question.innerHTML = "";
+
+        const title = document.createElement("strong");
+        title.textContent = questionText;
+
+        question.appendChild(title);
+
+        const form = document.createElement("div");
+        form.style.marginTop = "15px";
+
+        options.forEach(function(option){
+
+            const letter = option.substring(0,1);
+
+            const label = document.createElement("label");
+
+            label.style.display = "block";
+            label.style.padding = "8px";
+            label.style.cursor = "pointer";
+
+            const input = document.createElement("input");
+
+            input.type = "radio";
+            input.name = "question" + index;
+            input.value = letter;
+
+            label.appendChild(input);
+
+            label.appendChild(
+                document.createTextNode(" " + option)
+            );
+
+            form.appendChild(label);
+
+        });
+
+        question.appendChild(form);
+
+        question.dataset.correct = correctAnswer;
+
+    });
+
+
+    const testSection =
+        document.querySelector(".test-question").parentElement;
+
+    const button =
+        document.createElement("button");
+
+    button.textContent =
+        "📝 Тестти текшерүү";
+
+    button.style.display = "block";
+    button.style.margin = "25px auto 10px";
+    button.style.padding = "13px 25px";
+    button.style.background = "#173653";
+    button.style.color = "white";
+    button.style.border = "none";
+    button.style.borderRadius = "10px";
+    button.style.fontSize = "16px";
+    button.style.cursor = "pointer";
+
+
+    const result =
+        document.createElement("div");
+
+    result.style.display = "none";
+    result.style.marginTop = "20px";
+    result.style.padding = "18px";
+    result.style.borderRadius = "12px";
+    result.style.background = "#eef7f0";
+    result.style.fontSize = "18px";
+    result.style.fontWeight = "bold";
+    result.style.textAlign = "center";
+
+
+    button.addEventListener("click", function(){
+
+        let score = 0;
+        let answered = 0;
+
+        questions.forEach(function(question, index){
+
+            const selected =
+                document.querySelector(
+                    'input[name="question' +
+                    index +
+                    '"]:checked'
+                );
+
+            if(selected){
+
+                answered++;
+
+                if(
+                    selected.value ===
+                    question.dataset.correct
+                ){
+                    score++;
+                }
+
+            }
+
+        });
+
+
+        result.style.display = "block";
+
+
+        if(answered < questions.length){
+
+            result.innerHTML =
+                "⚠️ Бардык 10 суроого жооп бериңиз.<br>" +
+                "Азырынча " +
+                answered +
+                " суроого жооп берилди.";
+
+        }else{
+
+            result.innerHTML =
+                "🎉 Тест аяктады!<br><br>" +
+                "Сиздин жыйынтык: <strong>" +
+                score +
+                " / " +
+                questions.length +
+                "</strong><br><br>" +
+                "Туура жооптор: " +
+                score +
+                "<br>" +
+                "Ката жооптор: " +
+                (questions.length - score);
+
+        }
+
+    });
+
+
+    testSection.appendChild(button);
+    testSection.appendChild(result);
+
+});
+
+</script>
+
+</body>
+</html>
