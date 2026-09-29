@@ -407,10 +407,9 @@ background:#173653; color:white; border-radius:10px; text-decoration:none;">
 </p>
 </div>
 
-<button class="test-btn" onclick="checkTest()">📝 Тестти текшерүү</button>
+<button type="button" class="test-btn" onclick="checkQuarterTest()">📝 Тестти текшерүү</button>
 
-<div id="result"></div>
-
+<div id="quarterResult"></div>
 </section>
 
 </div>
@@ -474,6 +473,50 @@ fetch("https://script.google.com/macros/s/AKfycbwzcRs1EuXeWlBlgEEuIpQZUHhccVxHRZ
     score: score + "/10"
   })
 });}
+  function checkQuarterTest(){
+  const answers={
+    q1:"b",
+    q2:"a",
+    q3:"c",
+    q4:"b",
+    q5:"c",
+    q6:"a",
+    q7:"a",
+    q8:"c",
+    q9:"a",
+    q10:"b"
+  };
+
+  let score=0;
+  let answered=0;
+  const testSection=document.getElementById("test2");
+
+  for(const q in answers){
+    const selected=testSection.querySelector('input[name="'+q+'"]:checked');
+    if(selected){
+      answered++;
+      if(selected.value===answers[q]) score++;
+    }
+  }
+
+  const result=document.getElementById("quarterResult");
+  result.style.display="block";
+
+  if(answered<10){
+    result.innerHTML="⚠️ Бардык 10 суроого жооп бериңиз. Азырынча "+answered+" суроого жооп берилди.";
+    return;
+  }
+
+  let message="";
+
+  if(score>=9) message="🌟 Абдан жакшы!";
+  else if(score>=7) message="👏 Жакшы иштедиңиз!";
+  else if(score>=5) message="👍 Темаларды дагы бир жолу кайталап көрүңүз.";
+  else message="📚 Темаларды кайра окуп, тестти дагы бир жолу тапшырыңыз.";
+
+  result.innerHTML=
+    "🎯 Жыйынтык: <strong>"+score+"/10</strong><br>"+message;
+}
 </script>
 
 </body>
