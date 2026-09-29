@@ -721,6 +721,140 @@ A) Булагына жана орнотуу шарттарына<br>
 </div>
 
 </main>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
+    const questions = document.querySelectorAll(".test-question");
+
+    questions.forEach(function(question, index){
+
+        const strong = question.querySelector("strong");
+        const optionP = question.querySelector("p:not(.answer)");
+        const answerP = question.querySelector(".answer");
+
+        if(!strong || !optionP || !answerP) return;
+
+        const questionText = strong.textContent;
+        const correctAnswer = answerP.textContent.replace("Жооп:", "").trim();
+
+        const options = optionP.innerHTML
+            .split(/<br\s*\/?>/i)
+            .map(function(item){
+                return item.replace(/<[^>]+>/g, "").trim();
+            })
+            .filter(function(item){
+                return item.length > 0;
+            });
+
+        question.innerHTML = "";
+
+        const title = document.createElement("strong");
+        title.textContent = questionText;
+        question.appendChild(title);
+
+        const form = document.createElement("div");
+        form.style.marginTop = "15px";
+
+        options.forEach(function(option){
+
+            const letter = option.substring(0,1);
+
+            const label = document.createElement("label");
+            label.style.display = "block";
+            label.style.padding = "8px";
+            label.style.cursor = "pointer";
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = "question" + index;
+            input.value = letter;
+
+            label.appendChild(input);
+            label.appendChild(
+                document.createTextNode(" " + option)
+            );
+
+            form.appendChild(label);
+        });
+
+        question.appendChild(form);
+
+        question.dataset.correct = correctAnswer;
+    });
+
+
+    const testSection = document.querySelector(".test-question").parentElement;
+
+    const button = document.createElement("button");
+    button.textContent = "📝 Тестти текшерүү";
+
+    button.style.display = "block";
+    button.style.margin = "25px auto 10px";
+    button.style.padding = "13px 25px";
+    button.style.background = "#173653";
+    button.style.color = "white";
+    button.style.border = "none";
+    button.style.borderRadius = "10px";
+    button.style.fontSize = "16px";
+    button.style.cursor = "pointer";
+
+    const result = document.createElement("div");
+
+    result.style.display = "none";
+    result.style.marginTop = "20px";
+    result.style.padding = "18px";
+    result.style.borderRadius = "12px";
+    result.style.background = "#eef7f0";
+    result.style.fontSize = "18px";
+    result.style.fontWeight = "bold";
+    result.style.textAlign = "center";
+
+    button.addEventListener("click", function(){
+
+        let score = 0;
+        let answered = 0;
+
+        questions.forEach(function(question, index){
+
+            const selected = document.querySelector(
+                'input[name="question' + index + '"]:checked'
+            );
+
+            if(selected){
+                answered++;
+
+                if(selected.value === question.dataset.correct){
+                    score++;
+                }
+            }
+        });
+
+        result.style.display = "block";
+
+        if(answered < questions.length){
+
+            result.innerHTML =
+                "⚠️ Бардык 10 суроого жооп бериңиз.<br>" +
+                "Азырынча " + answered + " суроого жооп берилди.";
+
+        } else {
+
+            result.innerHTML =
+                "🎉 Тест аяктады!<br><br>" +
+                "Сиздин жыйынтык: <strong>" +
+                score + " / " + questions.length +
+                "</strong><br><br>" +
+                "Туура жооптор: " + score +
+                "<br>" +
+                "Ката жооптор: " +
+                (questions.length - score);
+        }
+    });
+
+    testSection.appendChild(button);
+    testSection.appendChild(result);
+
+});
+</script>
 </body>
 </html>
