@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-класс — 4-сабактын тести</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #1d4ed8;
+}
+
+.student-info {
+    background: #eef5ff;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.student-info label {
+    display: block;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.student-info input {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.test-question {
+    background: #fafafa;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.test-question h3 {
+    margin-top: 0;
+}
+
+.option {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #eef5ff;
+    border-radius: 6px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 18px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📝 7-класс — 4-сабактын тести</h1>
+
+<h2>Тема: Тексттик маалыматты коддоо</h2>
+
+<div class="student-info">
+    <h3>👨‍🎓 Окуучу жөнүндө маалымат</h3>
+
+    <label>
+        Аты-жөнү:
+        <input type="text" id="studentName" placeholder="Аты-жөнүңүздү жазыңыз">
+    </label>
+
+    <label>
+        Классы:
+        <input type="text" id="studentClass" placeholder="Мисалы: 7-А">
+    </label>
+</div>
+
+<form id="quizForm">
+
+<div class="test-question">
+<h3>1. Тексттик маалымат компьютерде кандай түрдө сакталат?</h3>
+
+<label class="option"><input type="radio" name="q1" value="A"> A) Сандык коддор түрүндө</label>
+<label class="option"><input type="radio" name="q1" value="B"> Б) Сүрөт түрүндө гана</label>
+<label class="option"><input type="radio" name="q1" value="C"> В) Үн түрүндө гана</label>
+<label class="option"><input type="radio" name="q1" value="D"> Г) Кагаз түрүндө</label>
+</div>
+
+<div class="test-question">
+<h3>2. ASCII деген эмне?</h3>
+
+<label class="option"><input type="radio" name="q2" value="A"> A) Сүрөт редактору</label>
+<label class="option"><input type="radio" name="q2" value="B"> Б) Текстти коддоо стандарты</label>
+<label class="option"><input type="radio" name="q2" value="C"> В) Оюн программасы</label>
+<label class="option"><input type="radio" name="q2" value="D"> Г) Антивирус</label>
+</div>
+
+<div class="test-question">
+<h3>3. ASCII стандартындагы A тамгасынын коду канча?</h3>
+
+<label class="option"><input type="radio" name="q3" value="A"> A) 32</label>
+<label class="option"><input type="radio" name="q3" value="B"> Б) 48</label>
+<label class="option"><input type="radio" name="q3" value="C"> В) 65</label>
+<label class="option"><input type="radio" name="q3" value="D"> Г) 97</label>
+</div>
+
+<div class="test-question">
+<h3>4. ASCII стандартындагы a тамгасынын коду канча?</h3>
+
+<label class="option"><input type="radio" name="q4" value="A"> A) 65</label>
+<label class="option"><input type="radio" name="q4" value="B"> Б) 66</label>
+<label class="option"><input type="radio" name="q4" value="C"> В) 96</label>
+<label class="option"><input type="radio" name="q4" value="D"> Г) 97</label>
+</div>
+
+<div class="test-question">
+<h3>5. ASCII стандартындагы 0 цифрасынын коду канча?</h3>
+
+<label class="option"><input type="radio" name="q5" value="A"> A) 30</label>
+<label class="option"><input type="radio" name="q5" value="B"> Б) 32</label>
+<label class="option"><input type="radio" name="q5" value="C"> В) 48</label>
+<label class="option"><input type="radio" name="q5" value="D"> Г) 65</label>
+</div>
+
+<div class="test-question">
+<h3>6. Коддук таблица эмне үчүн колдонулат?</h3>
+
+<label class="option"><input type="radio" name="q6" value="A"> A) Символ менен анын кодунун дал келүүсүн табуу үчүн</label>
+<label class="option"><input type="radio" name="q6" value="B"> Б) Сүрөт тартуу үчүн</label>
+<label class="option"><input type="radio" name="q6" value="C"> В) Музыка угуу үчүн</label>
+<label class="option"><input type="radio" name="q6" value="D"> Г) Видео көрүү үчүн</label>
+</div>
+
+<div class="test-question">
+<h3>7. ASCIIнин классикалык версиясы канча кодду камтыйт?</h3>
+
+<label class="option"><input type="radio" name="q7" value="A"> A) 64</label>
+<label class="option"><input type="radio" name="q7" value="B"> Б) 100</label>
+<label class="option"><input type="radio" name="q7" value="C"> В) 128</label>
+<label class="option"><input type="radio" name="q7" value="D"> Г) 256</label>
+</div>
+
+<div class="test-question">
+<h3>8. Unicode эмнеси менен айырмаланат?</h3>
+
+<label class="option"><input type="radio" name="q8" value="A"> A) Көптөгөн тилдердин символдорун колдойт</label>
+<label class="option"><input type="radio" name="q8" value="B"> Б) Бир гана цифраларды колдойт</label>
+<label class="option"><input type="radio" name="q8" value="C"> В) Сүрөттөрдү гана сактайт</label>
+<label class="option"><input type="radio" name="q8" value="D"> Г) Интернетсиз гана иштейт</label>
+</div>
+
+<div class="test-question">
+<h3>9. ASCII боюнча B тамгасынын коду канча?</h3>
+
+<label class="option"><input type="radio" name="q9" value="A"> A) 65</label>
+<label class="option"><input type="radio" name="q9" value="B"> Б) 66</label>
+<label class="option"><input type="radio" name="q9" value="C"> В) 67</label>
+<label class="option"><input type="radio" name="q9" value="D"> Г) 98</label>
+</div>
+
+<div class="test-question">
+<h3>10. ASCII боюнча Space символунун коду канча?</h3>
+
+<label class="option"><input type="radio" name="q10" value="A"> A) 0</label>
+<label class="option"><input type="radio" name="q10" value="B"> Б) 10</label>
+<label class="option"><input type="radio" name="q10" value="C"> В) 32</label>
+<label class="option"><input type="radio" name="q10" value="D"> Г) 64</label>
+</div>
+
+<button type="button" onclick="checkTest()">Тестти бүтүрүү</button>
+
+</form>
+
+<div id="result"></div>
+
+<a class="back" href="7class_lesson4.html">⬅️ 4-сабакка кайтуу</a>
+
+</div>
+
+<script>
+
+function checkTest() {
+
+    const studentName = document.getElementById("studentName").value.trim();
+    const studentClass = document.getElementById("studentClass").value.trim();
+
+    if (!studentName || !studentClass) {
+        alert("Аты-жөнүңүздү жана классыңызды жазыңыз!");
+        return;
+    }
+
+    const answers = {
+        q1: "A",
+        q2: "B",
+        q3: "C",
+        q4: "D",
+        q5: "C",
+        q6: "A",
+        q7: "C",
+        q8: "A",
+        q9: "B",
+        q10: "C"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    const percent = score * 10;
+
+    document.getElementById("result").innerHTML =
+        "👨‍🎓 Окуучу: " + studentName +
+        "<br>🏫 Класс: " + studentClass +
+        "<br><br>Туура жооптор: " + score + " / 10" +
+        "<br>Жыйынтык: " + percent + "%";
+}
+
+</script>
+
+</body>
+</html>
