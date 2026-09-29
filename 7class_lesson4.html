@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>7-класс | 4-сабак — Тексттик маалыматты коддоо</title>
+
+<link rel="stylesheet" href="style.css?v=2">
+
+<style>
+.lesson-page{
+    padding:45px 20px;
+    background:#f5f8fc;
+    min-height:70vh;
+}
+
+.lesson-wrap{
+    max-width:1100px;
+    margin:auto;
+}
+
+.lesson-title{
+    text-align:center;
+    color:#173653;
+}
+
+.lesson-subtitle{
+    text-align:center;
+    color:#52677a;
+    margin-bottom:35px;
+}
+
+.lesson-card{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    margin-bottom:22px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.lesson-card h2{
+    color:#173653;
+}
+
+.lesson-card h3{
+    color:#173653;
+}
+
+.topic{
+    border:1px solid #e1e8ef;
+    border-radius:14px;
+    padding:20px;
+    margin-top:15px;
+}
+
+.topic h3{
+    color:#173653;
+}
+
+.note{
+    background:#eef7f0;
+    border-left:5px solid #2e8b57;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.example{
+    background:#f7f9fb;
+    border:1px solid #e1e8ef;
+    border-radius:10px;
+    padding:15px;
+    margin:15px 0;
+}
+
+.ascii-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.ascii-table th,
+.ascii-table td{
+    border:1px solid #d9e1e8;
+    padding:10px;
+    text-align:center;
+}
+
+.ascii-table th{
+    background:#173653;
+    color:white;
+}
+
+.task{
+    background:#fff8e7;
+    border-left:5px solid #e0a800;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.test-question{
+    border:1px solid #e1e8ef;
+    border-radius:12px;
+    padding:18px;
+    margin:14px 0;
+    background:#f9fbfd;
+}
+
+.answer{
+    color:#198754;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+    background:#173653;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.back-link:hover{
+    opacity:.9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<div class="brand">
+<div class="logo">35</div>
+
+<div>
+<strong>№35–Жумабек Чаргынов атындагы</strong>
+<span>орто билим берүү мектеби</span>
+</div>
+</div>
+
+</div>
+</header>
+
+
+<main class="lesson-page">
+
+<div class="lesson-wrap">
+
+<h1 class="lesson-title">
+💻 7-класс — 4-сабак
+</h1>
+
+<p class="lesson-subtitle">
+<strong>Тема: Тексттик маалыматты коддоо</strong>
+</p>
+
+
+<section class="lesson-card">
+
+<h2>📚 Сабактын максаты</h2>
+
+<p>
+Окуучулар тексттик маалыматты компьютерде коддоо түшүнүгүн билишет,
+тексттин стандарттык коддоолору менен таанышат жана ASCII коддук таблицасын
+колдонуп символдордун коддорун аныктай алышат.
+</p>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>💡 1. Тексттик маалыматты коддоо деген эмне?</h2>
+
+<p>
+Компьютер текстти түздөн-түз тамгалар түрүндө эмес, атайын
+<strong>сандык коддор</strong> аркылуу сактайт жана иштетет.
+</p>
+
+<p>
+Ар бир тамга, цифра, боштук же атайын белги компьютердин эсинде
+белгилүү бир код менен көрсөтүлөт.
+</p>
+
+<div class="example">
+
+<strong>Мисал:</strong>
+
+<p>
+Адам компьютерге <strong>A</strong> тамгасын киргизсе,
+компьютер аны белгилүү бир сандык код катары сактай алат.
+</p>
+
+<p>
+ASCII кодунда:
+<strong>A = 65</strong>
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Эсте сакта!</strong>
+
+<p>
+Тексттик маалыматты коддоо — символдорду компьютер түшүнө турган
+сандык коддорго айландыруу процесси.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🔤 2. Тексттин стандарттык коддоолору</h2>
+
+<p>
+Ар кандай тилдердеги символдорду компьютерде көрсөтүү үчүн атайын
+коддоо стандарттары колдонулат.
+</p>
+
+<div class="topic">
+
+<h3>ASCII</h3>
+
+<p>
+ASCII — англис алфавитиндеги тамгаларды, цифраларды жана айрым
+атайын белгилерди коддоо үчүн колдонулган стандарт.
+</p>
+
+</div>
+
+<div class="topic">
+
+<h3>Unicode</h3>
+
+<p>
+Unicode — дүйнөнүн көптөгөн тилдериндеги символдорду коддоого
+мүмкүндүк берген заманбап стандарт.
+</p>
+
+<p>
+Кыргыз, орус, англис жана башка тилдердин символдорун көрсөтүүгө
+мүмкүндүк берет.
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Маанилүү:</strong>
+
+<p>
+ASCII негизинен англис тилинин символдорун коддоого багытталган.
+Ал эми Unicode көптөгөн тилдердин символдорун камтыйт.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>📋 3. Коддук таблица</h2>
+
+<p>
+<strong>Коддук таблица</strong> — символдор менен алардын сандык
+коддорунун ортосундагы дал келүүнү көрсөтүүчү таблица.
+</p>
+
+<p>
+Мисалы, ASCII таблицасында:
+
+</p>
+
+<table class="ascii-table">
+
+<tr>
+<th>Символ</th>
+<th>ASCII коду</th>
+<th>Он алтылык код</th>
+</tr>
+
+<tr>
+<td>A</td>
+<td>65</td>
+<td>41</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>66</td>
+<td>42</td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>67</td>
+<td>43</td>
+</tr>
+
+<tr>
+<td>a</td>
+<td>97</td>
+<td>61</td>
+</tr>
+
+<tr>
+<td>b</td>
+<td>98</td>
+<td>62</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>48</td>
+<td>30</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>49</td>
+<td>31</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>50</td>
+<td>32</td>
+</tr>
+
+<tr>
+<td>Space</td>
+<td>32</td>
+<td>20</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>💻 4. ASCII таблицасы</h2>
+
+<p>
+<strong>ASCII</strong> сөзү англис тилиндеги
+<strong>American Standard Code for Information Interchange</strong>
+деген аталыштан алынган.
+</p>
+
+<p>
+ASCII стандартында символдор сандык маанилер менен берилет.
+Классикалык ASCII таблицасы <strong>0дөн 127ге чейин</strong> болгон
+коддорду камтыйт.
+</p>
+
+<div class="example">
+
+<h3>Мисалдар:</h3>
+
+<p><strong>A → 65</strong></p>
+<p><strong>B → 66</strong></p>
+<p><strong>C → 67</strong></p>
+<p><strong>a → 97</strong></p>
+<p><strong>b → 98</strong></p>
+<p><strong>0 → 48</strong></p>
+
+</div>
+
+<div class="note">
+
+<strong>Көңүл бур!</strong>
+
+<p>
+Чоң жана кичине тамгалардын коддору ар башка.
+Мисалы:
+</p>
+
+<p>
+<strong>A = 65</strong>, бирок <strong>a = 97</strong>.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🧮 5. Мисалдарды чыгаралы</h2>
+
+<div class="example">
+
+<h3>Мисал 1</h3>
+
+<p>
+<strong>A</strong> тамгасынын ASCII коду канча?
+</p>
+
+<p>
+Жооп: <strong>65</strong>
+</p>
+
+</div>
+
+<div class="example">
+
+<h3>Мисал 2</h3>
+
+<p>
+<strong>ABC</strong> сөзүндөгү символдордун ASCII коддорун тапкыла.
+</p>
+
+<p>
+A = 65<br>
+B = 66<br>
+C = 67
+</p>
+
+<p>
+Демек:
+<strong>ABC → 65, 66, 67</strong>
+</p>
+
+</div>
+
+<div class="example">
+
+<h3>Мисал 3</h3>
+
+<p>
+<strong>12</strong> символдорунун ASCII коддорун тапкыла.
+</p>
+
+<p>
+1 = 49<br>
+2 = 50
+</p>
+
+<p>
+Демек:
+<strong>12 → 49, 50</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🛠️ 6. Практикалык иш</h2>
+
+<p>
+Төмөнкү символдордун ASCII коддорун таблицадан тапкыла:
+</p>
+
+<div class="task">
+
+<p>1. A</p>
+<p>2. C</p>
+<p>3. a</p>
+<p>4. b</p>
+<p>5. 0</p>
+<p>6. 5</p>
+<p>7. боштук (Space)</p>
+
+</div>
+
+<div class="note">
+
+<strong>Кошумча тапшырма:</strong>
+
+<p>
+<strong>HELLO</strong> сөзүндөгү ар бир тамганын ASCII кодун жазгыла.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>📝 7. Тест</h2>
+
+
+<div class="test-question">
+
+<strong>1. Тексттик маалымат компьютерде кандай түрдө сакталат?</strong>
+
+<p>
+A) Сандык коддор түрүндө<br>
+Б) Сүрөт түрүндө гана<br>
+В) Үн түрүндө гана<br>
+Г) Кагаз түрүндө
+</p>
+
+<p class="answer">Жооп: A</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>2. ASCII деген эмне?</strong>
+
+<p>
+A) Сүрөт редактору<br>
+Б) Текстти коддоо стандарты<br>
+В) Оюн программасы<br>
+Г) Антивирус
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>3. ASCII стандартындагы A тамгасынын коду канча?</strong>
+
+<p>
+A) 32<br>
+Б) 48<br>
+В) 65<br>
+Г) 97
+</p>
+
+<p class="answer">Жооп: В</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>4. ASCII стандартындагы a тамгасынын коду канча?</strong>
+
+<p>
+A) 65<br>
+Б) 66<br>
+В) 96<br>
+Г) 97
+</p>
+
+<p class="answer">Жооп: Г</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>5. ASCII стандартындагы 0 цифрасынын коду канча?</strong>
+
+<p>
+A) 30<br>
+Б) 32<br>
+В) 48<br>
+Г) 65
+</p>
+
+<p class="answer">Жооп: В</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>6. Коддук таблица эмне үчүн колдонулат?</strong>
+
+<p>
+A) Символ менен анын кодунун дал келүүсүн табуу үчүн<br>
+Б) Сүрөт тартуу үчүн<br>
+В) Музыка угуу үчүн<br>
+Г) Видео көрүү үчүн
+</p>
+
+<p class="answer">Жооп: A</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>7. ASCIIнин классикалык версиясы канча кодду камтыйт?</strong>
+
+<p>
+A) 64<br>
+Б) 100<br>
+В) 128<br>
+Г) 256
+</p>
+
+<p class="answer">Жооп: В</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>8. Unicode эмнеси менен айырмаланат?</strong>
+
+<p>
+A) Көптөгөн тилдердин символдорун колдойт<br>
+Б) Бир гана цифраларды колдойт<br>
+В) Сүрөттөрдү гана сактайт<br>
+Г) Интернетсиз гана иштейт
+</p>
+
+<p class="answer">Жооп: A</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>9. ASCII боюнча B тамгасынын коду канча?</strong>
+
+<p>
+A) 65<br>
+Б) 66<br>
+В) 67<br>
+Г) 98
+</p>
+
+<p class="answer">Жооп: Б</p>
+
+</div>
+
+
+<div class="test-question">
+
+<strong>10. ASCII боюнча Space символунун коду канча?</strong>
+
+<p>
+A) 0<br>
+Б) 10<br>
+В) 32<br>
+Г) 64
+</p>
+
+<p class="answer">Жооп: В</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>💡 Сабактын негизги жыйынтыгы</h2>
+
+<div class="note">
+
+<p>
+Тексттик маалымат компьютерде сандык коддор аркылуу көрсөтүлөт.
+</p>
+
+<p>
+<strong>ASCII</strong> — символдорду коддоонун стандарттарынын бири.
+</p>
+
+<p>
+<strong>Коддук таблица</strong> символ менен анын сандык кодунун
+ортосундагы байланышты көрсөтөт.
+</p>
+
+<p>
+Классикалык ASCII таблицасында <strong>128 код</strong> бар.
+Ал эми <strong>Unicode</strong> көптөгөн тилдердин символдорун
+колдоого ылайыкталган.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="lesson-card">
+
+<h2>🏠 Үй тапшырмасы</h2>
+
+<p>
+1. ASCII деген эмне экенин жазып келүү.
+</p>
+
+<p>
+2. A, B, C, a, b, c тамгаларынын ASCII коддорун жаттоо.
+</p>
+
+<p>
+3. <strong>HELLO</strong> сөзүндөгү ар бир тамганын ASCII кодун жазуу.
+</p>
+
+</section>
+
+
+<a href="7class_online_full.html" class="back-link">
+← 7-класстын сабактарына кайтуу
+</a>
+
+</div>
+
+</main>
+
+</body>
+</html>
