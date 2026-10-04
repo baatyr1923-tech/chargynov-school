@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кыргыз тили — 2-ай, 6-сабак</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1e5aa8;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 25px;
+        }
+
+        .lesson {
+            background: #eef5ff;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .example {
+            background: #fff8df;
+            padding: 15px;
+            border-left: 5px solid #e0ad00;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #1e5aa8;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #15447f;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #e8f5e9;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .homework {
+            background: #eef9ee;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Кыргыз тили — 2-ай, 6-сабак</h1>
+
+    <h2>Тема: Жөнөкөй жана татаал сүйлөм</h2>
+
+    <div class="lesson">
+
+        <p>
+            Сүйлөмдөр түзүлүшүнө жана грамматикалык негиздеринин санына
+            жараша <b>жөнөкөй</b> жана <b>татаал</b> сүйлөм болуп бөлүнөт.
+        </p>
+
+        <h3>1. Жөнөкөй сүйлөм</h3>
+
+        <p>
+            <b>Жөнөкөй сүйлөмдө бир гана грамматикалык негиз</b>
+            болот. Башкача айтканда, бир ээ жана баяндооч же бир
+            грамматикалык өзөк болот.
+        </p>
+
+        <div class="example">
+            <b>Мисалдар:</b><br><br>
+
+            • Окуучу китеп окуду.<br>
+            • Балдар мектепке келишти.<br>
+            • Күн жылынды.<br>
+            • Атам жумушка кетти.
+        </div>
+
+        <h3>2. Татаал сүйлөм</h3>
+
+        <p>
+            <b>Татаал сүйлөмдө эки же андан көп грамматикалык негиз</b>
+            болот. Анын бөлүктөрү өз ара байланышып, бир бүтүн ойду
+            билдирет.
+        </p>
+
+        <div class="example">
+            <b>Мисалдар:</b><br><br>
+
+            • Күн чыкты, <b>жер жылынды</b>.<br>
+            • Мен китеп окудум, <b>иним сүрөт тартты</b>.<br>
+            • Жамгыр жаады, <b>балдар үйдө калышты</b>.
+        </div>
+
+        <h3>Эсте сактагыла</h3>
+
+        <p>
+            <b>1 грамматикалык негиз → жөнөкөй сүйлөм.</b>
+        </p>
+
+        <p>
+            <b>2 же андан көп грамматикалык негиз → татаал сүйлөм.</b>
+        </p>
+
+        <div class="example">
+            <b>Мисал:</b><br><br>
+
+            «Айбек мектепке барды.» — <b>жөнөкөй сүйлөм</b>.<br><br>
+
+            «Айбек мектепке барды, досу үйдө калды.» —
+            <b>татаал сүйлөм</b>.
+        </div>
+
+    </div>
+
+    <h2>Тест</h2>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p>1. Жөнөкөй сүйлөмдө канча грамматикалык негиз болот?</p>
+            <label><input type="radio" name="q1" value="A"> А) Бир</label>
+            <label><input type="radio" name="q1" value="B"> Б) Эки</label>
+            <label><input type="radio" name="q1" value="C"> В) Үч</label>
+            <label><input type="radio" name="q1" value="D"> Г) Төрт</label>
+        </div>
+
+        <div class="question">
+            <p>2. Татаал сүйлөмдө канча грамматикалык негиз болот?</p>
+            <label><input type="radio" name="q2" value="A"> А) Бир гана</label>
+            <label><input type="radio" name="q2" value="B"> Б) Эки же андан көп</label>
+            <label><input type="radio" name="q2" value="C"> В) Негиз болбойт</label>
+            <label><input type="radio" name="q2" value="D"> Г) Бир сөз гана</label>
+        </div>
+
+        <div class="question">
+            <p>3. «Окуучу китеп окуду» кандай сүйлөм?</p>
+            <label><input type="radio" name="q3" value="A"> А) Татаал сүйлөм</label>
+            <label><input type="radio" name="q3" value="B"> Б) Суроолуу сүйлөм</label>
+            <label><input type="radio" name="q3" value="C"> В) Жөнөкөй сүйлөм</label>
+            <label><input type="radio" name="q3" value="D"> Г) Буйрук сүйлөм</label>
+        </div>
+
+        <div class="question">
+            <p>4. «Күн чыкты, жер жылынды» кандай сүйлөм?</p>
+            <label><input type="radio" name="q4" value="A"> А) Жөнөкөй сүйлөм</label>
+            <label><input type="radio" name="q4" value="B"> Б) Татаал сүйлөм</label>
+            <label><input type="radio" name="q4" value="C"> В) Атама сүйлөм</label>
+            <label><input type="radio" name="q4" value="D"> Г) Сөз айкашы</label>
+        </div>
+
+        <div class="question">
+            <p>5. Кайсы сүйлөм жөнөкөй?</p>
+            <label><input type="radio" name="q5" value="A"> А) Жамгыр жаады, жер нымдалды.</label>
+            <label><input type="radio" name="q5" value="B"> Б) Күн чыкты, аба жылынды.</label>
+            <label><input type="radio" name="q5" value="C"> В) Балдар мектепке келишти.</label>
+            <label><input type="radio" name="q5" value="D"> Г) Мен окудум, иним жазды.</label>
+        </div>
+
+        <div class="question">
+            <p>6. Кайсы сүйлөм татаал?</p>
+            <label><input type="radio" name="q6" value="A"> А) Атам жумушка кетти.</label>
+            <label><input type="radio" name="q6" value="B"> Б) Кыз китеп окуду.</label>
+            <label><input type="radio" name="q6" value="C"> В) Балдар ойношту.</label>
+            <label><input type="radio" name="q6" value="D"> Г) Күн батты, түн кирди.</label>
+        </div>
+
+        <div class="question">
+            <p>7. «Мен китеп окудум, иним сүрөт тартты» сүйлөмүндө канча грамматикалык негиз бар?</p>
+            <label><input type="radio" name="q7" value="A"> А) Бир</label>
+            <label><input type="radio" name="q7" value="B"> Б) Эки</label>
+            <label><input type="radio" name="q7" value="C"> В) Үч</label>
+            <label><input type="radio" name="q7" value="D"> Г) Төрт</label>
+        </div>
+
+        <div class="question">
+            <p>8. «Балдар мектепке келишти» сүйлөмүнүн түрү кайсы?</p>
+            <label><input type="radio" name="q8" value="A"> А) Татаал</label>
+            <label><input type="radio" name="q8" value="B"> Б) Жөнөкөй</label>
+            <label><input type="radio" name="q8" value="C"> В) Кошмо сөз</label>
+            <label><input type="radio" name="q8" value="D"> Г) Сөз айкашы</label>
+        </div>
+
+        <div class="question">
+            <p>9. Татаал сүйлөмдүн негизги белгиси кайсы?</p>
+            <label><input type="radio" name="q9" value="A"> А) Бир гана сөздөн турат</label>
+            <label><input type="radio" name="q9" value="B"> Б) Эки же андан көп грамматикалык негиз болот</label>
+            <label><input type="radio" name="q9" value="C"> В) Сөздөр байланышпайт</label>
+            <label><input type="radio" name="q9" value="D"> Г) Ээ болбойт</label>
+        </div>
+
+        <div class="question">
+            <p>10. «Жамгыр жаады, балдар үйдө калышты» сүйлөмү:</p>
+            <label><input type="radio" name="q10" value="A"> А) Жөнөкөй сүйлөм</label>
+            <label><input type="radio" name="q10" value="B"> Б) Татаал сүйлөм</label>
+            <label><input type="radio" name="q10" value="C"> В) Сөз айкашы</label>
+            <label><input type="radio" name="q10" value="D"> Г) Бир сөз</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Тестти текшерүү</button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <div class="homework">
+        <h2>Үй тапшырмасы</h2>
+        <p>
+            1. 3 жөнөкөй сүйлөм жазгыла.<br>
+            2. 3 татаал сүйлөм жазгыла.<br>
+            3. Ар бир сүйлөмдүн грамматикалык негизин тапкыла.
+        </p>
+    </div>
+
+    <a class="back" href="ort-kyrgyz-month2.html">
+        ← Кыргыз тили — 2-айдын сабактарына кайтуу
+    </a>
+
+</div>
+
+<script>
+function checkQuiz() {
+
+    const answers = {
+        q1: "A",
+        q2: "B",
+        q3: "C",
+        q4: "B",
+        q5: "C",
+        q6: "D",
+        q7: "B",
+        q8: "B",
+        q9: "B",
+        q10: "B"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+        const selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    let message = "";
+
+    if (score >= 9) {
+        message = "Абдан жакшы! 👏";
+    } else if (score >= 7) {
+        message = "Жакшы! 👍";
+    } else if (score >= 5) {
+        message = "Канааттандырарлык. Теманы дагы кайталаңыз.";
+    } else {
+        message = "Теманы кайра окуп, тестти дагы бир жолу иштеңиз.";
+    }
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "Сиздин жыйынтык: " +
+        score +
+        " / 10<br>" +
+        message;
+}
+</script>
+
+</body>
+</html>
