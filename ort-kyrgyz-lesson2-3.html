@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кыргыз тили — 2-ай, 3-сабак</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1e5aa8;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 25px;
+        }
+
+        .lesson {
+            background: #eef5ff;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .example {
+            background: #fff8df;
+            padding: 15px;
+            border-left: 5px solid #e0ad00;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #1e5aa8;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #15447f;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #e8f5e9;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .homework {
+            background: #eef9ee;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Кыргыз тили — 2-ай, 3-сабак</h1>
+
+    <h2>Тема: Фразеологизмдер жана алардын мааниси</h2>
+
+    <div class="lesson">
+
+        <p>
+            <b>Фразеологизм</b> — эки же андан көп сөздөн туруп,
+            бир бүтүн маанини билдирген туруктуу сөз айкашы.
+        </p>
+
+        <div class="example">
+            <b>Мисалдар:</b><br><br>
+
+            • <b>Көз ачып-жумганча</b> — абдан тез.<br>
+            • <b>Жүрөгү оозуна келүү</b> — катуу коркуу.<br>
+            • <b>Кол кабыш кылуу</b> — жардам берүү.<br>
+            • <b>Төбөсү көккө жетүү</b> — абдан кубануу.<br>
+            • <b>Эки көзү төрт болуу</b> — чыдамсыздык менен күтүү.
+        </div>
+
+        <p>
+            Фразеологизмдерди түз маанисинде түшүнүүгө болбойт.
+            Алар көбүнчө өтмө маанини билдирет.
+        </p>
+
+        <div class="example">
+            <b>Мисалы:</b><br>
+            «Жүрөгү оозуна келди» деген сөз адамдын жүрөгү
+            чындап оозуна келди дегенди билдирбейт.
+            Бул — <b>катуу коркту</b> деген маанини билдирет.
+        </div>
+
+    </div>
+
+    <h2>Тест</h2>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p>1. Фразеологизм деген эмне?</p>
+            <label><input type="radio" name="q1" value="A"> А) Бир гана сөз</label>
+            <label><input type="radio" name="q1" value="B"> Б) Туруктуу сөз айкашы</label>
+            <label><input type="radio" name="q1" value="C"> В) Сүйлөмдүн бир түрү</label>
+            <label><input type="radio" name="q1" value="D"> Г) Тыбыштардын жыйындысы</label>
+        </div>
+
+        <div class="question">
+            <p>2. «Көз ачып-жумганча» деген фразеологизмдин мааниси кандай?</p>
+            <label><input type="radio" name="q2" value="A"> А) Көзүн жумуу</label>
+            <label><input type="radio" name="q2" value="B"> Б) Абдан тез</label>
+            <label><input type="radio" name="q2" value="C"> В) Узак убакыт</label>
+            <label><input type="radio" name="q2" value="D"> Г) Уктоо</label>
+        </div>
+
+        <div class="question">
+            <p>3. «Жүрөгү оозуна келүү» деген эмне?</p>
+            <label><input type="radio" name="q3" value="A"> А) Кубануу</label>
+            <label><input type="radio" name="q3" value="B"> Б) Чуркоо</label>
+            <label><input type="radio" name="q3" value="C"> В) Катуу коркуу</label>
+            <label><input type="radio" name="q3" value="D"> Г) Ырдоо</label>
+        </div>
+
+        <div class="question">
+            <p>4. «Кол кабыш кылуу» дегендин мааниси:</p>
+            <label><input type="radio" name="q4" value="A"> А) Колун жуу</label>
+            <label><input type="radio" name="q4" value="B"> Б) Жардам берүү</label>
+            <label><input type="radio" name="q4" value="C"> В) Кол көтөрүү</label>
+            <label><input type="radio" name="q4" value="D"> Г) Эс алуу</label>
+        </div>
+
+        <div class="question">
+            <p>5. «Төбөсү көккө жетүү» деген эмне?</p>
+            <label><input type="radio" name="q5" value="A"> А) Бийик жерге чыгуу</label>
+            <label><input type="radio" name="q5" value="B"> Б) Коркуу</label>
+            <label><input type="radio" name="q5" value="C"> В) Абдан кубануу</label>
+            <label><input type="radio" name="q5" value="D"> Г) Уктоо</label>
+        </div>
+
+        <div class="question">
+            <p>6. «Эки көзү төрт болуу» деген эмнени билдирет?</p>
+            <label><input type="radio" name="q6" value="A"> А) Төрт көздүү болуу</label>
+            <label><input type="radio" name="q6" value="B"> Б) Көпкө күтүү</label>
+            <label><input type="radio" name="q6" value="C"> В) Ырдоо</label>
+            <label><input type="radio" name="q6" value="D"> Г) Окуу</label>
+        </div>
+
+        <div class="question">
+            <p>7. Фразеологизмдер көбүнчө кандай мааниде колдонулат?</p>
+            <label><input type="radio" name="q7" value="A"> А) Өтмө мааниде</label>
+            <label><input type="radio" name="q7" value="B"> Б) Сандык мааниде</label>
+            <label><input type="radio" name="q7" value="C"> В) Түз гана мааниде</label>
+            <label><input type="radio" name="q7" value="D"> Г) Тыбыштык мааниде</label>
+        </div>
+
+        <div class="question">
+            <p>8. «Оозуна суу толтуруп алгандай» деген эмнени билдирет?</p>
+            <label><input type="radio" name="q8" value="A"> А) Көп сүйлөө</label>
+            <label><input type="radio" name="q8" value="B"> Б) Унчукпоо</label>
+            <label><input type="radio" name="q8" value="C"> В) Ырдоо</label>
+            <label><input type="radio" name="q8" value="D"> Г) Күлүү</label>
+        </div>
+
+        <div class="question">
+            <p>9. «Башы көккө жетүү» мааниси боюнча кайсы сөзгө жакын?</p>
+            <label><input type="radio" name="q9" value="A"> А) Кубануу</label>
+            <label><input type="radio" name="q9" value="B"> Б) Уйку</label>
+            <label><input type="radio" name="q9" value="C"> В) Коркуу</label>
+            <label><input type="radio" name="q9" value="D"> Г) Ыйлоо</label>
+        </div>
+
+        <div class="question">
+            <p>10. Фразеологизмдерди туура түшүнүүнүн негизги өзгөчөлүгү кайсы?</p>
+            <label><input type="radio" name="q10" value="A"> А) Ар бир сөздү өзүнчө гана түшүнүү</label>
+            <label><input type="radio" name="q10" value="B"> Б) Жалпы маанисин түшүнүү</label>
+            <label><input type="radio" name="q10" value="C"> В) Сөздөрдү алып салуу</label>
+            <label><input type="radio" name="q10" value="D"> Г) Тамгаларды саноо</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Тестти текшерүү</button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <div class="homework">
+        <h2>Үй тапшырмасы</h2>
+        <p>
+            1. 5 фразеологизм жазгыла.<br>
+            2. Ар биринин маанисин түшүндүргүлө.<br>
+            3. Фразеологизмдерди колдонуп 3 сүйлөм түзгүлө.
+        </p>
+    </div>
+
+    <a class="back" href="ort-kyrgyz-month2.html">
+        ← Кыргыз тили — 2-айдын сабактарына кайтуу
+    </a>
+
+</div>
+
+<script>
+function checkQuiz() {
+
+    const answers = {
+        q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "B",
+        q5: "C",
+        q6: "B",
+        q7: "A",
+        q8: "B",
+        q9: "A",
+        q10: "B"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+        const selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    let message = "";
+
+    if (score >= 9) {
+        message = "Абдан жакшы! 👏";
+    } else if (score >= 7) {
+        message = "Жакшы! 👍";
+    } else if (score >= 5) {
+        message = "Канааттандырарлык. Дагы кайталаңыз.";
+    } else {
+        message = "Теманы дагы бир жолу окуп чыгыңыз.";
+    }
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "Сиздин жыйынтык: " +
+        score +
+        " / 10<br>" +
+        message;
+}
+</script>
+
+</body>
+</html>
