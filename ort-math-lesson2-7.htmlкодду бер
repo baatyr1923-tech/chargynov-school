@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-сабак — Геометрия</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-top: 25px;
+        }
+
+        .theory {
+            background: #eef5ff;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        label:hover {
+            background: #eaf2ff;
+            border-radius: 6px;
+        }
+
+        button {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 25px;
+            font-size: 17px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .homework {
+            background: #fff7ed;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📐 7-сабак</h1>
+    <h2>Геометрия: үч бурчтук, төрт бурчтук, периметр жана аянт</h2>
+
+    <div class="theory">
+
+        <h3>📌 Периметр</h3>
+
+        <p>
+            Фигуранын бардык капталдарынын узундуктарынын суммасы
+            <b>периметр</b> деп аталат.
+        </p>
+
+        <p>
+            Үч бурчтуктун периметри:
+            <b>P = a + b + c</b>
+        </p>
+
+        <p>
+            Тик төрт бурчтуктун периметри:
+            <b>P = 2(a + b)</b>
+        </p>
+
+        <h3>📌 Аянт</h3>
+
+        <p>
+            Тик төрт бурчтуктун аянты:
+            <b>S = a × b</b>
+        </p>
+
+        <p>
+            Квадраттын аянты:
+            <b>S = a²</b>
+        </p>
+
+        <p>
+            Үч бурчтуктун аянты:
+            <b>S = (a × h) / 2</b>
+        </p>
+
+        <p>
+            <b>Мисал:</b> тик төрт бурчтуктун узундугу 8 см,
+            туурасы 5 см болсо:
+        </p>
+
+        <p>
+            S = 8 × 5 = <b>40 см²</b>
+        </p>
+
+        <p>
+            P = 2 × (8 + 5) = <b>26 см</b>
+        </p>
+
+    </div>
+
+    <h2>📝 Тест</h2>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p>1. Үч бурчтуктун капталдары 5 см, 6 см жана 7 см. Периметри канча?</p>
+            <label><input type="radio" name="q1" value="A"> A) 16 см</label>
+            <label><input type="radio" name="q1" value="B"> B) 18 см</label>
+            <label><input type="radio" name="q1" value="C"> C) 20 см</label>
+            <label><input type="radio" name="q1" value="D"> D) 22 см</label>
+        </div>
+
+        <div class="question">
+            <p>2. Тик төрт бурчтуктун узундугу 8 см, туурасы 4 см. Аянты канча?</p>
+            <label><input type="radio" name="q2" value="A"> A) 24 см²</label>
+            <label><input type="radio" name="q2" value="B"> B) 32 см²</label>
+            <label><input type="radio" name="q2" value="C"> C) 36 см²</label>
+            <label><input type="radio" name="q2" value="D"> D) 40 см²</label>
+        </div>
+
+        <div class="question">
+            <p>3. Квадраттын капталы 6 см. Периметри канча?</p>
+            <label><input type="radio" name="q3" value="A"> A) 12 см</label>
+            <label><input type="radio" name="q3" value="B"> B) 18 см</label>
+            <label><input type="radio" name="q3" value="C"> C) 24 см</label>
+            <label><input type="radio" name="q3" value="D"> D) 36 см</label>
+        </div>
+
+        <div class="question">
+            <p>4. Квадраттын капталы 5 см. Аянты канча?</p>
+            <label><input type="radio" name="q4" value="A"> A) 10 см²</label>
+            <label><input type="radio" name="q4" value="B"> B) 20 см²</label>
+            <label><input type="radio" name="q4" value="C"> C) 25 см²</label>
+            <label><input type="radio" name="q4" value="D"> D) 30 см²</label>
+        </div>
+
+        <div class="question">
+            <p>5. Тик төрт бурчтуктун узундугу 10 см, туурасы 3 см. Периметри канча?</p>
+            <label><input type="radio" name="q5" value="A"> A) 13 см</label>
+            <label><input type="radio" name="q5" value="B"> B) 20 см</label>
+            <label><input type="radio" name="q5" value="C"> C) 26 см</label>
+            <label><input type="radio" name="q5" value="D"> D) 30 см</label>
+        </div>
+
+        <div class="question">
+            <p>6. Үч бурчтуктун негизи 10 см, бийиктиги 6 см. Аянты канча?</p>
+            <label><input type="radio" name="q6" value="A"> A) 20 см²</label>
+            <label><input type="radio" name="q6" value="B"> B) 30 см²</label>
+            <label><input type="radio" name="q6" value="C"> C) 40 см²</label>
+            <label><input type="radio" name="q6" value="D"> D) 60 см²</label>
+        </div>
+
+        <div class="question">
+            <p>7. Тик төрт бурчтуктун периметри 20 см. Узундугу 6 см болсо, туурасы канча?</p>
+            <label><input type="radio" name="q7" value="A"> A) 3 см</label>
+            <label><input type="radio" name="q7" value="B"> B) 4 см</label>
+            <label><input type="radio" name="q7" value="C"> C) 5 см</label>
+            <label><input type="radio" name="q7" value="D"> D) 6 см</label>
+        </div>
+
+        <div class="question">
+            <p>8. Квадраттын аянты 49 см². Анын капталы канча?</p>
+            <label><input type="radio" name="q8" value="A"> A) 6 см</label>
+            <label><input type="radio" name="q8" value="B"> B) 7 см</label>
+            <label><input type="radio" name="q8" value="C"> C) 8 см</label>
+            <label><input type="radio" name="q8" value="D"> D) 9 см</label>
+        </div>
+
+        <div class="question">
+            <p>9. Үч бурчтуктун капталдары 8 см, 8 см жана 5 см. Периметри канча?</p>
+            <label><input type="radio" name="q9" value="A"> A) 18 см</label>
+            <label><input type="radio" name="q9" value="B"> B) 21 см</label>
+            <label><input type="radio" name="q9" value="C"> C) 24 см</label>
+            <label><input type="radio" name="q9" value="D"> D) 25 см</label>
+        </div>
+
+        <div class="question">
+            <p>10. Тик төрт бурчтуктун аянты 36 см², туурасы 4 см. Узундугу канча?</p>
+            <label><input type="radio" name="q10" value="A"> A) 7 см</label>
+            <label><input type="radio" name="q10" value="B"> B) 8 см</label>
+            <label><input type="radio" name="q10" value="C"> C) 9 см</label>
+            <label><input type="radio" name="q10" value="D"> D) 10 см</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">✅ Тестти текшерүү</button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <div class="homework">
+
+        <h2>🏠 Үй тапшырмасы</h2>
+
+        <ol>
+            <li>Үч бурчтуктун капталдары 6 см, 8 см жана 10 см. Периметрин тап.</li>
+
+            <li>Тик төрт бурчтуктун узундугу 12 см, туурасы 5 см. Аянтын тап.</li>
+
+            <li>Квадраттын капталы 9 см. Периметрин тап.</li>
+
+            <li>Квадраттын капталы 7 см. Аянтын тап.</li>
+
+            <li>Үч бурчтуктун негизи 12 см, бийиктиги 5 см. Аянтын тап.</li>
+        </ol>
+
+    </div>
+
+    <div class="back">
+        <a href="ort-math-month2.html">← 2-айдын сабактарына кайтуу</a>
+    </div>
+
+</div>
+
+<script>
+
+function checkQuiz() {
+
+    const answers = {
+        q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "C",
+        q5: "C",
+        q6: "B",
+        q7: "A",
+        q8: "B",
+        q9: "B",
+        q10: "C"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+
+        const selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    let message = "";
+
+    if (score >= 9) {
+        message = "🌟 Абдан жакшы!";
+    } else if (score >= 7) {
+        message = "👍 Жакшы жыйынтык!";
+    } else if (score >= 5) {
+        message = "🙂 Дагы бир аз машыгуу керек.";
+    } else {
+        message = "📚 Теманы кайра кайталап көр.";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Натыйжа: " + score + " / 10<br>" + message;
+}
+
+</script>
+
+</body>
+</html>
