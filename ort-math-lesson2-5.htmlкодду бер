@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОРТга даярдык — Математика — 2-ай — 5-сабак</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin: 6px;
+        }
+
+        .lesson-content,
+        .question,
+        .homework {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        h3 {
+            color: #166534;
+        }
+
+        .example {
+            background: #eef6ff;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .important {
+            background: #fff7ed;
+            padding: 15px;
+            border-left: 5px solid #f97316;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .question {
+            background: #f8fafc;
+        }
+
+        .question p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .homework {
+            background: #fff7ed;
+            border-left: 6px solid #f97316;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin: 10px auto;
+            }
+
+            .header,
+            .lesson-content,
+            .question,
+            .homework {
+                padding: 18px;
+            }
+
+            .question p {
+                font-size: 17px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>📘 ОРТга даярдык</h1>
+        <p><strong>Математика</strong></p>
+        <p>2-ай — 5-сабак</p>
+        <p><strong>Теңсиздиктер</strong></p>
+    </div>
+
+
+    <div class="lesson-content">
+
+        <h2>📚 Сабактын темасы</h2>
+
+        <p>
+            <strong>Теңсиздик</strong> — эки туюнтманын чоңдугун салыштырган
+            математикалык жазуу.
+        </p>
+
+        <p>
+            Теңсиздиктерде төмөнкү белгилер колдонулат:
+        </p>
+
+        <div class="example">
+            <strong>&gt;</strong> — чоң<br>
+            <strong>&lt;</strong> — кичине<br>
+            <strong>≥</strong> — чоң же барабар<br>
+            <strong>≤</strong> — кичине же барабар
+        </div>
+
+        <h3>📌 Мисалдар</h3>
+
+        <div class="example">
+            <strong>Мисал 1:</strong><br><br>
+            x + 5 &gt; 12<br>
+            x &gt; 12 − 5<br>
+            <strong>x &gt; 7</strong>
+        </div>
+
+        <div class="example">
+            <strong>Мисал 2:</strong><br><br>
+            x − 4 ≤ 10<br>
+            x ≤ 10 + 4<br>
+            <strong>x ≤ 14</strong>
+        </div>
+
+        <div class="example">
+            <strong>Мисал 3:</strong><br><br>
+            3x &lt; 18<br>
+            x &lt; 18 ÷ 3<br>
+            <strong>x &lt; 6</strong>
+        </div>
+
+        <div class="important">
+            <strong>⚠️ Маанилүү эреже:</strong><br><br>
+            Теңсиздиктин эки тарабын терс санга көбөйткөндө же бөлгөндө
+            теңсиздиктин белгиси карама-каршы өзгөрөт.
+        </div>
+
+        <div class="example">
+            <strong>Мисал:</strong><br><br>
+            −2x &gt; 8<br>
+            x &lt; −4
+        </div>
+
+    </div>
+
+
+    <h2>📝 Тест — 10 суроо</h2>
+
+
+    <div class="question">
+        <p>1. x + 4 &gt; 10 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q1" value="A"> A) x &gt; 6</label>
+        <label><input type="radio" name="q1" value="B"> Б) x &lt; 6</label>
+        <label><input type="radio" name="q1" value="C"> В) x &gt; 14</label>
+        <label><input type="radio" name="q1" value="D"> Г) x &lt; 14</label>
+    </div>
+
+
+    <div class="question">
+        <p>2. x − 5 &lt; 9 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q2" value="A"> A) x &lt; 4</label>
+        <label><input type="radio" name="q2" value="B"> Б) x &lt; 14</label>
+        <label><input type="radio" name="q2" value="C"> В) x &gt; 14</label>
+        <label><input type="radio" name="q2" value="D"> Г) x &gt; 4</label>
+    </div>
+
+
+    <div class="question">
+        <p>3. 2x &gt; 12 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q3" value="A"> A) x &gt; 5</label>
+        <label><input type="radio" name="q3" value="B"> Б) x &lt; 6</label>
+        <label><input type="radio" name="q3" value="C"> В) x &gt; 6</label>
+        <label><input type="radio" name="q3" value="D"> Г) x &lt; 12</label>
+    </div>
+
+
+    <div class="question">
+        <p>4. 3x &lt; 21 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q4" value="A"> A) x &lt; 7</label>
+        <label><input type="radio" name="q4" value="B"> Б) x &gt; 7</label>
+        <label><input type="radio" name="q4" value="C"> В) x &lt; 18</label>
+        <label><input type="radio" name="q4" value="D"> Г) x &gt; 21</label>
+    </div>
+
+
+    <div class="question">
+        <p>5. x + 8 ≤ 15 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q5" value="A"> A) x ≥ 7</label>
+        <label><input type="radio" name="q5" value="B"> Б) x ≤ 7</label>
+        <label><input type="radio" name="q5" value="C"> В) x &lt; 23</label>
+        <label><input type="radio" name="q5" value="D"> Г) x &gt; 23</label>
+    </div>
+
+
+    <div class="question">
+        <p>6. x − 6 ≥ 10 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q6" value="A"> A) x ≥ 16</label>
+        <label><input type="radio" name="q6" value="B"> Б) x ≤ 16</label>
+        <label><input type="radio" name="q6" value="C"> В) x ≥ 4</label>
+        <label><input type="radio" name="q6" value="D"> Г) x ≤ 4</label>
+    </div>
+
+
+    <div class="question">
+        <p>7. 5x ≤ 25 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q7" value="A"> A) x ≥ 5</label>
+        <label><input type="radio" name="q7" value="B"> Б) x ≤ 5</label>
+        <label><input type="radio" name="q7" value="C"> В) x &lt; 25</label>
+        <label><input type="radio" name="q7" value="D"> Г) x &gt; 25</label>
+    </div>
+
+
+    <div class="question">
+        <p>8. −2x &gt; 10 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q8" value="A"> A) x &gt; 5</label>
+        <label><input type="radio" name="q8" value="B"> Б) x &lt; −5</label>
+        <label><input type="radio" name="q8" value="C"> В) x &gt; −5</label>
+        <label><input type="radio" name="q8" value="D"> Г) x &lt; 5</label>
+    </div>
+
+
+    <div class="question">
+        <p>9. 4x − 3 ≥ 13 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q9" value="A"> A) x ≥ 4</label>
+        <label><input type="radio" name="q9" value="B"> Б) x ≤ 4</label>
+        <label><input type="radio" name="q9" value="C"> В) x ≥ 10</label>
+        <label><input type="radio" name="q9" value="D"> Г) x ≤ 10</label>
+    </div>
+
+
+    <div class="question">
+        <p>10. −3x ≤ 12 болсо, x кандай мааниге ээ?</p>
+
+        <label><input type="radio" name="q10" value="A"> A) x ≤ −4</label>
+        <label><input type="radio" name="q10" value="B"> Б) x ≥ −4</label>
+        <label><input type="radio" name="q10" value="C"> В) x ≤ 4</label>
+        <label><input type="radio" name="q10" value="D"> Г) x ≥ 4</label>
+    </div>
+
+
+    <button onclick="checkAnswers()">✅ Жоопторду текшерүү</button>
+
+    <div id="result"></div>
+
+
+    <div class="homework">
+
+        <h2>🏠 Үй тапшырмасы</h2>
+
+        <p>Төмөнкү теңсиздиктерди чыгаргыла:</p>
+
+        <ol>
+            <li>x + 7 &gt; 15</li>
+            <li>x − 9 ≤ 6</li>
+            <li>2x &gt; 18</li>
+            <li>4x ≤ 28</li>
+            <li>−3x &gt; 12</li>
+        </ol>
+
+    </div>
+
+
+    <a class="back" href="ort-math-month2.html">
+        ← Математика — 2-ай сабактарына кайтуу
+    </a>
+
+</div>
+
+
+<script>
+
+function checkAnswers() {
+
+    const correctAnswers = {
+        q1: "A",
+        q2: "B",
+        q3: "C",
+        q4: "A",
+        q5: "B",
+        q6: "A",
+        q7: "B",
+        q8: "B",
+        q9: "A",
+        q10: "B"
+    };
+
+    let score = 0;
+
+    for (let question in correctAnswers) {
+
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === correctAnswers[question]) {
+            score++;
+        }
+    }
+
+    let message = "";
+
+    if (score >= 8) {
+        message = "🎉 Абдан жакшы! Сиз теманы жакшы өздөштүрдүңүз.";
+    } else if (score >= 5) {
+        message = "👍 Жакшы! Бирок дагы бир жолу кайталап көрүңүз.";
+    } else {
+        message = "📚 Сабакты кайра окуп, тестти дагы бир жолу иштеп көрүңүз.";
+    }
+
+    document.getElementById("result").innerHTML =
+        "📊 Сиздин жыйынтык: " + score + " / 10<br><br>" + message;
+}
+
+</script>
+
+</body>
+</html>
