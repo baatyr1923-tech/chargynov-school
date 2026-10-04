@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-сабак — Жыйынтыктоочу тест</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        .info {
+            background: #eef5ff;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .question {
+            margin: 18px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            padding: 8px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        label:hover {
+            background: #eaf2ff;
+            border-radius: 6px;
+        }
+
+        button {
+            display: block;
+            margin: 25px auto;
+            padding: 13px 28px;
+            font-size: 17px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 25px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .homework {
+            background: #fff7ed;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .back a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📘 8-сабак</h1>
+    <h2>Жыйынтыктоочу тест — 2-ай</h2>
+
+    <div class="info">
+        <p>
+            Бул тестте <b>15 суроо</b> бар.
+            2-айда өткөн негизги темалар боюнча билимиңизди текшериңиз.
+        </p>
+
+        <p>
+            Ар бир туура жооп — <b>1 упай</b>.
+        </p>
+
+        <p>
+            <b>Баалоо:</b><br>
+            13–15 упай — Абдан жакшы 🌟<br>
+            10–12 упай — Жакшы 👍<br>
+            7–9 упай — Канааттандырарлык 🙂<br>
+            0–6 упай — Темаларды кайра кайталоо керек 📚
+        </p>
+    </div>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p>1. 25 + 15 × 2 = ?</p>
+            <label><input type="radio" name="q1" value="A"> A) 80</label>
+            <label><input type="radio" name="q1" value="B"> B) 55</label>
+            <label><input type="radio" name="q1" value="C"> C) 70</label>
+            <label><input type="radio" name="q1" value="D"> D) 50</label>
+        </div>
+
+        <div class="question">
+            <p>2. 3/4 + 1/4 = ?</p>
+            <label><input type="radio" name="q2" value="A"> A) 1</label>
+            <label><input type="radio" name="q2" value="B"> B) 2/4</label>
+            <label><input type="radio" name="q2" value="C"> C) 3/8</label>
+            <label><input type="radio" name="q2" value="D"> D) 4/8</label>
+        </div>
+
+        <div class="question">
+            <p>3. 200дүн 25% канча?</p>
+            <label><input type="radio" name="q3" value="A"> A) 25</label>
+            <label><input type="radio" name="q3" value="B"> B) 40</label>
+            <label><input type="radio" name="q3" value="C"> C) 50</label>
+            <label><input type="radio" name="q3" value="D"> D) 75</label>
+        </div>
+
+        <div class="question">
+            <p>4. 3x + 6 = 18 теңдемесинде x канча?</p>
+            <label><input type="radio" name="q4" value="A"> A) 2</label>
+            <label><input type="radio" name="q4" value="B"> B) 3</label>
+            <label><input type="radio" name="q4" value="C"> C) 4</label>
+            <label><input type="radio" name="q4" value="D"> D) 6</label>
+        </div>
+
+        <div class="question">
+            <p>5. x + 7 &gt; 12 болсо, x кандай маанилерди алат?</p>
+            <label><input type="radio" name="q5" value="A"> A) x &gt; 5</label>
+            <label><input type="radio" name="q5" value="B"> B) x &lt; 5</label>
+            <label><input type="radio" name="q5" value="C"> C) x &gt; 19</label>
+            <label><input type="radio" name="q5" value="D"> D) x = 5</label>
+        </div>
+
+        <div class="question">
+            <p>6. y = 2x + 3 функциясында x = 4 болсо, y канча?</p>
+            <label><input type="radio" name="q6" value="A"> A) 8</label>
+            <label><input type="radio" name="q6" value="B"> B) 9</label>
+            <label><input type="radio" name="q6" value="C"> C) 11</label>
+            <label><input type="radio" name="q6" value="D"> D) 12</label>
+        </div>
+
+        <div class="question">
+            <p>7. Үч бурчтуктун капталдары 5 см, 6 см жана 7 см. Периметри канча?</p>
+            <label><input type="radio" name="q7" value="A"> A) 16 см</label>
+            <label><input type="radio" name="q7" value="B"> B) 18 см</label>
+            <label><input type="radio" name="q7" value="C"> C) 20 см</label>
+            <label><input type="radio" name="q7" value="D"> D) 21 см</label>
+        </div>
+
+        <div class="question">
+            <p>8. Тик төрт бурчтуктун узундугу 8 см, туурасы 5 см. Аянты канча?</p>
+            <label><input type="radio" name="q8" value="A"> A) 13 см²</label>
+            <label><input type="radio" name="q8" value="B"> B) 26 см²</label>
+            <label><input type="radio" name="q8" value="C"> C) 40 см²</label>
+            <label><input type="radio" name="q8" value="D"> D) 45 см²</label>
+        </div>
+
+        <div class="question">
+            <p>9. 5x = 35 болсо, x канча?</p>
+            <label><input type="radio" name="q9" value="A"> A) 5</label>
+            <label><input type="radio" name="q9" value="B"> B) 6</label>
+            <label><input type="radio" name="q9" value="C"> C) 7</label>
+            <label><input type="radio" name="q9" value="D"> D) 8</label>
+        </div>
+
+        <div class="question">
+            <p>10. 80дин 15% канча?</p>
+            <label><input type="radio" name="q10" value="A"> A) 10</label>
+            <label><input type="radio" name="q10" value="B"> B) 12</label>
+            <label><input type="radio" name="q10" value="C"> C) 15</label>
+            <label><input type="radio" name="q10" value="D"> D) 18</label>
+        </div>
+
+        <div class="question">
+            <p>11. y = 3x − 2 функциясында x = 2 болсо, y канча?</p>
+            <label><input type="radio" name="q11" value="A"> A) 2</label>
+            <label><input type="radio" name="q11" value="B"> B) 4</label>
+            <label><input type="radio" name="q11" value="C"> C) 6</label>
+            <label><input type="radio" name="q11" value="D"> D) 8</label>
+        </div>
+
+        <div class="question">
+            <p>12. Квадраттын капталы 7 см. Аянты канча?</p>
+            <label><input type="radio" name="q12" value="A"> A) 14 см²</label>
+            <label><input type="radio" name="q12" value="B"> B) 28 см²</label>
+            <label><input type="radio" name="q12" value="C"> C) 49 см²</label>
+            <label><input type="radio" name="q12" value="D"> D) 56 см²</label>
+        </div>
+
+        <div class="question">
+            <p>13. 2x − 4 = 10 теңдемесинин чечими кайсы?</p>
+            <label><input type="radio" name="q13" value="A"> A) x = 5</label>
+            <label><input type="radio" name="q13" value="B"> B) x = 6</label>
+            <label><input type="radio" name="q13" value="C"> C) x = 7</label>
+            <label><input type="radio" name="q13" value="D"> D) x = 8</label>
+        </div>
+
+        <div class="question">
+            <p>14. 1/2 + 1/4 = ?</p>
+            <label><input type="radio" name="q14" value="A"> A) 1/4</label>
+            <label><input type="radio" name="q14" value="B"> B) 2/4</label>
+            <label><input type="radio" name="q14" value="C"> C) 3/4</label>
+            <label><input type="radio" name="q14" value="D"> D) 1</label>
+        </div>
+
+        <div class="question">
+            <p>15. Тик төрт бурчтуктун узундугу 10 см, туурасы 4 см. Периметри канча?</p>
+            <label><input type="radio" name="q15" value="A"> A) 14 см</label>
+            <label><input type="radio" name="q15" value="B"> B) 20 см</label>
+            <label><input type="radio" name="q15" value="C"> C) 28 см</label>
+            <label><input type="radio" name="q15" value="D"> D) 40 см</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">
+            ✅ Жыйынтыкты чыгаруу
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <div class="homework">
+        <h2>📚 Кайталоо үчүн</h2>
+
+        <ol>
+            <li>Сандык туюнтмалардагы амалдардын тартибин кайтала.</li>
+            <li>Бөлчөктөр жана пайыздар боюнча мисалдарды иште.</li>
+            <li>Сызыктуу теңдемелерди кайтала.</li>
+            <li>Теңсиздиктерди чыгарууну кайтала.</li>
+            <li>Периметр жана аянттын формулаларын жатта.</li>
+        </ol>
+    </div>
+
+    <div class="back">
+        <a href="ort-math-month2.html">
+            ← 2-айдын сабактарына кайтуу
+        </a>
+    </div>
+
+</div>
+
+<script>
+
+function checkQuiz() {
+
+    const answers = {
+        q1: "B",
+        q2: "A",
+        q3: "C",
+        q4: "C",
+        q5: "A",
+        q6: "C",
+        q7: "B",
+        q8: "C",
+        q9: "C",
+        q10: "B",
+        q11: "B",
+        q12: "C",
+        q13: "C",
+        q14: "C",
+        q15: "C"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+
+        const selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    let message = "";
+
+    if (score >= 13) {
+        message = "🌟 Абдан жакшы! Сиз 2-айдын темаларын мыкты өздөштүрдүңүз.";
+    } else if (score >= 10) {
+        message = "👍 Жакшы! Негизги темаларды жакшы билесиз.";
+    } else if (score >= 7) {
+        message = "🙂 Канааттандырарлык. Айрым темаларды дагы кайталоо керек.";
+    } else {
+        message = "📚 Темаларды кайрадан кайталап, тестти кайра иштеп көрүңүз.";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Жыйынтык: " + score + " / 15<br><br>" + message;
+}
+
+</script>
+
+</body>
+</html>
