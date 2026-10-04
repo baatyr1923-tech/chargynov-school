@@ -308,7 +308,7 @@
 </div>
 
 <script>
-
+<script>
 function checkQuiz() {
 
     const answers = {
@@ -351,9 +351,25 @@ function checkQuiz() {
 
     document.getElementById("result").innerHTML =
         "Натыйжа: " + score + " / 10<br><br>" + message;
-}
 
+    // Google Sheetsке жөнөтүү
+    fetch("https://script.google.com/macros/s/AKfycbxLYt2OfRZ7qua8rwX42gqxGtYv0jrPSoUjJ8hUJRNKSSw5NSiyJYbnzQ_-22o5yqQw/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify({
+            student: "Окуучу",
+            lesson: "Кыргыз тили — 2-ай, 2-сабак",
+            score: score,
+            total: 10
+        })
+    });
+}
 </script>
+
+
 
 </body>
 </html>
