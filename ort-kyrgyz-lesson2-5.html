@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кыргыз тили — 2-ай, 5-сабак</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1e5aa8;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 25px;
+        }
+
+        .lesson {
+            background: #eef5ff;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .example {
+            background: #fff8df;
+            padding: 15px;
+            border-left: 5px solid #e0ad00;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #1e5aa8;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #15447f;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #e8f5e9;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .homework {
+            background: #eef9ee;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background: #555;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Кыргыз тили — 2-ай, 5-сабак</h1>
+
+    <h2>Тема: Сүйлөмдүн баш жана айкындооч мүчөлөрү</h2>
+
+    <div class="lesson">
+
+        <p>
+            Сүйлөмдүн мүчөлөрү сүйлөмдөгү сөздөрдүн аткарган кызматына
+            жараша бөлүнөт.
+        </p>
+
+        <h3>1. Баш мүчөлөр</h3>
+
+        <p>
+            Сүйлөмдүн негизги мүчөлөрү <b>ээ</b> жана <b>баяндооч</b>.
+            Алар сүйлөмдүн негизги маанисин түзөт.
+        </p>
+
+        <div class="example">
+            <b>Мисал:</b><br><br>
+            <b>Окуучу</b> китеп <b>окуду</b>.<br><br>
+
+            <b>Окуучу</b> — ээ. (Ким?)<br>
+            <b>окуду</b> — баяндооч. (Эмне кылды?)
+        </div>
+
+        <h3>2. Айкындооч мүчөлөр</h3>
+
+        <p>
+            Айкындооч мүчөлөр баш мүчөлөрдү жана башка сөздөрдү
+            толуктап, алардын маанисин тактап турат.
+        </p>
+
+        <p>
+            Аларга <b>аныктооч, толуктооч, бышыктооч</b> кирет.
+        </p>
+
+        <div class="example">
+            <b>Мисал:</b><br><br>
+
+            <b>Акылдуу окуучу кызыктуу китепти бүгүн мектепте окуду.</b><br><br>
+
+            <b>окуучу</b> — ээ<br>
+            <b>окуду</b> — баяндооч<br>
+            <b>акылдуу</b> — аныктооч<br>
+            <b>китепти</b> — толуктооч<br>
+            <b>бүгүн</b> — бышыктооч
+        </div>
+
+        <h3>Эсте сактагыла</h3>
+
+        <p>
+            <b>Ээ</b> — ким? эмне?<br>
+            <b>Баяндооч</b> — эмне кылды? эмне кылат? кандай?<br>
+            <b>Аныктооч</b> — кандай? кайсы?<br>
+            <b>Толуктооч</b> — кимди? эмнени? кимге? эмнеге?<br>
+            <b>Бышыктооч</b> — качан? кайда? кантип? эмне үчүн?
+        </p>
+
+    </div>
+
+    <h2>Тест</h2>
+
+    <form id="quiz">
+
+        <div class="question">
+            <p>1. Сүйлөмдүн баш мүчөлөрү кайсылар?</p>
+            <label><input type="radio" name="q1" value="A"> А) Аныктооч жана толуктооч</label>
+            <label><input type="radio" name="q1" value="B"> Б) Ээ жана баяндооч</label>
+            <label><input type="radio" name="q1" value="C"> В) Толуктооч жана бышыктооч</label>
+            <label><input type="radio" name="q1" value="D"> Г) Аныктооч жана бышыктооч</label>
+        </div>
+
+        <div class="question">
+            <p>2. «Балдар футбол ойношту» сүйлөмүндөгү ээ кайсы?</p>
+            <label><input type="radio" name="q2" value="A"> А) футбол</label>
+            <label><input type="radio" name="q2" value="B"> Б) балдар</label>
+            <label><input type="radio" name="q2" value="C"> В) ойношту</label>
+            <label><input type="radio" name="q2" value="D"> Г) балдар футбол</label>
+        </div>
+
+        <div class="question">
+            <p>3. «Балдар футбол ойношту» сүйлөмүндөгү баяндооч кайсы?</p>
+            <label><input type="radio" name="q3" value="A"> А) балдар</label>
+            <label><input type="radio" name="q3" value="B"> Б) футбол</label>
+            <label><input type="radio" name="q3" value="C"> В) ойношту</label>
+            <label><input type="radio" name="q3" value="D"> Г) балдар футбол</label>
+        </div>
+
+        <div class="question">
+            <p>4. Аныктооч кайсы суроолорго жооп берет?</p>
+            <label><input type="radio" name="q4" value="A"> А) Ким? Эмне?</label>
+            <label><input type="radio" name="q4" value="B"> Б) Эмне кылды?</label>
+            <label><input type="radio" name="q4" value="C"> В) Кандай? Кайсы?</label>
+            <label><input type="radio" name="q4" value="D"> Г) Качан? Кайда?</label>
+        </div>
+
+        <div class="question">
+            <p>5. «Кызыл алма бышты» сүйлөмүндөгү аныктооч кайсы?</p>
+            <label><input type="radio" name="q5" value="A"> А) алма</label>
+            <label><input type="radio" name="q5" value="B"> Б) бышты</label>
+            <label><input type="radio" name="q5" value="C"> В) кызыл</label>
+            <label><input type="radio" name="q5" value="D"> Г) кызыл алма</label>
+        </div>
+
+        <div class="question">
+            <p>6. Толуктооч кайсы суроого жооп берет?</p>
+            <label><input type="radio" name="q6" value="A"> А) Кандай?</label>
+            <label><input type="radio" name="q6" value="B"> Б) Эмнени?</label>
+            <label><input type="radio" name="q6" value="C"> В) Качан?</label>
+            <label><input type="radio" name="q6" value="D"> Г) Кайда?</label>
+        </div>
+
+        <div class="question">
+            <p>7. «Мен китепти окудум» сүйлөмүндөгү толуктооч кайсы?</p>
+            <label><input type="radio" name="q7" value="A"> А) Мен</label>
+            <label><input type="radio" name="q7" value="B"> Б) китепти</label>
+            <label><input type="radio" name="q7" value="C"> В) окудум</label>
+            <label><input type="radio" name="q7" value="D"> Г) Мен китепти</label>
+        </div>
+
+        <div class="question">
+            <p>8. Бышыктооч эмнени билдирет?</p>
+            <label><input type="radio" name="q8" value="A"> А) Заттын атын</label>
+            <label><input type="radio" name="q8" value="B"> Б) Кыймыл-аракеттин ордун, мезгилин же түрүн</label>
+            <label><input type="radio" name="q8" value="C"> В) Заттын санын гана</label>
+            <label><input type="radio" name="q8" value="D"> Г) Адамдын атын</label>
+        </div>
+
+        <div class="question">
+            <p>9. «Балдар бүгүн мектепке келишти» сүйлөмүндөгү бышыктооч кайсы?</p>
+            <label><input type="radio" name="q9" value="A"> А) Балдар</label>
+            <label><input type="radio" name="q9" value="B"> Б) бүгүн</label>
+            <label><input type="radio" name="q9" value="C"> В) мектепке</label>
+            <label><input type="radio" name="q9" value="D"> Г) келишти</label>
+        </div>
+
+        <div class="question">
+            <p>10. «Акылдуу бала сабакты жакшы окуду» сүйлөмүндөгү «акылдуу» кайсы мүчө?</p>
+            <label><input type="radio" name="q10" value="A"> А) Толуктооч</label>
+            <label><input type="radio" name="q10" value="B"> Б) Аныктооч</label>
+            <label><input type="radio" name="q10" value="C"> В) Бышыктооч</label>
+            <label><input type="radio" name="q10" value="D"> Г) Баяндооч</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Тестти текшерүү</button>
+
+    </form>
+
+    <div id="result"></div>
+
+    <div class="homework">
+        <h2>Үй тапшырмасы</h2>
+        <p>
+            1. 3 сүйлөм түзгүлө.<br>
+            2. Ар бир сүйлөмдөн ээ жана баяндоочту тапкыла.<br>
+            3. Аныктооч, толуктооч жана бышыктоочту таап,
+            астын сызгыла.
+        </p>
+    </div>
+
+    <a class="back" href="ort-kyrgyz-month2.html">
+        ← Кыргыз тили — 2-айдын сабактарына кайтуу
+    </a>
+
+</div>
+
+<script>
+function checkQuiz() {
+
+    const answers = {
+        q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "C",
+        q5: "C",
+        q6: "B",
+        q7: "B",
+        q8: "B",
+        q9: "B",
+        q10: "B"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+        const selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    let message = "";
+
+    if (score >= 9) {
+        message = "Абдан жакшы! 👏";
+    } else if (score >= 7) {
+        message = "Жакшы! 👍";
+    } else if (score >= 5) {
+        message = "Канааттандырарлык. Теманы дагы кайталаңыз.";
+    } else {
+        message = "Теманы кайра окуп, тестти дагы бир жолу иштеңиз.";
+    }
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "Сиздин жыйынтык: " +
+        score +
+        " / 10<br>" +
+        message;
+}
+</script>
+
+</body>
+</html>
