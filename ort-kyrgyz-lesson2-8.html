@@ -1,370 +1,363 @@
 <!DOCTYPE html>
 <html lang="ky">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кыргыз тили — 2-ай — Жыйынтыктоочу тест</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            margin: 0;
-            padding: 20px;
-            color: #222;
-        }
+<title>Кыргыз тили — 2-ай, 8-сабак</title>
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
 
-        h1 {
-            text-align: center;
-            color: #1e5aa8;
-        }
+.container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-        h2 {
-            color: #333;
-        }
+h1, h2 {
+    text-align: center;
+}
 
-        .info {
-            background: #eaf3ff;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-        }
+.student-name {
+    background: #eef5ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
-        .question {
-            background: #fafafa;
-            border: 1px solid #ddd;
-            padding: 18px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-        }
+input[type="text"] {
+    width: 95%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 16px;
+}
 
-        .question p {
-            font-weight: bold;
-            margin-top: 0;
-        }
+.question {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
 
-        label {
-            display: block;
-            padding: 8px;
-            cursor: pointer;
-            border-radius: 6px;
-        }
+button {
+    display: block;
+    margin: 25px auto;
+    padding: 13px 30px;
+    font-size: 17px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        label:hover {
-            background: #eef5ff;
-        }
+button:hover {
+    background: #125ca5;
+}
 
-        button {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: #1e73be;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 25px;
-        }
-
-        button:hover {
-            background: #155a96;
-        }
-
-        #result {
-            margin-top: 25px;
-            padding: 20px;
-            border-radius: 10px;
-            background: #eaf7ea;
-            display: none;
-            font-size: 18px;
-        }
-
-        .back {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #1e73be;
-            font-weight: bold;
-        }
-    </style>
+#result {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>Кыргыз тили — 2-ай</h1>
-    <h2>8-сабак: Жыйынтыктоочу тест</h2>
+<h1>Кыргыз тили — 2-ай</h1>
 
-    <div class="info">
-        <p><strong>Тест:</strong> 20 суроо</p>
-        <p><strong>Максаты:</strong> 2-айда өтүлгөн темаларды жыйынтыктоо.</p>
-        <p>Ар бир суроодон бир гана туура жоопту тандаңыз.</p>
-    </div>
+<h2>8-сабак: Тилдик материалдарды кайталоо жана бекемдөө</h2>
 
-    <form id="testForm">
+<h3>Кыскача кайталоо</h3>
 
-        <!-- 1 -->
-        <div class="question">
-            <p>1. «Алтын күз келди» сүйлөмүндө «алтын» сөзү кандай мааниде колдонулган?</p>
-            <label><input type="radio" name="q1" value="A"> А) түз мааниде</label>
-            <label><input type="radio" name="q1" value="B"> Б) өтмө мааниде</label>
-            <label><input type="radio" name="q1" value="C"> В) омоним</label>
-            <label><input type="radio" name="q1" value="D"> Г) антоним</label>
-        </div>
+<p>
+Бул сабакта 2-ай ичинде өтүлгөн негизги темаларды кайталайбыз:
+сөздүн түз жана өтмө мааниси, синоним, антоним, омоним,
+фразеологизмдер, сөз түркүмдөрү, сүйлөм мүчөлөрү,
+жөнөкөй жана татаал сүйлөм, ошондой эле текст менен иштөө.
+</p>
 
-        <!-- 2 -->
-        <div class="question">
-            <p>2. «Кооз» сөзүнүн синонимин тап.</p>
-            <label><input type="radio" name="q2" value="A"> А) жаман</label>
-            <label><input type="radio" name="q2" value="B"> Б) сулуу</label>
-            <label><input type="radio" name="q2" value="C"> В) кичине</label>
-            <label><input type="radio" name="q2" value="D"> Г) бийик</label>
-        </div>
+<p>
+Тестти аткарууда суроолорду кунт коюп окуп,
+туура жоопту тандаңыз.
+</p>
 
-        <!-- 3 -->
-        <div class="question">
-            <p>3. «Чоң» сөзүнүн антоними кайсы?</p>
-            <label><input type="radio" name="q3" value="A"> А) узун</label>
-            <label><input type="radio" name="q3" value="B"> Б) кең</label>
-            <label><input type="radio" name="q3" value="C"> В) кичине</label>
-            <label><input type="radio" name="q3" value="D"> Г) бийик</label>
-        </div>
+<hr>
 
-        <!-- 4 -->
-        <div class="question">
-            <p>4. «Башы асманга жетти» деген фразеологизмдин мааниси кандай?</p>
-            <label><input type="radio" name="q4" value="A"> А) бийикке чыкты</label>
-            <label><input type="radio" name="q4" value="B"> Б) чуркады</label>
-            <label><input type="radio" name="q4" value="C"> В) абдан кубанды</label>
-            <label><input type="radio" name="q4" value="D"> Г) уктады</label>
-        </div>
+<h2>Тест</h2>
 
-        <!-- 5 -->
-        <div class="question">
-            <p>5. «Мугалим» кайсы сөз түркүмүнө кирет?</p>
-            <label><input type="radio" name="q5" value="A"> А) сын атооч</label>
-            <label><input type="radio" name="q5" value="B"> Б) этиш</label>
-            <label><input type="radio" name="q5" value="C"> В) зат атооч</label>
-            <label><input type="radio" name="q5" value="D"> Г) сан атооч</label>
-        </div>
+<form id="quiz">
 
-        <!-- 6 -->
-        <div class="question">
-            <p>6. «Беш окуучу келди» сүйлөмүндөгү «беш» кайсы сөз түркүмү?</p>
-            <label><input type="radio" name="q6" value="A"> А) зат атооч</label>
-            <label><input type="radio" name="q6" value="B"> Б) сан атооч</label>
-            <label><input type="radio" name="q6" value="C"> В) сын атооч</label>
-            <label><input type="radio" name="q6" value="D"> Г) ат атооч</label>
-        </div>
+<div class="student-name">
+<label for="studentName">
+<strong>Окуучунун аты-жөнү:</strong>
+</label><br>
 
-        <!-- 7 -->
-        <div class="question">
-            <p>7. «Балдар мектепке келишти» сүйлөмүндө баш мүчөлөр кайсылар?</p>
-            <label><input type="radio" name="q7" value="A"> А) мектепке, келишти</label>
-            <label><input type="radio" name="q7" value="B"> Б) балдар, мектепке</label>
-            <label><input type="radio" name="q7" value="C"> В) балдар, келишти</label>
-            <label><input type="radio" name="q7" value="D"> Г) мектепке гана</label>
-        </div>
+<input
+type="text"
+id="studentName"
+placeholder="Аты-жөнүңүздү жазыңыз"
+required>
+</div>
 
-        <!-- 8 -->
-        <div class="question">
-            <p>8. «Акылдуу бала жакшы окуйт» сүйлөмүндө «акылдуу» кандай мүчө?</p>
-            <label><input type="radio" name="q8" value="A"> А) баяндооч</label>
-            <label><input type="radio" name="q8" value="B"> Б) ээ</label>
-            <label><input type="radio" name="q8" value="C"> В) толуктооч</label>
-            <label><input type="radio" name="q8" value="D"> Г) аныктооч</label>
-        </div>
+<div class="question">
+<strong>1. Сөздүн түз мааниси деген эмне?</strong><br><br>
 
-        <!-- 9 -->
-        <div class="question">
-            <p>9. Кайсы сүйлөм жөнөкөй сүйлөм?</p>
-            <label><input type="radio" name="q9" value="A"> А) Күн чыкты.</label>
-            <label><input type="radio" name="q9" value="B"> Б) Күн чыкты да, аба жылынды.</label>
-            <label><input type="radio" name="q9" value="C"> В) Жамгыр жаады, жер көгөрдү.</label>
-            <label><input type="radio" name="q9" value="D"> Г) Атам келди, апам кетти.</label>
-        </div>
+<label><input type="radio" name="q1" value="A">
+A) Кыйыр мааниси</label><br>
 
-        <!-- 10 -->
-        <div class="question">
-            <p>10. Кайсы сүйлөм татаал сүйлөм?</p>
-            <label><input type="radio" name="q10" value="A"> А) Окуучу китеп окуду.</label>
-            <label><input type="radio" name="q10" value="B"> Б) Күн чыкты да, аба жылынды.</label>
-            <label><input type="radio" name="q10" value="C"> В) Балдар ойношту.</label>
-            <label><input type="radio" name="q10" value="D"> Г) Мугалим сүйлөдү.</label>
-        </div>
+<label><input type="radio" name="q1" value="B">
+B) Негизги, чыныгы мааниси</label><br>
 
-        <!-- 11 -->
-        <div class="question">
-            <p>11. Тексттин негизги оюн аныктоо үчүн биринчи кезекте эмнеге көңүл буруу керек?</p>
-            <label><input type="radio" name="q11" value="A"> А) Сөздөрдүн санына</label>
-            <label><input type="radio" name="q11" value="B"> Б) Тексттин көлөмүнө</label>
-            <label><input type="radio" name="q11" value="C"> В) Автор эмнени айткысы келгенине</label>
-            <label><input type="radio" name="q11" value="D"> Г) Абзацтардын санына</label>
-        </div>
+<label><input type="radio" name="q1" value="C">
+C) Карама-каршы мааниси</label><br>
 
-        <!-- 12 -->
-        <div class="question">
-            <p>12. Тексттин темасы деген эмне?</p>
-            <label><input type="radio" name="q12" value="A"> А) Автордун аты</label>
-            <label><input type="radio" name="q12" value="B"> Б) Текстте эмне жөнүндө сөз болуп жаткандыгы</label>
-            <label><input type="radio" name="q12" value="C"> В) Тексттин аягы</label>
-            <label><input type="radio" name="q12" value="D"> Г) Сөздөрдүн саны</label>
-        </div>
+<label><input type="radio" name="q1" value="D">
+D) Окшош мааниси</label>
+</div>
 
-        <!-- 13 -->
-        <div class="question">
-            <p>13. «Жүрөгү оозуна тыгылды» фразеологизминин мааниси?</p>
-            <label><input type="radio" name="q13" value="A"> А) күлдү</label>
-            <label><input type="radio" name="q13" value="B"> Б) сүйлөдү</label>
-            <label><input type="radio" name="q13" value="C"> В) катуу коркту</label>
-            <label><input type="radio" name="q13" value="D"> Г) ырдады</label>
-        </div>
+<div class="question">
+<strong>2. Синонимдер деген эмне?</strong><br><br>
 
-        <!-- 14 -->
-        <div class="question">
-            <p>14. «Тез» сөзүнүн антоними кайсы?</p>
-            <label><input type="radio" name="q14" value="A"> А) ылдам</label>
-            <label><input type="radio" name="q14" value="B"> Б) жай</label>
-            <label><input type="radio" name="q14" value="C"> В) бат</label>
-            <label><input type="radio" name="q14" value="D"> Г) шамдагай</label>
-        </div>
+<label><input type="radio" name="q2" value="A">
+A) Карама-каршы маанилүү сөздөр</label><br>
 
-        <!-- 15 -->
-        <div class="question">
-            <p>15. «Ал бүгүн мектепке барды» сүйлөмүндө «бүгүн» кайсы сөз түркүмү?</p>
-            <label><input type="radio" name="q15" value="A"> А) зат атооч</label>
-            <label><input type="radio" name="q15" value="B"> Б) тактооч</label>
-            <label><input type="radio" name="q15" value="C"> В) сын атооч</label>
-            <label><input type="radio" name="q15" value="D"> Г) сан атооч</label>
-        </div>
+<label><input type="radio" name="q2" value="B">
+B) Бирдей жазылган сөздөр</label><br>
 
-        <!-- 16 -->
-        <div class="question">
-            <p>16. «Мен китеп окудум» сүйлөмүндөгү ээ кайсы?</p>
-            <label><input type="radio" name="q16" value="A"> А) мен</label>
-            <label><input type="radio" name="q16" value="B"> Б) китеп</label>
-            <label><input type="radio" name="q16" value="C"> В) окудум</label>
-            <label><input type="radio" name="q16" value="D"> Г) китеп окудум</label>
-        </div>
+<label><input type="radio" name="q2" value="C">
+C) Мааниси жакын сөздөр</label><br>
 
-        <!-- 17 -->
-        <div class="question">
-            <p>17. «Окуучулар сабак окушат» сүйлөмүндөгү баяндооч кайсы?</p>
-            <label><input type="radio" name="q17" value="A"> А) окушат</label>
-            <label><input type="radio" name="q17" value="B"> Б) окуучулар</label>
-            <label><input type="radio" name="q17" value="C"> В) сабак</label>
-            <label><input type="radio" name="q17" value="D"> Г) окуучулар сабак</label>
-        </div>
+<label><input type="radio" name="q2" value="D">
+D) Мааниси жок сөздөр</label>
+</div>
 
-        <!-- 18 -->
-        <div class="question">
-            <p>18. Кайсы сөз омоним болуп саналат?</p>
-            <label><input type="radio" name="q18" value="A"> А) чоң</label>
-            <label><input type="radio" name="q18" value="B"> Б) ат</label>
-            <label><input type="radio" name="q18" value="C"> В) сулуу</label>
-            <label><input type="radio" name="q18" value="D"> Г) бийик</label>
-        </div>
+<div class="question">
+<strong>3. Антонимдер деген эмне?</strong><br><br>
 
-        <!-- 19 -->
-        <div class="question">
-            <p>19. Тексттин негизги оюн табуу деген эмне?</p>
-            <label><input type="radio" name="q19" value="A"> А) Бардык сөздөрдү жаттоо</label>
-            <label><input type="radio" name="q19" value="B"> Б) Текстти кайра көчүрүү</label>
-            <label><input type="radio" name="q19" value="C"> В) Автордун негизги оюн түшүнүү</label>
-            <label><input type="radio" name="q19" value="D"> Г) Сүйлөмдөрдү саноо</label>
-        </div>
+<label><input type="radio" name="q3" value="A">
+A) Карама-каршы маанидеги сөздөр</label><br>
 
-        <!-- 20 -->
-        <div class="question">
-            <p>20. «Эрте турган адам ишин бүтүрөт» сүйлөмү кандай сүйлөм?</p>
-            <label><input type="radio" name="q20" value="A"> А) Сөз айкашы</label>
-            <label><input type="radio" name="q20" value="B"> Б) Жөнөкөй сүйлөм</label>
-            <label><input type="radio" name="q20" value="C"> В) Татаал сүйлөм</label>
-            <label><input type="radio" name="q20" value="D"> Г) Фразеологизм</label>
-        </div>
+<label><input type="radio" name="q3" value="B">
+B) Мааниси жакын сөздөр</label><br>
 
-        <button type="button" onclick="checkTest()">Тестти текшерүү</button>
+<label><input type="radio" name="q3" value="C">
+C) Бирдей айтылган сөздөр</label><br>
 
-    </form>
+<label><input type="radio" name="q3" value="D">
+D) Туунду сөздөр</label>
+</div>
 
-    <div id="result"></div>
+<div class="question">
+<strong>4. Фразеологизм деген эмне?</strong><br><br>
 
-    <a class="back" href="ort-kyrgyz-month2.html">
-        ← Кыргыз тили — 2-айга кайтуу
-    </a>
+<label><input type="radio" name="q4" value="A">
+A) Бир гана тамга</label><br>
+
+<label><input type="radio" name="q4" value="B">
+B) Туруктуу сөз айкашы</label><br>
+
+<label><input type="radio" name="q4" value="C">
+C) Сүйлөмдүн баш мүчөсү</label><br>
+
+<label><input type="radio" name="q4" value="D">
+D) Сөздүн бөлүгү</label>
+</div>
+
+<div class="question">
+<strong>5. Сөз түркүмдөрүнө кайсынысы кирет?</strong><br><br>
+
+<label><input type="radio" name="q5" value="A">
+A) Абзац</label><br>
+
+<label><input type="radio" name="q5" value="B">
+B) Сүйлөм</label><br>
+
+<label><input type="radio" name="q5" value="C">
+C) Зат атооч</label><br>
+
+<label><input type="radio" name="q5" value="D">
+D) Текст</label>
+</div>
+
+<div class="question">
+<strong>6. Сүйлөмдүн баш мүчөлөрү кайсылар?</strong><br><br>
+
+<label><input type="radio" name="q6" value="A">
+A) Ээ жана баяндооч</label><br>
+
+<label><input type="radio" name="q6" value="B">
+B) Аныктооч жана толуктооч</label><br>
+
+<label><input type="radio" name="q6" value="C">
+C) Бышыктооч жана аныктооч</label><br>
+
+<label><input type="radio" name="q6" value="D">
+D) Толуктооч жана бышыктооч</label>
+</div>
+
+<div class="question">
+<strong>7. Жөнөкөй сүйлөмдө канча грамматикалык негиз болот?</strong><br><br>
+
+<label><input type="radio" name="q7" value="A">
+A) Эки же андан көп</label><br>
+
+<label><input type="radio" name="q7" value="B">
+B) Бир</label><br>
+
+<label><input type="radio" name="q7" value="C">
+C) Үч</label><br>
+
+<label><input type="radio" name="q7" value="D">
+D) Төрт</label>
+</div>
+
+<div class="question">
+<strong>8. Татаал сүйлөм деген эмне?</strong><br><br>
+
+<label><input type="radio" name="q8" value="A">
+A) Бир гана сөздөн турган сүйлөм</label><br>
+
+<label><input type="radio" name="q8" value="B">
+B) Бир гана грамматикалык негиздүү сүйлөм</label><br>
+
+<label><input type="radio" name="q8" value="C">
+C) Эки же андан көп грамматикалык негизден турган сүйлөм</label><br>
+
+<label><input type="radio" name="q8" value="D">
+D) Аталыш гана</label>
+</div>
+
+<div class="question">
+<strong>9. Тексттин негизги ою деген эмне?</strong><br><br>
+
+<label><input type="radio" name="q9" value="A">
+A) Автор жеткиргиси келген негизги пикир</label><br>
+
+<label><input type="radio" name="q9" value="B">
+B) Тексттин көлөмү</label><br>
+
+<label><input type="radio" name="q9" value="C">
+C) Сөздөрдүн саны</label><br>
+
+<label><input type="radio" name="q9" value="D">
+D) Биринчи сөз</label>
+</div>
+
+<div class="question">
+<strong>10. Текст менен иштөөдө эмне маанилүү?</strong><br><br>
+
+<label><input type="radio" name="q10" value="A">
+A) Сөздөрдү гана саноо</label><br>
+
+<label><input type="radio" name="q10" value="B">
+B) Тексттин мазмунун жана негизги оюн түшүнүү</label><br>
+
+<label><input type="radio" name="q10" value="C">
+C) Биринчи сүйлөмдү гана окуу</label><br>
+
+<label><input type="radio" name="q10" value="D">
+D) Текстти окубай коюу</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">
+Тестти текшерүү
+</button>
+
+</form>
+
+<div id="result"></div>
 
 </div>
 
 <script>
 
-function checkTest() {
+function checkQuiz() {
 
-    const answers = {
-        q1: "B",
-        q2: "B",
-        q3: "C",
-        q4: "B",
-        q5: "C",
-        q6: "B",
-        q7: "D",
-        q8: "D",
-        q9: "A",
-        q10: "B",
-        q11: "C",
-        q12: "B",
-        q13: "C",
-        q14: "B",
-        q15: "B",
-        q16: "A",
-        q17: "A",
-        q18: "B",
-        q19: "C",
-        q20: "C"
-    };
+const correctAnswers = [
+"B","C","A","B","C",
+"A","B","C","A","B"
+];
 
-    let score = 0;
+let score = 0;
 
-    for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 10; i++) {
 
-        const selected = document.querySelector(
-            'input[name="q' + i + '"]:checked'
-        );
+const answer = document.querySelector(
+'input[name="q' + i + '"]:checked'
+);
 
-        if (selected && selected.value === answers["q" + i]) {
-            score++;
-        }
-    }
+if (answer && answer.value === correctAnswers[i - 1]) {
+score++;
+}
 
-    let message = "";
+}
 
-    if (score >= 18) {
-        message = "🎉 Абдан жакшы! Темаларды мыкты өздөштүрдүңүз.";
-    } else if (score >= 15) {
-        message = "👏 Жакшы! Билимиңиз жакшы деңгээлде.";
-    } else if (score >= 10) {
-        message = "👍 Канааттандырарлык. Айрым темаларды дагы кайталоо керек.";
-    } else {
-        message = "📚 Темаларды кайрадан кайталап, тестти дагы бир жолу иштеп көрүңүз.";
-    }
+const studentName =
+document.getElementById("studentName").value.trim();
 
-    const result = document.getElementById("result");
+if (studentName === "") {
+alert("Сураныч, аты-жөнүңүздү жазыңыз!");
+return;
+}
 
-    result.style.display = "block";
+let message = "";
 
-    result.innerHTML =
-        "<strong>Жыйынтык: " + score + " / 20</strong><br><br>" +
-        message;
+if (score === 10) {
+message = "Азаматсыз! 🎉";
+} else if (score >= 8) {
+message = "Абдан жакшы! 👏";
+} else if (score >= 5) {
+message = "Канааттандырарлык. Темаларды дагы кайталаңыз.";
+} else {
+message = "Темаларды кайра окуп, тестти дагы бир жолу иштеңиз.";
+}
+
+const result = document.getElementById("result");
+
+result.style.display = "block";
+
+result.innerHTML =
+"Сиздин жыйынтык: " +
+score +
+" / 10<br>" +
+message;
+
+// Google Sheetsке жөнөтүү
+fetch("https://script.google.com/macros/s/AKfycbxLYt2OfRZ7qua8rwX42gqxGtYv0jrPSoUjJ8hUJRNKSSw5NSiyJYbnzQ_-22o5yqQw/exec", {
+method: "POST",
+mode: "no-cors",
+headers: {
+"Content-Type": "text/plain;charset=utf-8"
+},
+body: JSON.stringify({
+student: document.getElementById("studentName").value.trim(),
+lesson: "Кыргыз тили — 2-ай, 8-сабак",
+score: score,
+total: 10
+})
+});
+
 }
 
 </script>
