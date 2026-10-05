@@ -361,7 +361,7 @@ function checkQuiz() {
         score +
         " / 10<br>" +
         message;
-}
+
 fetch("https://script.google.com/macros/s/AKfycbxLYt2OfRZ7qua8rwX42gqxGtYv0jrPSoUjJ8hUJRNKSSw5NSiyJYbnzQ_-22o5yqQw/exec", {
         method: "POST",
         mode: "no-cors",
@@ -372,9 +372,10 @@ fetch("https://script.google.com/macros/s/AKfycbxLYt2OfRZ7qua8rwX42gqxGtYv0jrPSo
 student: document.getElementById("studentName").value.trim(),
             lesson: "Кыргыз тили — 2-ай, 4-сабак",
             score: score,
-            total: 10
-        })
-    });
+            total:10
+            
+    })
+}); 
 }
 </script>
 </body>
