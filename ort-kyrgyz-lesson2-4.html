@@ -367,8 +367,8 @@ function checkQuiz() {
         message;
 
 
-// Google Sheetsке жөнөтүү
-fetch("https://script.google.com/macros/s/AKfycbxLYt2OfRZ7qua8rwX42gqxGtYv0jrPSoUjJ8hUJRNKSSw5NSiyJYbnzQ_-22o5yqQw/exec", {
+ // Google Sheetsке жөнөтүү
+    fetch("https://script.google.com/macros/s/AKfycbxLYt2OfRZ7qua8rwX42gqxGtYv0jrPSoUjJ8hUJRNKSSw5NSiyJYbnzQ_-22o5yqQw/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
@@ -379,9 +379,9 @@ student: document.getElementById("studentName").value.trim(),
             lesson: "Кыргыз тили — 2-ай, 4-сабак",
             score: score,
             total: 10
-    
-    })
-});    
+        })
+    });
+}
 </script>
 </body>
 </html>
