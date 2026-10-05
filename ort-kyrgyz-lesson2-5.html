@@ -333,6 +333,21 @@ function checkQuiz() {
         " / 10<br>" +
         message;
 }
+// Google Sheetsке жөнөтүү
+fetch("4-сабакта иштеген толук URL", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify({
+        student: document.getElementById("studentName").value.trim(),
+        lesson: "Кыргыз тили — 2-ай, 5-сабак",
+        score: score,
+        total: 10
+    })
+});
+    }
 </script>
 
 </body>
