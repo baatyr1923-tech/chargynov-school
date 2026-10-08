@@ -117,8 +117,22 @@ input{
 </p>
 </div>
 
-<form>
+<form onsubmit="checkTest(event)">
+<div class="question">
+<h2>👤 Окуучу тууралуу маалымат</h2>
 
+<label>
+Аты-жөнү:
+<input type="text" id="studentName" required>
+</label>
+
+<br><br>
+
+<label>
+Класс:
+<input type="text" id="studentClass" required>
+</label>
+</div>
 <div class="question">
 <h2>1. AND логикалык элементинин натыйжасы 1 болушу үчүн эмне керек?</h2>
 
@@ -374,16 +388,55 @@ D) Үчөө тең
 <button class="btn" type="submit">
 📝 Тестти бүтүрүү
 </button>
-
+<div id="result" style="text-align:center; margin:20px; font-size:20px; font-weight:bold;"></div>
 <a class="btn" href="8class_informatika.html">
 📚 Бардык сабактар
 </a>
 
 </div>
-
 </form>
-
 </div>
 
 </body>
+    <script>
+function checkTest(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("studentName").value.trim();
+    const studentClass = document.getElementById("studentClass").value.trim();
+
+    const correctAnswers = [1, 0, 1, 0, 1, 0, 2, 1, 1, 3];
+
+    let score = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        const options = document.querySelectorAll('input[name="q' + i + '"]');
+
+        for (let j = 0; j < options.length; j++) {
+            if (options[j].checked && j === correctAnswers[i - 1]) {
+                score++;
+            }
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Жыйынтык: " + score + " / 10<br>" +
+        "Окуучу: " + name + "<br>" +
+        "Класс: " + studentClass;
+
+    fetch("https://script.google.com/macros/s/AKfycbzIua8y8vss2HvNPvUjNzKbOwom5SauoJZbb_GQJx-BnxeZnCPCsTE16NS3wXvhpvj5/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify({
+            student: name,
+            lesson: "8-класс 4-сабак",
+            score: score,
+            total: 10
+        })
+    });
+}
+</script>
 </html>
