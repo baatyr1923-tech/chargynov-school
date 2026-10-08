@@ -219,7 +219,19 @@ document.getElementById("result").innerHTML=
 "Жыйынтык: "+score+" / 10 🎯<br><br>"+
 (name ? "Окуучу: "+name+"<br>" : "")+
 (studentClass ? "Класс: "+studentClass : "");
-
+fetch("https://script.google.com/macros/s/AKfycbzIua8y8vss2HvNPvUjNzKbOwom5SauoJZbb_GQJx-BnxeZnCPCsTE16NS3wXvhpvj5/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify({
+        student: name,
+        lesson: "8-класс 3-сабак",
+        score: score,
+        total: 10
+    })
+});
 }
 
 </script>
