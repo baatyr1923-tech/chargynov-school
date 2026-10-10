@@ -465,18 +465,21 @@ result.innerHTML =
 "🎯 Жыйынтык: <strong>" + score + "/10</strong><br>" +
 message;
 
-fetch("https://script.google.com/macros/s/AKfycbwzcRs1EuXeWlBlgEEuIpQZUHhccVxHRZ0eCxr_Xbmz9ZgnhUnlyDSJhoIi1BcOSsoZmQ/exec", {
+fetch("https://script.google.com/macros/s/AKfycbz0MWHa0m8rWolob3Orz5SMbFiOV4z4KxPD5cMrFs-JR9O11dQvy77oEv-iggRerS7n/exec", {
   method: "POST",
   mode: "no-cors",
   headers: {
     "Content-Type": "text/plain;charset=utf-8"
   },
   body: JSON.stringify({
-    studentName: studentName,
+    student: studentName,
     studentClass: studentClass,
-    score: score + "/10"
+    lesson: "7-класс 1-тест",
+    score: score,
+    total: 10
   })
-});}
+});
+}
   function checkQuarterTest(){
   const answers={
     q1:"b",
