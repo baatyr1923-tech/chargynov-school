@@ -343,12 +343,17 @@ method:"POST",
 mode:"no-cors",
 headers:{
 "Content-Type":"text/plain;charset=utf-8"
-},
-body:JSON.stringify({
-studentName:name,
-studentClass:studentClass,
-score:score+"/10"
+```javascript
+body: JSON.stringify({
+  studentName: name,
+  studentClass: studentClass,
+  lesson: "7-класс 2-сабак",
+  score: score,
+  total: 10
 })
+```
+},
+
 });
 
 }
