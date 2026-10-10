@@ -277,6 +277,22 @@ function checkTest() {
         "<br><br>Туура жооптор: " + score + " / 10" +
         "<br>Жыйынтык: " + percent + "%";
 }
+    
+fetch("https://script.google.com/macros/s/AKfycbwiOr10ffTx6Jj5NLeL2xVN25WDFnezZ30QOii8DUZRRXfNR1zcSQkZrENE34-qrfqX/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify({
+        studentName: studentName,
+        studentClass: studentClass,
+        lesson: "7-класс 4-тест",
+        score: score,
+        total: 10
+    })
+});
+
 
 </script>
 
