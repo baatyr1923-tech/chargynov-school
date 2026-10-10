@@ -267,7 +267,20 @@ function checkTest() {
         "<br><br>Туура жооптор: " + score + " / 10" +
         "<br>Жыйынтык: " + percent + "%";
 }
-
+  fetch("4-тесттеги Google Apps Script URL дареги", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify({
+      studentName: studentName,
+      studentClass: studentClass,
+      lesson: "7-класс 5-тест",
+      score: score,
+      total: 10
+    })
+  });
 </script>
 
 </body>
