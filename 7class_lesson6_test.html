@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-класс | 6-тест — Логикалык операциялар</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f6fb;margin:0;padding:20px;color:#222}
+.container{max-width:850px;margin:auto;background:white;padding:25px;border-radius:14px}
+h1{text-align:center;color:#173653}
+.info{display:grid;gap:12px;margin:20px 0}
+input{padding:12px;font-size:16px;border:1px solid #bbb;border-radius:7px}
+.question{padding:16px;margin:15px 0;border:1px solid #ddd;border-radius:10px}
+.question p{font-weight:bold}
+label{display:block;padding:8px;cursor:pointer}
+button{background:#2463eb;color:white;border:0;padding:13px 22px;border-radius:8px;font-size:17px;cursor:pointer}
+#result{margin-top:20px;padding:18px;border-radius:10px;background:#e6f5e9;font-size:19px;font-weight:bold;display:none}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>7-класс. 6-тест</h1>
+<h2>Компьютер жана мобилдик түзүлүштөрдөгү логикалык операциялар</h2>
+
+<div class="info">
+<input id="studentName" placeholder="Окуучунун аты-жөнү" required>
+<input id="studentClass" placeholder="Классы (мисалы, 7-Б)" required>
+</div>
+
+<form id="quiz">
+<div class="question"><p>1. Логикалык операция деген эмне?</p>
+<label><input type="radio" name="q1" value="A"> A) Маалыматтын үстүндө логикалык шартты текшерүүчү аракет</label>
+<label><input type="radio" name="q1" value="B"> Б) Сүрөт тартуу</label>
+<label><input type="radio" name="q1" value="C"> В) Үн жаздыруу</label>
+<label><input type="radio" name="q1" value="D"> Г) Файлды басып чыгаруу</label></div>
+
+<div class="question"><p>2. AND (ЖАНА) операциясынын натыйжасы качан чын болот?</p>
+<label><input type="radio" name="q2" value="A"> A) Эки шарт тең чын болгондо</label>
+<label><input type="radio" name="q2" value="B"> Б) Эки шарт тең жалган болгондо</label>
+<label><input type="radio" name="q2" value="C"> В) Биринчи шарт гана чын болгондо</label>
+<label><input type="radio" name="q2" value="D"> Г) Шарттардын бири чын болсо жетиштүү</label></div>
+
+<div class="question"><p>3. OR (ЖЕ) операциясы качан чын болот?</p>
+<label><input type="radio" name="q3" value="A"> A) Эки шарт тең жалган болгондо гана</label>
+<label><input type="radio" name="q3" value="B"> Б) Шарттардын жок дегенде бири чын болгондо</label>
+<label><input type="radio" name="q3" value="C"> В) Эки шарт тең чын болгондо гана</label>
+<label><input type="radio" name="q3" value="D"> Г) Эч качан</label></div>
+
+<div class="question"><p>4. NOT (ЭМЕС) операциясы эмне кылат?</p>
+<label><input type="radio" name="q4" value="A"> A) Эки санды кошот</label>
+<label><input type="radio" name="q4" value="B"> Б) Маалыматты өчүрөт</label>
+<label><input type="radio" name="q4" value="C"> В) Логикалык маанини тескерисине өзгөртөт</label>
+<label><input type="radio" name="q4" value="D"> Г) Файлды көчүрөт</label></div>
+
+<div class="question"><p>5. Эгер A = чын, B = чын болсо, A AND B кандай натыйжа берет?</p>
+<label><input type="radio" name="q5" value="A"> A) Чын</label>
+<label><input type="radio" name="q5" value="B"> Б) Жалган</label>
+<label><input type="radio" name="q5" value="C"> В) Белгисиз</label>
+<label><input type="radio" name="q5" value="D"> Г) Маалымат жок</label></div>
+
+<div class="question"><p>6. A = жалган, B = жалган болсо, A OR B натыйжасы кандай?</p>
+<label><input type="radio" name="q6" value="A"> A) Чын</label>
+<label><input type="radio" name="q6" value="B"> Б) Жалган</label>
+<label><input type="radio" name="q6" value="C"> В) Экөө тең</label>
+<label><input type="radio" name="q6" value="D"> Г) Аныктоо мүмкүн эмес</label></div>
+
+<div class="question"><p>7. NOT(чын) натыйжасы кандай?</p>
+<label><input type="radio" name="q7" value="A"> A) Чын</label>
+<label><input type="radio" name="q7" value="B"> Б) Жалган</label>
+<label><input type="radio" name="q7" value="C"> В) Нөл эмес сан</label>
+<label><input type="radio" name="q7" value="D"> Г) Өзгөрбөйт</label></div>
+
+<div class="question"><p>8. Эки шарт тең чын болушун талап кылган операция кайсы?</p>
+<label><input type="radio" name="q8" value="A"> A) OR</label>
+<label><input type="radio" name="q8" value="B"> Б) NOT</label>
+<label><input type="radio" name="q8" value="C"> В) AND</label>
+<label><input type="radio" name="q8" value="D"> Г) PRINT</label></div>
+
+<div class="question"><p>9. «Телефон кубатталып жатат ЖАНА экран күйүп турат» деген шартта AND операциясы колдонулса, натыйжа качан чын болот?</p>
+<label><input type="radio" name="q9" value="A"> A) Эки шарт тең аткарылганда</label>
+<label><input type="radio" name="q9" value="B"> Б) Биринчи шарт гана аткарылганда</label>
+<label><input type="radio" name="q9" value="C"> В) Эки шарт тең аткарылбаганда</label>
+<label><input type="radio" name="q9" value="D"> Г) Экинчи шарт гана аткарылганда</label></div>
+
+<div class="question"><p>10. Логикалык операциялар кайсы жерде колдонулушу мүмкүн?</p>
+<label><input type="radio" name="q10" value="A"> A) Программалардагы шарттарды текшерүүдө</label>
+<label><input type="radio" name="q10" value="B"> Б) Компьютердин түсүн өзгөртүүдө гана</label>
+<label><input type="radio" name="q10" value="C"> В) Мониторду тазалоодо</label>
+<label><input type="radio" name="q10" value="D"> Г) Клавиатураны жууп-тазалоодо</label></div>
+
+<button type="submit">Тестти бүтүрүү</button>
+</form>
+<div id="result"></div>
+</div>
+
+<script>
+const answers = {
+  q1:"A", q2:"A", q3:"B", q4:"C", q5:"A",
+  q6:"B", q7:"B", q8:"C", q9:"A", q10:"A"
+};
+
+document.getElementById("quiz").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const studentName = document.getElementById("studentName").value.trim();
+  const studentClass = document.getElementById("studentClass").value.trim();
+
+  if (!studentName || !studentClass) {
+    alert("Окуучунун аты-жөнүн жана классын жазыңыз.");
+    return;
+  }
+
+  let score = 0;
+  for (const question in answers) {
+    const selected = document.querySelector('input[name="' + question + '"]:checked');
+    if (selected && selected.value === answers[question]) score++;
+  }
+
+  const result = document.getElementById("result");
+  result.style.display = "block";
+  result.innerHTML =
+    "Окуучу: " + studentName +
+    "<br>Класс: " + studentClass +
+    "<br>Туура жооптор: " + score + " / 10" +
+    "<br>Жыйынтык: " + (score * 10) + "%";
+});
+</script>
+</body>
+</html>
