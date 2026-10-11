@@ -124,7 +124,7 @@ document.getElementById("quiz").addEventListener("submit", function(event) {
     "<br>Класс: " + studentClass +
     "<br>Туура жооптор: " + score + " / 10" +
     "<br>Жыйынтык: " + (score * 10) + "%";
-});
+
   
     fetch("https://script.google.com/macros/s/AKfycbwiOr10ffTx6Jj5NLeL2xVN25WDFnezZ30QOii8DUZRRXfNR1zcSQkZrENE34-qrfqX/exec", {
         method: "POST",
@@ -140,6 +140,7 @@ document.getElementById("quiz").addEventListener("submit", function(event) {
             total: 10
         })
     });
+  });
 
 </script>
 </body>
