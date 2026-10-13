@@ -70,8 +70,22 @@ label{
     padding: 8px;
     margin: 10px;
 }
-label:hover{
-    background:#e8eefc;
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons label:hover {
+    background: #e8eefc;
+}
+
+.buttons input[type="text"] {
+    width: 220px;
+    box-sizing: border-box;
+}
+
 }
 
 input{
@@ -286,6 +300,20 @@ result.innerHTML =
     "<br>Класс: " + studentClass +
     "<br>Туура жооптор: " + score + " / 10" +
     "<br>Жыйынтык: " + (score * 10) + "%";
+    fetch("https://script.google.com/macros/s/AKfycbwiOr10ffTx6Jj5NLeL2xVN25WDFnezZ30QOii8DUZRRXfNR1zcSQkZrENE34-qrfqX/exec", {
+  method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify({
+    studentName: studentName,
+    studentClass: studentClass,
+    lesson: "8-класс 6-сабак",
+    score: score,
+    total: 10
+  })
+});
 }
 </script>
 </body>
