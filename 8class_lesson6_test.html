@@ -206,12 +206,19 @@ footer{
 </div>
 
 
-<div class="buttons">
 
-<button class="btn"
-onclick="alert('Тест аяктады! Жоопторуңузду мугалим текшерет.')">
-📝 Тестти бүтүрүү
-</button>
+
+
+<div class="buttons">
+  <label>Окуучунун аты-жөнү:</label>
+  <input type="text" id="studentName" placeholder="Аты-жөнүн жазыңыз">
+
+  <label>Классы:</label>
+  <input type="text" id="studentClass" placeholder="Мисалы: 8-А">
+
+  <button class="btn" onclick="checkTest()">Тестти текшерүү</button>
+  <div id="result"></div>
+</div>
 
 <a class="btn" href="8class_lesson6.html">
 📚 Сабакка кайтуу
