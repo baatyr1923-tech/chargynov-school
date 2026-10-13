@@ -235,6 +235,48 @@ footer{
 <footer>
 №35 Жумабек Чаргынов атындагы орто билим берүү мектеби
 </footer>
+<script>
+function checkTest() {
+  const studentName = document.getElementById("studentName").value.trim();
+  const studentClass = document.getElementById("studentClass").value.trim();
 
+  if (!studentName || !studentClass) {
+    alert("Окуучунун аты-жөнүн жана классын жазыңыз.");
+    return;
+  }
+
+  const answers = {
+    q1: "A",
+    q2: "A",
+    q3: "B",
+    q4: "A",
+    q5: "A",
+    q6: "A",
+    q7: "A",
+    q8: "A",
+    q9: "A",
+    q10: "A"
+  };
+
+  let score = 0;
+
+  for (const question in answers) {
+    const selected = document.querySelector(
+      'input[name="' + question + '"]:checked'
+    );
+    if (selected && selected.value === answers[question]) {
+      score++;
+    }
+  }
+
+  const result = document.getElementById("result");
+result.style.display = "block";
+result.innerHTML =
+    "Окуучу: " + studentName +
+    "<br>Класс: " + studentClass +
+    "<br>Туура жооптор: " + score + " / 10" +
+    "<br>Жыйынтык: " + (score * 10) + "%";
+}
+</script>
 </body>
 </html>
