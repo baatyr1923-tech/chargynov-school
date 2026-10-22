@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-сабак: Маалыматты издөө жана маалымат аналитикасы</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 20px;
+      background: #f2f7f5;
+      color: #20364a;
+    }
+    main {
+      max-width: 950px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px #00000012;
+    }
+    h1, h2 { color: #087456; }
+    .topic {
+      background: #e4f4ed;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      border: 1px solid #b9cec5;
+      padding: 10px;
+      text-align: left;
+    }
+    th { background: #d9eee5; }
+    .task {
+      background: #f0f6ff;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    a { color: #087456; }
+    button {
+      padding: 10px 16px;
+      background: #087456;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .answer { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="engineering-materials.html">← Окуу материалдарына кайтуу</a></p>
+
+  <h1>5-сабак. Маалыматты издөө стратегиялары жана маалымат аналитикасы</h1>
+
+  <div class="topic">
+    <strong>Сабактын темалары:</strong>
+    <ul>
+      <li>Маалыматты издөө стратегиялары</li>
+      <li>Чоң маалыматтар (Big Data) жөнүндө базалык түшүнүк</li>
+      <li>Excel жана Google Sheets: формулалар</li>
+      <li>Маалыматты иргөө жана фильтрлөө</li>
+      <li>Диаграммалар түзүү</li>
+    </ul>
+  </div>
+
+  <h2>1. Сабактын максаты</h2>
+  <p>Окуучулар маалыматты натыйжалуу издөөнү, маалыматтын ишенимдүүлүгүн баалоону, электрондук жадыбалдарда формулаларды колдонууну, маалыматты иргөөнү, фильтрлөөнү жана диаграмма түзүүнү үйрөнүшөт.</p>
+
+  <h2>2. Маалыматты издөө стратегиялары</h2>
+  <p>Издөөдө так ачкыч сөздөрдү колдонуу керек. Өтө жалпы сөздүн ордуна теманы так сүрөттөгөн сөз айкашын жазуу пайдалуу.</p>
+  <ul>
+    <li>Ачкыч сөздөрдү так тандоо.</li>
+    <li>Керек болсо сөз айкашын тырмакчага алуу.</li>
+    <li>Маалыматтын жарыяланган күнүн текшерүү.</li>
+    <li>Авторун жана булагын карап чыгуу.</li>
+    <li>Маалыматты бир нече ишенимдүү булак менен салыштыруу.</li>
+  </ul>
+  <div class="task">
+    <strong>Мисал:</strong> «күн панели» деп издөөнүн ордуна «күн панелинин иштөө принциби окуучулар үчүн» деп издесек, натыйжалар темага жакыныраак болот.
+  </div>
+
+  <h2>3. Чоң маалыматтар (Big Data)</h2>
+  <p>Big Data — көлөмү чоң, тез пайда болгон жана ар түрдүү форматтагы маалыматтар. Аларды сактоо, иштетүү жана талдоо үчүн атайын технологиялар колдонулушу мүмкүн.</p>
+  <p><strong>Мисалдар:</strong> интернеттеги издөө маалыматтары, онлайн дүкөндөрдүн буйрутмалары, аба ырайынын өлчөөлөрү жана жол кыймылы жөнүндө маалыматтар.</p>
+
+  <h2>4. Excel жана Google Sheets формулалары</h2>
+  <p>Формулалар көбүнчө <strong>=</strong> белгиси менен башталат. Төмөнкү мисалдарда A2:A5 — эсептелүүчү уячалардын диапазону.</p>
+  <table>
+    <tr><th>Формула</th><th>Милдети</th></tr>
+    <tr><td><code>=SUM(A2:A5)</code></td><td>Маанилердин суммасын эсептейт</td></tr>
+    <tr><td><code>=AVERAGE(A2:A5)</code></td><td>Орточо маанини табат</td></tr>
+    <tr><td><code>=MAX(A2:A5)</code></td><td>Эң чоң маанини табат</td></tr>
+    <tr><td><code>=MIN(A2:A5)</code></td><td>Эң кичине маанини табат</td></tr>
+    <tr><td><code>=COUNT(A2:A5)</code></td><td>Сан камтыган уячаларды санайт</td></tr>
+  </table>
+  <p>Эскертүү: программаңыздын тилине жана аймактык жөндөөлөрүнө жараша функциялардын аталышы же аргументтердин бөлгүчү айырмаланышы мүмкүн.</p>
+
+  <h2>5. Маалыматты иргөө жана фильтрлөө</h2>
+  <ul>
+    <li><strong>Иргөө (Sort):</strong> маалыматтарды алфавит боюнча же кичинеден чоңго, чоңдон кичинеге иреттөө.</li>
+    <li><strong>Фильтрлөө (Filter):</strong> берилген шартка туура келген маалыматтарды гана көрсөтүү.</li>
+  </ul>
+  <div class="task">
+    <strong>Мисал:</strong> окуучулардын упайларын чоңдон кичинеге иргеп, 80ден жогору упай алган окуучуларды фильтр аркылуу көрсөтүү.
+  </div>
+
+  <h2>6. Диаграммалар</h2>
+  <p>Диаграмма маалыматтарды көрнөк-жарнак түрүндө көрсөтүп, салыштырууну жеңилдетет.</p>
+  <ul>
+    <li><strong>Мамычалуу диаграмма:</strong> категорияларды салыштыруу үчүн.</li>
+    <li><strong>Сызыктуу диаграмма:</strong> убакыт боюнча өзгөрүүнү көрсөтүү үчүн.</li>
+    <li><strong>Тегерек диаграмма:</strong> бүтүндүн бөлүктөрүн салыштыруу үчүн.</li>
+  </ul>
+
+  <h2>7. Практикалык тапшырма</h2>
+  <p>Google Sheets же Excel программасында төмөнкү таблицаны түзгүлө.</p>
+  <table>
+    <tr><th>Окуучу</th><th>Упай</th></tr>
+    <tr><td>Айжан</td><td>85</td></tr>
+    <tr><td>Бекзат</td><td>72</td></tr>
+    <tr><td>Нуриза</td><td>94</td></tr>
+    <tr><td>Эрмек</td><td>68</td></tr>
+  </table>
+  <ol>
+    <li>Упайлардын суммасын эсептегиле: <code>=SUM(B2:B5)</code>.</li>
+    <li>Орточо упайды тапкыла: <code>=AVERAGE(B2:B5)</code>.</li>
+    <li>Упайларды чоңдон кичинеге иргегиле.</li>
+    <li>80ден жогору упайларды фильтр менен көрсөтүп көргүлө.</li>
+    <li>Окуучулардын упайлары боюнча мамычалуу диаграмма түзгүлө.</li>
+  </ol>
+
+  <h2>8. Билимиңерди текшергиле</h2>
+
+  <div class="task">
+    <p><strong>1. Электрондук жадыбалда формула кайсы белги менен башталат?</strong></p>
+    <label><input type="radio" name="q1" value="a"> +</label><br>
+    <label><input type="radio" name="q1" value="b"> =</label><br>
+    <label><input type="radio" name="q1" value="c"> #</label>
+  </div>
+
+  <div class="task">
+    <p><strong>2. Фильтр эмне үчүн колдонулат?</strong></p>
+    <label><input type="radio" name="q2" value="a"> Бардык маалыматты өчүрүү үчүн</label><br>
+    <label><input type="radio" name="q2" value="b"> Маалыматтарды сүрөт кылуу үчүн</label><br>
+    <label><input type="radio" name="q2" value="c"> Шартка туура келген маалыматтарды көрсөтүү үчүн</label>
+  </div>
+
+  <div class="task">
+    <p><strong>3. Убакыт боюнча өзгөрүүнү көрсөтүүгө кайсы диаграмма ылайыктуу?</strong></p>
+    <label><input type="radio" name="q3" value="a"> Сызыктуу диаграмма</label><br>
+    <label><input type="radio" name="q3" value="b"> Тегерек диаграмма</label><br>
+    <label><input type="radio" name="q3" value="c"> Сүрөт</label>
+  </div>
+
+  <button onclick="checkAnswers()">Жоопторду текшерүү</button>
+  <p id="result" class="answer" aria-live="polite"></p>
+
+  <h2>9. Үй тапшырмасы</h2>
+  <ol>
+    <li>Бир теманы тандап, үч так ачкыч сөз айкашын түзгүлө.</li>
+    <li>Big Data колдонулган эки мисал жазгыла.</li>
+    <li>Беш саптан турган маалымат таблицасын түзүп, формула жана диаграмма кошкула.</li>
+  </ol>
+
+  <p><a href="engineering-materials.html">← Окуу материалдарына кайтуу</a></p>
+</main>
+
+<script>
+function checkAnswers() {
+  const answers = { q1: "b", q2: "c", q3: "a" };
+  let score = 0;
+  for (const question in answers) {
+    const selected = document.querySelector('input[name="' + question + '"]:checked');
+    if (selected && selected.value === answers[question]) score++;
+  }
+  document.getElementById("result").textContent =
+    "Сиздин жыйынтык: " + score + " / 3 туура жооп.";
+}
+</script>
+</body>
+</html>
