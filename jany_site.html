@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>№35 Жумабек Чаргынов мектеби</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --site-primary: #174B3A;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #E5B85C;
+  --site-on-secondary: #19271F;
+  --site-background: #F5F7F2;
+  --site-on-background: #182820;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Georgia, "Times New Roman", serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  --surface: light-dark(#FFFFFF, #202923);
+  --surface-soft: light-dark(#EAF0E9, #29362E);
+  --muted: light-dark(#5D6E63, #B7C5BA);
+  --line: light-dark(#DCE5DB, #3B4A40);
+  --shadow: 0 12px 35px rgba(19, 52, 38, .10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); }
+#app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); border-radius: 0; overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+.container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+.topline { background: var(--site-primary); color: var(--site-on-primary); font-size: 12px; letter-spacing: .03em; }
+.topline .container { display:flex; justify-content:space-between; gap:16px; padding: 10px 0; flex-wrap:wrap; }
+header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.nav { min-height: 82px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+.brand { display:flex; align-items:center; gap:12px; min-width: 240px; }
+.crest { width:48px; height:52px; flex-shrink:0; display:grid; place-items:center; color:var(--site-on-primary); background:var(--site-primary); clip-path: polygon(7% 0,93% 0,88% 72%,50% 100%,12% 72%); font-size:25px; }
+.brand strong { display:block; font-family:var(--site-font-heading); font-size:calc(17px * var(--site-heading-scale)); line-height:1.12; }
+.brand small { display:block; color:var(--muted); font-size:11px; margin-top:5px; }
+.navlinks { display:flex; align-items:center; gap:clamp(12px,2vw,25px); font-size:13px; font-weight:650; }
+.navlinks a:hover { color:var(--site-primary); text-decoration:underline; text-underline-offset:5px; }
+.menu-toggle { display:none; border:1px solid var(--line); background:var(--surface); color:var(--site-on-background); padding:9px 12px; border-radius:calc(10px * var(--site-radius-scale)); }
+.hero { background:var(--site-primary); color:var(--site-on-primary); position:relative; overflow:hidden; }
+.hero::after { content:""; position:absolute; width:420px; height:420px; border:1px solid rgba(255,255,255,.15); border-radius:50%; right:-120px; top:-190px; box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 95px rgba(255,255,255,.025); opacity:var(--site-decoration-opacity); pointer-events:none; }
+.hero-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:40px; align-items:center; padding: clamp(48px,7vw,88px) 0; position:relative; z-index:1; }
+.eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:800; color:var(--site-secondary); }
+h1,h2,h3 { font-family:var(--site-font-heading); font-weight:600; }
+h1 { font-size:clamp(36px,5.1vw,61px); line-height:1.04; letter-spacing:-.035em; margin:18px 0; }
+.hero p { color:rgba(255,255,255,.82); font-size:16px; line-height:1.75; max-width:570px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; border:1px solid transparent; border-radius:calc(9px * var(--site-radius-scale)); padding:12px 17px; font-weight:750; font-size:13px; cursor:pointer; transition:transform .18s, opacity .18s; }
+.btn:hover { transform:translateY(-2px); }
+.btn-gold { background:var(--site-secondary); color:var(--site-on-secondary); }
+.btn-outline { border-color:rgba(255,255,255,.42); color:white; background:transparent; }
+.hero-card { min-height:300px; border:1px solid rgba(255,255,255,.2); background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035)); border-radius:calc(22px * var(--site-radius-scale)); padding:28px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 24px 50px rgba(0,0,0,.12); }
+.hero-illustration { display:grid; place-items:center; font-size:clamp(80px,12vw,132px); min-height:170px; }
+.hero-card .quote { font-family:var(--site-font-heading); font-size:23px; line-height:1.3; }
+.hero-card small { color:rgba(255,255,255,.7); margin-top:8px; display:block; }
+.quickstats { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border-bottom:1px solid var(--line); }
+.stat { background:var(--surface); text-align:center; padding:23px 10px; }
+.stat strong { display:block; color:var(--site-primary); font-family:var(--site-font-heading); font-size:30px; }
+.stat span { font-size:12px; color:var(--muted); }
+section { padding:clamp(48px,6vw,76px) 0; }
+.section-head { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:28px; }
+.section-head h2 { font-size:calc(clamp(29px,3.5vw,40px) * var(--site-heading-scale)); margin:9px 0 0; letter-spacing:-.025em; }
+.section-head p { color:var(--muted); max-width:480px; line-height:1.6; margin:0; font-size:14px; }
+.kicker { color:var(--site-primary); font-size:11px; text-transform:uppercase; letter-spacing:.15em; font-weight:850; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:calc(15px * var(--site-radius-scale)); overflow:hidden; box-shadow:var(--shadow); transition:transform .2s; }
+.card:hover { transform:translateY(-4px); }
+.card-top { height:145px; display:grid; place-items:center; font-size:56px; background:var(--surface-soft); position:relative; }
+.card-top::after { content:""; position:absolute; inset:15px; border:1px solid color-mix(in srgb, var(--site-primary) 15%, transparent); border-radius:calc(10px * var(--site-radius-scale)); opacity:var(--site-decoration-opacity); }
+.card-body { padding:21px; }
+.tag { display:inline-block; background:var(--surface-soft); color:var(--site-primary); font-size:10px; font-weight:850; text-transform:uppercase; letter-spacing:.08em; padding:6px 9px; border-radius:99px; }
+.card h3 { font-size:22px; margin:13px 0 9px; }
+.card p { color:var(--muted); font-size:13px; line-height:1.65; margin:0 0 17px; }
+.text-link { color:var(--site-primary); font-size:12px; font-weight:850; cursor:pointer; background:none; border:0; padding:0; }
+.soft-section { background:var(--surface-soft); }
+.feature-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:40px; align-items:center; }
+.feature-art { min-height:320px; border-radius:calc(20px * var(--site-radius-scale)); background:var(--site-primary); color:white; display:grid; place-items:center; font-size:100px; position:relative; overflow:hidden; }
+.feature-art::before,.feature-art::after { content:""; position:absolute; border:1px solid rgba(255,255,255,.2); width:260px; height:260px; border-radius:50%; opacity:var(--site-decoration-opacity); }
+.feature-art::after { width:340px; height:340px; }
+.feature-art span { z-index:1; }
+.feature-copy h2 { font-size:calc(clamp(30px,3.6vw,42px) * var(--site-heading-scale)); line-height:1.12; margin:12px 0 16px; }
+.feature-copy p { color:var(--muted); line-height:1.75; font-size:14px; }
+.checks { display:grid; gap:12px; margin:22px 0; }
+.check { display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.5; }
+.check b { display:grid; place-items:center; flex-shrink:0; width:22px; height:22px; border-radius:50%; background:var(--site-secondary); color:var(--site-on-secondary); }
+.teacher-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.teacher { border:1px solid var(--line); background:var(--surface); border-radius:calc(14px * var(--site-radius-scale)); padding:23px; display:flex; gap:15px; align-items:center; }
+.avatar { width:58px; height:58px; border-radius:50%; flex-shrink:0; display:grid; place-items:center; background:var(--surface-soft); font-size:27px; }
+.teacher h3 { margin:0 0 5px; font-family:var(--site-font-body); font-size:14px; font-weight:800; }
+.teacher p { margin:0; color:var(--muted); font-size:12px; line-height:1.5; }
+.resources { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.resource { display:flex; gap:15px; align-items:flex-start; padding:21px; border:1px solid var(--line); border-radius:calc(14px * var(--site-radius-scale)); background:var(--surface); }
+.resource .ico { font-size:27px; }
+.resource h3 { font-family:var(--site-font-body); font-size:14px; margin:2px 0 7px; }
+.resource p { color:var(--muted); font-size:12px; line-height:1.55; margin:0 0 12px; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+.contact-panel { background:var(--site-primary); color:white; border-radius:calc(18px * var(--site-radius-scale)); padding:30px; }
+.contact-panel h2 { font-size:32px; margin:10px 0 16px; }
+.contact-panel p { color:rgba(255,255,255,.78); line-height:1.7; font-size:14px; }
+.contact-row { display:flex; gap:12px; margin-top:20px; align-items:flex-start; font-size:13px; }
+.contact-form { display:grid; gap:13px; align-content:start; }
+.contact-form label { font-size:12px; font-weight:800; }
+.contact-form input,.contact-form select { display:block; width:100%; margin-top:7px; padding:12px; background:var(--surface); color:var(--site-on-background); border:1px solid var(--line); border-radius:calc(8px * var(--site-radius-scale)); }
+.form-message { font-size:12px; color:var(--site-primary); min-height:18px; }
+footer { background:#102D23; color:#fff; padding:27px 0; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; font-size:12px; color:rgba(255,255,255,.72); }
+.footer-inner strong { color:#fff; }
+.notice { position:fixed; right:20px; bottom:20px; max-width:320px; padding:15px 18px; background:var(--site-primary); color:white; border-radius:12px; box-shadow:var(--shadow); z-index:30; display:none; font-size:13px; }
+@media (prefers-color-scheme: dark) { .stat strong,.kicker,.text-link { color:var(--site-secondary); } .tag { color:var(--site-secondary); } }
+@media(max-width:850px) { .navlinks { display:none; position:absolute; top:82px; left:0; right:0; background:var(--surface); padding:18px 22px 24px; border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; } .navlinks.open { display:flex; } .menu-toggle { display:block; } .hero-grid,.feature-grid,.contact-grid { grid-template-columns:1fr; } .hero-card { min-height:230px; } .hero-illustration { min-height:120px; } .cards,.teacher-grid,.resources { grid-template-columns:repeat(2,1fr); } .feature-art { min-height:230px; } }
+@media(max-width:560px) { .container { width:calc(100% - 28px); } .topline .container { font-size:10px; } .brand { min-width:0; } .brand strong { font-size:15px; } .brand small { font-size:10px; } .crest { width:40px; height:45px; font-size:21px; } .quickstats { grid-template-columns:repeat(2,1fr); } .cards,.teacher-grid,.resources { grid-template-columns:1fr; } .section-head { display:block; } .section-head p { margin-top:12px; } .hero-grid { gap:25px; } .hero p { font-size:14px; } .hero-card { padding:20px; } .hero-card .quote { font-size:20px; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="topline"><div class="container"><span>КЫРГЫЗ РЕСПУБЛИКАСЫ · ЖАЛАЛ-АБАД ОБЛАСТЫ</span><span>Токтогул району · Өзгөрүш айылы</span></div></div>
+  <header><div class="container nav">
+    <a class="brand" href="#home" aria-label="Башкы бет"><div class="crest">✦</div><div><strong>№35 Жумабек Чаргынов</strong><small>атындагы орто билим берүү мектеби</small></div></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Менюну ачуу">☰ Меню</button>
+    <nav class="navlinks" id="navlinks"><a href="#home">Башкы бет</a><a href="#about">Мектеп жөнүндө</a><a href="#news">Жаңылыктар</a><a href="#teachers">Мугалимдер</a><a href="#lessons">Сабактар</a><a href="#media-literacy">Медиасабаттуулук</a><a href="#contact">Байланыш</a></nav>
+  </div></header>
+  <main>
+    <section class="hero" id="home"><div class="container hero-grid">
+      <div><div class="eyebrow">Билим · Тарбия · Келечек</div><h1>Билимдүү муун — өлкөнүн жаркын келечеги</h1><p>№35 Жумабек Чаргынов атындагы орто билим берүү мектебинин расмий сайтынын интерактивдүү үлгүсүнө кош келиңиз. Бул жерден мектеп жаңылыктарын, окуу материалдарын жана пайдалуу ресурстарды таба аласыз.</p><div class="actions"><a class="btn btn-gold" href="#lessons">Сабактарды көрүү ↗</a><a class="btn btn-outline" href="#about">Мектеп тууралуу</a></div></div>
+      <div class="hero-card"><div class="hero-illustration" aria-hidden="true">🏫</div><div><div class="quote">«Билим — ийгиликтин ачкычы»</div><small>Окуйбуз, изденебиз, өнүгөбүз.</small></div></div>
+    </div></section>
+    <div class="quickstats" aria-label="Мектептин багыттары"><div class="stat"><strong>01</strong><span>Сапаттуу билим</span></div><div class="stat"><strong>02</strong><span>Тарбия жана өнүгүү</span></div><div class="stat"><strong>03</strong><span>Санариптик көндүмдөр</span></div><div class="stat"><strong>04</strong><span>Коопсуз чөйрө</span></div></div>
+    <section id="about"><div class="container"><div class="section-head"><div><div class="kicker">Биз жөнүндө</div><h2>Ар бир окуучунун мүмкүнчүлүгүн ачабыз</h2></div><p>Мектеп — билим гана эмес, чыгармачылыкка, жоопкерчиликке жана биргелешип иштөөгө үйрөткөн чөйрө.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-top">📚</div><div class="card-body"><span class="tag">Окуу</span><h3>Сапаттуу билим</h3><p>Окуучуларга негизги билимди өздөштүрүүгө жана өз алдынча ой жүгүртүүгө жардам берген окуу материалдары.</p><button class="text-link" data-notice="Окуу материалдары бөлүмү тандалды.">Кененирээк →</button></div></article>
+        <article class="card"><div class="card-top">💡</div><div class="card-body"><span class="tag">Инновация</span><h3>Санариптик көндүмдөр</h3><p>Информатика, программалоо жана технология аркылуу заманбап дүйнөгө даярдануу.</p><a class="text-link" href="#lessons">Материалдарды ачуу →</a></div></article>
+        <article class="card"><div class="card-top">🌱</div><div class="card-body"><span class="tag">Тарбия</span><h3>Жоопкерчиликтүү инсан</h3><p>Урматтоо, кызматташуу, эмгекчилдик жана мекенчилдик баалуулуктарын өнүктүрүү.</p><button class="text-link" data-notice="Тарбиялык иштер тууралуу маалымат тандалды.">Кененирээк →</button></div></article>
+      </div></div></section>
+    <section class="soft-section" id="news"><div class="container"><div class="section-head"><div><div class="kicker">Мектептин жашоосу</div><h2>Жаңылыктар жана иш-чаралар</h2></div><p>Мектептеги окуу, чыгармачылык жана коомдук иш-чаралар тууралуу маалымат.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-top">🧑‍🏫</div><div class="card-body"><span class="tag">Педагогикалык иш</span><h3>Мугалимдердин тажрыйба алмашуусу</h3><p>Сабактардын сапатын жогорулатуу жана натыйжалуу усулдарды бөлүшүү боюнча иш-чаралар.</p><button class="text-link" data-notice="Бул жаңылык демо мазмун. Сайт жарыяланганда чыныгы маалымат менен алмаштырыңыз.">Окуу →</button></div></article>
+        <article class="card"><div class="card-top">🖥️</div><div class="card-body"><span class="tag">Санарип билим</span><h3>Окуучулар үчүн санариптик ресурстар</h3><p>Онлайн материалдар жана практикалык тапшырмалар менен өз алдынча билим алууну колдоо.</p><a class="text-link" href="#lessons">Ресурстарды көрүү →</a></div></article>
+        <article class="card"><div class="card-top">🏆</div><div class="card-body"><span class="tag">Ийгилик</span><h3>Окуучулардын жетишкендиктери</h3><p>Олимпиадаларга, долбоорлорго жана мектептик сынактарга даярдануу.</p><button class="text-link" data-notice="Окуучулардын жетишкендиктери боюнча маалымат кийин кошулат.">Кененирээк →</button></div></article>
+      </div></div></section>
+    <section id="lessons"><div class="container"><div class="section-head"><div><div class="kicker">Окуу ресурстары</div><h2>Сабактар жана пайдалуу материалдар</h2></div><p>Окуучулар жана мугалимдер үчүн темалар боюнча бөлүнгөн материалдар.</p></div>
+      <div class="resources">
+        <article class="resource"><div class="ico">💻</div><div><h3>Информатика</h3><p>Алгоритмдер, Python, маалыматтар базасы жана компьютердик сабаттуулук.</p><button class="text-link" data-notice="Информатика материалдары тандалды. Бул үлгүдө тышкы сабактар азырынча туташтырылган эмес.">Материалдарды ачуу →</button></div></article>
+        <article class="resource"><div class="ico">🛡️</div><div><h3>Санариптик медиасабаттуулук</h3><p>Фейк маалыматты аныктоо, интернет коопсуздугу жана маалыматты текшерүү.</p><a class="text-link" href="#media-literacy">Материалдарды ачуу →</a></div></article>
+        <article class="resource"><div class="ico">📝</div><div><h3>Тесттер жана практика</h3><p>Өтүлгөн темаларды бекемдөөчү суроолор жана компьютердик тапшырмалар.</p><button class="text-link" data-notice="Тесттер бөлүмү тандалды. Реалдуу тесттерди кийин кошууга болот.">Тесттерди көрүү →</button></div></article>
+        <article class="resource"><div class="ico">🎯</div><div><h3>ОРТга даярдык</h3><p>Логикалык ой жүгүртүү, математика жана машыгуу материалдары.</p><button class="text-link" data-notice="ОРТга даярдык бөлүмү тандалды.">Даярдыкты баштоо →</button></div></article>
+        <article class="resource"><div class="ico">🐍</div><div><h3>Python олимпиадасы</h3><p>Программалоонун негиздери, маселелер жана кадам-кадам түшүндүрмөлөр.</p><button class="text-link" data-notice="Python олимпиадасына даярдык бөлүмү тандалды.">Маселелерди көрүү →</button></div></article>
+      </div></div></section>
+    <section class="soft-section" id="media-literacy"><div class="container"><div class="section-head"><div><div class="kicker">Жаңы окуу бөлүмү</div><h2>Санариптик медиасабаттуулук</h2></div><p>Маалыматты сын көз менен талдоого, ишенимдүү булактарды тандоого жана интернетте коопсуз иштөөгө үйрөнөбүз.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-top">🔎</div><div class="card-body"><span class="tag">1-практикалык иш</span><h3>Фейк маалыматты аныктоо</h3><p>Жаңылыктын авторун, жарыяланган күнүн, далилдерин жана башка булактардагы маалыматты салыштырып текшериңиз.</p><button class="text-link" data-notice="Иштин кадамдары: 1) Интернеттен бир жаңылык тандаңыз. 2) Авторун жана датасын табыңыз. 3) Ушул маалыматты башка эки булактан издеңиз. 4) Далилдерди салыштырыңыз. 5) Жыйынтык жазыңыз: ишенимдүүбү же кошумча текшерүү керекпи? Белгисиз маалыматты дароо бөлүшпөңүз.">Тапшырманы ачуу →</button></div></article>
+        <article class="card"><div class="card-top">🔐</div><div class="card-body"><span class="tag">2-практикалык иш</span><h3>Интернеттеги коопсуздук</h3><p>Жеке маалыматты коргоо, күчтүү сырсөз түзүү жана шектүү шилтемелерди таануу эрежелерин үйрөнүңүз.</p><button class="text-link" data-notice="Иштин кадамдары: 1) Сырсөздө чоң-кичине тамга, сан жана белги колдонуу эрежесин жазыңыз. 2) Өзүңүздүн чыныгы сырсөзүңүздү жазбаңыз. 3) Кайсы маалыматты интернетке жарыялоого болбой турганын тизмектеңиз. 4) Шектүү шилтеме келсе, ачпай туруп чоң кишиге же мугалимге көрсөтүңүз.">Тапшырманы ачуу →</button></div></article>
+        <article class="card"><div class="card-top">📰</div><div class="card-body"><span class="tag">3-практикалык иш</span><h3>Маалымат булагын баалоо</h3><p>Факт менен пикирди айырмалап, сүрөттүн жана билдирүүнүн контекстин текшерип көрүңүз.</p><button class="text-link" data-notice="Иштин кадамдары: 1) Кыска жаңылык же билдирүү тандаңыз. 2) Текшерүүгө мүмкүн болгон эки фактты белгилеңиз. 3) Автордун жеке көз карашын билдирген эки пикирди табыңыз. 4) Сүрөт качан жана кайсы жерде тартылганын текшерүүгө аракет кылыңыз. 5) Булакты ишенимдүү деп эсептөөнүн себебин жазыңыз.">Тапшырманы ачуу →</button></div></article>
+        <article class="card"><div class="card-top">💻</div><div class="card-body"><span class="tag">4-практикалык иш</span><h3>Издөө жана салыштыруу</h3><p>Браузерден бир теманы издеп, эки сайттагы маалыматты салыштырып, булактардын атын жазыңыз.</p><button class="text-link" data-notice="Компьютердик иш: 1) Браузерди ачыңыз. 2) Мисалы, суу үнөмдөө жөнүндө маалымат издеңиз. 3) Эки башка сайтты ачыңыз. 4) Авторун, датасын жана далилдерин салыштырыңыз. 5) Кайсы булак ишенимдүүрөөк экенин 2 себеп менен түшүндүрүңүз. Жеке маалыматтарды формага киргизбеңиз.">Иштин кадамдарын көрүү →</button></div></article>
+        <article class="card"><div class="card-top">📽️</div><div class="card-body"><span class="tag">Презентациянын планы</span><h3>Маалыматты кантип текшеребиз?</h3><p>1-слайд: медиасабаттуулук. 2-слайд: факт жана пикир. 3-слайд: автор менен датаны текшерүү. 4-слайд: башка булактарды салыштыруу. 5-слайд: жыйынтык.</p><button class="text-link" data-notice="Презентация планы: 1) Медиасабаттуулук деген эмне? 2) Факт жана пикир. 3) Авторду, датаны жана далилди текшерүү. 4) Эки ишенимдүү булакты салыштыруу. 5) Жыйынтык: бөлүшүүдөн мурда текшер! Ар бир слайдга мисал же сүрөт кошуңуз.">Презентация планын көрүү →</button></div></article>
+        <article class="card"><div class="card-top">✅</div><div class="card-body"><span class="tag">Өзүңдү текшер</span><h3>Кыска тест</h3><form id="mediaQuiz" style="display:grid;gap:12px"><label style="font-size:12px;font-weight:750">1. Күмөндүү жаңылыкты эмне кылуу керек?<select name="q1" required style="display:block;width:100%;margin-top:6px;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--site-on-background)"><option value="">Тандаңыз</option><option value="a">Дароо бөлүшүү</option><option value="b">Башка ишенимдүү булактан текшерүү</option></select></label><label style="font-size:12px;font-weight:750">2. Сырсөздү кимге айтууга болот?<select name="q2" required style="display:block;width:100%;margin-top:6px;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--site-on-background)"><option value="">Тандаңыз</option><option value="a">Досторго</option><option value="b">Эч кимге айтпоо керек</option></select></label><label style="font-size:12px;font-weight:750">3. Факт деген эмне?<select name="q3" required style="display:block;width:100%;margin-top:6px;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--site-on-background)"><option value="">Тандаңыз</option><option value="a">Далил менен текшерүүгө боло турган маалымат</option><option value="b">Жеке көз караш</option></select></label><button class="btn btn-gold" type="submit">Жоопторду текшерүү</button><p id="quizResult" class="form-message" role="status" aria-live="polite"></p></form></div></article>
+      </div><div class="actions"><button class="btn btn-gold" type="button" data-notice="Бөлүмдө 5 слайддык презентациянын планы, 4 практикалык иш жана жооптору автоматтык текшерилүүчү 3 суроолук тест бар. Тапшырманын карточкасындагы шилтемени басып, кадамдарды окуңуз.">Презентациялар жана тапшырмалар</button></div></div></section>
+    <section class="soft-section" id="teachers"><div class="container"><div class="section-head"><div><div class="kicker">Биздин жамаат</div><h2>Мугалимдер</h2></div><p>Мугалимдердин аты-жөнү, предмети, сүрөтү жана байланыш маалыматы үчүн үлгү бөлүм.</p></div>
+      <div class="teacher-grid">
+        <article class="teacher"><div class="avatar">👩‍🏫</div><div><h3>Арзыбаева Анара Жалилова</h3><p>Мектеп директору<br>Кыргыз тили жана адабияты</p></div></article>
+        <article class="teacher"><div class="avatar">👩‍🏫</div><div><h3>Койчубаева Гүлзат Калыбековна</h3><p>Окуу-тарбия иштери боюнча директордун орун басары</p></div></article>
+        <article class="teacher"><div class="avatar">👨‍🏫</div><div><h3>Карыпбаев Бакыт Жээнбекович</h3><p>Директордун орун басары · География</p></div></article>
+        
+<article class="teacher"><div class="avatar">👨‍🏫</div><div><h3>Баатырбек Чаргынов</h3><p>Информатика мугалими</p></div></article>      </div></div></section>
+    <section id="contact"><div class="container contact-grid"><div class="contact-panel"><div class="eyebrow">Биз менен байланыш</div><h2>Сурооңуз барбы?</h2><p>Мектептин иши, окуу материалдары же сайт боюнча сунуштарыңызды калтырыңыз.</p><div class="contact-row"><span>📍</span><span>Өзгөрүш айылы, Токтогул району, Жалал-Абад облусу</span></div><div class="contact-row"><span>🏫</span><span>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби</span></div><p style="font-size:11px;margin-top:24px">Эскертүү: дарек жана байланыш маалыматтарын сайтты жарыялоодон мурда текшерип, тактаңыз.</p></div>
+      <form class="contact-form" id="contactForm"><label>Атыңыз<input name="name" required placeholder="Атыңызды жазыңыз"></label><label>Электрондук почта (милдеттүү эмес)<input name="email" type="email" placeholder="example@mail.com"></label><label>Билдирүүңүз<input name="message" required placeholder="Суроо же сунуш"></label><button class="btn btn-gold" type="submit">Билдирүүнү текшерүү →</button><div class="form-message" id="formMessage" role="status"></div><p style="font-size:11px;color:var(--muted);line-height:1.5">Бул интерактивдүү үлгү: билдирүү серверге жөнөтүлбөйт жана сакталбайт.</p></form>
+    </div></section>
+  </main>
+  <footer><div class="container footer-inner"><div><strong>№35 Жумабек Чаргынов мектеби</strong><br>Билимдүү муун — жаркын келечек.</div><div>Интерактивдүү сайттын алдын ала көрүүсү · 2026</div></div></footer>
+  <div class="notice" id="notice" role="status"></div>
+</div>
+<script>
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('navlinks');
+toggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.textContent = open ? '✕ Жабуу' : '☰ Меню';
+});
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.textContent = '☰ Меню';
+}));
+let noticeTimer;
+function showNotice(message) {
+  const box = document.getElementById('notice');
+  box.textContent = message;
+  box.style.display = 'block';
+  clearTimeout(noticeTimer);
+  noticeTimer = setTimeout(() => box.style.display = 'none', 4200);
+}
+document.querySelectorAll('[data-notice]').forEach(button => button.addEventListener('click', () => showNotice(button.dataset.notice)));
+document.getElementById('mediaQuiz').addEventListener('submit', event => {
+  event.preventDefault();
+  const answers = new FormData(event.currentTarget);
+  const score = Number(answers.get('q1') === 'b') + Number(answers.get('q2') === 'b') + Number(answers.get('q3') === 'a');
+  const result = document.getElementById('quizResult');
+  result.textContent = `Сиздин жыйынтык: ${score}/3 туура жооп. ${score === 3 ? 'Азаматсыз! Баарын туура таптыңыз.' : 'Туура жооптор: 1 — башка булактан текшерүү; 2 — эч кимге айтпоо; 3 — далил менен текшерилүүчү маалымат.'}`;
+});
+document.getElementById('contactForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const name = form.elements.name.value.trim();
+  const message = form.elements.message.value.trim();
+  document.getElementById('formMessage').textContent = name && message ? `Рахмат, ${name}! Үлгү форма текшерилди; билдирүү жөнөтүлгөн жок.` : 'Атыңызды жана билдирүүңүздү толтуруңуз.';
+});
+</script>
+</body>
+</html>
