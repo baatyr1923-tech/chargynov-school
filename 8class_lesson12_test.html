@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 11-сабактын тести</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;line-height:1.6}
+header{background:#2563eb;color:white;text-align:center;padding:25px 15px}
+.container{max-width:900px;margin:25px auto;padding:20px}
+.question{background:white;padding:20px;margin-bottom:18px;border-radius:12px;box-shadow:0 3px 10px #0001}
+label{display:block;background:#f1f5f9;padding:10px;margin:8px 0;border-radius:7px;cursor:pointer}
+button{background:#2563eb;color:white;border:0;padding:13px 22px;border-radius:8px;font-size:16px;cursor:pointer}
+#result{display:none;background:#eaf7ed;padding:20px;margin-top:20px;border-radius:12px;font-size:20px}
+.back{display:inline-block;margin-top:20px;color:#2563eb}
+</style>
+</head>
+<body>
+<header>
+<h1>11-сабак: MySQL жана Microsoft Access</h1>
+<p>8-класс | Билимиңди текшер</p>
+</header>
+<div class="container">
+
+<form id="quiz">
+
+<div class="question">
+<strong>1. МББС деген эмне?</strong>
+<label><input type="radio" name="q1" value="a"> A) Сүрөт тартуучу программа</label>
+<label><input type="radio" name="q1" value="b"> B) Маалыматтар базасын башкаруу системасы</label>
+<label><input type="radio" name="q1" value="c"> C) Оюн программасы</label>
+<label><input type="radio" name="q1" value="d"> D) Музыка ойнотуучу программа</label>
+</div>
+
+<div class="question">
+<strong>2. MySQL эмне үчүн колдонулат?</strong>
+<label><input type="radio" name="q2" value="a"> A) Видео монтаждоо үчүн</label>
+<label><input type="radio" name="q2" value="b"> B) Сүрөт иштетүү үчүн</label>
+<label><input type="radio" name="q2" value="c"> C) Маалыматтарды сактоо жана башкаруу үчүн</label>
+<label><input type="radio" name="q2" value="d"> D) Текст терүү үчүн</label>
+</div>
+
+<div class="question">
+<strong>3. Microsoft Access кандай программа?</strong>
+<label><input type="radio" name="q3" value="a"> A) Маалыматтар базасын башкаруу программасы</label>
+<label><input type="radio" name="q3" value="b"> B) Браузер</label>
+<label><input type="radio" name="q3" value="c"> C) Операциялык система</label>
+<label><input type="radio" name="q3" value="d"> D) Антивирус</label>
+</div>
+
+<div class="question">
+<strong>4. Маалыматтар базасында таблица эмне үчүн керек?</strong>
+<label><input type="radio" name="q4" value="a"> A) Сүрөт тартуу үчүн</label>
+<label><input type="radio" name="q4" value="b"> B) Музыка угуу үчүн</label>
+<label><input type="radio" name="q4" value="c"> C) Интернетке кирүү үчүн</label>
+<label><input type="radio" name="q4" value="d"> D) Маалыматтарды иреттүү сактоо үчүн</label>
+</div>
+
+<div class="question">
+<strong>5. Access программасында форма эмне үчүн колдонулат?</strong>
+<label><input type="radio" name="q5" value="a"> A) Маалыматтарды өчүрүү гана үчүн</label>
+<label><input type="radio" name="q5" value="b"> B) Маалыматтарды киргизүү жана көрүү үчүн</label>
+<label><input type="radio" name="q5" value="c"> C) Видео көрүү үчүн</label>
+<label><input type="radio" name="q5" value="d"> D) Компьютерди өчүрүү үчүн</label>
+</div>
+
+<div class="question">
+<strong>6. Сурам (Query) эмне үчүн керек?</strong>
+<label><input type="radio" name="q6" value="a"> A) Программа орнотуу үчүн</label>
+<label><input type="radio" name="q6" value="b"> B) Сүрөттү чоңойтуу үчүн</label>
+<label><input type="radio" name="q6" value="c"> C) Керектүү маалыматтарды издөө жана тандоо үчүн</label>
+<label><input type="radio" name="q6" value="d"> D) Музыка жаздыруу үчүн</label>
+</div>
+
+<div class="question">
+<strong>7. Access программасында отчет (Report) эмне үчүн колдонулат?</strong>
+<label><input type="radio" name="q7" value="a"> A) Маалыматтарды иреттүү көрсөтүү жана басып чыгаруу үчүн</label>
+<label><input type="radio" name="q7" value="b"> B) Оюн ойноо үчүн</label>
+<label><input type="radio" name="q7" value="c"> C) Интернетке туташуу үчүн</label>
+<label><input type="radio" name="q7" value="d"> D) Сүрөт тартуу үчүн</label>
+</div>
+
+<div class="question">
+<strong>8. MySQL көбүнчө кайсы жерде колдонулат?</strong>
+<label><input type="radio" name="q8" value="a"> A) Калькулятордо</label>
+<label><input type="radio" name="q8" value="b"> B) Музыка ойноткучта</label>
+<label><input type="radio" name="q8" value="c"> C) Сүрөт редакторунда</label>
+<label><input type="radio" name="q8" value="d"> D) Веб-сайттарда жана серверлерде</label>
+</div>
+
+<div class="question">
+<strong>9. Маалыматтар базасында окуучунун аты-жөнү эмнени билдирет?</strong>
+<label><input type="radio" name="q9" value="a"> A) Таблицанын аталышын</label>
+<label><input type="radio" name="q9" value="b"> B) Талааны (Field)</label>
+<label><input type="radio" name="q9" value="c"> C) Программанын аталышын</label>
+<label><input type="radio" name="q9" value="d"> D) Отчетту</label>
+</div>
+
+<div class="question">
+<strong>10. MySQL жана Microsoft Access программаларынын окшоштугу кайсы?</strong>
+<label><input type="radio" name="q10" value="a"> A) Экөө тең сүрөт тартат</label>
+<label><input type="radio" name="q10" value="b"> B) Экөө тең оюн түзөт</label>
+<label><input type="radio" name="q10" value="c"> C) Экөө тең маалыматтарды сактоого жана башкарууга жардам берет</label>
+<label><input type="radio" name="q10" value="d"> D) Экөө тең операциялык система</label>
+</div>
+
+<button type="button" onclick="checkTest()">Тестти текшерүү</button>
+</form>
+
+<div id="result"></div>
+<a class="back" href="8class_informatika.html">← Сабактарга кайтуу</a>
+</div>
+
+<script>
+function checkTest(){
+const answers={q1:"b",q2:"c",q3:"a",q4:"d",q5:"b",q6:"c",q7:"a",q8:"d",q9:"b",q10:"c"};
+let score=0;
+let unanswered=0;
+for(let q in answers){
+const selected=document.querySelector('input[name="'+q+'"]:checked');
+if(!selected){unanswered++;}
+else if(selected.value===answers[q]){score++;}
+}
+const result=document.getElementById("result");
+result.style.display="block";
+if(unanswered>0){
+result.innerHTML="⚠️ Бардык суроолорго жооп бериңиз. Жооп берилбей калган суроолор: "+unanswered;
+return;
+}
+result.innerHTML="<h2>Сиздин жыйынтык: "+score+" / 10</h2>"+
+(score>=9?"🌟 Абдан жакшы!":score>=7?"👏 Жакшы иштедиңиз!":score>=5?"👍 Дагы бир жолу кайталаңыз.":"📚 Теманы кайрадан окуп чыгыңыз.");
+}
+</script>
+</body>
+</html>
