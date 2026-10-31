@@ -185,3 +185,34 @@
   function checkTest() {
     var correctAnswers = {
       q1: "B", q2: "B", q3: "A", q4: "B", q5: "B",
+        q6: "B", q7: "B", q8: "A", q9: "B", q10: "B"
+    };
+
+    var score = 0;
+    var answered = 0;
+
+    for (var i = 1; i <= 10; i++) {
+        var selected = document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        );
+
+        if (selected) {
+            answered++;
+            if (selected.value === correctAnswers["q" + i]) {
+                score++;
+            }
+        }
+    }
+
+    var grade = score >= 9 ? 5 :
+                score >= 7 ? 4 :
+                score >= 5 ? 3 : 2;
+
+    var result = document.getElementById("result");
+    result.style.display = "block";
+    result.innerHTML =
+        "Жооп берилди: " + answered + "/10<br>" +
+        "Туура жооп: " + score + "/10<br>" +
+        "Баасы: " + grade;
+}
+</script>
