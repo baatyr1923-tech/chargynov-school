@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | SQL тилинин негиздери</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f4f7fb;color:#222;line-height:1.6}
+header{background:#2563eb;color:white;padding:30px 20px;text-align:center}
+.container{max-width:950px;margin:25px auto;padding:20px}
+.lesson{background:white;padding:25px;margin-bottom:20px;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+h2{color:#2563eb}
+.note{background:#eaf3ff;padding:15px;border-left:5px solid #2563eb;border-radius:8px}
+pre{background:#172033;color:#e5e7eb;padding:15px;border-radius:8px;overflow-x:auto}
+code{font-family:monospace}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ddd;padding:10px;text-align:left}
+th{background:#2563eb;color:white}
+.back{display:inline-block;background:#2563eb;color:white;padding:12px 20px;border-radius:8px;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+<h1>13-сабак: SQL тилинин негиздери</h1>
+<p>8-класс | Информатика</p>
+</header>
+
+<div class="container">
+
+<div class="lesson">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар SQL тилинин негизги түшүнүктөрүн үйрөнүшөт. Маалыматтар базасынан маалыматтарды тандоо, кошуу, өзгөртүү жана өчүрүү командалары менен таанышышат.</p>
+</div>
+
+<div class="lesson">
+<h2>1. SQL деген эмне?</h2>
+<p><b>SQL (Structured Query Language)</b> — маалыматтар базасы менен иштөө үчүн колдонулган структураланган сурамдар тили.</p>
+<p>SQL аркылуу маалыматтар базасын түзүүгө, маалыматтарды сактоого, издөөгө, өзгөртүүгө жана өчүрүүгө болот.</p>
+<div class="note">
+<b>Мисал:</b> Мектептин окуучулары жөнүндө маалыматтарды сактаган базадан белгилүү бир окуучуну издөө үчүн SQL колдонулат.
+</div>
+</div>
+
+<div class="lesson">
+<h2>2. SQL тилинин негизги командалары</h2>
+<table>
+<tr><th>Команда</th><th>Аткарган кызматы</th></tr>
+<tr><td>SELECT</td><td>Маалыматтарды тандоо</td></tr>
+<tr><td>INSERT</td><td>Жаңы маалымат кошуу</td></tr>
+<tr><td>UPDATE</td><td>Маалыматты өзгөртүү</td></tr>
+<tr><td>DELETE</td><td>Маалыматты өчүрүү</td></tr>
+<tr><td>CREATE TABLE</td><td>Жаңы таблица түзүү</td></tr>
+</table>
+</div>
+
+<div class="lesson">
+<h2>3. SELECT — маалыматтарды тандоо</h2>
+<p>SELECT командасы таблицадан керектүү маалыматтарды алуу үчүн колдонулат.</p>
+<pre><code>SELECT * FROM Okuuchular;</code></pre>
+<p>Бул команда Okuuchular таблицасындагы бардык маалыматтарды көрсөтөт.</p>
+<p>Белгилүү бир талааны тандоо:</p>
+<pre><code>SELECT Аты FROM Okuuchular;</code></pre>
+</div>
+
+<div class="lesson">
+<h2>4. INSERT — жаңы маалымат кошуу</h2>
+<p>INSERT командасы таблицага жаңы жазуу кошот.</p>
+<pre><code>INSERT INTO Okuuchular (Аты, Классы)
+VALUES ('Асан', 8);</code></pre>
+<p>Бул команда таблицага Асан аттуу 8-класстын окуучусун кошот.</p>
+</div>
+
+<div class="lesson">
+<h2>5. UPDATE — маалыматты өзгөртүү</h2>
+<p>UPDATE командасы таблицадагы маалыматты өзгөртүү үчүн колдонулат.</p>
+<pre><code>UPDATE Okuuchular
+SET Классы = 9
+WHERE Аты = 'Асан';</code></pre>
+<p>Бул команда Асан аттуу окуучунун классын 9-класска өзгөртөт.</p>
+<div class="note">Эскертүү: UPDATE командасында WHERE шартын туура колдонуу керек. Болбосо таблицадагы бардык жазуулар өзгөрүп калышы мүмкүн.</div>
+</div>
+
+<div class="lesson">
+<h2>6. DELETE — маалыматты өчүрүү</h2>
+<p>DELETE командасы таблицадагы керексиз жазууларды өчүрөт.</p>
+<pre><code>DELETE FROM Okuuchular
+WHERE Аты = 'Асан';</code></pre>
+<p>Бул команда Асан аттуу окуучунун жазуусун өчүрөт.</p>
+<div class="note">Эскертүү: WHERE шартын көрсөтпөсөңүз, таблицадагы бардык жазуулар өчүп калышы мүмкүн.</div>
+</div>
+
+<div class="lesson">
+<h2>7. Практикалык тапшырмалар</h2>
+<p>Төмөнкү тапшырмаларды дептерге же компьютерде аткаргыла.</p>
+<ol>
+<li>Okuuchular аттуу таблицадагы бардык маалыматтарды чыгарган SQL командасын жазгыла.</li>
+<li>Таблицага Айжан аттуу 8-класстын окуучусун кошкон команданы түзгүлө.</li>
+<li>Айжан аттуу окуучунун классын 9-класска өзгөрткүлө.</li>
+<li>Асан аттуу окуучунун жазуусун өчүргөн команданы жазгыла.</li>
+<li>SQL тилинин колдонулушуна үч мисал келтиргиле.</li>
+</ol>
+</div>
+
+<div class="lesson">
+<h2>8. Билимиңерди текшергиле</h2>
+<ol>
+<li>SQL деген эмне?</li>
+<li>SELECT командасы кандай кызмат аткарат?</li>
+<li>INSERT командасы эмне үчүн колдонулат?</li>
+<li>UPDATE командасынын милдети кандай?</li>
+<li>DELETE командасы кандай иш аткарат?</li>
+<li>WHERE шарты эмне үчүн керек?</li>
+</ol>
+</div>
+
+<div class="lesson">
+<h2>Жыйынтык</h2>
+<p>SQL — маалыматтар базасы менен иштөөнүн маанилүү куралы. Анын жардамы менен маалыматтарды тандоого, кошууга, өзгөртүүгө жана өчүрүүгө болот.</p>
+<div class="note"><b>Үй тапшырма:</b> SQL тилинин SELECT, INSERT, UPDATE жана DELETE командаларына бирден мисал жазып келгиле.</div>
+</div>
+
+<a class="back" href="8class_informatika.html">← Сабактарга кайтуу</a>
+
+</div>
+</body>
+</html>
