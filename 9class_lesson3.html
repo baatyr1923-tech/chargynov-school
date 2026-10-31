@@ -1,57 +1,40 @@
-  <div class="card">
-    <h2>📝 Тест — Өзүңдү текшер</h2>
+<h2>📝 Тест — Өзүңдү текшер</h2>
     <p>Суроолорго туура жоопту тандап, аягында "Текшерүү" баскычын баскыла.</p>
 
     <!-- 1-суроо -->
     <div class="test" data-question="1">
-      <p><strong>1. Растрдык графика деген эмне?</strong></p>
-      <label><input type="radio" name="q1" value="A"> А) Сүрөттөр математикалык формулалар жана сызыктар аркылуу түзүлгөн графика</label><br>
-      <label><input type="radio" name="q1" value="B"> Б) Сүрөт майда чекиттерден (пикселдерден) түзүлгөн графика</label><br>
-      <label><input type="radio" name="q1" value="C"> В) Сандарды гана көрсөтүүчү таблицалык графика</label><br>
+      <p><strong>1. Растрдык сүрөттүн эң кичинекей элементи эмне деп аталат?</strong></p>
+      <label><input type="radio" name="q1" value="A"> А) Вектор</label><br>
+      <label><input type="radio" name="q1" value="B"> Б) Пиксель</label><br>
+      <label><input type="radio" name="q1" value="C"> В) Сан</label><br>
     </div>
 
     <!-- 2-суроо -->
     <div class="test" data-question="2">
-      <p><strong>2. Вектордук графика деген эмне?</strong></p>
-      <label><input type="radio" name="q2" value="A"> А) Сүрөттөр математикалык сызыктар, чекиттер жана геометриялык фигуралар аркылуу түзүлгөн графика</label><br>
-      <label><input type="radio" name="q2" value="B"> Б) Пикселдердин жыйындысынан турган фотосүрөттөр</label><br>
-      <label><input type="radio" name="q2" value="C"> В) Видео файлдарды монтаждоочу атайын программа</label><br>
+      <p><strong>2. RGB моделиндеги "B" тамгасы кайсы түстү билдирет?</strong></p>
+      <label><input type="radio" name="q2" value="A"> А) Black (Кара)</label><br>
+      <label><input type="radio" name="q2" value="B"> Б) Blue (Көк)</label><br>
+      <label><input type="radio" name="q2" value="C"> В) Brown (Күрөң)</label><br>
     </div>
 
     <!-- 3-суроо -->
     <div class="test" data-question="3">
-      <p><strong>3. Пиксель деген эмне?</strong></p>
-      <label><input type="radio" name="q3" value="A"> А) Компьютердин эс тутумунун эң кичине бирдиги</label><br>
-      <label><input type="radio" name="q3" value="B"> Б) Экрандагы же сүрөттөгү эң кичинекей графикалык элемент</label><br>
-      <label><input type="radio" name="q3" value="C"> В) Вектордук графикадагы ийри сызык</label><br>
+      <p><strong>3. Сүрөттү чоңойткондо сапаты жоголбогон графика кайсы?</strong></p>
+      <label><input type="radio" name="q3" value="A"> А) Вектордук</label><br>
+      <label><input type="radio" name="q3" value="B"> Б) Растрдык</label><br>
+      <label><input type="radio" name="q3" value="C"> В) Фракталдык</label><br>
     </div>
 
     <!-- 4-суроо -->
     <div class="test" data-question="4">
-      <p><strong>4. RGB моделинде кайсы үч түс колдонулат?</strong></p>
-      <label><input type="radio" name="q4" value="A"> А) Кызыл, Сары, Көк (Red, Yellow, Blue)</label><br>
-      <label><input type="radio" name="q4" value="B"> Б) Кызыл, Жашыл, Кара (Red, Green, Black)</label><br>
-      <label><input type="radio" name="q4" value="C"> В) Кызыл, Жашыл, Көк (Red, Green, Blue)</label><br>
+      <p><strong>4. CMYK модели негизинен кайда колдонулат?</strong></p>
+      <label><input type="radio" name="q4" value="A"> А) Монитордун экранында</label><br>
+      <label><input type="radio" name="q4" value="B"> Б) Басып чыгарууда (полиграфияда)</label><br>
+      <label><input type="radio" name="q4" value="C"> В) Телефондордо</label><br>
     </div>
 
-    <!-- 5-суроо -->
-    <div class="test" data-question="5">
-      <p><strong>5. CMYK модели кайда көбүрөөк колдонулат?</strong></p>
-      <label><input type="radio" name="q5" value="A"> А) Компьютер, телефон жана телевизордун экрандарында</label><br>
-      <label><input type="radio" name="q5" value="B"> Б) Басып чыгарууда, полиграфияда жана принтерлерде</label><br>
-      <label><input type="radio" name="q5" value="C"> В) Интернет сайттарды программалоодо</label><br>
-    </div>
-
-    <!-- 6-суроо -->
-    <div class="test" data-question="6">
-      <p><strong>6. 1920 × 1080 экранда жалпы канча пиксель бар?</strong></p>
-      <label><input type="radio" name="q6" value="A"> А) 2 073 600 пиксель</label><br>
-      <label><input type="radio" name="q6" value="B"> Б) 3 000 пиксель</label><br>
-      <label><input type="radio" name="q6" value="C"> В) 1 920 1080 пиксель</label><br>
-    </div>
-
-    <!-- Жыйынтык баскычы -->
-    <button onclick="checkTest()" style="background: #16845B; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 15px; font-weight: bold;">Текшерүү</button>
+    <!-- Жыйынтык көрсөтүүчү блок -->
+    <button onclick="checkTest()" style="background: #16845B; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 15px;">Текшерүү</button>
     
     <div id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold; display: none;"></div>
   </div>
@@ -66,24 +49,23 @@
 
 <script>
   function checkTest() {
-    // Туура жооптор коопсуздук үчүн ушул жерде гана сакталат
+    // Туура жооптор ушул жерде жашыруун сакталат
     const correctAnswers = {
-      q1: "B", // Растрдык - пикселдерден түзүлөт
-      q2: "A", // Вектордук - математикалык сызыктар
-      q3: "B", // Пиксель - эң кичинекей элемент
-      q4: "C", // RGB - Кызыл, Жашыл, Көк
-      q5: "B", // CMYK - Басып чыгарууда
-      q6: "A"  // 1920 x 1080 = 2073600
+      q1: "B", // Пиксель
+      q2: "B", // Blue
+      q3: "A", // Вектордук
+      q4: "B"  // Басып чыгарууда
     };
 
     let score = 0;
     let totalQuestions = Object.keys(correctAnswers).length;
 
+    // Жоопторду текшерүү
     for (let key in correctAnswers) {
       let selected = document.querySelector(`input[name="${key}"]:checked`);
-      let testDiv = document.querySelector(`input[name="${key}"]`).closest('.test');
+      let testDiv = document.querySelector(`[name="${key}"]`).closest('.test');
       
-      // Мурунку текшерүүнүн түстөрүн тазалоо
+      // Мурунку боёкторду тазалоо
       testDiv.style.background = "#fafafa";
       testDiv.style.borderColor = "#ddd";
 
@@ -97,22 +79,20 @@
           testDiv.style.borderColor = "#e53e3e";
         }
       } else {
-        testDiv.style.background = "#fff7e6"; // Суроо калтырылып кетсе сары фон
+        testDiv.style.background = "#fff7e6"; // Белгиленбесе сары фон
         testDiv.style.borderColor = "#f0ad4e";
       }
     }
 
-    // Жыйынтыкты чыгаруу
+    // Жыйынтыкты экранга чыгаруу
     const resultDiv = document.getElementById("result");
     resultDiv.style.display = "block";
     resultDiv.innerHTML = `Сиздин жыйынтык: ${score} / ${totalQuestions} туура жооп.`;
     
     if (score === totalQuestions) {
       resultDiv.style.color = "#16845B";
-    } else if (score >= totalQuestions / 2) {
-      resultDiv.style.color = "#f0ad4e";
     } else {
-      resultDiv.style.color = "#e53e3e";
+      resultDiv.style.color = "#222";
     }
   }
 </script>
