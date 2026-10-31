@@ -1,41 +1,175 @@
-<h2>📝 Тест — Өзүңдү текшер</h2>
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="9-класс информатика. Графикалык маалыматты коддоо, компьютердик графика, растрдык жана вектордук графика, түстүк моделдер.">
+  <title>9-класс — Графикалык маалыматты коддоо</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f7f6; color: #222; line-height: 1.6; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 25px 20px 50px; }
+    .header { background: #16845B; color: white; padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 25px; }
+    .header h1 { margin: 0 0 10px; font-size: 28px; }
+    .header p { margin: 0; font-size: 17px; }
+    .card { background: white; padding: 25px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    h2 { color: #16845B; margin-top: 0; }
+    h3 { color: #333; }
+    .important { background: #e8f5ef; border-left: 5px solid #16845B; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    .good { background: #eef8ff; border-left: 5px solid #4285f4; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    .warning { background: #fff7e6; border-left: 5px solid #f0ad4e; padding: 15px; border-radius: 8px; margin: 15px 0; }
+    li { margin-bottom: 8px; }
+    .test { background: #fafafa; padding: 15px; border-radius: 10px; margin: 15px 0; border: 1px solid #ddd; }
+    .back { display: inline-block; background: #16845B; color: white; text-decoration: none; padding: 10px 18px; border-radius: 8px; margin-top: 10px; }
+    .back:hover { opacity: 0.9; }
+    footer { text-align: center; margin-top: 30px; color: #666; font-size: 14px; }
+    .formula { background: #f1f1f1; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 16px; }
+    button { background: #16845B; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 15px; font-weight: bold; }
+    button:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>9-класс — Информатика</h1>
+    <p>3-сабак. Графикалык маалыматты коддоо</p>
+  </div>
+
+  <div class="card">
+    <h2>📚 Сабактын темасы</h2>
+    <p><strong>Графикалык маалыматты коддоо. Компьютердик графика. Растрдык графика. Вектордук графика. Түстүк моделдер. Экрандагы графикалык маалымат.</strong></p>
+    <h3>🎯 Сабактын максаты</h3>
+    <ul>
+      <li>Графикалык маалымат жана компьютердик графика жөнүндө түшүнүк алуу;</li>
+      <li>Растрдык жана вектордук графиканын айырмасын түшүнүү;</li>
+      <li>Графикалык маалыматтын компьютерде коддолушун түшүндүрүү;</li>
+      <li>RGB жана CMYK түстүк моделдери жөнүндө түшүнүк алуу;</li>
+      <li>Экрандагы сүрөттүн пикселдерден түзүлөрүн түшүнүү.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🖥️ Компьютердик графика деген эмне?</h2>
+    <p><strong>Компьютердик графика</strong> — компьютердин жардамы менен сүрөттөрдү, чиймелерди, схемаларды жана башка графикалык объекттерди түзүү, сактоо жана иштетүү тармагы.</p>
+    <div class="important">
+      <strong>Эсиңде болсун:</strong><br>Компьютердеги ар бир сүрөт санариптик маалымат катары коддолуп, компьютердин эсинде сандар түрүндө сакталат.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔲 Растрдык графика</h2>
+    <p><strong>Растрдык графика</strong> — сүрөт майда чекиттерден, башкача айтканда <strong>пикселдерден</strong> түзүлгөн графика.</p>
+    <div class="good"><strong>Пиксель</strong> — экрандагы же сүрөттөгү эң кичинекей графикалык элемент.</div>
+    <div class="warning">Растрдык сүрөттү өтө чоңойткондо пикселдер көрүнүп, сүрөттүн сапаты начарлашы мүмкүн.</div>
+  </div>
+
+  <div class="card">
+    <h2>📐 Вектордук графика</h2>
+    <p><strong>Вектордук графика</strong> — сүрөттөр математикалык сызыктар, чекиттер, ийри сызыктар жана геометриялык фигуралар аркылуу түзүлгөн графика.</p>
+    <div class="important">Вектордук сүрөттү чоңойткондо анын сапаты көбүнчө сакталат, анткени сүрөт геометриялык объекттер аркылуу берилет.</div>
+  </div>
+
+  <div class="card">
+    <h2>🎨 Түстүк моделдер</h2>
+    <p>Компьютерде түстөрдү көрсөтүү үчүн атайын <strong>түстүк моделдер</strong> колдонулат.</p>
+    <h3>🔴 RGB модели</h3>
+    <ul>
+      <li>🔴 R — Red — кызыл;</li>
+      <li>🟢 G — Green — жашыл;</li>
+      <li>🔵 B — Blue — көк.</li>
+    </ul>
+    <div class="good">RGB модели негизинен компьютердин, телефондун жана телевизордун экрандарында колдонулат.</div>
+    <h3>🖨️ CMYK модели</h3>
+    <p><strong>CMYK</strong> көбүнчө басып чыгарууда (полиграфияда) колдонулат: Cyan, Magenta, Yellow, Key/Black.</p>
+  </div>
+
+  <div class="card">
+    <h2>🖥️ Экрандагы графикалык маалымат</h2>
+    <div class="formula">
+      Мисалы: 1920 × 1080<br>
+      1920 — туурасы боюнча, 1080 — бийиктиги боюнча пикселдердин саны.<br>
+      Жалпы саны: 1920 × 1080 = 2 073 600 пиксель.
+    </div>
+  </div>
+
+  <!-- ТЕСТ ИЗ 10 ВОПРОСОВ -->
+  <div class="card">
+    <h2>📝 Тест — Өзүңдү текшер (10 суроо)</h2>
     <p>Суроолорго туура жоопту тандап, аягында "Текшерүү" баскычын баскыла.</p>
 
-    <!-- 1-суроо -->
-    <div class="test" data-question="1">
-      <p><strong>1. Растрдык сүрөттүн эң кичинекей элементи эмне деп аталат?</strong></p>
-      <label><input type="radio" name="q1" value="A"> А) Вектор</label><br>
-      <label><input type="radio" name="q1" value="B"> Б) Пиксель</label><br>
-      <label><input type="radio" name="q1" value="C"> В) Сан</label><br>
+    <div class="test">
+      <p><strong>1. Компьютердик графика деген эмне?</strong></p>
+      <label><input type="radio" name="q1" value="A"> А) Тексттерди гана редакциялоочу программа</label><br>
+      <label><input type="radio" name="q1" value="B"> Б) Компьютердин жардамы менен графикалык объекттерди түзүү, сактоо жана иштетүү тармагы</label><br>
+      <label><input type="radio" name="q1" value="C"> В) Интернет ылдамдыгын өлчөөчү курал</label><br>
     </div>
 
-    <!-- 2-суроо -->
-    <div class="test" data-question="2">
-      <p><strong>2. RGB моделиндеги "B" тамгасы кайсы түстү билдирет?</strong></p>
-      <label><input type="radio" name="q2" value="A"> А) Black (Кара)</label><br>
-      <label><input type="radio" name="q2" value="B"> Б) Blue (Көк)</label><br>
-      <label><input type="radio" name="q2" value="C"> В) Brown (Күрөң)</label><br>
+    <div class="test">
+      <p><strong>2. Растрдык графиканын эң кичинекей элементи эмне деп аталат?</strong></p>
+      <label><input type="radio" name="q2" value="A"> А) Вектор</label><br>
+      <label><input type="radio" name="q2" value="B"> Б) Пиксель</label><br>
+      <label><input type="radio" name="q2" value="C"> В) Байт</label><br>
     </div>
 
-    <!-- 3-суроо -->
-    <div class="test" data-question="3">
-      <p><strong>3. Сүрөттү чоңойткондо сапаты жоголбогон графика кайсы?</strong></p>
-      <label><input type="radio" name="q3" value="A"> А) Вектордук</label><br>
-      <label><input type="radio" name="q3" value="B"> Б) Растрдык</label><br>
-      <label><input type="radio" name="q3" value="C"> В) Фракталдык</label><br>
+    <div class="test">
+      <p><strong>3. Кайсы графикада сүрөттү чоңойткондо сапаты начарлап, пикселдер көрүнүп калат?</strong></p>
+      <label><input type="radio" name="q3" value="A"> А) Растрдык графикада</label><br>
+      <label><input type="radio" name="q3" value="B"> Б) Вектордук графикада</label><br>
+      <label><input type="radio" name="q3" value="C"> В) Үч өлчөмдүү графикада</label><br>
     </div>
 
-    <!-- 4-суроо -->
-    <div class="test" data-question="4">
-      <p><strong>4. CMYK модели негизинен кайда колдонулат?</strong></p>
-      <label><input type="radio" name="q4" value="A"> А) Монитордун экранында</label><br>
-      <label><input type="radio" name="q4" value="B"> Б) Басып чыгарууда (полиграфияда)</label><br>
-      <label><input type="radio" name="q4" value="C"> В) Телефондордо</label><br>
+    <div class="test">
+      <p><strong>4. Вектордук графика эмнелердин жардамы менен түзүлөт?</strong></p>
+      <label><input type="radio" name="q4" value="A"> А) Майда түстүү чекиттерден</label><br>
+      <label><input type="radio" name="q4" value="B"> Б) Математикалык сызыктар, чекиттер жана геометриялык фигуралар менен</label><br>
+      <label><input type="radio" name="q4" value="C"> В) Үн файлдарынын коддору менен</label><br>
     </div>
 
-    <!-- Жыйынтык көрсөтүүчү блок -->
-    <button onclick="checkTest()" style="background: #16845B; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 15px;">Текшерүү</button>
-    
+    <div class="test">
+      <p><strong>5. RGB моделиндеги "G" тамгасы кайсы түстү түшүндүрөт?</strong></p>
+      <label><input type="radio" name="q5" value="A"> А) Grey (Боз)</label><br>
+      <label><input type="radio" name="q5" value="B"> Б) Green (Жашыл)</label><br>
+      <label><input type="radio" name="q5" value="C"> В) Gold (Алтын сымал)</label><br>
+    </div>
+
+    <div class="test">
+      <p><strong>6. RGB түстүк модели негизинен кайда колдонулат?</strong></p>
+      <label><input type="radio" name="q6" value="A"> А) Китептерди басып чыгарууда</label><br>
+      <label><input type="radio" name="q6" value="B"> Б) Компьютер, telephone жана телевизорлордун экрандарында</label><br>
+      <label><input type="radio" name="q6" value="C"> В) Сүрөттөрдү принтерден чыгарууда</label><br>
+    </div>
+
+    <div class="test">
+      <p><strong>7. Принтерлерде жана полиграфияда кайсы түстүк модель колдонулат?</strong></p>
+      <label><input type="radio" name="q7" value="A"> А) RGB</label><br>
+      <label><input type="radio" name="q7" value="B"> Б) CMYK</label><br>
+      <label><input type="radio" name="q7" value="C"> В) HighColor</label><br>
+    </div>
+
+    <div class="test">
+      <p><strong>8. Экрандын чечилиши (разрешение) 1920 × 1080 болсо, анда жалпы канча пиксель бар?</strong></p>
+      <label><input type="radio" name="q8" value="A"> А) 2 073 600 пиксель</label><br>
+      <label><input type="radio" name="q8" value="B"> Б) 1 920 000 пиксель</label><br>
+      <label><input type="radio" name="q8" value="C"> В) 1080 пиксель</label><br>
+    </div>
+
+    <div class="test">
+      <p><strong>9. Компьютердин эсинде графикалык маалымат кандай түрдө сакталат?</strong></p>
+      <label><input type="radio" name="q9" value="A"> А) Кагаз түрүндө</label><br>
+      <label><input type="radio" name="q9" value="B"> Б) Санариптик код (сандар) түрүндө</label><br>
+      <label><input type="radio" name="q9" value="C"> В) Үн толкундары түрүндө</label><br>
+    </div>
+
+    <div class="test">
+      <p><strong>10. Төмөнкүлөрдүн кайсынысы вектордук графикага мисал боло алат?</strong></p>
+      <label><input type="radio" name="q10" value="A"> А) Фотоаппаратка тартылган фотосүрөт</label><br>
+      <label><input type="radio" name="q10" value="B"> Б) Логотиптер, чиймелер жана иконкалар</label><br>
+      <label><input type="radio" name="q10" value="C"> В) Сканерден өткөрүлгөн китептин бети</label><br>
+    </div>
+
+    <button onclick="checkTest()">Текшерүү</button>
     <div id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold; display: none;"></div>
   </div>
 
@@ -49,53 +183,13 @@
 
 <script>
   function checkTest() {
-    // Туура жооптор ушул жерде жашыруун сакталат
     const correctAnswers = {
-      q1: "B", // Пиксель
-      q2: "B", // Blue
-      q3: "A", // Вектордук
-      q4: "B"  // Басып чыгарууда
+      q1: "B", q2: "B", q3: "A", q4: "B", q5: "B",
+      q6: "B", q7: "B", q8: "A", q9: "B", q10: "B"
     };
 
     let score = 0;
-    let totalQuestions = Object.keys(correctAnswers).length;
+    const totalQuestions = 10;
 
-    // Жоопторду текшерүү
-    for (let key in correctAnswers) {
-      let selected = document.querySelector(`input[name="${key}"]:checked`);
-      let testDiv = document.querySelector(`[name="${key}"]`).closest('.test');
-      
-      // Мурунку боёкторду тазалоо
-      testDiv.style.background = "#fafafa";
-      testDiv.style.borderColor = "#ddd";
-
-      if (selected) {
-        if (selected.value === correctAnswers[key]) {
-          score++;
-          testDiv.style.background = "#e8f5ef"; // Туура болсо жашыл фон
-          testDiv.style.borderColor = "#16845B";
-        } else {
-          testDiv.style.background = "#fde8e8"; // Ката болсо кызыл фон
-          testDiv.style.borderColor = "#e53e3e";
-        }
-      } else {
-        testDiv.style.background = "#fff7e6"; // Белгиленбесе сары фон
-        testDiv.style.borderColor = "#f0ad4e";
-      }
-    }
-
-    // Жыйынтыкты экранга чыгаруу
-    const resultDiv = document.getElementById("result");
-    resultDiv.style.display = "block";
-    resultDiv.innerHTML = `Сиздин жыйынтык: ${score} / ${totalQuestions} туура жооп.`;
-    
-    if (score === totalQuestions) {
-      resultDiv.style.color = "#16845B";
-    } else {
-      resultDiv.style.color = "#222";
-    }
-  }
-</script>
-
-</body>
-</html>
+    for (let i = 1; i <= totalQuestions; i++) {
+      let key = "q" + i;
