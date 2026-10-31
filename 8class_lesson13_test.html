@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 13-сабактын тести</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;padding:20px;line-height:1.6}
+.container{max-width:850px;margin:25px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 4px 12px #ddd}
+h1,h2{color:#2563eb}
+.question{padding:15px;margin:15px 0;background:#f4f7fb;border-radius:10px}
+label{display:block;padding:6px;cursor:pointer}
+button{background:#2563eb;color:white;border:0;padding:12px 22px;border-radius:8px;font-size:16px;cursor:pointer}
+#result{font-size:20px;font-weight:bold;margin-top:20px}
+.back{display:inline-block;margin-top:20px;color:#2563eb}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>13-сабак: SQL тилинин негиздери</h1>
+<p><b>8-класс | Информатика</b></p>
+<p>Окуучунун аты-жөнү: <input type="text" id="student"></p>
+<form id="quiz">
+
+<div class="question">
+<p>1. SQL деген эмне?</p>
+<label><input type="radio" name="q1" value="a"> Сүрөт тартуу программасы</label>
+<label><input type="radio" name="q1" value="b"> Маалыматтар базасы менен иштөө тили</label>
+<label><input type="radio" name="q1" value="c"> Операциялык система</label>
+</div>
+
+<div class="question">
+<p>2. SQL сөзүнүн толук аталышы кайсы?</p>
+<label><input type="radio" name="q2" value="a"> Structured Query Language</label>
+<label><input type="radio" name="q2" value="b"> Simple Question Language</label>
+<label><input type="radio" name="q2" value="c"> System Quick Link</label>
+</div>
+
+<div class="question">
+<p>3. SELECT командасы эмне үчүн колдонулат?</p>
+<label><input type="radio" name="q3" value="a"> Маалыматты өчүрүү үчүн</label>
+<label><input type="radio" name="q3" value="b"> Маалыматты тандоо үчүн</label>
+<label><input type="radio" name="q3" value="c"> Таблица түзүү үчүн</label>
+</div>
+
+<div class="question">
+<p>4. INSERT командасынын кызматы кандай?</p>
+<label><input type="radio" name="q4" value="a"> Жаңы маалымат кошуу</label>
+<label><input type="radio" name="q4" value="b"> Маалыматты издөө</label>
+<label><input type="radio" name="q4" value="c"> Маалыматты өчүрүү</label>
+</div>
+
+<div class="question">
+<p>5. UPDATE командасы эмне кылат?</p>
+<label><input type="radio" name="q5" value="a"> Таблицаны өчүрөт</label>
+<label><input type="radio" name="q5" value="b"> Маалыматты өзгөртөт</label>
+<label><input type="radio" name="q5" value="c"> Маалыматты тандайт</label>
+</div>
+
+<div class="question">
+<p>6. DELETE командасы эмне үчүн колдонулат?</p>
+<label><input type="radio" name="q6" value="a"> Маалыматты өчүрүү</label>
+<label><input type="radio" name="q6" value="b"> Маалымат кошуу</label>
+<label><input type="radio" name="q6" value="c"> Маалыматты сорттоо</label>
+</div>
+
+<div class="question">
+<p>7. FROM командасы эмнени көрсөтөт?</p>
+<label><input type="radio" name="q7" value="a"> Маалымат алынуучу таблицаны</label>
+<label><input type="radio" name="q7" value="b"> Окуучунун атын</label>
+<label><input type="radio" name="q7" value="c"> Маалыматтын түсүн</label>
+</div>
+
+<div class="question">
+<p>8. WHERE командасы эмне үчүн колдонулат?</p>
+<label><input type="radio" name="q8" value="a"> Шарт коюу үчүн</label>
+<label><input type="radio" name="q8" value="b"> Таблица түзүү үчүн</label>
+<label><input type="radio" name="q8" value="c"> Файл сактоо үчүн</label>
+</div>
+
+<div class="question">
+<p>9. SELECT * FROM Окуучулар; командасы эмне кылат?</p>
+<label><input type="radio" name="q9" value="a"> Бардык окуучуларды өчүрөт</label>
+<label><input type="radio" name="q9" value="b"> Окуучулар таблицасындагы бардык маалыматты көрсөтөт</label>
+<label><input type="radio" name="q9" value="c"> Жаңы таблица түзөт</label>
+</div>
+
+<div class="question">
+<p>10. SQL командалары кайсы объект менен иштейт?</p>
+<label><input type="radio" name="q10" value="a"> Маалыматтар базасы жана таблицалар</label>
+<label><input type="radio" name="q10" value="b"> Музыкалык файлдар</label>
+<label><input type="radio" name="q10" value="c"> Компьютердин экраны</label>
+</div>
+
+<button type="button" onclick="checkTest()">Тестти текшерүү</button>
+</form>
+
+<div id="result"></div>
+<a class="back" href="8class_informatika.html">← Сабактарга кайтуу</a>
+</div>
+
+<script>
+function checkTest(){
+const answers={q1:"b",q2:"a",q3:"b",q4:"a",q5:"b",q6:"a",q7:"a",q8:"a",q9:"b",q10:"a"};
+let score=0;
+for(let q in answers){
+let selected=document.querySelector('input[name="'+q+'"]:checked');
+if(selected && selected.value===answers[q]) score++;
+}
+let name=document.getElementById("student").value.trim();
+document.getElementById("result").innerHTML=
+(name ? name+", " : "")+"Сиздин жыйынтыгыңыз: "+score+"/10 балл.";
+}
+</script>
+</body>
+</html>
