@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 14-сабактын тести</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;padding:20px;line-height:1.6}
+header{background:#2563eb;color:white;padding:25px;text-align:center;border-radius:12px}
+.container{max-width:850px;margin:25px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 4px 12px #ddd}
+h1,h2{color:#2563eb}
+.question{padding:15px;margin:15px 0;background:#f4f7fb;border-radius:10px}
+label{display:block;padding:7px;cursor:pointer}
+input[type=text]{padding:10px;width:90%;max-width:350px;font-size:16px}
+button{background:#2563eb;color:white;border:0;padding:12px 22px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:15px}
+#result{font-size:20px;font-weight:bold;margin-top:20px}
+.back{display:inline-block;margin-top:20px;color:#2563eb}
+</style>
+</head>
+<body>
+<header>
+<h1>14-сабак: Практикалык иш — МББС жана SQL сурамдары</h1>
+<p>8-класс | Информатика</p>
+</header>
+<div class="container">
+<h2>Билимди текшерүү</h2>
+<p>Окуучунун аты-жөнү:</p>
+<input type="text" id="student" placeholder="Аты-жөнүн жазыңыз">
+
+<form id="quiz">
+<div id="questions"></div>
+<button type="button" onclick="checkAnswers()">Тестти текшерүү</button>
+</form>
+<div id="result"></div>
+<a class="back" href="8class_informatika.html">← Сабактарга кайтуу</a>
+</div>
+
+<script>
+const questions=[
+["SQL деген эмне?",["Сүрөт тартуу программасы","Маалыматтар базасы менен иштөө тили","Операциялык система","Оюн программасы"],1],
+["SELECT командасы эмне үчүн колдонулат?",["Маалыматты өчүрүү","Маалыматты тандоо","Таблица түзүү","Маалыматты өзгөртүү"],1],
+["INSERT командасынын кызматы кандай?",["Жаңы маалымат кошуу","Маалыматты өчүрүү","Маалыматты издөө","Таблицаны жабуу"],0],
+["UPDATE командасы эмне кылат?",["Маалыматты жаңыртат","Таблицаны өчүрөт","Маалыматты көрсөтөт","Программаны жабат"],0],
+["DELETE командасы эмне үчүн колдонулат?",["Маалымат кошуу","Маалыматты өчүрүү","Маалыматты сорттоо","Таблица түзүү"],1],
+["CREATE TABLE командасы эмне кылат?",["Таблица түзөт","Маалыматты өчүрөт","Маалыматты издейт","Маалыматты көчүрөт"],0],
+["FROM сөзү SQL сурамында эмнени көрсөтөт?",["Маалымат алынуучу таблицаны","Окуучунун атын","Маалыматтын түсүн","Таблицанын өлчөмүн"],0],
+["WHERE шарты эмне үчүн керек?",["Маалыматты шарт боюнча тандоо","Таблицаны боёо","Маалыматты көчүрүү","Программаны иштетүү"],0],
+["Маалыматтар базасындагы жазуу деген эмне?",["Таблицанын бир сабы","Таблицанын түсү","Файлдын аты","Программанын белгиси"],0],
+["Талаа деген эмне?",["Таблицанын мамычасы","Таблицанын сабы","Компьютердин бөлүгү","Файлдын көлөмү"],0],
+["SQL сурамынын туура жазылышын белгилегиле.",["SELECT * FROM Students;","OPEN Students;","START Students;","SHOW ALL Students;"],0],
+["Маалыматты сорттоо үчүн кайсы команда колдонулат?",["ORDER BY","DELETE","INSERT","CREATE"],0],
+["COUNT() функциясы эмне кылат?",["Жазуулардын санын эсептейт","Маалыматты өчүрөт","Таблица түзөт","Маалыматты өзгөртөт"],0],
+["Маалыматтар базасын башкаруу системасына кайсы программа кирет?",["Microsoft Access","Paint","Calculator","PowerPoint"],0],
+["SQL аркылуу окуучулардын маалыматтарын тандоо үчүн кайсы команда колдонулат?",["SELECT","DELETE","DROP","UPDATE"],0]
+];
+
+const box=document.getElementById("questions");
+questions.forEach((q,i)=>{
+let html=`<div class="question"><b>${i+1}. ${q[0]}</b>`;
+q[1].forEach((a,j)=>{
+html+=`<label><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}) ${a}</label>`;
+});
+html+="</div>";
+box.innerHTML+=html;
+});
+
+function checkAnswers(){
+let student=document.getElementById("student").value.trim();
+if(!student){alert("Окуучунун аты-жөнүн жазыңыз!");return;}
+let score=0,answered=0;
+questions.forEach((q,i)=>{
+let selected=document.querySelector(`input[name="q${i}"]:checked`);
+if(selected){
+answered++;
+if(Number(selected.value)===q[2])score++;
+}
+});
+if(answered<questions.length){
+alert("Бардык суроолорго жооп бериңиз!");
+return;
+}
+let percent=Math.round(score/questions.length*100);
+document.getElementById("result").innerHTML=
+`Окуучу: ${student}<br>Туура жооптор: ${score} / ${questions.length}<br>Жыйынтык: ${percent}%`;
+}
+</script>
+</body>
+</html>
