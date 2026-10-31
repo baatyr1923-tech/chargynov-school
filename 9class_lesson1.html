@@ -377,4 +377,52 @@
 </div>
 
 </body>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tests = document.querySelectorAll(".test");
+    const result = document.createElement("div");
+    result.id = "testResult";
+
+    const button = document.createElement("button");
+    button.textContent = "Тестти текшерүү";
+    button.style.cssText = "padding:12px 24px;background:#16845B;color:white;border:0;border-radius:8px;font-size:18px;cursor:pointer;margin:20px 0;";
+
+    const testCard = document.querySelector(".card:has(.test)");
+    if (!testCard || tests.length === 0) return;
+
+    testCard.appendChild(button);
+    testCard.appendChild(result);
+
+    button.addEventListener("click", function () {
+        let correct = 0;
+        let answered = 0;
+
+        tests.forEach(function (test) {
+            const answer = test.querySelector(".answer");
+            if (!answer) return;
+
+            const correctAnswer = answer.textContent.replace("Жооп:", "").trim();
+            let selected = test.querySelector('input[type="radio"]:checked');
+
+            if (selected) {
+                answered++;
+                if (selected.value === correctAnswer) correct++;
+            }
+        });
+
+        if (answered < tests.length) {
+            result.textContent = "Бардык суроолорго жооп бериңиз!";
+            return;
+        }
+
+        const grade = correct >= tests.length * 0.85 ? 5 :
+                      correct >= tests.length * 0.65 ? 4 :
+                      correct >= tests.length * 0.45 ? 3 : 2;
+
+        result.innerHTML = "Туура жооптор: " + correct + " / " + tests.length +
+            "<br>Баасы: " + grade;
+    });
+});
+</script>
+</body> 
 </html>
