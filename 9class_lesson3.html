@@ -596,6 +596,106 @@
   </footer>
 
 </div>
+ <h2>📝 Тест — Өзүңдү текшер</h2>
+    <p>Суроолорго туура жоопту тандап, аягында "Текшерүү" баскычын баскыла.</p>
 
+    <!-- 1-суроо -->
+    <div class="test" data-question="1">
+      <p><strong>1. Растрдык сүрөттүн эң кичинекей элементи эмне деп аталат?</strong></p>
+      <label><input type="radio" name="q1" value="A"> А) Вектор</label><br>
+      <label><input type="radio" name="q1" value="B"> Б) Пиксель</label><br>
+      <label><input type="radio" name="q1" value="C"> В) Сан</label><br>
+    </div>
+
+    <!-- 2-суроо -->
+    <div class="test" data-question="2">
+      <p><strong>2. RGB моделиндеги "B" тамгасы кайсы түстү билдирет?</strong></p>
+      <label><input type="radio" name="q2" value="A"> А) Black (Кара)</label><br>
+      <label><input type="radio" name="q2" value="B"> Б) Blue (Көк)</label><br>
+      <label><input type="radio" name="q2" value="C"> В) Brown (Күрөң)</label><br>
+    </div>
+
+    <!-- 3-суроо -->
+    <div class="test" data-question="3">
+      <p><strong>3. Сүрөттү чоңойткондо сапаты жоголбогон графика кайсы?</strong></p>
+      <label><input type="radio" name="q3" value="A"> А) Вектордук</label><br>
+      <label><input type="radio" name="q3" value="B"> Б) Растрдык</label><br>
+      <label><input type="radio" name="q3" value="C"> В) Фракталдык</label><br>
+    </div>
+
+    <!-- 4-суроо -->
+    <div class="test" data-question="4">
+      <p><strong>4. CMYK модели негизинен кайда колдонулат?</strong></p>
+      <label><input type="radio" name="q4" value="A"> А) Монитордун экранында</label><br>
+      <label><input type="radio" name="q4" value="B"> Б) Басып чыгарууда (полиграфияда)</label><br>
+      <label><input type="radio" name="q4" value="C"> В) Телефондордо</label><br>
+    </div>
+
+    <!-- Жыйынтык көрсөтүүчү блок -->
+    <button onclick="checkTest()" style="background: #16845B; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 15px;">Текшерүү</button>
+    
+    <div id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold; display: none;"></div>
+  </div>
+
+  <center><a href="index.html" class="back">← Башкы бетке кайтуу</a></center>
+
+  <footer>
+    <p>© 2026 — Жумабек Чаргынов атындагы мектеп</p>
+  </footer>
+
+</div>
+
+<script>
+  function checkTest() {
+    // Туура жооптор ушул жерде жашыруун сакталат
+    const correctAnswers = {
+      q1: "B", // Пиксель
+      q2: "B", // Blue
+      q3: "A", // Вектордук
+      q4: "B"  // Басып чыгарууда
+    };
+
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+
+    // Жоопторду текшерүү
+    for (let key in correctAnswers) {
+      let selected = document.querySelector(`input[name="${key}"]:checked`);
+      let testDiv = document.querySelector(`[name="${key}"]`).closest('.test');
+      
+      // Мурунку боёкторду тазалоо
+      testDiv.style.background = "#fafafa";
+      testDiv.style.borderColor = "#ddd";
+
+      if (selected) {
+        if (selected.value === correctAnswers[key]) {
+          score++;
+          testDiv.style.background = "#e8f5ef"; // Туура болсо жашыл фон
+          testDiv.style.borderColor = "#16845B";
+        } else {
+          testDiv.style.background = "#fde8e8"; // Ката болсо кызыл фон
+          testDiv.style.borderColor = "#e53e3e";
+        }
+      } else {
+        testDiv.style.background = "#fff7e6"; // Белгиленбесе сары фон
+        testDiv.style.borderColor = "#f0ad4e";
+      }
+    }
+
+    // Жыйынтыкты экранга чыгаруу
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `Сиздин жыйынтык: ${score} / ${totalQuestions} туура жооп.`;
+    
+    if (score === totalQuestions) {
+      resultDiv.style.color = "#16845B";
+    } else {
+      resultDiv.style.color = "#222";
+    }
+  }
+</script>
+
+</body>
+</html>
 </body>
 </html>
