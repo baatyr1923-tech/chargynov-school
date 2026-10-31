@@ -431,5 +431,39 @@
 
 </div>
 
+<div style="text-align:center; margin:25px;">
+  <button type="button" onclick="checkTest()" style="padding:12px 25px; background:#16845B; color:white; border:0; border-radius:8px; font-size:18px; cursor:pointer;">
+    Тестти текшерүү
+  </button>
+  <h2 id="result"></h2>
+</div>
+
+<script>
+function checkTest() {
+  const tests = document.querySelectorAll('.test');
+  let score = 0;
+  let answered = 0;
+
+  tests.forEach(test => {
+    const selected = test.querySelector('input:checked');
+    const answer = test.querySelector('.answer');
+
+    if (selected) {
+      answered++;
+      const correct = answer.textContent.match(/[АБВГ]/);
+      if (correct && selected.value === correct[0]) {
+        score++;
+      }
+    }
+  });
+
+  const grade = score >= 9 ? 5 : score >= 7 ? 4 : score >= 5 ? 3 : 2;
+
+  document.getElementById('result').textContent =
+    'Жооп берилди: ' + answered + '/10. Туура жооп: ' +
+    score + '/10. Баа: ' + grade;
+}
+</script>
 </body>
 </html>
+
