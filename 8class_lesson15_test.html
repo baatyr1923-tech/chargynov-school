@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 15-сабактын чейректик кайталоо тести</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;padding:20px;line-height:1.6}
+header{background:#2563eb;color:white;text-align:center;padding:35px 15px;border-radius:15px}
+.container{max-width:900px;margin:25px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 4px 15px #ddd}
+h1,h2{color:#2563eb}
+.question{background:#f1f5f9;padding:15px;margin:15px 0;border-radius:10px}
+label{display:block;padding:7px;cursor:pointer}
+input[type=radio]{margin-right:8px}
+input[type=text]{padding:10px;font-size:16px;width:280px;max-width:90%}
+button{background:#2563eb;color:white;border:0;padding:13px 22px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:15px}
+button:hover{background:#1749b5}
+#result{font-size:20px;font-weight:bold;margin-top:20px}
+.back{display:inline-block;margin-top:20px;color:#2563eb;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+<h1>15-сабак: Чейректик кайталоо</h1>
+<p>8-класс | Информатика</p>
+</header>
+
+<div class="container">
+<h2>Билимди текшерүү</h2>
+<p>Окуучунун аты-жөнү:</p>
+<input type="text" id="student" placeholder="Аты-жөнүн жазыңыз">
+
+<form id="quiz">
+
+<div class="question">
+<b>1. Маалыматтар базасы деген эмне?</b>
+<label><input type="radio" name="q1" value="a"> Сүрөт тартуучу программа</label>
+<label><input type="radio" name="q1" value="b"> Тартипке келтирилген маалыматтар жыйындысы</label>
+<label><input type="radio" name="q1" value="c"> Оюн программасы</label>
+<label><input type="radio" name="q1" value="d"> Музыка ойноткуч</label>
+</div>
+
+<div class="question">
+<b>2. Маалыматтар базасында таблица эмнеден турат?</b>
+<label><input type="radio" name="q2" value="a"> Сүрөттөрдөн гана</label>
+<label><input type="radio" name="q2" value="b"> Файлдардан гана</label>
+<label><input type="radio" name="q2" value="c"> Жазуулардан жана талаалардан</label>
+<label><input type="radio" name="q2" value="d"> Музыкалардан</label>
+</div>
+
+<div class="question">
+<b>3. МББС деген эмне?</b>
+<label><input type="radio" name="q3" value="a"> Маалыматтарды башкаруу системасы</label>
+<label><input type="radio" name="q3" value="b"> Операциялык система</label>
+<label><input type="radio" name="q3" value="c"> Графикалык редактор</label>
+<label><input type="radio" name="q3" value="d"> Интернет браузери</label>
+</div>
+
+<div class="question">
+<b>4. MySQL программасы эмне үчүн колдонулат?</b>
+<label><input type="radio" name="q4" value="a"> Видео көрүү үчүн</label>
+<label><input type="radio" name="q4" value="b"> Сүрөт тартуу үчүн</label>
+<label><input type="radio" name="q4" value="c"> Текст терүү үчүн</label>
+<label><input type="radio" name="q4" value="d"> Маалыматтарды сактоо жана башкаруу үчүн</label>
+</div>
+
+<div class="question">
+<b>5. INSERT командасынын кызматы кандай?</b>
+<label><input type="radio" name="q5" value="a"> Маалыматты өчүрүү</label>
+<label><input type="radio" name="q5" value="b"> Жаңы маалымат кошуу</label>
+<label><input type="radio" name="q5" value="c"> Маалыматты издөө</label>
+<label><input type="radio" name="q5" value="d"> Таблицаны жабуу</label>
+</div>
+
+<div class="question">
+<b>6. UPDATE командасы эмне кылат?</b>
+<label><input type="radio" name="q6" value="a"> Маалыматты жаңыртат</label>
+<label><input type="radio" name="q6" value="b"> Маалыматты көрсөтөт</label>
+<label><input type="radio" name="q6" value="c"> Жаңы база түзөт</label>
+<label><input type="radio" name="q6" value="d"> Программаны өчүрөт</label>
+</div>
+
+<div class="question">
+<b>7. DELETE командасы эмне үчүн колдонулат?</b>
+<label><input type="radio" name="q7" value="a"> Маалымат кошуу</label>
+<label><input type="radio" name="q7" value="b"> Маалымат издөө</label>
+<label><input type="radio" name="q7" value="c"> Маалыматты өчүрүү</label>
+<label><input type="radio" name="q7" value="d"> Таблица түзүү</label>
+</div>
+
+<div class="question">
+<b>8. SQL сөзүнүн толук аталышы кайсы?</b>
+<label><input type="radio" name="q8" value="a"> Simple Question Language</label>
+<label><input type="radio" name="q8" value="b"> System Quick Link</label>
+<label><input type="radio" name="q8" value="c"> Software Quality List</label>
+<label><input type="radio" name="q8" value="d"> Structured Query Language</label>
+</div>
+
+<div class="question">
+<b>9. SELECT командасы эмне үчүн колдонулат?</b>
+<label><input type="radio" name="q9" value="a"> Маалыматты өчүрүү</label>
+<label><input type="radio" name="q9" value="b"> Маалыматты тандоо</label>
+<label><input type="radio" name="q9" value="c"> Маалыматты өзгөртүү</label>
+<label><input type="radio" name="q9" value="d"> Таблицаны жок кылуу</label>
+</div>
+
+<div class="question">
+<b>10. SQL сурамы деген эмне?</b>
+<label><input type="radio" name="q10" value="a"> Маалыматтар базасына берилген буйрук</label>
+<label><input type="radio" name="q10" value="b"> Сүрөттүн түрү</label>
+<label><input type="radio" name="q10" value="c"> Компьютердин бөлүгү</label>
+<label><input type="radio" name="q10" value="d"> Оюн эрежеси</label>
+</div>
+
+<button type="button" onclick="checkQuiz()">Тестти текшерүү</button>
+<button type="reset" onclick="document.getElementById('result').innerHTML=''">Кайра баштоо</button>
+</form>
+
+<div id="result"></div>
+<a class="back" href="8class_informatika.html">← Сабактарга кайтуу</a>
+</div>
+
+<script>
+function checkQuiz(){
+const student=document.getElementById('student').value.trim();
+if(!student){
+alert('Аты-жөнүңүздү жазыңыз!');
+return;
+}
+const answers=['b','c','a','d','b','a','c','d','b','a'];
+let score=0;
+let unanswered=0;
+for(let i=1;i<=10;i++){
+const selected=document.querySelector('input[name="q'+i+'"]:checked');
+if(!selected){unanswered++;}
+else if(selected.value===answers[i-1]){score++;}
+}
+if(unanswered>0){
+alert('Бардык суроолорго жооп бериңиз. Жооп берилбеген суроолор: '+unanswered);
+return;
+}
+let grade=score>=9?5:score>=7?4:score>=5?3:2;
+document.getElementById('result').innerHTML=
+'Окуучу: '+student+'<br>'+
+'Туура жооптор: '+score+' / 10<br>'+
+'Баасы: '+grade+'<br>'+
+'Жыйынтык: '+(score>=9?'Азаматсыз!':score>=7?'Жакшы!':score>=5?'Канааттандырарлык.':'Дагы кайталап окуңуз.');
+}
+</script>
+</body>
+</html>
