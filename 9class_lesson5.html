@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="ky">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="9-класс информатика. 5-сабак. Чейректик кайталоо. Маалыматтык сабаттуулук жана компьютердик графика боюнча кайталоо.">
-
+  <meta name="description" content="9-класс информатика. 5-сабак. Чейректик кайталоо. Маалыматтык сабаттуулук жана компьютердик графика.">
   <title>9-класс — Чейректик кайталоо</title>
-
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -75,15 +77,55 @@
 
     .test {
       background: #fafafa;
-      padding: 15px;
+      padding: 18px;
       border-radius: 10px;
       margin: 15px 0;
       border: 1px solid #ddd;
     }
 
-    .answer {
-      color: #16845B;
+    .test strong {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .test label {
+      display: block;
+      padding: 7px 0;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .test input {
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      background: #16845B;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 9px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    button:hover {
+      background: #106b49;
+    }
+
+    #result {
+      display: none;
+      background: #e8f5ef;
+      border-left: 6px solid #16845B;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 25px;
+      font-size: 21px;
       font-weight: bold;
+      line-height: 1.8;
     }
 
     .back {
@@ -102,6 +144,24 @@
       color: #666;
       font-size: 14px;
     }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px 12px 35px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .header h1 {
+        font-size: 23px;
+      }
+
+      .test label {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 
@@ -116,7 +176,6 @@
 
   <div class="card">
     <h2>📚 Кайталоонун темалары</h2>
-
     <ul>
       <li>Маалыматтык сабаттуулук жана фейк маалымат;</li>
       <li>Интернетке маалымат жарыялоо эрежелери;</li>
@@ -132,7 +191,6 @@
 
   <div class="card">
     <h2>🔍 1. Маалыматтык сабаттуулук</h2>
-
     <p>
       <strong>Фейк маалымат</strong> — чындыкка туура келбеген
       же адаштыруучу маалымат.
@@ -144,7 +202,6 @@
     </div>
 
     <h3>Эсте сакта:</h3>
-
     <ul>
       <li>Маалыматтын булагын текшерүү керек;</li>
       <li>Авторун жана жарыяланган датасын карап чыгуу керек;</li>
@@ -155,12 +212,10 @@
 
   <div class="card">
     <h2>🎨 2. Графикалык маалыматты коддоо</h2>
-
     <p>
       Компьютердеги сүрөттөр санариптик маалымат түрүндө
       коддолот жана компьютердин эсинде сандар аркылуу сакталат.
     </p>
-
     <p>
       Экрандагы сүрөт майда чекиттерден — <strong>пикселдерден</strong>
       турат.
@@ -175,44 +230,31 @@
     <h2>🖼️ 3. Растрдык жана вектордук графика</h2>
 
     <h3>Растрдык графика</h3>
-
     <p>
       Растрдык сүрөт пикселдерден түзүлөт.
       Сүрөттү чоңойткондо сапаты начарлап кетиши мүмкүн.
     </p>
-
-    <p>
-      <strong>Мисалдар:</strong> JPEG, PNG, GIF.
-    </p>
+    <p><strong>Мисалдар:</strong> JPEG, PNG, GIF.</p>
 
     <h3>Вектордук графика</h3>
-
     <p>
       Вектордук сүрөт геометриялык объекттерден:
       сызык, тегерек, тик бурчтук жана башка фигуралардан түзүлөт.
     </p>
-
-    <p>
-      Вектордук сүрөттү чоңойткондо сапаты жакшы сакталат.
-    </p>
-
-    <p>
-      <strong>Мисал:</strong> логотиптер, схемалар, диаграммалар.
-    </p>
+    <p>Вектордук сүрөттү чоңойткондо сапаты жакшы сакталат.</p>
+    <p><strong>Мисал:</strong> логотиптер, схемалар, диаграммалар.</p>
   </div>
 
   <div class="card">
     <h2>🌈 4. Түстүк моделдер</h2>
 
     <h3>RGB</h3>
-
     <p>
       RGB модели үч негизги түстөн турат:
       <strong>Red — кызыл, Green — жашыл, Blue — көк.</strong>
     </p>
 
     <h3>CMYK</h3>
-
     <p>
       CMYK көбүнчө басып чыгарууда колдонулат:
       <strong>Cyan, Magenta, Yellow, Key (Black).</strong>
@@ -229,14 +271,12 @@
     <h2>🥽 5. AR жана VR</h2>
 
     <h3>Кеңейтилген реалдуулук — AR</h3>
-
     <p>
       AR чыныгы дүйнөнүн көрүнүшүнө санариптик объекттерди
       кошуп көрсөтөт.
     </p>
 
     <h3>Виртуалдык реалдуулук — VR</h3>
-
     <p>
       VR колдонуучуну компьютер тарабынан түзүлгөн
       виртуалдык чөйрөгө киргизет.
@@ -245,7 +285,6 @@
 
   <div class="card">
     <h2>🤖 6. Графикада жасалма интеллект</h2>
-
     <p>
       Жасалма интеллект графикалык материалдарды түзүүдө,
       сүрөттөрдү оңдоодо, объекттерди таанууда жана
@@ -263,147 +302,135 @@
 
   <div class="card">
     <h2>📝 Чейректик тест</h2>
+    <p>15 суроонун ар биринен бирден туура жоопту белгилеп, аягында текшериңиз.</p>
 
     <div class="test">
-      <strong>1. Фейк деген эмне?</strong><br>
-      А) Компьютердик оюн<br>
-      Б) Жалган же адаштыруучу маалымат<br>
-      В) Сүрөт редактору<br>
-      Г) Вирус<br>
-      <p class="answer">Жооп: Б</p>
+      <strong>1. Фейк деген эмне?</strong>
+      <label><input type="radio" name="q1" value="A"> А) Компьютердик оюн</label>
+      <label><input type="radio" name="q1" value="B"> Б) Жалган же адаштыруучу маалымат</label>
+      <label><input type="radio" name="q1" value="C"> В) Сүрөт редактору</label>
+      <label><input type="radio" name="q1" value="D"> Г) Вирус</label>
     </div>
 
     <div class="test">
-      <strong>2. Маалыматты бөлүшүүдөн мурун эмне кылуу керек?</strong><br>
-      А) Дароо бөлүшүү<br>
-      Б) Булагын текшерүү<br>
-      В) Өчүрүү<br>
-      Г) Көчүрүү<br>
-      <p class="answer">Жооп: Б</p>
+      <strong>2. Маалыматты бөлүшүүдөн мурун эмне кылуу керек?</strong>
+      <label><input type="radio" name="q2" value="A"> А) Дароо бөлүшүү</label>
+      <label><input type="radio" name="q2" value="B"> Б) Булагын текшерүү</label>
+      <label><input type="radio" name="q2" value="C"> В) Өчүрүү</label>
+      <label><input type="radio" name="q2" value="D"> Г) Көчүрүү</label>
     </div>
 
     <div class="test">
-      <strong>3. Экрандагы сүрөт эмнелерден турат?</strong><br>
-      А) Папкалардан<br>
-      Б) Пикселдерден<br>
-      В) Файлдардан<br>
-      Г) Программалардан<br>
-      <p class="answer">Жооп: Б</p>
+      <strong>3. Экрандагы сүрөт эмнелерден турат?</strong>
+      <label><input type="radio" name="q3" value="A"> А) Папкалардан</label>
+      <label><input type="radio" name="q3" value="B"> Б) Пикселдерден</label>
+      <label><input type="radio" name="q3" value="C"> В) Файлдардан</label>
+      <label><input type="radio" name="q3" value="D"> Г) Программалардан</label>
     </div>
 
     <div class="test">
-      <strong>4. Растрдык графиканын негизги элементи кайсы?</strong><br>
-      А) Пиксел<br>
-      Б) Формула<br>
-      В) Таблица<br>
-      Г) Код<br>
-      <p class="answer">Жооп: А</p>
+      <strong>4. Растрдык графиканын негизги элементи кайсы?</strong>
+      <label><input type="radio" name="q4" value="A"> А) Пиксел</label>
+      <label><input type="radio" name="q4" value="B"> Б) Формула</label>
+      <label><input type="radio" name="q4" value="C"> В) Таблица</label>
+      <label><input type="radio" name="q4" value="D"> Г) Код</label>
     </div>
 
     <div class="test">
-      <strong>5. Вектордук графика эмнелерден түзүлөт?</strong><br>
-      А) Пикселдерден гана<br>
-      Б) Геометриялык объекттерден<br>
-      В) Үндөрдөн<br>
-      Г) Тексттен гана<br>
-      <p class="answer">Жооп: Б</p>
+      <strong>5. Вектордук графика эмнелерден түзүлөт?</strong>
+      <label><input type="radio" name="q5" value="A"> А) Пикселдерден гана</label>
+      <label><input type="radio" name="q5" value="B"> Б) Геометриялык объекттерден</label>
+      <label><input type="radio" name="q5" value="C"> В) Үндөрдөн</label>
+      <label><input type="radio" name="q5" value="D"> Г) Тексттен гана</label>
     </div>
 
     <div class="test">
-      <strong>6. RGB моделинде кайсы түстөр колдонулат?</strong><br>
-      А) Кызыл, жашыл, көк<br>
-      Б) Сары, кара, ак<br>
-      В) Көк, сары, кара<br>
-      Г) Ак, боз, кара<br>
-      <p class="answer">Жооп: А</p>
+      <strong>6. RGB моделинде кайсы түстөр колдонулат?</strong>
+      <label><input type="radio" name="q6" value="A"> А) Кызыл, жашыл, көк</label>
+      <label><input type="radio" name="q6" value="B"> Б) Сары, кара, ак</label>
+      <label><input type="radio" name="q6" value="C"> В) Көк, сары, кара</label>
+      <label><input type="radio" name="q6" value="D"> Г) Ак, боз, кара</label>
     </div>
 
     <div class="test">
-      <strong>7. CMYK көбүнчө кайда колдонулат?</strong><br>
-      А) Басып чыгарууда<br>
-      Б) Компьютердик оюндарда<br>
-      В) Интернет браузерде<br>
-      Г) Электрондук почтада<br>
-      <p class="answer">Жооп: А</p>
+      <strong>7. CMYK көбүнчө кайда колдонулат?</strong>
+      <label><input type="radio" name="q7" value="A"> А) Басып чыгарууда</label>
+      <label><input type="radio" name="q7" value="B"> Б) Компьютердик оюндарда</label>
+      <label><input type="radio" name="q7" value="C"> В) Интернет браузерде</label>
+      <label><input type="radio" name="q7" value="D"> Г) Электрондук почтада</label>
     </div>
 
     <div class="test">
-      <strong>8. Растрдык сүрөттү чоңойткондо эмне болушу мүмкүн?</strong><br>
-      А) Сапаты начарлайт<br>
-      Б) Үнгө айланат<br>
-      В) Файл өчөт<br>
-      Г) Текст болуп калат<br>
-      <p class="answer">Жооп: А</p>
+      <strong>8. Растрдык сүрөттү чоңойткондо эмне болушу мүмкүн?</strong>
+      <label><input type="radio" name="q8" value="A"> А) Сапаты начарлайт</label>
+      <label><input type="radio" name="q8" value="B"> Б) Үнгө айланат</label>
+      <label><input type="radio" name="q8" value="C"> В) Файл өчөт</label>
+      <label><input type="radio" name="q8" value="D"> Г) Текст болуп калат</label>
     </div>
 
     <div class="test">
-      <strong>9. AR деген эмне?</strong><br>
-      А) Виртуалдык дүйнө гана<br>
-      Б) Чыныгы дүйнөгө санариптик объекттерди кошуу<br>
-      В) Текст редактору<br>
-      Г) Антивирус<br>
-      <p class="answer">Жооп: Б</p>
+      <strong>9. AR деген эмне?</strong>
+      <label><input type="radio" name="q9" value="A"> А) Виртуалдык дүйнө гана</label>
+      <label><input type="radio" name="q9" value="B"> Б) Чыныгы дүйнөгө санариптик объекттерди кошуу</label>
+      <label><input type="radio" name="q9" value="C"> В) Текст редактору</label>
+      <label><input type="radio" name="q9" value="D"> Г) Антивирус</label>
     </div>
 
     <div class="test">
-      <strong>10. VR эмнени билдирет?</strong><br>
-      А) Виртуалдык реалдуулук<br>
-      Б) Растрдык визуализация<br>
-      В) Видео редактор<br>
-      Г) Вектордук ресурс<br>
-      <p class="answer">Жооп: А</p>
+      <strong>10. VR эмнени билдирет?</strong>
+      <label><input type="radio" name="q10" value="A"> А) Виртуалдык реалдуулук</label>
+      <label><input type="radio" name="q10" value="B"> Б) Растрдык визуализация</label>
+      <label><input type="radio" name="q10" value="C"> В) Видео редактор</label>
+      <label><input type="radio" name="q10" value="D"> Г) Вектордук ресурс</label>
     </div>
 
     <div class="test">
-      <strong>11. Жасалма интеллект графикада эмне үчүн колдонулушу мүмкүн?</strong><br>
-      А) Сүрөт түзүү жана оңдоо үчүн<br>
-      Б) Компьютерди өчүрүү үчүн гана<br>
-      В) Интернетти өчүрүү үчүн<br>
-      Г) Клавиатураны алмаштыруу үчүн<br>
-      <p class="answer">Жооп: А</p>
+      <strong>11. Жасалма интеллект графикада эмне үчүн колдонулушу мүмкүн?</strong>
+      <label><input type="radio" name="q11" value="A"> А) Сүрөт түзүү жана оңдоо үчүн</label>
+      <label><input type="radio" name="q11" value="B"> Б) Компьютерди өчүрүү үчүн гана</label>
+      <label><input type="radio" name="q11" value="C"> В) Интернетти өчүрүү үчүн</label>
+      <label><input type="radio" name="q11" value="D"> Г) Клавиатураны алмаштыруу үчүн</label>
     </div>
 
     <div class="test">
-      <strong>12. Вектордук графиканын артыкчылыгы кайсы?</strong><br>
-      А) Чоңойткондо сапаты жакшы сакталат<br>
-      Б) Ар дайым пикселдерден турат<br>
-      В) Үн чыгарат<br>
-      Г) Интернетсиз иштебейт<br>
-      <p class="answer">Жооп: А</p>
+      <strong>12. Вектордук графиканын артыкчылыгы кайсы?</strong>
+      <label><input type="radio" name="q12" value="A"> А) Чоңойткондо сапаты жакшы сакталат</label>
+      <label><input type="radio" name="q12" value="B"> Б) Ар дайым пикселдерден турат</label>
+      <label><input type="radio" name="q12" value="C"> В) Үн чыгарат</label>
+      <label><input type="radio" name="q12" value="D"> Г) Интернетсиз иштебейт</label>
     </div>
 
     <div class="test">
-      <strong>13. Кайсысы растрдык формат?</strong><br>
-      А) JPEG<br>
-      Б) HTML<br>
-      В) TXT<br>
-      Г) DOCX<br>
-      <p class="answer">Жооп: А</p>
+      <strong>13. Кайсысы растрдык формат?</strong>
+      <label><input type="radio" name="q13" value="A"> А) JPEG</label>
+      <label><input type="radio" name="q13" value="B"> Б) HTML</label>
+      <label><input type="radio" name="q13" value="C"> В) TXT</label>
+      <label><input type="radio" name="q13" value="D"> Г) DOCX</label>
     </div>
 
     <div class="test">
-      <strong>14. Жеке маалыматка кайсынысы кирет?</strong><br>
-      А) Сырсөз<br>
-      Б) Сабактын темасы<br>
-      В) Окуу китебинин аталышы<br>
-      Г) Мектептин жалпы жаңылыгы<br>
-      <p class="answer">Жооп: А</p>
+      <strong>14. Жеке маалыматка кайсынысы кирет?</strong>
+      <label><input type="radio" name="q14" value="A"> А) Сырсөз</label>
+      <label><input type="radio" name="q14" value="B"> Б) Сабактын темасы</label>
+      <label><input type="radio" name="q14" value="C"> В) Окуу китебинин аталышы</label>
+      <label><input type="radio" name="q14" value="D"> Г) Мектептин жалпы жаңылыгы</label>
     </div>
 
     <div class="test">
-      <strong>15. Маалыматтык сабаттуулуктун негизги эрежеси кайсы?</strong><br>
-      А) Оку → Текшер → Ойлон → Бөлүш<br>
-      Б) Оку → Дароо бөлүш<br>
-      В) Көр → Дароо жөнөт<br>
-      Г) Башкалар бөлүшсө, сен да бөлүш<br>
-      <p class="answer">Жооп: А</p>
+      <strong>15. Маалыматтык сабаттуулуктун негизги эрежеси кайсы?</strong>
+      <label><input type="radio" name="q15" value="A"> А) Оку → Текшер → Ойлон → Бөлүш</label>
+      <label><input type="radio" name="q15" value="B"> Б) Оку → Дароо бөлүш</label>
+      <label><input type="radio" name="q15" value="C"> В) Көр → Дароо жөнөт</label>
+      <label><input type="radio" name="q15" value="D"> Г) Башкалар бөлүшсө, сен да бөлүш</label>
     </div>
 
+    <button type="button" onclick="checkTest()">Тестти текшерүү</button>
+
+    <div id="result"></div>
   </div>
 
   <div class="card">
     <h2>🎯 Жыйынтык</h2>
-
     <div class="important">
       Чейрек ичинде маалыматтык сабаттуулук, графикалык маалыматты
       коддоо, компьютердик графика, растрдык жана вектордук графика,
@@ -414,7 +441,6 @@
 
   <div class="card">
     <h2>🏠 Үй тапшырмасы</h2>
-
     <p>
       Чейрек ичинде өткөн темалардын ичинен өзүңө эң кызыктуу болгон
       теманы тандап, анын негизги түшүнүктөрүн 5–7 сүйлөм менен жазып кел.
@@ -428,6 +454,62 @@
   </footer>
 
 </div>
+
+<script>
+function checkTest() {
+  const correctAnswers = {
+    q1: "B",
+    q2: "B",
+    q3: "B",
+    q4: "A",
+    q5: "B",
+    q6: "A",
+    q7: "A",
+    q8: "A",
+    q9: "B",
+    q10: "A",
+    q11: "A",
+    q12: "A",
+    q13: "A",
+    q14: "A",
+    q15: "A"
+  };
+
+  let score = 0;
+  let answered = 0;
+
+  for (let i = 1; i <= 15; i++) {
+    const selected = document.querySelector(
+      'input[name="q' + i + '"]:checked'
+    );
+
+    if (selected) {
+      answered++;
+
+      if (selected.value === correctAnswers["q" + i]) {
+        score++;
+      }
+    }
+  }
+
+  const grade = score >= 13 ? 5 :
+                score >= 10 ? 4 :
+                score >= 7 ? 3 : 2;
+
+  const result = document.getElementById("result");
+
+  result.style.display = "block";
+  result.innerHTML =
+    "Жооп берилди: " + answered + "/15<br>" +
+    "Туура жооп: " + score + "/15<br>" +
+    "Баасы: " + grade;
+
+  result.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+</script>
 
 </body>
 </html>
