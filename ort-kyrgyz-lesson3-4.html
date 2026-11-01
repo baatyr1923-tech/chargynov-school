@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОРТ — Сүйлөмдүн баш мүчөлөрү</title>
+<style>
+:root{--blue:#102b50;--green:#16865b;--light:#f2f6fa;--text:#263445}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.7}
+header{background:var(--blue);color:white;text-align:center;padding:30px 16px}
+header h1{margin:0;font-size:clamp(23px,4vw,34px)}
+header p{color:#dbe7f5;margin:8px 0 0}
+.container{width:min(1050px,92%);margin:28px auto}
+.card{background:white;border-radius:18px;padding:26px;margin:20px 0;box-shadow:0 5px 18px #102b5010}
+h2{color:var(--blue);margin-top:0}
+h3{color:var(--green)}
+.example{background:#f0f7f4;border-left:5px solid var(--green);padding:12px 16px;border-radius:8px;margin:12px 0}
+.question{border:1px solid #d9e2ec;border-radius:14px;padding:18px;margin:15px 0}
+.question p{font-weight:bold;margin:0 0 10px}
+label{display:block;padding:6px 0;cursor:pointer}
+input[type=radio]{margin-right:9px}
+button,.back{display:inline-block;border:0;border-radius:11px;padding:13px 22px;font-size:16px;font-weight:bold;cursor:pointer;margin:8px 6px 8px 0;text-decoration:none}
+button{background:var(--green);color:white}
+.back{background:var(--blue);color:white}
+#result{font-size:22px;font-weight:bold;margin-top:18px}
+#feedback{font-size:17px}
+footer{text-align:center;background:var(--blue);color:white;padding:22px;margin-top:35px}
+@media(max-width:600px){.card{padding:18px}.container{width:94%}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>📘 ОРТ — КЫРГЫЗ ТИЛИ</h1>
+<p>3-ай. 4-сабак: Сүйлөмдүн баш мүчөлөрү — ээ жана баяндооч</p>
+</header>
+
+<main class="container">
+
+<section class="card">
+<h2>🎯 Сабактын максаты</h2>
+<p>Сүйлөмдүн грамматикалык негизин түшүнүү, ээ менен баяндоочту айырмалоо жана сүйлөм ичинен туура табуу көндүмдөрүн өнүктүрүү.</p>
+<p><b>Сабактын бөлүктөрү:</b> теория, мисалдар, практикалык тапшырмалар жана 15 суроолук тест.</p>
+</section>
+
+<section class="card">
+<h2>1. Сүйлөмдүн баш мүчөлөрү деген эмне?</h2>
+<p>Сүйлөмдүн баш мүчөлөрү — сүйлөмдүн негизги оюн билдирген ээ жана баяндооч.</p>
+<p>Ээ менен баяндооч сүйлөмдүн грамматикалык негизин түзөт.</p>
+<div class="example">
+<b>Мисал:</b> Окуучу китеп окуйт.
+<ul>
+<li><b>Ким?</b> — окуучу (ээ).</li>
+<li><b>Эмне кылат?</b> — окуйт (баяндооч).</li>
+</ul>
+</div>
+</section>
+
+<section class="card">
+<h2>2. Ээ деген эмне?</h2>
+<p><b>Ээ</b> — сүйлөмдө ким же эмне жөнүндө сөз болуп жатканын билдирген баш мүчө.</p>
+<p>Ээ көбүнчө зат атооч же ат атооч менен берилет.</p>
+<h3>Ээге берилүүчү суроолор</h3>
+<ul>
+<li>Ким?</li>
+<li>Эмне?</li>
+<li>Кимдер?</li>
+<li>Эмнелер?</li>
+</ul>
+<div class="example">
+<b>Мисалдар:</b>
+<ul>
+<li><u>Мугалим</u> сабак өттү. (Ким? — мугалим)</li>
+<li><u>Күн</u> чыкты. (Эмне? — күн)</li>
+<li><u>Окуучулар</u> келишти. (Кимдер? — окуучулар)</li>
+<li><u>Китептер</u> текчеде турат. (Эмнелер? — китептер)</li>
+</ul>
+</div>
+</section>
+
+<section class="card">
+<h2>3. Баяндооч деген эмне?</h2>
+<p><b>Баяндооч</b> — ээнин кыймыл-аракетин, абалын же белгисин билдирген баш мүчө.</p>
+<p>Баяндооч көбүнчө этиштен жасалат, бирок башка сөз түркүмдөрү менен да берилиши мүмкүн.</p>
+<h3>Баяндоочко берилүүчү суроолор</h3>
+<ul>
+<li>Эмне кылды?</li>
+<li>Эмне кылат?</li>
+<li>Кандай?</li>
+<li>Ким болду?</li>
+<li>Эмне болду?</li>
+</ul>
+<div class="example">
+<b>Мисалдар:</b>
+<ul>
+<li>Бала <u>ойноп жатат</u>. (Эмне кылып жатат?)</li>
+<li>Атам <u>келди</u>. (Эмне кылды?)</li>
+<li>Аба <u>суук</u>. (Кандай?)</li>
+<li>Ал <u>мугалим</u>. (Ким?)</li>
+</ul>
+</div>
+</section>
+
+<section class="card">
+<h2>4. Ээ менен баяндоочту кантип табабыз?</h2>
+<div class="example">
+<p><b>1-мисал:</b> Айгүл ыр ырдады.</p>
+<p>Ким? — Айгүл (ээ).</p>
+<p>Эмне кылды? — ырдады (баяндооч).</p>
+</div>
+<div class="example">
+<p><b>2-мисал:</b> Балдар мектепке барышты.</p>
+<p>Кимдер? — балдар (ээ).</p>
+<p>Эмне кылышты? — барышты (баяндооч).</p>
+</div>
+<div class="example">
+<p><b>3-мисал:</b> Асман ачык.</p>
+<p>Эмне? — асман (ээ).</p>
+<p>Кандай? — ачык (баяндооч).</p>
+</div>
+</section>
+
+<section class="card">
+<h2>5. Сүйлөмдүн грамматикалык негизи</h2>
+<p>Сүйлөмдүн ээси жана баяндоочу анын грамматикалык негизин түзөт.</p>
+<div class="example">
+<p><b>Мисал:</b> Акылдуу окуучу тапшырманы тез аткарды.</p>
+<p>Ээ — окуучу.</p>
+<p>Баяндооч — аткарды.</p>
+<p>«Акылдуу», «тапшырманы», «тез» сөздөрү баш мүчөлөр эмес.</p>
+</div>
+<p><b>Эсиңерде болсун:</b> сүйлөмдөн биринчи «ким?» же «эмне?» деп ээни, андан кийин «эмне кылды?» же башка тиешелүү суроолор менен баяндоочту табабыз.</p>
+</section>
+
+<section class="card">
+<h2>6. Практикалык тапшырмалар</h2>
+<h3>1-тапшырма. Ээсин тап</h3>
+<ol>
+<li>Окуучу тапшырманы аткарды. — Окуучу.</li>
+<li>Канат куштар учуп жүрөт. — Куштар.</li>
+<li>Апам тамак жасады. — Апам.</li>
+<li>Жамгыр жаады. — Жамгыр.</li>
+</ol>
+<h3>2-тапшырма. Баяндоочту тап</h3>
+<ol>
+<li>Балдар футбол ойношту. — Ойношту.</li>
+<li>Күн жылуу. — Жылуу.</li>
+<li>Атам жумушка кетти. — Кетти.</li>
+<li>Китеп кызыктуу. — Кызыктуу.</li>
+</ol>
+<h3>3-тапшырма. Грамматикалык негизди аныкта</h3>
+<ul>
+<li>Мугалим түшүндүрдү. — Мугалим / түшүндүрдү.</li>
+<li>Окуучулар жазышты. — Окуучулар / жазышты.</li>
+<li>Гүлдөр ачылды. — Гүлдөр / ачылды.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>📝 7. Билимиңди текшер — тест</h2>
+<p>Ар бир суроодон бир туура жоопту танда. Бардык суроолорго жооп бергенден кийин «Жоопторду текшерүү» баскычын бас.</p>
+<div id="quiz"></div>
+<button onclick="checkAnswers()">Жоопторду текшерүү</button>
+<button onclick="resetQuiz()" style="background:var(--blue)">Кайра баштоо</button>
+<div id="result"></div>
+<div id="feedback"></div>
+</section>
+
+<a class="back" href="ort-kyrgyz-month3.html">← 3-айдын сабактарына кайтуу</a>
+
+</main>
+
+<footer>
+№35 — Жумабек Чаргынов атындагы орто билим берүү мектеби<br>
+ОРТга даярдоо курсу
+</footer>
+
+<script>
+const questions=[
+{q:"1. Сүйлөмдүн баш мүчөлөрү кайсылар?",a:["Аныктооч жана толуктооч","Ээ жана баяндооч","Бышыктооч жана аныктооч"],c:1},
+{q:"2. Ээ эмнени билдирет?",a:["Ким же эмне жөнүндө сөз болуп жатканын","Кыймылдын ордун","Кыймылдын мезгилин"],c:0},
+{q:"3. Ээге берилүүчү суроолорду тап.",a:["Качан? Кайда?","Кандай? Кантип?","Ким? Эмне?"],c:2},
+{q:"4. Баяндооч эмнени билдирет?",a:["Ээнин кыймылын, абалын же белгисин","Заттын атын гана","Заттын санын"],c:0},
+{q:"5. «Окуучу китеп окуйт» сүйлөмүндө ээ кайсы?",a:["Китеп","Окуучу","Окуйт"],c:1},
+{q:"6. «Окуучу китеп окуйт» сүйлөмүндө баяндооч кайсы?",a:["Окуучу","Китеп","Окуйт"],c:2},
+{q:"7. «Күн чыкты» сүйлөмүнүн ээси кайсы?",a:["Күн","Чыкты","Сүйлөм"],c:0},
+{q:"8. «Балдар ойношту» сүйлөмүнүн баяндоочу кайсы?",a:["Балдар","Ойношту","Оюн"],c:1},
+{q:"9. Сүйлөмдүн грамматикалык негизин эмне түзөт?",a:["Ээ жана баяндооч","Аныктооч жана толуктооч","Бардык сөздөр"],c:0},
+{q:"10. «Аба суук» сүйлөмүндө баяндооч кайсы?",a:["Аба","Суук","Сүйлөм"],c:1},
+{q:"11. «Мугалим сабак өттү» сүйлөмүнүн ээси кайсы?",a:["Сабак","Өттү","Мугалим"],c:2},
+{q:"12. «Куштар учту» сүйлөмүндө баяндоочту тап.",a:["Куштар","Учту","Куш"],c:1},
+{q:"13. Ээ көбүнчө кайсы сөз түркүмдөрү менен берилет?",a:["Зат атооч жана ат атооч","Тактооч гана","Байламта гана"],c:0},
+{q:"14. «Атам келди» сүйлөмүндөгү грамматикалык негиз кайсы?",a:["Атам — келди","Атам — үйгө","Келди — үй"],c:0},
+{q:"15. «Акылдуу окуучу тапшырманы аткарды» сүйлөмүнүн ээси кайсы?",a:["Акылдуу","Тапшырманы","Окуучу"],c:2}
+];
+
+const quiz=document.getElementById("quiz");
+questions.forEach((item,i)=>{
+const div=document.createElement("div");
+div.className="question";
+let html="<p>"+item.q+"</p>";
+item.a.forEach((answer,j)=>{
+html+=`<label><input type="radio" name="q${i}" value="${j}"> ${answer}</label>`;
+});
+div.innerHTML=html;
+quiz.appendChild(div);
+});
+
+function checkAnswers(){
+let score=0,answered=0;
+questions.forEach((item,i)=>{
+const selected=document.querySelector(`input[name="q${i}"]:checked`);
+if(selected){
+answered++;
+if(Number(selected.value)===item.c)score++;
+}
+});
+if(answered<questions.length){
+document.getElementById("result").textContent="Бардык суроолорго жооп бериңиз. Жооп берилгени: "+answered+"/15";
+document.getElementById("feedback").textContent="";
+return;
+}
+let percent=Math.round(score/questions.length*100);
+document.getElementById("result").textContent=`Сиздин жыйынтыгыңыз: ${score} / 15 (${percent}%)`;
+let message="";
+if(score===15)message="Азаматсыз! Бардык суроого туура жооп бердиңиз!";
+else if(score>=12)message="Абдан жакшы! Теманы мыкты өздөштүрдүңүз.";
+else if(score>=9)message="Жакшы! Дагы бир аз машыгыңыз.";
+else if(score>=6)message="Жаман эмес. Теорияны кайра кайталаңыз.";
+else message="Теманы кайра окуп чыгып, тестти кайталап көрүңүз.";
+document.getElementById("feedback").textContent=message;
+}
+function resetQuiz(){
+document.querySelectorAll('input[type="radio"]').forEach(input=>input.checked=false);
+document.getElementById("result").textContent="";
+document.getElementById("feedback").textContent="";
+}
+</script>
+</body>
+</html>
