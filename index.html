@@ -1,589 +1,609 @@
+
 <!DOCTYPE html>
 <html lang="ky">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="№35 Жумабек Чаргынов атындагы орто билим берүү мектебинин расмий сайты. Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы. Мектеп жөнүндө маалымат, мугалимдер, жаңылыктар, ОРТга даярдык жана окуу материалдары.">
- <link rel="canonical" href="https://chargynov.com.kg/">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби</title>
-  <link rel="stylesheet" href="style.css?v=2">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="№35 Жумабек Чаргынов атындагы орто билим берүү мектебинин расмий сайты. Өзгөрүш айылы, Токтогул району.">
+<title>№35 Жумабек Чаргынов атындагы мектеп</title>
+<style>
+:root {
+  --blue:#102b50;
+  --blue2:#174574;
+  --green:#16865b;
+  --light:#f2f6fa;
+  --white:#fff;
+  --text:#263445;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  color:var(--text);
+  background:var(--light);
+  line-height:1.7;
+}
+.container{width:min(1160px,92%);margin:auto}
+header{
+  background:var(--blue);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 18px #0002;
+}
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{
+  width:54px;height:54px;border-radius:15px;
+  background:var(--green);
+  display:grid;place-items:center;
+  font-size:25px;font-weight:bold;color:white;
+}
+.brand strong{display:block;font-size:16px;line-height:1.4}
+.brand span{font-size:13px;color:#d4e3f2}
+nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+nav a{
+  color:white;text-decoration:none;
+  padding:9px 11px;border-radius:8px;
+  font-size:13px;
+}
+nav a:hover{background:var(--green)}
+.menu{
+  display:none;background:var(--green);color:white;
+  border:0;padding:10px 14px;border-radius:8px;font-size:20px;
+}
+.hero{
+  min-height:510px;
+  position:relative;
+  display:flex;align-items:center;
+  background:linear-gradient(90deg,#102b50ed,#102b5099);
+  color:white;overflow:hidden;
+}
+.hero>img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:-2;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,#102b50ed 0%,#102b50a8 65%,#102b5060);
+  z-index:-1;
+}
+.hero-content{padding:75px 0;max-width:780px}
+.eyebrow{
+  color:#9ee6c4;font-weight:bold;
+  letter-spacing:2px;text-transform:uppercase;
+}
+.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.15;margin:15px 0}
+.hero p{font-size:19px;max-width:650px}
+.button,.action{
+  display:inline-block;background:var(--green);color:white;
+  text-decoration:none;padding:13px 23px;
+  border-radius:9px;font-weight:bold;margin-top:15px;
+}
+.button:hover,.action:hover{background:#106c49}
+section{padding:65px 0;scroll-margin-top:90px}
+section.soft{background:#eaf1f7}
+h2{
+  color:var(--blue);font-size:clamp(25px,3vw,34px);
+  margin:0 0 25px;
+}
+h3{color:var(--blue);margin-top:8px}
+.lead{font-size:18px;color:#526477}
+.card{
+  background:white;border-radius:16px;padding:25px;
+  box-shadow:0 5px 22px #18324d12;
+  border:1px solid #e5ebf1;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+.card img{max-width:100%;height:auto}
+.about-photo{
+  width:100%;max-width:650px;display:block;
+  margin:25px auto;border-radius:14px;
+}
+.teacher{text-align:center}
+.avatar{
+  width:145px;height:145px;margin:0 auto 18px;
+  border-radius:50%;overflow:hidden;
+  border:5px solid #e5f3ec;
+}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.teacher h3{margin-bottom:5px}
+.teacher p{margin:5px 0}
+.section-label{
+  display:inline-block;color:var(--green);
+  font-weight:bold;margin-bottom:8px;
+}
+.ort-section{
+  background:linear-gradient(135deg,#102b50,#174574);
+  color:white;
+}
+.ort-section h2{color:white}
+.ort-section .lead{color:#d8e7f4}
+.ort-card{border-top:4px solid var(--green)}
+.ort-card a,.card-link{
+  display:inline-block;color:var(--green);
+  font-weight:bold;text-decoration:none;margin-top:10px;
+}
+.ort-card a:hover,.card-link:hover{text-decoration:underline}
+.lesson-card{border-top:4px solid #2c79a9}
+.engineering-section{background:#eaf1f7}
+.news-date{color:var(--green);font-weight:bold}
+.news-photos,.gallery{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;margin:20px 0;
+}
+.news-photos img,.gallery img{
+  width:100%;height:190px;object-fit:cover;
+  border-radius:12px;
+}
+video{width:100%;max-width:480px;border-radius:12px}
+.contact p{margin:10px 0}
+footer{
+  background:#0b203a;color:#d9e5f1;
+  padding:30px 0;text-align:center;
+}
+#school-bot{
+  position:fixed;right:22px;bottom:22px;z-index:2000;
+}
+#bot-button{
+  background:var(--green);color:white;border:0;
+  padding:15px 20px;border-radius:30px;
+  font-size:15px;font-weight:bold;cursor:pointer;
+  box-shadow:0 5px 18px #0003;
+}
+#bot-box{
+  display:none;width:min(340px,calc(100vw - 35px));
+  background:white;border-radius:15px;
+  box-shadow:0 8px 35px #0003;overflow:hidden;
+}
+.bot-header{
+  background:var(--blue);color:white;
+  padding:15px;display:flex;justify-content:space-between;
+}
+.bot-header button{
+  border:0;background:transparent;color:white;
+  font-size:20px;cursor:pointer;
+}
+#bot-messages{padding:17px}
+.bot-question{
+  display:block;width:100%;text-align:left;
+  padding:11px;margin:8px 0;border:1px solid #dce5ed;
+  background:#f4f8fb;border-radius:8px;cursor:pointer;
+}
+.bot-question:hover{background:#e4f3eb}
+#bot-answer{
+  margin-top:12px;padding:10px;
+  background:#e9f5ee;border-radius:8px;
+}
+@media(max-width:850px){
+  .nav{flex-wrap:wrap;padding:12px 0}
+  .menu{display:block}
+  nav{
+    display:none;width:100%;
+    flex-direction:column;align-items:stretch;
+    padding:8px 0 15px;
+  }
+  nav.open{display:flex}
+  nav a{padding:11px 13px;background:#18395f}
+  .hero{min-height:450px}
+}
+@media(max-width:550px){
+  section{padding:45px 0}
+  .hero-content{padding:55px 0}
+  .hero p{font-size:16px}
+  .card{padding:19px}
+  .brand strong{font-size:13px}
+  .brand span{font-size:11px}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">35</div>
-        <div>
-          <strong>№35-Жумабек Чаргынов атындагы</strong>
-          <span>орто билим берүү мектеби</span>
-        </div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">35</div>
+      <div>
+        <strong>№35 — Жумабек Чаргынов атындагы</strong>
+        <span>орто билим берүү мектеби</span>
       </div>
-      <button class="menu" aria-label="Меню">☰</button>
-      <nav>
-        <a href="#home">Башкы бет</a>
-        <a href="#about">Мектеп жөнүндө</a>
-        <a href="#teachers">Мугалимдер</a>
-        <a href="#subject-tips">Предметтик сунуштар</a>
-        <a href="#announcement">Кулактандыруу</a>
-        <a href="#summer-news">Жайкы жаңылыктар</a>
-        <a href="#news">Жаңылыктар</a>
-        <a href="#gallery">Галерея</a>
-        <a href="#ort">ОРТга даярдануу</a>
-        <a href="#engineering">Инженердик технологиялар</a>
-        <a href="#online-lessons">🎓 Онлайн сабактар</a>
-        <a href="#contact">Байланыш</a>
-      </nav>
     </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <p class="eyebrow">Билим • Тарбия • Келечек</p>
-        <h1>№35-Жумабек Чаргынов атындагы орто билим берүү мектеби</h1>
-        <p>Ар бир окуучунун билим алуусуна, өнүгүүсүнө жана келечегине кең жол ачабыз.</p>
-        <a class="button" href="#about">Мектеп жөнүндө</a>
-      </div>
-      <img src="1b5042bb-6a7a-4c99-910e-c6a59b08b1f9.JPG" alt="№35 Жумабек Чаргынов атындагы мектеп">
-    </section>
-</section>
-
-<!-- Мектеп жардамчысы -->
-<div id="school-bot">
-  <button id="bot-button">💬 Мектеп жардамчысы</button>
-
-  <div id="bot-box" style="display:none;">
-    <div class="bot-header">
-      <strong>Мектеп жардамчысы</strong>
-      <button id="bot-close">✕</button>
-    </div>
-
-    <div id="bot-messages">
-      <p><strong>Бот:</strong> Саламатсызбы! Сурооңузду тандаңыз:</p>
-
-      <button class="bot-question"
-        data-answer="Мектептин дареги: Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай Ата көчөсү №8.">
-        📍 Мектептин дареги
-      </button>
-
-      <button class="bot-question"
-  onclick="window.location.href='#ort'">
-  📘 ОРТга даярдануу
-</button>
-      <button class="bot-question"
-  onclick="window.location.href='#engineering'">
-  🛠 Инженердик технологиялар
-</button>
- 
-
-      <button class="bot-question"
-  onclick="window.location.href='#teachers'">
-  👩‍🏫 Мугалимдер
-</button>
-
-      <button class="bot-question"
-        data-answer="Мектептин жаңылыктарын «Жаңылыктар» бөлүмүнөн көрө аласыз.">
-        📰 Жаңылыктар
-      </button>
-
-      <button class="bot-question"
-        data-answer="Байланыш маалыматтары сайттын «Байланыш» бөлүмүндө көрсөтүлгөн.">
-        ☎️ Байланыш
-      </button>
-
-      <div id="bot-answer"></div>
-    </div>
+    <button class="menu" id="menuButton" aria-label="Меню">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Башкы бет</a>
+      <a href="#about">Мектеп жөнүндө</a>
+      <a href="#teachers">Мугалимдер</a>
+      <a href="#subject-tips">Предметтик сунуштар</a>
+      <a href="#announcement">Кулактандыруу</a>
+      <a href="#news">Жаңылыктар</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#ort">ОРТ</a>
+      <a href="#online-lessons">Сабактар</a>
+      <a href="#engineering">Инженердик технологиялар</a>
+      <a href="#contact">Байланыш</a>
+    </nav>
   </div>
-</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <img src="1b5042bb-6a7a-4c99-910e-c6a59b08b1f9.JPG" alt="№35 мектептин имараты">
+  <div class="container hero-content">
+    <p class="eyebrow">Билим • Тарбия • Келечек</p>
+    <h1>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби</h1>
+    <p>Ар бир окуучунун билим алуусуна, өнүгүүсүнө жана келечегине кең жол ачабыз.</p>
+    <a class="button" href="#about">Мектеп жөнүндө</a>
+    <a class="button" href="#ort">ОРТга даярдануу</a>
+  </div>
+</section>
 
 <section id="about">
-    <section id="about">
-      <div class="container">
-        <h2>Мектеп жөнүндө</h2>
-        <div class="card">
-          <p>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби Жалал-Абад облусунун Токтогул районундагы Өзгөрүш айылында жайгашкан.</p>
-<p>Мектеп көп жылдардан бери жаш муундарга сапаттуу билим жана татыктуу тарбия берип, айылдын билим берүү тармагында маанилүү орунду ээлеп келет.</p><p>Бүгүнкү күндө мектеп окуучуларга сапаттуу билим жана тарбия берүү менен бирге, өзүнүн бай тарыхын, агартуу салтын жана мугалимдердин эмгегин улантып келет.</p>        </div>
-    <h3>Жумабек Чаргынов — мектеп тарыхында</h3>
-<img src="jumabek-chargynov.png" alt="Жумабек Чаргынов" style="width:300px;height:auto;float:left;margin:10px 30px 20px 0;border-radius:12px;">            
-
-        <p>Жумабек Чаргынов 1907-жылы Орто-Дыйкан Абайылда Чаргындын үй-бүлөсүндө төрөлгөн.</p>
-        <p>Атасынан 16 жашында ажырап, өзүнөн кичүү 6 бир тууганын кыйынчылык заманда жетимчиликтин каарын көргөзбөй, эмгекке тарбиялап чоңойткон.</p>
-        <p>1933-жылы Жумабек Чаргынов Камыш-Башы айылында тууганы Качканактын тамын оңдоп, 11 баланы 1-класска кабыл алып, балдарга билим берүү ишин уланткан.</p>
-        <p>1934-жылы Жумабек Чаргыновдун демилгеси жана уюштуруусу менен айылдагы эски имарат оңдолуп, төрт класстык бөлмөсү бар мектепке айландырылган. Мектептин айланасы тосулуп, бак-дарактар отургузулган.</p>
-        <p>Жумабек Чаргынов мектепте 9 жыл мугалим жана директор болуп эмгектенип, айылдагы билим берүү жана агартуу иштеринин өнүгүшүнө чоң салым кошкон.</p>
-        <p>1942-жылы Жумабек Чаргынов Мекенди коргоо үчүн аскерге чакырылып, Ленинград фронтунда артиллериялык замбиректин командири болуп кызмат өтөгөн. 1943-жылы «За оборону Ленинграда» медалы менен сыйланган.</p>
-        <p>1944-жылы 20-майда Жумабек Чаргынов согуштук тапшырманы аткаруу учурунда душман менен салгылашууда баатырларча курман болгон. Анын сөөгү Псков облусунун Псков районундагы Ланёва Гора кыштагындагы мемориалдык комплекске коюлган.</p>
-            <img src="chargynov-list.png" alt="Жумабек Чаргыновдун аты мемориалдык тизмеде" style="width:100%;max-width:650px;height:auto;display:block;margin:25px auto 10px auto;border-radius:12px;">  <a href="https://www.pskovgid.ru/mesta/voinskie-memorialy/laneva-gora" target="_blank">
-    Псковгид — Ланёва Гора мемориалы
-  </a>
-<img src="https://cbaatyrbek-prog.github.io/juma--chargynov-school/009feb89-b0dc-4c9e-a639-afb3f63c8e62.png" alt="Ланёва Гора мемориалдык комплекси" style="width:80%;max-width:800px;height:auto;display:block;margin:25px auto 10px auto;border-radius:12px;">            <p class="memorial-caption">Ланёва Горадагы мемориалдык комплекс — Жумабек Чаргыновдун сөөгү коюлган жер.</p>
-      </div>
-</div>
-    </section>
-
-    <section class="soft" id="teachers">
-    <section class="soft" id="subject-tips">
   <div class="container">
-    <h2>📚 Мугалимдердин предметтик окутуудагы сунуштары</h2>
-
-    <article class="card">
-      <h3>Предметти натыйжалуу окутуу боюнча сунуштар</h3>
-      <p>Бул бөлүмдө мугалимдер өз предметин окутууда колдонгон натыйжалуу усулдары, тажрыйбалары жана окуучулардын билим сапатын жогорулатуу боюнча сунуштары менен бөлүшөт.</p>
-    <hr style="margin:25px 0;">
-
-<h3>💻 Информатика предметин окутуу боюнча сунуштар</h3>
-
-<p><strong>Чаргынов Баатырбек — информатика мугалими</strong></p>
-
-<p>Информатика сабагында теория менен практиканы айкалыштыруу маанилүү. Окуучуларга компьютерди жөн гана колдонуу эмес, маалыматты туура издөө, талдоо жана санариптик технологияларды пайдалуу багытта колдонуу көндүмдөрүн үйрөтүү зарыл.</p>
-
-<p>Сабактарда программалоо, веб-сайт түзүү, презентация даярдоо, маалымат менен иштөө жана жасалма интеллект куралдарын туура колдонуу боюнча практикалык тапшырмаларга көбүрөөк орун берүү сунушталат.</p>
-
-<p>Ошондой эле киберкоопсуздукка, жеке маалыматтарды коргоого, интернеттеги маалыматтын ишенимдүүлүгүн текшерүүгө жана санариптик маданиятты калыптандырууга өзгөчө көңүл буруу керек.</p>
-
-<p>Окуучуларды чакан долбоорлорду өз алдынча аткарууга, чыгармачылык менен изденүүгө жана алган билимин турмушта колдонууга багыттоо — информатика сабагынын негизги максаттарынын бири.</p></article>
-  </article>
-    <article class="card" style="margin-top:25px;">
-  <h3>📖 Кыргыз тили предметин окутуу боюнча сунуштар</h3>
-
-  
-<p><strong>Арзыбаева Анара Жалиловна — кыргыз тили мугалими</strong></p>  <p>Кыргыз тили сабагында окуучулардын туура жана сабаттуу сүйлөө, жазуу жана өз оюн так жеткирүү көндүмдөрүн өнүктүрүүгө өзгөчө көңүл буруу зарыл.</p>
-
-  <p>Сабактарда текст менен иштөө, көркөм чыгармаларды талдоо, сөз байлыгын өстүрүү, диктант, баяндама жана чыгарма жазуу иштерин үзгүлтүксүз колдонуу сунушталат.</p>
-
-  <p>Окуучулардын сүйлөө маданиятын жогорулатуу үчүн талкуу, суроо-жооп, дебат, ролдук оюндар жана чыгармачыл тапшырмалар менен иштөөгө көбүрөөк мүмкүнчүлүк берүү пайдалуу.</p>
-
-  <p>Ошондой эле кыргыз тилинин грамматикасын күнүмдүк турмуштагы мисалдар менен байланыштырган практикалык тапшырмалар аркылуу түшүндүрүү окуучулардын сабакка болгон кызыгуусун арттырат.</p>
-
-  <p>Улуттук баалуулуктарды, макал-лакаптарды, фразеологизмдерди жана көркөм адабиятты кеңири колдонуу менен окуучулардын тилге болгон урмат-сыйын жана кызыгуусун калыптандыруу маанилүү.</p>
-</article>
-    <article class="card" style="margin-top:25px;">
-  <h3>➗ Математика предметин окутуу боюнча сунуштар</h3>
-
-  <p><strong>Тургуналиева Гулнар — математика мугалими</strong></p>
-
-  <p>Математика сабагында окуучулардын логикалык ой жүгүртүүсүн, эсептөө жөндөмүн жана маселелерди өз алдынча чечүү көндүмдөрүн өнүктүрүүгө өзгөчө көңүл буруу зарыл.</p>
-
-  <p>Жаңы темаларды түшүндүрүүдө теорияны практикалык мисалдар менен айкалыштырып, математикалык түшүнүктөрдү күнүмдүк турмуштагы жагдайлар менен байланыштыруу сунушталат.</p>
-
-  <p>Сабактарда деңгээлдик тапшырмаларды, логикалык маселелерди, математикалык оюндарды жана топтук иштерди колдонуу окуучулардын сабакка болгон кызыгуусун арттырат.</p>
-
-  <p>Окуучуларды формулаларды жаттап алуу менен гана чектебестен, алардын маанисин түшүнүүгө, чыгарылыш жолдорун талдоого жана өз жообун негиздеп берүүгө үйрөтүү маанилүү.</p>
-
-  <p>Санариптик технологияларды, интерактивдүү тапшырмаларды жана практикалык долбоорлорду колдонуу аркылуу математикалык билимди бекемдөө сунушталат.</p>
-</article>
+    <span class="section-label">Биздин мектеп</span>
+    <h2>Мектеп жөнүндө</h2>
+    <div class="card">
+      <p>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби Жалал-Абад облусунун Токтогул районундагы Өзгөрүш айылында жайгашкан.</p>
+      <p>Мектеп көп жылдардан бери жаш муундарга сапаттуу билим жана татыктуу тарбия берип, айылдын билим берүү тармагында маанилүү орунду ээлеп келет.</p>
+      <p>Бүгүнкү күндө мектеп өзүнүн бай тарыхын, агартуу салтын жана мугалимдердин эмгегин улантып келет.</p>
+    </div>
+    <h3>Жумабек Чаргынов — мектеп тарыхында</h3>
+    <img class="about-photo" src="jumabek-chargynov.png" alt="Жумабек Чаргынов">
+    <p>Жумабек Чаргынов 1907-жылы Орто-Дыйкан Абайылда Чаргындын үй-бүлөсүндө төрөлгөн.</p>
+    <p>1933-жылы Камыш-Башы айылында 11 баланы 1-класска кабыл алып, балдарга билим берүү ишин уланткан.</p>
+    <p>1934-жылы анын демилгеси менен айылдагы эски имарат оңдолуп, төрт класстык бөлмөсү бар мектепке айландырылган.</p>
+    <p>Жумабек Чаргынов мектепте 9 жыл мугалим жана директор болуп эмгектенип, айылдагы билим берүү иштеринин өнүгүшүнө чоң салым кошкон.</p>
+    <p>1942-жылы Мекенди коргоо үчүн аскерге чакырылып, Ленинград фронтунда кызмат өтөгөн. 1943-жылы «За оборону Ленинграда» медалы менен сыйланган.</p>
+    <p>1944-жылы 20-майда согуштук тапшырманы аткаруу учурунда баатырларча курман болгон.</p>
+    <img class="about-photo" src="chargynov-list.png" alt="Жумабек Чаргыновдун аты мемориалдык тизмеде">
+    <p><a class="card-link" href="https://www.pskovgid.ru/mesta/voinskie-memorialy/laneva-gora" target="_blank" rel="noopener">Псковгид — Ланёва Гора мемориалы</a></p>
+    <img class="about-photo" src="https://cbaatyrbek-prog.github.io/juma--chargynov-school/009feb89-b0dc-4c9e-a639-afb3f63c8e62.png" alt="Ланёва Гора мемориалдык комплекси">
+    <p class="lead">Ланёва Горадагы мемориалдык комплекс — Жумабек Чаргыновдун сөөгү коюлган жер.</p>
   </div>
 </section>
-      <section class="soft" id="announcement"><section class="soft" id="summer-news">
-        <div class="container">
-  <h2>📢 Окуучуларга жана ата-энелерге кулактандыруу</h2>
 
-  <article class="card">
-    <h3>🔔 Урматтуу окуучулар жана ата-энелер!</h3>
+<section class="soft" id="teachers">
+  <div class="container">
+    <span class="section-label">Биздин жамаат</span>
+    <h2>Мугалимдер</h2>
+    <div class="grid">
+      <article class="card teacher">
+        <div class="avatar"><img src="90x2.jpg" alt="Чаргынов Баатырбек"></div>
+        <h3>Чаргынов Баатырбек</h3><p>Информатика мугалими</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="Анара муг.JPG" alt="Арзыбаева Анара Жалиловна"></div>
+        <h3>Арзыбаева Анара Жалиловна</h3>
+        <p>Мектептин директору</p><p>Кыргыз тили жана адабияты мугалими</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="eba7f231-89a1-4479-bad8-627b5ed195c5.JPG" alt="Койчубаева Гулзат"></div>
+        <h3>Койчубаева Гулзат Калыбековна</h3>
+        <p>Окуу-тарбия иштери боюнча директордун орун басары</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="bf2a01eb-c92d-4d5a-9665-6da99aef555f.JPG" alt="Карыпбаев Бакыт"></div>
+        <h3>Карыпбаев Бакыт Жээнбекович</h3>
+        <p>Директордун орун басары</p><p>География мугалими</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="Бусу муг.jpg" alt="Табалдиев Бусурман"></div>
+        <h3>Табалдиев Бусурман Адашович</h3>
+        <p>Социалдык педагог</p><p>Дене тарбия мугалими</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="Тургуналиева Г.JPG" alt="Тургуналиева Гулнар"></div>
+        <h3>Тургуналиева Гулнар</h3><p>Математика мугалими</p><p>Ардагер</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="Созул Муг.JPG" alt="Калбаева Созул"></div>
+        <h3>Калбаева Созул Козубаевна</h3><p>Башталгыч класстардын мугалими</p><p>Ардагер</p>
+      </article>
+      <article class="card teacher">
+        <div class="avatar"><img src="Индра муг.JPG" alt="Убайдылдаева Индира"></div>
+        <h3>Убайдылдаева Индира</h3><p>Математика мугалими</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <p><strong>2026–2027-окуу жылы 14-сентябрда башталат.</strong></p>
-
-    <p>Урматтуу ата-энелер жана окуучулар! №35 Жумабек Чаргынов атындагы орто билим берүү мектебинде жаңы окуу жылынын башталышына байланыштуу бардык окуучуларды сабакка өз убагында келүүгө чакырабыз.</p>
-
-    <p>Окуучуларга жаңы окуу жылына керектүү окуу куралдарын жана мектеп формасын алдын ала даярдап коюу сунушталат.</p>
-
-    <p>Баарыңыздарга жаңы окуу жылында ийгиликтерди, бекем ден соолук жана мыкты жетишкендиктерди каалайбыз!</p>
-  </article>
-</div>
-</section>  <div class="container">
-    <h2 style="text-align:center;font-size:36px;margin-bottom:30px;">☀️ Жайкы жаңылыктар</h2>
-    <article class="card" style="max-width:1100px;margin:0 auto;padding:30px;border-radius:18px;">      <h3>Мугалимдердин жайкы эс алуусу</h3>
-      <p><strong>28-июнь, 2026-жыл</strong></p>
-     <img src="PHOTO-2026-06-28-12-20-13.jpg"
-     alt="Мугалимдердин жайкы эс алуусу"
-     style="width:100%;max-width:800px;height:auto;display:block;margin:20px auto;border-radius:15px;">        <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:20px;">
-<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin-top:20px;">
-  <video controls style="width:48%-width:500px;border-radius:12px;">
-    <source src="VIDEO-2026-06-28-08-29-29.mp4" type="video/mp4">
-    Браузериңиз видеону көрсөтө албай жатат.
-  </video>
-
-  <video controls style="width:48%max-width:500px;border-radius:12px;">
-    <source src="VIDEO-2026-06-28-11-53-36.mp4" type="video/mp4">
-    Браузериңиз видеону көрсөтө албай жатат.
-  </video>
-
-</div>
-    
-
-      <p>№35 Жумабек Чаргынов атындагы орто мектебинин мугалимдери жайкы эс алуу күндөрүн жаратылыш койнунда өткөрүп, жакшы маанай жана жагымдуу таасирлер менен бөлүштү.</p>
-
-      <p>Биргелешкен эс алуу — кесиптештердин ынтымагын бекемдеп, жаңы окуу жылына жаңы күч, дем жана жакшы маанай тартуулайт.</p>
+<section id="subject-tips">
+  <div class="container">
+    <h2>📚 Мугалимдердин предметтик окутуудагы сунуштары</h2>
+    <article class="card">
+      <h3>💻 Информатика предметин окутуу боюнча сунуштар</h3>
+      <p><strong>Чаргынов Баатырбек — информатика мугалими</strong></p>
+      <p>Информатика сабагында теория менен практиканы айкалыштыруу маанилүү. Окуучуларга маалыматты туура издөө, талдоо жана санариптик технологияларды пайдалуу багытта колдонуу көндүмдөрүн үйрөтүү зарыл.</p>
+      <p>Сабактарда программалоо, веб-сайт түзүү, презентация даярдоо, маалымат менен иштөө жана жасалма интеллект куралдарын туура колдонуу боюнча практикалык тапшырмаларга орун берүү сунушталат.</p>
+      <p>Киберкоопсуздукка, жеке маалыматтарды коргоого жана интернеттеги маалыматтын ишенимдүүлүгүн текшерүүгө өзгөчө көңүл буруу керек.</p>
+    </article>
+    <article class="card" style="margin-top:20px">
+      <h3>📖 Кыргыз тили предметин окутуу боюнча сунуштар</h3>
+      <p><strong>Арзыбаева Анара Жалиловна — кыргыз тили мугалими</strong></p>
+      <p>Окуучулардын туура жана сабаттуу сүйлөө, жазуу жана өз оюн так жеткирүү көндүмдөрүн өнүктүрүүгө көңүл буруу зарыл.</p>
+      <p>Текст менен иштөө, көркөм чыгармаларды талдоо, сөз байлыгын өстүрүү, диктант жана чыгарма жазуу иштерин үзгүлтүксүз колдонуу сунушталат.</p>
+    </article>
+    <article class="card" style="margin-top:20px">
+      <h3>➗ Математика предметин окутуу боюнча сунуштар</h3>
+      <p><strong>Тургуналиева Гулнар — математика мугалими</strong></p>
+      <p>Окуучулардын логикалык ой жүгүртүүсүн, эсептөө жөндөмүн жана маселелерди өз алдынча чечүү көндүмдөрүн өнүктүрүү зарыл.</p>
+      <p>Практикалык мисалдарды, деңгээлдик тапшырмаларды, логикалык маселелерди жана математикалык оюндарды колдонуу сунушталат.</p>
     </article>
   </div>
 </section>
-      
-      <div class="container">
-        <h2>Мугалимдер</h2>
-        <div class="grid">
-        <article class="card">
-  <div class="avatar">
-    <img src="90x2.jpg" alt="Чаргынов Баатырбек">
-  </div>
-  <h3>Чаргынов Баатырбек</h3>
-  <p>Информатика мугалими</p>
-</article>          <article class="card">
-  <div class="avatar">
-    <img src="Анара муг.JPG" alt="Арзыбаева Анара Жалиловна">
-  </div>
-  <h3>Арзыбаева Анара Жалиловна</h3>
-  <p>Мектептин директору</p>
-  <p>Кыргыз тили жана адабияты мугалими</p>
-</article>
-  
-<article class="card">
-  <div class="avatar">
-    <img src="eba7f231-89a1-4479-bad8-627b5ed195c5.JPG" alt="Койчубаева Гулзат Калыбековна">
-  </div>
-  <h3>Койчубаева Гулзат Калыбековна</h3>
-  <p>Мектептин окуу-тарбия иштери боюнча директордун орун басары</p>
-</article>
-<article class="card">
-  <div class="avatar">
-    <img src="bf2a01eb-c92d-4d5a-9665-6da99aef555f.JPG" alt="Карыпбаев Бакыт Жээнбекович">
-  </div>
-  <h3>Карыпбаев Бакыт Жээнбекович</h3>
-  <p>Мектептин директорунун орун басары</p>
-  <p>География мугалими</p>
-</article>
-          <article class="card">
-  <div class="avatar">
-    <img src="Бусу муг.jpg" alt="Табалдиев Бусурман Адашович">
-  </div>
-  <h3>Табалдиев Бусурман Адашович</h3>
-  <p>Мектептин соц. педагогу</p>
-  <p>Дене тарбия мугалими</p>
-</article>
-          
-<article class="card">
-  <div class="avatar">
-    <img src="Тургуналиева Г.JPG" alt="Тургуналиева Гулнар">
-  </div>
-  <h3>Тургуналиева Гулнар</h3>
-  <p>Математика мугалими</p>
-  <p>Ардагер</p>
-</article>
-<article class="card">
-  <div class="avatar">
-    <img src="Созул Муг.JPG" alt="Калбаева Созул Козубаевна">
-  </div>
-  <h3>Калбаева Созул Козубаевна</h3>
-  <p>Башталгыч класстардын мугалими</p>
-  <p>Ардагер</p>
-</article>
-<article class="card">
-  <div class="avatar">
-    <img src="Индра муг.JPG" alt="Убайдылдаева Индира">
-  </div>
-  <h3>Убайдылдаева Индира</h3>
-  <p>Математика мугалими</p>
-</article>
-      </div>
-    </section>
-<section id="ort" class="ort-section">
+
+<section class="soft" id="announcement">
   <div class="container">
-    <h2>ОРТга даярдануу</h2>
-    <p>
-      Бул бөлүмдө окуучулар ОРТга даярдануу үчүн тесттерди,
-      сабак материалдарын жана пайдалуу маалыматтарды таба алышат.
-    </p>
-
-    <div class="grid ort-grid">
-
-      <div class="сard ort-card">
-        <h3>📘 ОРТ жөнүндө</h3>
-        <p>ОРТнын түзүлүшү, даярдануу эрежелери жана пайдалуу кеңештер.</p>
-        <a href="ort-info.html">Толук маалымат</a>
-      </div>
-
-      <div class="card ort-card">
-        <h3>➗ Математика</h3>
-        <p>Формулалар, мисалдар жана тесттик тапшырмалар.</p>
-      <a href="ort-math.html">Тестти баштоо</a>
-      </div>
-
-      <div class="card ort-card">
-        <h3>📖 Кыргыз тили</h3>
-        <p>Грамматика, текст менен иштөө жана тесттер.</p>
-        <a href="ort-kyrgyz.html">Тестти баштоо</a>
-      </div>
-      <div class="card ort-card">
-    <h3>📘 Кыргыз тили — 2-ай</h3>
-    <p>Кыргыз тили боюнча 2-айдын 8 сабагы жана жыйынтыктоочу тест.</p>
-    <a href="ort-kyrgyz-month2.html">2-айдын сабактарын ачуу</a>
-</div>
-
-      <div class="card ort-card">
-        <h3>📝 Сыноо тесттери</h3>
-        <a href="ort-mixed.html">Аралаш тестти баштоо</a>
-        <p>Өз билимиңизди текшерүү үчүн онлайн тесттер.</p>
-      </div>
-
-
-<div class="card ort-card">
-  <h3>📅 Даярдык планы</h3>
-  <p>ОРТга системалуу даярдануу үчүн 4 жумалык план.</p>
-  <a href="ort-plan.html">Планды ачуу</a>
-</div>
-
-
-<div class="card ort-card">
-  <h3>🎥 Видео сабактар</h3>
-  <p>ОРТга даярдануу үчүн математика боюнча видео сабактар.</p>
-  <a href="ort-video.html">Видео сабактарды көрүү</a>
-</div>
-<div class="card ort-card">
-  <h3>📅 1-жума — Математика</h3>
-  <p>Пайыздар, бөлчөктөр, теңдемелер жана аралаш эсептөөлөр боюнча 20 суроолук тест.</p>
-  <a href="ort-week1.html">1-жуманын тестин баштоо</a>
-</div>
-<div class="card ort-card">
-    <h3>📘 Математика — 2-ай</h3>
-    <p>Математика боюнча 2-айдын 8 сабагы жана жыйынтыктоочу тест.</p>
-    <a href="ort-math-month2.html">2-айдын сабактарын ачуу</a>
-</div>
-<div class="card ort-card">
-  <h3>📅 2-жума — Кыргыз тили</h3>
-  <p>Сөз түркүмдөрү, жөндөмөлөр, сүйлөм мүчөлөрү, синоним-антоним жана туура жазуу боюнча 20 суроолук тест.</p>
-  <a href="ort-week2.html">2-жуманын тестин баштоо</a>
-</div>
-<div class="card ort-card">
-  <h3>📅 3-жума — Логика жана ой жүгүртүү</h3>
-  <p>Сан катарлары, салыштыруу, мыйзам ченемдүүлүк, убакыт жана логикалык жыйынтык чыгаруу боюнча 20 суроолук тест.</p>
-  <a href="ort-week3.html">3-жуманын тестин баштоо</a>
-</div>
-      <div class="card ort-card">
-  <h3>📅 4-жума — Жыйынтыктоочу аралаш тест</h3>
-  <p>Математика, кыргыз тили жана логика боюнча 30 суроолук жыйынтыктоочу тест.</p>
-  <a href="ort-week4.html">4-жуманын тестин баштоо</a>
-</div>
-</div>
-</div>
+    <h2>📢 Кулактандыруу</h2>
+    <article class="card">
+      <h3>Урматтуу окуучулар жана ата-энелер!</h3>
+      <p><strong>2026–2027-окуу жылы 14-сентябрда башталат.</strong></p>
+      <p>Бардык окуучуларды сабакка өз убагында келүүгө чакырабыз. Окуу куралдарын жана мектеп формасын алдын ала даярдап коюу сунушталат.</p>
+      <p>Баарыңыздарга жаңы окуу жылында ийгиликтерди каалайбыз!</p>
+    </article>
+  </div>
 </section>
-</div>
-</div>
+
+<section id="summer-news">
+  <div class="container">
+    <h2>☀️ Жайкы жаңылыктар</h2>
+    <article class="card">
+      <h3>Мугалимдердин жайкы эс алуусу</h3>
+      <p class="news-date">28-июнь, 2026-жыл</p>
+      <img class="about-photo" src="PHOTO-2026-06-28-12-20-13.jpg" alt="Мугалимдердин жайкы эс алуусу">
+      <div class="grid">
+        <div><video controls><source src="VIDEO-2026-06-28-08-29-29.mp4" type="video/mp4"></video></div>
+        <div><video controls><source src="VIDEO-2026-06-28-11-53-36.mp4" type="video/mp4"></video></div>
+      </div>
+      <p>Мектептин мугалимдери жайкы эс алуу күндөрүн жаратылыш койнунда өткөрүп, жакшы маанай жана жагымдуу таасирлер менен бөлүштү.</p>
+      <p>Биргелешкен эс алуу кесиптештердин ынтымагын бекемдеп, жаңы окуу жылына дем берет.</p>
+    </article>
+  </div>
 </section>
+
+<section class="ort-section" id="ort">
+  <div class="container">
+    <span class="section-label" style="color:#9ee6c4">Келечекке кадам</span>
+    <h2>🎓 ОРТга даярдануу</h2>
+    <p class="lead">Окуучулар үчүн тесттер, сабак материалдары жана пайдалуу даярдык ресурстары.</p>
+    <div class="grid">
+      <article class="card ort-card">
+        <h3>📘 ОРТ жөнүндө</h3><p>ОРТнын түзүлүшү, даярдануу эрежелери жана кеңештер.</p>
+        <a href="ort-info.html">Толук маалымат →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>➗ Математика</h3><p>Формулалар, мисалдар жана тесттик тапшырмалар.</p>
+        <a href="ort-math.html">Тестти баштоо →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📖 Кыргыз тили</h3><p>Грамматика, текст менен иштөө жана тесттер.</p>
+        <a href="ort-kyrgyz.html">Тестти баштоо →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📘 Кыргыз тили — 2-ай</h3><p>2-айдын 8 сабагы жана жыйынтыктоочу тест.</p>
+        <a href="ort-kyrgyz-month2.html">Сабактарды ачуу →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📝 Сыноо тесттери</h3><p>Өз билимиңди текшерүү үчүн онлайн тесттер.</p>
+        <a href="ort-mixed.html">Аралаш тест →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📅 Даярдык планы</h3><p>ОРТга системалуу даярдануу үчүн 4 жумалык план.</p>
+        <a href="ort-plan.html">Планды ачуу →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>🎥 Видео сабактар</h3><p>ОРТга даярдануу үчүн математика боюнча видео сабактар.</p>
+        <a href="ort-video.html">Видео сабактар →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📅 1-жума — Математика</h3><p>Пайыздар, бөлчөктөр жана теңдемелер боюнча 20 суроо.</p>
+        <a href="ort-week1.html">Тестти баштоо →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📘 Математика — 2-ай</h3><p>Математика боюнча 2-айдын 8 сабагы.</p>
+        <a href="ort-math-month2.html">Сабактарды ачуу →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📅 2-жума — Кыргыз тили</h3><p>Сөз түркүмдөрү, жөндөмөлөр жана сүйлөм мүчөлөрү.</p>
+        <a href="ort-week2.html">Тестти баштоо →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📅 3-жума — Логика</h3><p>Сан катарлары, салыштыруу жана мыйзам ченемдүүлүк.</p>
+        <a href="ort-week3.html">Тестти баштоо →</a>
+      </article>
+      <article class="card ort-card">
+        <h3>📅 4-жума — Жыйынтыктоочу тест</h3><p>Математика, кыргыз тили жана логика боюнча 30 суроо.</p>
+        <a href="ort-week4.html">Тестти баштоо →</a>
+      </article>
     </div>
   </div>
 </section>
-    <section id="online-lessons" style="padding:50px 20px; background:#f5f8fc;">
+
+<section id="online-lessons">
   <div class="container">
-    <h2 style="text-align:center; margin-bottom:15px;">🎓 📚 Информатика сабактары</h2>
-
-    <p style="text-align:center; margin-bottom:35px;">
-    7–9-класстар үчүн информатика сабактары, окуу материалдары жана тесттер. 9-класста технология сабактары да камтылган.
-    </p>
-
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
-
-      <div style="background:white; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-        <h3>💻 7-класс</h3>
-        <p>Информатика</p>
-  <a href="7class_online_full.html" style="display:inline-block; margin-top:10px;">📚 Сабактарды ачуу</a>
-        
-      </div>
-
-      <div style="background:white; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-        <h3>💻 8-класс</h3>
-        <p>Информатика</p>
-        <a href="8class_informatika.html" style="display:inline-block; margin-top:10px;">📚 Сабактарды ачуу</a>
-      </div>
-
-      <div style="background:white; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-        <h3>💻 9-класс</h3>
-        <p>Информатика<br>Технология</p>
-        <a href="9class_lesson1.html" style="display:inline-block; margin-top:10px;">📚 1-сабак</a><br>
-<a href="9class_lesson2.html" style="display:inline-block; margin-top:10px;">📚 2-сабак</a>
-<a href="9class_lesson3.html" style="display:inline-block; margin-top:10px;">📚 3-сабак</a>
-<a href="9class_lesson4.html" style="display:inline-block; margin-top:10px;">📚 4-сабак</a>
-        <a href="9class_lesson5.html" style="display:inline-block; margin-top:10px;">📚 5-сабак</a>
-      </div>
-
+    <span class="section-label">Онлайн билим</span>
+    <h2>🎓 Информатика сабактары</h2>
+    <p class="lead">7–9-класстар үчүн информатика сабактары, окуу материалдары жана тесттер. 9-класста технология сабактары да камтылган.</p>
+    <div class="grid">
+      <article class="card lesson-card">
+        <h3>💻 7-класс</h3><p>Информатика</p>
+        <a class="action" href="7class_online_full.html">Сабактарды ачуу</a>
+      </article>
+      <article class="card lesson-card">
+        <h3>💻 8-класс</h3><p>Информатика</p>
+        <a class="action" href="8class_informatika.html">Сабактарды ачуу</a>
+      </article>
+      <article class="card lesson-card">
+        <h3>💻 9-класс</h3><p>Информатика жана технология</p>
+        <a class="card-link" href="9class_lesson1.html">📚 1-сабак</a><br>
+        <a class="card-link" href="9class_lesson2.html">📚 2-сабак</a><br>
+        <a class="card-link" href="9class_lesson3.html">📚 3-сабак</a><br>
+        <a class="card-link" href="9class_lesson4.html">📚 4-сабак</a><br>
+        <a class="card-link" href="9class_lesson5.html">📚 5-сабак</a>
+      </article>
     </div>
-
-    <div style="margin-top:35px; text-align:center;">
-      <p><strong>Ар бир сабакта:</strong></p>
-      <span>📖 Материал</span> &nbsp;
-      <span>🎥 Видео</span> &nbsp;
-      <span>📄 Конспект</span> &nbsp;
-      <span>📝 Тест</span>
+    <div class="card" style="margin-top:25px;text-align:center">
+      <strong>Ар бир сабакта:</strong><br>
+      📖 Материал &nbsp; 🎥 Видео &nbsp; 📄 Конспект &nbsp; 📝 Тест
     </div>
-
   </div>
-</section>    <section id="engineering" class="engineering-section">
+</section>
+
+<section class="engineering-section" id="engineering">
   <div class="container">
-    <h2>Профилге чейинки даярдоо программасы «Инженердик технологиялар»</h2>
-
-    <p>
-      Бул программа окуучуларды инженердик ой жүгүртүүгө,
-      техникалык чыгармачылыкка, долбоорлоо жана практикалык
-      ишмердүүлүккө даярдоого багытталган.
-    </p>
-
-    <div class="grid engineering-grid">
-
-      <div class="card engineering-card">
+    <span class="section-label">Профилге чейинки даярдоо</span>
+    <h2>🛠 Инженердик технологиялар</h2>
+    <p class="lead">Бул программа окуучуларды инженердик ой жүгүртүүгө, техникалык чыгармачылыкка, долбоорлоо жана практикалык ишмердүүлүккө даярдоого багытталган.</p>
+    <div class="grid">
+      <article class="card">
         <h3>🎯 Программанын максаты</h3>
         <p>Окуучулардын инженердик жана технологиялык багыттагы кызыгуусун өнүктүрүү.</p>
-      </div>
-
-      
-
-      <div class="card engineering-card">
+      </article>
+      <article class="card">
         <h3>💻 Санарип технологиялар</h3>
         <p>Компьютердик моделдөө, программалоо жана санариптик шаймандарды колдонуу.</p>
         <ul>
-    <li>Презентация түзүү жана жасалгалоо.</li>
-    <li>Электрондук таблицада маалыматтарды эсептөө.</li>
-    <li>Жалган маалыматтарды аныктоо.</li>
-    <li>Жасалма интеллектти коопсуз колдонуу.</li>
-    <li>Python тилинде жөнөкөй программа түзүү.</li>
-</ul>
-      </div>
-
-      <div class="card engineering-card">
+          <li>Презентация түзүү жана жасалгалоо.</li>
+          <li>Электрондук таблицада маалыматтарды эсептөө.</li>
+          <li>Жалган маалыматтарды аныктоо.</li>
+          <li>Жасалма интеллектти коопсуз колдонуу.</li>
+          <li>Python тилинде жөнөкөй программа түзүү.</li>
+        </ul>
+      </article>
+      <article class="card">
         <h3>📚 Окуу материалдары</h3>
         <p>Сабак материалдары, тапшырмалар, презентациялар жана пайдалуу маалыматтар.</p>
-        <a href="engineering-materials.html">Материалдарды ачуу</a>
-      </div>
-
+        <a class="card-link" href="engineering-materials.html">Материалдарды ачуу →</a>
+      </article>
     </div>
   </div>
 </section>
-    <section id="news">
-      <div class="container">
-        <h2>Жаңылыктар</h2>
-        
-  <span class="date">15-сентябрь 2026-жыл</span>
-  <h3>«Доор өзгөрткөн билим: жаратман мугалим — өнүккөн өлкө» педагогикалык форуму</h3>
 
-  <div class="news-photos">
-    <img src="WhatsApp Image 2026-09-12 at 13.26.36.jpeg" alt="Педагогикалык форум" style="width:200px;height:130px;object-fit:cover;border-radius:10px;">
-<img src="WhatsApp Image 2026-09-14 at 14.13.26.jpeg" alt="Педагогикалык форум" style="width:200px;height:130px;object-fit:cover;border-radius:10px;">
-<img src="WhatsApp Image 2026-09-14 at 16.45.31.jpeg" alt="Педагогикалык форум" style="width:200px;height:130px;object-fit:cover;border-radius:10px;">  
+<section id="news">
+  <div class="container">
+    <h2>📰 Мектеп жаңылыктары</h2>
+    <article class="card">
+      <span class="news-date">15-сентябрь 2026-жыл</span>
+      <h3>«Доор өзгөрткөн билим: жаратман мугалим — өнүккөн өлкө» педагогикалык форуму</h3>
+      <div class="news-photos">
+        <img src="WhatsApp Image 2026-09-12 at 13.26.36.jpeg" alt="Педагогикалык форум">
+        <img src="WhatsApp Image 2026-09-14 at 14.13.26.jpeg" alt="Педагогикалык форум">
+        <img src="WhatsApp Image 2026-09-14 at 16.45.31.jpeg" alt="Педагогикалык форум">
+      </div>
+      <p>2026-жылдын 15-сентябрында №35 Жумабек Чаргынов атындагы орто билим берүү мектебинде «Доор өзгөрткөн билим: жаратман мугалим — өнүккөн өлкө» аттуу педагогикалык форум өткөрүлдү.</p>
+      <p>Форумга мектеп директору, окуу-тарбия иштери боюнча директордун орун басары, уюштуруучулар, социалдык педагог, усулдук бирикмелердин жетекчилери жана мугалимдер катышты.</p>
+    </article>
+    <div class="grid" style="margin-top:20px">
+      <article class="card"><h3>Мектеп жаңылыгы</h3><p>Бул жерге мектептеги иш-чаралар жана акыркы жаңылыктар жазылат.</p></article>
+      <article class="card"><h3>Окуучулардын жетишкендиги</h3><p>Олимпиада, сынак жана спорттук ийгиликтер тууралуу маалымат.</p></article>
+      <article class="card"><h3>Маанилүү маалымат</h3><p>Ата-энелерге жана окуучуларга арналган кулактандыруулар.</p></article>
+    </div>
   </div>
-<div class="grid"><article class="card forum-news">
-  <p>
-    2026-жылдын 15-сентябрында №35 Жумабек Чаргынов атындагы орто билим берүү мектебинде
-    «Доор өзгөрткөн билим: жаратман мугалим — өнүккөн өлкө» аттуу педагогикалык форум өткөрүлдү.
-  </p>
+</section>
 
-  <p>
-    Форумга мектеп директору, окуу-тарбия иштери боюнча директордун орун басары,
-    уюштуруучулар, социалдык педагог, усулдук бирикмелердин жетекчилери жана мугалимдер катышты.
-  </p>
-</article>
-<article class="card forum-news"><span class="date">Жаңылык</span><h3>Мектеп жаңылыгы</h3><p>Бул жерге мектептеги иш-чаралар жана акыркы жаңылыктар жазылат.</p></article>
-          <article class="card"><span class="date">Иш-чара</span><h3>Окуучулардын жетишкендиги</h3><p>Олимпиада, сынак жана спорттук ийгиликтер тууралуу маалымат.</p></article>
-          <article class="card"><span class="date">Кулактандыруу</span><h3>Маанилүү маалымат</h3><p>Ата-энелерге жана окуучуларга арналган кулактандыруулар.</p></article>
-        </div>
-      </div>
-    </section>
+<section class="soft" id="gallery">
+  <div class="container">
+    <h2>📸 Галерея</h2>
+    <p class="lead">Мектептин жашоосунан сүрөттөр.</p>
+    <div class="gallery">
+      <img src="IMG_7516.jpeg" alt="Мектептин сүрөтү">
+      <img src="3f256dd7-a42c-4a0e-8b8e-ba66b50b9ff8.jpg" alt="Иш-чара">
+      <img src="Окуучулар.JPG" alt="Окуучулар">
+    </div>
+  </div>
+</section>
 
-    <section class="soft" id="gallery">
-      <div class="container">
-        <h2>Галерея</h2>
-        <p class="lead">Бул жерге мектептин сүрөттөрүн кийин кошобуз.</p>
-        <div class="gallery">
-       <div><img src="IMG_7516.jpeg" alt="Мектептин сүрөтү"></div>   <div><img src="3f256dd7-a42c-4a0e-8b8e-ba66b50b9ff8.jpg" alt="Иш-чара"></div><div><img src="Окуучулар.JPG" alt="Окуучулар"></div>
-        </div>
-      </div>
-    </section>
+<section id="contact">
+  <div class="container">
+    <h2>📍 Байланыш</h2>
+    <div class="card contact">
+      <p><strong>Мектеп:</strong> №35 Жумабек Чаргынов атындагы орто билим берүү мектеби</p>
+      <p><strong>Дарек:</strong> Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай-Ата көчөсү №8</p>
+      <p><strong>Телефон:</strong> 0777 635 357</p>
+      <p><strong>E-mail:</strong> arzybaevaanara27@gmail.com</p>
+    </div>
+  </div>
+</section>
+</main>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Байланыш</h2>
-        <div class="card contact">
-          <p><strong>Дарек:</strong> Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай-Ата көчөсү №8
-          <p><strong>Телефон:</strong> 0777 635 357</p>
-<p><strong>E-mail:</strong> arzybaevaanara27@gmail.com</p>
-<p><strong>ИНН:</strong> 507200210056</p>      </div>
-    </section>
-  </main>
+<footer>
+  <div class="container">
+    © 2026 №35 Жумабек Чаргынов атындагы орто билим берүү мектеби
+    <br>Билим • Тарбия • Келечек
+  </div>
+</footer>
 
-  <footer
-    
-    <div class="container">© 2026 №35-Жумабек Чаргынов атындагы орто билим берүү мектеби</div>
-  </footer>
-  </footer>
-
-<!-- Мектеп жардамчысы -->
 <div id="school-bot">
-  <button id="bot-button" onclick="document.getElementById('bot-box').style.display='block'; this.style.display='none';">
-  💬 Мектеп жардамчысы
-</button>
-
-  <div id="bot-box" style="display:none;">
+  <button id="bot-button">💬 Мектеп жардамчысы</button>
+  <div id="bot-box">
     <div class="bot-header">
       <strong>Мектеп жардамчысы</strong>
-      <button id="bot-close" onclick="document.getElementById('bot-box').style.display='none'; document.getElementById('bot-button').style.display='block';">
-  ✕
-</button>
+      <button id="bot-close" aria-label="Жабуу">✕</button>
     </div>
-
     <div id="bot-messages">
       <p><strong>Бот:</strong> Саламатсызбы! Сурооңузду тандаңыз:</p>
-
-      <button class="bot-question" data-answer="Мектептин дареги: Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай Ата көчөсү №8.">
-        📍 Мектептин дареги
-      </button>
-
-      <button class="bot-question" data-answer="ОРТга даярдануу бөлүмүндө тесттер, 4 жумалык даярдык планы жана видео сабактар бар.">
-        📘 ОРТга даярдануу
-      </button>
-
-      <button class="bot-question" data-answer="Мугалимдер тууралуу маалыматты сайттын «Мугалимдер» бөлүмүнөн көрө аласыз.">
-        👩‍🏫 Мугалимдер
-      </button>
-
-      <button class="bot-question" data-answer="Мектептин жаңылыктарын «Жаңылыктар» бөлүмүнөн көрө аласыз.">
-        📰 Жаңылыктар
-      </button>
-
-      <button class="bot-question" data-answer="Байланыш маалыматтары сайттын «Байланыш» бөлүмүндө көрсөтүлгөн.">
-        ☎️ Байланыш
-      </button>
-
+      <button class="bot-question" data-answer="Мектептин дареги: Кыргыз Республикасы, Жалал-Абад облусу, Токтогул району, Өзгөрүш айылы, Нанай-Ата көчөсү №8.">📍 Мектептин дареги</button>
+      <button class="bot-question" data-link="#ort">📘 ОРТга даярдануу</button>
+      <button class="bot-question" data-link="#engineering">🛠 Инженердик технологиялар</button>
+      <button class="bot-question" data-link="#teachers">👩‍🏫 Мугалимдер</button>
+      <button class="bot-question" data-link="#news">📰 Жаңылыктар</button>
+      <button class="bot-question" data-link="#contact">☎️ Байланыш</button>
       <div id="bot-answer"></div>
     </div>
   </div>
 </div>
+
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const botButton = document.getElementById("bot-button");
-  const botBox = document.getElementById("bot-box");
-  const botClose = document.getElementById("bot-close");
-  const botAnswer = document.getElementById("bot-answer");
+const menuButton = document.getElementById("menuButton");
+const mainNav = document.getElementById("mainNav");
 
-  if (botButton && botBox) {
-    botButton.onclick = function () {
-      botBox.style.display = "block";
-      botButton.style.display = "none";
-    };
-  }
+menuButton.addEventListener("click", function(){
+  mainNav.classList.toggle("open");
+});
 
-  if (botClose && botBox && botButton) {
-    botClose.onclick = function () {
+mainNav.querySelectorAll("a").forEach(function(link){
+  link.addEventListener("click", function(){
+    mainNav.classList.remove("open");
+  });
+});
+
+const botButton = document.getElementById("bot-button");
+const botBox = document.getElementById("bot-box");
+const botClose = document.getElementById("bot-close");
+const botAnswer = document.getElementById("bot-answer");
+
+botButton.addEventListener("click", function(){
+  botBox.style.display = "block";
+  botButton.style.display = "none";
+});
+
+botClose.addEventListener("click", function(){
+  botBox.style.display = "none";
+  botButton.style.display = "block";
+});
+
+document.querySelectorAll(".bot-question").forEach(function(button){
+  button.addEventListener("click", function(){
+    if(button.dataset.link){
+      window.location.hash = button.dataset.link;
       botBox.style.display = "none";
       botButton.style.display = "block";
-    };
-  }
-
-  document.querySelectorAll(".bot-question[data-answer]").forEach(function (button) {
-    button.onclick = function () {
-      botAnswer.innerHTML =
-        "<strong>Бот:</strong> " + button.getAttribute("data-answer");
-    };
+    } else {
+      botAnswer.textContent = button.dataset.answer;
+    }
   });
 });
 </script>
-<script src="script.js?v=4"></script>
-  
 </body>
 </html>
