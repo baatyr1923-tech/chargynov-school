@@ -348,6 +348,77 @@ header nav a {
     font-size: 28px;
   }
 }
+/* МОБИЛЬДИК КӨРҮНҮШТҮ ОҢДОО */
+@media (max-width: 850px) {
+  .container.nav {
+    width: 94%;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center;
+  }
+
+  header .brand {
+    min-width: 0 !important;
+    flex: 1 1 auto;
+  }
+
+  .menu {
+    display: block !important;
+    margin-left: auto;
+  }
+
+  header nav,
+  nav#mainNav {
+    display: none !important;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  header nav.open,
+  nav#mainNav.open {
+    display: flex !important;
+  }
+
+  header nav a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    white-space: normal;
+    background: #18395f;
+    color: #fff !important;
+  }
+
+  .hero-content {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 45px 0 !important;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(25px, 7vw, 34px) !important;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 851px) {
+  .menu {
+    display: none !important;
+  }
+
+  header nav#mainNav {
+    display: flex !important;
+  }
+}
 </style>
 </head>
 <body>
