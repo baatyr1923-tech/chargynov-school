@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОРТ – Көпмүчөлөр жана көбөйтүү формулалары</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5f9;color:#263445;line-height:1.7}
+header{background:linear-gradient(135deg,#102b50,#174574);color:white;text-align:center;padding:30px 15px}
+header h1{margin:0;font-size:27px}
+header p{margin:8px 0;color:#dce8f5}
+.container{width:min(950px,94%);margin:25px auto}
+.card{background:white;padding:23px;border-radius:14px;margin-bottom:20px;box-shadow:0 3px 12px #0000000b}
+h2{color:#102b50;margin-top:0}
+h3{color:#16865b}
+.formula{background:#eaf4ff;padding:13px 17px;border-left:4px solid #16865b;border-radius:8px;margin:12px 0;font-weight:bold;font-size:18px}
+.example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:15px;margin:13px 0}
+.question{padding:17px;border:1px solid #e2e8f0;border-radius:10px;margin:15px 0}
+.question label{display:block;margin:7px 0;cursor:pointer}
+button{background:#16865b;color:white;border:0;border-radius:8px;padding:12px 20px;font-size:16px;cursor:pointer;margin:8px 5px 8px 0}
+button:hover{background:#116b48}
+.back{background:#102b50}
+#result{font-size:20px;font-weight:bold;margin-top:15px}
+footer{text-align:center;padding:20px;color:#64748b}
+</style>
+</head>
+<body>
+
+<header>
+<h1>📘 ОРТ – МАТЕМАТИКА</h1>
+<p>3-ай. 5-сабак. Көпмүчөлөр жана көбөйтүүнүн кыскача формулалары</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>🎯 Сабактын максаты</h2>
+<p>Көпмүчөлөрдү түшүнүү, аларды кошуу жана көбөйтүү, кыскача көбөйтүү формулаларын колдонуу.</p>
+</div>
+
+<div class="card">
+<h2>1. Көпмүчө деген эмне?</h2>
+<p>Бир нече бир мүчөлөрдүн суммасынан турган туюнтма көпмүчө деп аталат.</p>
+<div class="formula">3x² + 5x − 7</div>
+<p>Бул көпмүчөдө:</p>
+<ul>
+<li>3x² — биринчи мүчө;</li>
+<li>5x — экинчи мүчө;</li>
+<li>−7 — үчүнчү мүчө.</li>
+</ul>
+<h3>Окшош мүчөлөр</h3>
+<p>Бирдей тамгалык бөлүгү жана бирдей даражасы бар мүчөлөр окшош мүчөлөр деп аталат.</p>
+<div class="example">
+<strong>Мисал:</strong><br>
+3x + 5x − 2x = 6x
+</div>
+</div>
+
+<div class="card">
+<h2>2. Көпмүчөлөрдү кошуу жана кемитүү</h2>
+<p>Окшош мүчөлөрдү бириктирип эсептейбиз.</p>
+<div class="example">
+<strong>Мисал 1:</strong><br>
+(3x + 2) + (5x − 4)<br>
+= 3x + 5x + 2 − 4<br>
+= <strong>8x − 2</strong>
+</div>
+<div class="example">
+<strong>Мисал 2:</strong><br>
+(7x + 6) − (2x + 3)<br>
+= 7x + 6 − 2x − 3<br>
+= <strong>5x + 3</strong>
+</div>
+</div>
+
+<div class="card">
+<h2>3. Кыскача көбөйтүү формулалары</h2>
+<p>Бул формулаларды жаттап алуу маанилүү.</p>
+<div class="formula">(a + b)² = a² + 2ab + b²</div>
+<div class="formula">(a − b)² = a² − 2ab + b²</div>
+<div class="formula">a² − b² = (a − b)(a + b)</div>
+<div class="example">
+<strong>Мисал 1:</strong><br>
+(x + 3)² = x² + 6x + 9
+</div>
+<div class="example">
+<strong>Мисал 2:</strong><br>
+(x − 4)² = x² − 8x + 16
+</div>
+<div class="example">
+<strong>Мисал 3:</strong><br>
+x² − 25 = (x − 5)(x + 5)
+</div>
+</div>
+
+<div class="card">
+<h2>4. Өз алдынча иштөө</h2>
+<ol>
+<li>4x + 7x − 3x туюнтмасын жөнөкөйлөткүлө.</li>
+<li>(x + 2)² формуласын ачкыла.</li>
+<li>(x − 5)² формуласын ачкыла.</li>
+<li>x² − 36 туюнтмасын көбөйтүүчүлөргө ажыраткыла.</li>
+<li>(2x + 3) + (4x − 5) туюнтмасын жөнөкөйлөткүлө.</li>
+</ol>
+</div>
+
+<div class="card">
+<h2>5. Текшерүү тести</h2>
+<p>Бардык 10 суроого жооп берип, андан кийин «Жоопторду текшерүү» баскычын басыңыз.</p>
+
+<form id="quiz">
+
+<div class="question">
+<strong>1. 3x + 5x канча болот?</strong>
+<label><input type="radio" name="q1" value="a"> 8x</label>
+<label><input type="radio" name="q1" value="b"> 15x</label>
+<label><input type="radio" name="q1" value="c"> 2x</label>
+</div>
+
+<div class="question">
+<strong>2. (a + b)² формуласы кайсы?</strong>
+<label><input type="radio" name="q2" value="a"> a² + b²</label>
+<label><input type="radio" name="q2" value="b"> a² + 2ab + b²</label>
+<label><input type="radio" name="q2" value="c"> a² − 2ab + b²</label>
+</div>
+
+<div class="question">
+<strong>3. (a − b)² формуласы кайсы?</strong>
+<label><input type="radio" name="q3" value="a"> a² + 2ab + b²</label>
+<label><input type="radio" name="q3" value="b"> a² − b²</label>
+<label><input type="radio" name="q3" value="c"> a² − 2ab + b²</label>
+</div>
+
+<div class="question">
+<strong>4. x² − 16 туюнтмасынын көбөйтүүчүлөргө ажыратылышы?</strong>
+<label><input type="radio" name="q4" value="a"> (x − 4)²</label>
+<label><input type="radio" name="q4" value="b"> (x − 4)(x + 4)</label>
+<label><input type="radio" name="q4" value="c"> (x + 4)²</label>
+</div>
+
+<div class="question">
+<strong>5. (x + 3)² эмнеге барабар?</strong>
+<label><input type="radio" name="q5" value="a"> x² + 3x + 9</label>
+<label><input type="radio" name="q5" value="b"> x² + 6x + 9</label>
+<label><input type="radio" name="q5" value="c"> x² + 9</label>
+</div>
+
+<div class="question">
+<strong>6. 7x − 2x + 4x канча болот?</strong>
+<label><input type="radio" name="q6" value="a"> 9x</label>
+<label><input type="radio" name="q6" value="b"> 13x</label>
+<label><input type="radio" name="q6" value="c"> 11x</label>
+</div>
+
+<div class="question">
+<strong>7. (x − 5)² эмнеге барабар?</strong>
+<label><input type="radio" name="q7" value="a"> x² − 10x + 25</label>
+<label><input type="radio" name="q7" value="b"> x² − 5x + 25</label>
+<label><input type="radio" name="q7" value="c"> x² + 10x + 25</label>
+</div>
+
+<div class="question">
+<strong>8. x² − 49 туюнтмасын ажыраткыла.</strong>
+<label><input type="radio" name="q8" value="a"> (x − 7)²</label>
+<label><input type="radio" name="q8" value="b"> (x − 7)(x + 7)</label>
+<label><input type="radio" name="q8" value="c"> (x + 7)²</label>
+</div>
+
+<div class="question">
+<strong>9. (2x + 3) + (x − 5) канча болот?</strong>
+<label><input type="radio" name="q9" value="a"> 3x + 8</label>
+<label><input type="radio" name="q9" value="b"> 3x − 2</label>
+<label><input type="radio" name="q9" value="c"> 2x − 2</label>
+</div>
+
+<div class="question">
+<strong>10. (a + b)(a − b) эмнеге барабар?</strong>
+<label><input type="radio" name="q10" value="a"> a² + b²</label>
+<label><input type="radio" name="q10" value="b"> a² − b²</label>
+<label><input type="radio" name="q10" value="c"> a² − 2ab + b²</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Жоопторду текшерүү</button>
+<button type="reset" class="back" onclick="resetResult()">Кайра баштоо</button>
+</form>
+
+<div id="result" aria-live="polite"></div>
+<div id="feedback"></div>
+</div>
+
+<div class="card">
+<h2>📌 Сабактын жыйынтыгы</h2>
+<p>Бул сабакта көпмүчөлөрдү жөнөкөйлөтүүнү, окшош мүчөлөрдү бириктирүүнү жана кыскача көбөйтүү формулаларын колдонууну үйрөндүк.</p>
+<p><strong>Үй тапшырмасы:</strong> Кыскача көбөйтүү формулалары боюнча 5 мисал түзүп, чыгарып келгиле.</p>
+<a href="ort-math-month3.html"><button class="back">← 3-айдын программасына кайтуу</button></a>
+</div>
+
+</div>
+
+<footer>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби</footer>
+
+<script>
+function checkAnswers(){
+ const answers={
+ q1:"a",q2:"b",q3:"c",q4:"b",q5:"b",
+ q6:"b",q7:"a",q8:"b",q9:"b",q10:"b"
+ };
+ let score=0;
+ let unanswered=0;
+
+ for(let i=1;i<=10;i++){
+  const selected=document.querySelector('input[name="q'+i+'"]:checked');
+  if(!selected){
+   unanswered++;
+  }else if(selected.value===answers["q"+i]){
+   score++;
+  }
+ }
+
+ const result=document.getElementById("result");
+ const feedback=document.getElementById("feedback");
+
+ if(unanswered>0){
+  result.textContent="Жооп берилбеген суроолор: "+unanswered+". Бардык суроолорго жооп бериңиз.";
+  feedback.textContent="";
+  return;
+ }
+
+ result.textContent="Сиздин жыйынтыгыңыз: "+score+" / 10";
+
+ if(score>=9){
+  feedback.textContent="Азаматсыз! Эң жакшы жыйынтык!";
+ }else if(score>=7){
+  feedback.textContent="Жакшы! Дагы бир аз машыгыңыз.";
+ }else if(score>=5){
+  feedback.textContent="Канааттандырарлык. Теманы кайталаңыз.";
+ }else{
+  feedback.textContent="Теорияны кайра окуп, тестти кайталап көрүңүз.";
+ }
+}
+
+function resetResult(){
+ document.getElementById("result").textContent="";
+ document.getElementById("feedback").textContent="";
+}
+</script>
+
+</body>
+</html>
