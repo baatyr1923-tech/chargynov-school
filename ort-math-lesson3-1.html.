@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОРТ — Тексттик маселелерди чыгаруу</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f1f5f9;
+  color:#263445;
+  line-height:1.7;
+}
+header{
+  background:linear-gradient(135deg,#102b50,#174574);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+header h1{margin:0;font-size:27px}
+header p{margin:8px 0;color:#dce8f5}
+.container{width:min(950px,94%);margin:25px auto}
+.card{
+  background:white;
+  padding:23px;
+  border-radius:14px;
+  margin-bottom:20px;
+  box-shadow:0 3px 12px #0000000b;
+}
+h2{color:#102b50;margin-top:0}
+h3{color:#16865b}
+.formula{
+  background:#eaf4ff;
+  padding:13px 17px;
+  border-left:4px solid #16865b;
+  border-radius:8px;
+  margin:12px 0;
+  font-weight:bold;
+}
+.example{
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:15px;
+  margin:13px 0;
+}
+.task{
+  padding:13px;
+  border-bottom:1px solid #e2e8f0;
+}
+.question{
+  padding:17px;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  margin:15px 0;
+}
+.question p{font-weight:bold}
+label.option{
+  display:block;
+  padding:8px 10px;
+  margin:5px 0;
+  background:#f8fafc;
+  border-radius:7px;
+  cursor:pointer;
+}
+label.option:hover{background:#eaf4ff}
+button{
+  background:#16865b;
+  color:white;
+  border:0;
+  padding:13px 22px;
+  border-radius:9px;
+  font-size:16px;
+  cursor:pointer;
+  font-weight:bold;
+}
+button:hover{background:#116b48}
+#result{
+  display:none;
+  padding:18px;
+  margin-top:18px;
+  border-radius:10px;
+  background:#eaf4ff;
+  font-weight:bold;
+}
+.back{
+  display:inline-block;
+  background:#102b50;
+  color:white;
+  text-decoration:none;
+  padding:11px 17px;
+  border-radius:8px;
+  margin:10px 0 25px;
+}
+footer{
+  background:#102b50;
+  color:white;
+  text-align:center;
+  padding:22px;
+  margin-top:35px;
+}
+@media(max-width:600px){
+  header h1{font-size:22px}
+  .card{padding:16px}
+  button{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📘 ОРТ — МАТЕМАТИКА</h1>
+  <p>3-ай · 1-сабак</p>
+  <h2 style="color:white">Тексттик маселелерди чыгаруу</h2>
+  <p>Маселенин шартын талдоо жана математикалык модел түзүү</p>
+</header>
+
+<main class="container">
+
+<section class="card">
+  <h2>🎯 Сабактын максаты</h2>
+  <p>
+    Окуучулар тексттик маселелердин шартын туура окуп,
+    белгисиз чоңдукту аныктап, математикалык туюнтма же
+    теңдеме түзүп, маселени чыгарууну үйрөнүшөт.
+  </p>
+  <p><strong>Сабактын түрү:</strong> практикалык жана теориялык.</p>
+  <p><strong>Убактысы:</strong> 45 мүнөт.</p>
+</section>
+
+<section class="card">
+  <h2>1. Теориялык маалымат</h2>
+
+  <p>
+    <strong>Тексттик маселе</strong> — күнүмдүк турмуштагы
+    кырдаалды сандар жана математикалык амалдар аркылуу
+    чечүүгө багытталган тапшырма.
+  </p>
+
+  <h3>Маселени чыгаруунун 5 кадамы</h3>
+  <ol>
+    <li>Маселенин шартын кунт коюп окуу.</li>
+    <li>Берилген жана белгисиз чоңдуктарды аныктоо.</li>
+    <li>Белгисиз чоңдукту тамга менен белгилөө.</li>
+    <li>Математикалык моделди же теңдемени түзүү.</li>
+    <li>Теңдемени чыгарып, жоопту текшерүү.</li>
+  </ol>
+
+  <h3>Негизги математикалык байланыштар</h3>
+
+  <div class="formula">Жалпы сумма = 1 буюмдун баасы × буюмдардын саны</div>
+  <div class="formula">Жаңы сан = Баштапкы сан + Өзгөрүү</div>
+  <div class="formula">Пайыз = (Бөлүк / Жалпы сан) × 100%</div>
+  <div class="formula">Орточо арифметикалык = Сандардын суммасы / Сандардын саны</div>
+  <div class="formula">Жалпы иш = Өндүрүмдүүлүк × Убакыт</div>
+
+  <p>
+    <strong>Эскертүү:</strong> белгисиз чоңдукту көбүнчө
+    \(x\) тамгасы менен белгилейбиз. Маселенин шартындагы
+    байланыштарды теңдемеге айландыруу маанилүү.
+  </p>
+</section>
+
+<section class="card">
+  <h2>2. Чыгарылган мисалдар</h2>
+
+  <div class="example">
+    <h3>1-мисал. Дүкөндөгү сатып алуу</h3>
+    <p>
+      Бир дептер 20 сом турат. Окуучу бир нече дептер сатып
+      алып, 100 сом төлөдү. Ал канча дептер сатып алган?
+    </p>
+    <p><strong>Чыгарылышы:</strong></p>
+    <p>Дептердин саны — x.</p>
+    <p>20x = 100</p>
+    <p>x = 100 / 20 = 5</p>
+    <p><strong>Жообу: 5 дептер.</strong></p>
+  </div>
+
+  <div class="example">
+    <h3>2-мисал. Эки сандын суммасы</h3>
+    <p>
+      Эки сандын суммасы 45ке барабар. Биринчи сан экинчи
+      сандан 9га чоң. Сандарды тапкыла.
+    </p>
+    <p><strong>Чыгарылышы:</strong></p>
+    <p>Экинчи санды x дейбиз. Биринчи сан x + 9.</p>
+    <p>x + x + 9 = 45</p>
+    <p>2x = 36</p>
+    <p>x = 18</p>
+    <p>Биринчи сан: 18 + 9 = 27.</p>
+    <p><strong>Жообу: 27 жана 18.</strong></p>
+  </div>
+
+  <div class="example">
+    <h3>3-мисал. Жаш курак маселеси</h3>
+    <p>
+      Атасы 40 жашта, уулу 10 жашта. Канча жылдан кийин
+      атасы уулунан 3 эсе улуу болот?
+    </p>
+    <p><strong>Чыгарылышы:</strong></p>
+    <p>Канча жылдан кийин болорун x дейбиз.</p>
+    <p>40 + x = 3(10 + x)</p>
+    <p>40 + x = 30 + 3x</p>
+    <p>10 = 2x</p>
+    <p>x = 5</p>
+    <p><strong>Жообу: 5 жылдан кийин.</strong></p>
+  </div>
+
+  <div class="example">
+    <h3>4-мисал. Пайыздык маселе</h3>
+    <p>
+      Баасы 800 сом болгон буюмга 15% арзандатуу берилди.
+      Буюмдун жаңы баасын тапкыла.
+    </p>
+    <p><strong>Чыгарылышы:</strong></p>
+    <p>800 × 15 / 100 = 120 сом.</p>
+    <p>800 − 120 = 680 сом.</p>
+    <p><strong>Жообу: 680 сом.</strong></p>
+  </div>
+
+  <div class="example">
+    <h3>5-мисал. Орточо арифметикалык</h3>
+    <p>
+      Окуучу үч тесттен 70, 80 жана 90 упай алды.
+      Анын орточо упайын тапкыла.
+    </p>
+    <p><strong>Чыгарылышы:</strong></p>
+    <p>(70 + 80 + 90) / 3 = 240 / 3 = 80.</p>
+    <p><strong>Жообу: 80 упай.</strong></p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>3. Өз алдынча практикалык тапшырмалар</h2>
+  <p>Төмөнкү маселелерди дептерге чыгарып көргүлө.</p>
+
+  <div class="task">
+    <strong>1-тапшырма.</strong>
+    Бир калем 15 сом турат. 8 калем канча сом болот?
+  </div>
+  <div class="task">
+    <strong>2-тапшырма.</strong>
+    Эки сандын суммасы 64. Биринчи сан экинчисинен
+    12ге чоң. Сандарды тапкыла.
+  </div>
+  <div class="task">
+    <strong>3-тапшырма.</strong>
+    1200 сомдук буюм 20% арзандатылды.
+    Жаңы баасын тапкыла.
+  </div>
+  <div class="task">
+    <strong>4-тапшырма.</strong>
+    Үч окуучунун упайлары 65, 75 жана 80.
+    Орточо упай канча?
+  </div>
+  <div class="task">
+    <strong>5-тапшырма.</strong>
+    Эки сан бири-биринен 5ке айырмаланат.
+    Алардын суммасы 35. Сандарды тапкыла.
+  </div>
+</section>
+
+<section class="card">
+  <h2>4. Интерактивдүү ОРТ тести</h2>
+  <p>
+    Ар бир суроого бирден туура жооп тандагыла.
+    Тесттин аягында жыйынтык автоматтык эсептелет.
+  </p>
+
+  <form id="quiz">
+
+    <div class="question">
+      <p>1. Бир дептер 25 сом турат. 6 дептер канча сом болот?</p>
+      <label class="option"><input type="radio" name="q1" value="a"> A) 125 сом</label>
+      <label class="option"><input type="radio" name="q1" value="b"> B) 150 сом</label>
+      <label class="option"><input type="radio" name="q1" value="c"> C) 175 сом</label>
+      <label class="option"><input type="radio" name="q1" value="d"> D) 200 сом</label>
+    </div>
+
+    <div class="question">
+      <p>2. Эки сандын суммасы 50. Биринчи сан экинчисинен 10го чоң. Биринчи санды тапкыла.</p>
+      <label class="option"><input type="radio" name="q2" value="a"> A) 20</label>
+      <label class="option"><input type="radio" name="q2" value="b"> B) 25</label>
+      <label class="option"><input type="radio" name="q2" value="c"> C) 30</label>
+      <label class="option"><input type="radio" name="q2" value="d"> D) 35</label>
+    </div>
+
+    <div class="question">
+      <p>3. 600 сомдун 20% канча болот?</p>
+      <label class="option"><input type="radio" name="q3" value="a"> A) 60</label>
+      <label class="option"><input type="radio" name="q3" value="b"> B) 100</label>
+      <label class="option"><input type="radio" name="q3" value="c"> C) 120</label>
+      <label class="option"><input type="radio" name="q3" value="d"> D) 150</label>
+    </div>
+
+    <div class="question">
+      <p>4. 4 сандын орточо арифметикалык мааниси 12. Алардын суммасы канча?</p>
+      <label class="option"><input type="radio" name="q4" value="a"> A) 36</label>
+      <label class="option"><input type="radio" name="q4" value="b"> B) 40</label>
+      <label class="option"><input type="radio" name="q4" value="c"> C) 48</label>
+      <label class="option"><input type="radio" name="q4" value="d"> D) 52</label>
+    </div>
+
+    <div class="question">
+      <p>5. Белгисиз санга 15ти кошкондо 42 чыкты. Белгисиз сан канча?</p>
+      <label class="option"><input type="radio" name="q5" value="a"> A) 25</label>
+      <label class="option"><input type="radio" name="q5" value="b"> B) 27</label>
+      <label class="option"><input type="radio" name="q5" value="c"> C) 29</label>
+      <label class="option"><input type="radio" name="q5" value="d"> D) 32</label>
+    </div>
+
+    <div class="question">
+      <p>6. Атасы 36 жашта, уулу 12 жашта. Атасы уулунан канча эсе улуу?</p>
+      <label class="option"><input type="radio" name="q6" value="a"> A) 2 эсе</label>
+      <label class="option"><input type="radio" name="q6" value="b"> B) 3 эсе</label>
+      <label class="option"><input type="radio" name="q6" value="c"> C) 4 эсе</label>
+      <label class="option"><input type="radio" name="q6" value="d"> D) 5 эсе</label>
+    </div>
+
+    <div class="question">
+      <p>7. 900 сомдук буюм 10% арзандатылды. Жаңы баасы канча?</p>
+      <label class="option"><input type="radio" name="q7" value="a"> A) 800 сом</label>
+      <label class="option"><input type="radio" name="q7" value="b"> B) 810 сом</label>
+      <label class="option"><input type="radio" name="q7" value="c"> C) 820 сом</label>
+      <label class="option"><input type="radio" name="q7" value="d"> D) 890 сом</label>
+    </div>
+
+    <div class="question">
+      <p>8. Эки удаалаш натуралдык сандын суммасы 41. Чоң санды тапкыла.</p>
+      <label class="option"><input type="radio" name="q8" value="a"> A) 19</label>
+      <label class="option"><input type="radio" name="q8" value="b"> B) 20</label>
+      <label class="option"><input type="radio" name="q8" value="c"> C) 21</label>
+      <label class="option"><input type="radio" name="q8" value="d"> D) 22</label>
+    </div>
+
+    <div class="question">
+      <p>9. Окуучу 5 күндө күнүнө 8 беттен китеп окуду. Бардыгы канча бет окуду?</p>
+      <label class="option"><input type="radio" name="q9" value="a"> A) 13 бет</label>
+      <label class="option"><input type="radio" name="q9" value="b"> B) 35 бет</label>
+      <label class="option"><input type="radio" name="q9" value="c"> C) 40 бет</label>
+      <label class="option"><input type="radio" name="q9" value="d"> D) 45 бет</label>
+    </div>
+
+    <div class="question">
+      <p>10. Эки сандын айырмасы 8, суммасы 32. Чоң санды тапкыла.</p>
+      <label class="option"><input type="radio" name="q10" value="a"> A) 12</label>
+      <label class="option"><input type="radio" name="q10" value="b"> B) 16</label>
+      <label class="option"><input type="radio" name="q10" value="c"> C) 20</label>
+      <label class="option"><input type="radio" name="q10" value="d"> D) 24</label>
+    </div>
+
+    <button type="button" onclick="checkQuiz()">Тестти текшерүү</button>
+  </form>
+
+  <div id="result"></div>
+</section>
+
+<section class="card">
+  <h2>5. Сабакты жыйынтыктоо</h2>
+  <ul>
+    <li>Тексттик маселенин шартын туура окуу маанилүү.</li>
+    <li>Белгисиз чоңдукту тамга менен белгилөө керек.</li>
+    <li>Маселенин шартына ылайык теңдеме түзүлөт.</li>
+    <li>Алынган жооп маселенин шарты менен текшерилет.</li>
+  </ul>
+  <p><strong>Үй тапшырмасы:</strong> практикалык 5 маселени дептерге чыгарып, тестти аткаргыла.</p>
+</section>
+
+<a class="back" href="ort-math-month3.html">← 3-айдын сабактарына кайтуу</a>
+
+</main>
+
+<footer>
+  №35 — Жумабек Чаргынов атындагы орто билим берүү мектеби
+  <br>ОРТга даярдоо курсу
+</footer>
+
+<script>
+function checkQuiz(){
+  const answers={
+    q1:"b",
+    q2:"c",
+    q3:"c",
+    q4:"c",
+    q5:"b",
+    q6:"b",
+    q7:"b",
+    q8:"c",
+    q9:"c",
+    q10:"c"
+  };
+
+  let score=0;
+  let unanswered=0;
+  const total=Object.keys(answers).length;
+
+  for(let q in answers){
+    const selected=document.querySelector('input[name="'+q+'"]:checked');
+    if(!selected){
+      unanswered++;
+    }else if(selected.value===answers[q]){
+      score++;
+    }
+  }
+
+  const result=document.getElementById("result");
+  result.style.display="block";
+
+  let grade="";
+  if(score>=9) grade="Эң жакшы!";
+  else if(score>=7) grade="Жакшы!";
+  else if(score>=5) grade="Канааттандырарлык.";
+  else grade="Көбүрөөк машыгуу керек.";
+
+  result.innerHTML=
+    "Туура жооптор: "+score+" / "+total+
+    "<br>Ката жооптор: "+(total-unanswered-score)+
+    "<br>Жооп берилбеген суроолор: "+unanswered+
+    "<br>Пайыздык көрсөткүч: "+Math.round(score/total*100)+"%"+
+    "<br>Жыйынтык: "+grade;
+
+  result.scrollIntoView({behavior:"smooth",block:"center"});
+}
+</script>
+
+</body>
+</html>
