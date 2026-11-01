@@ -208,6 +208,57 @@ footer{
   .brand span{font-size:11px}
 }
 </style>
+  
+<style>
+/* Жогорку менюну жарык кылуу */
+header {
+  background: #ffffff !important;
+  color: #102b50 !important;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+header .brand,
+header .brand strong,
+header .brand span,
+header nav a {
+  color: #102b50 !important;
+}
+
+header nav a:hover {
+  color: #16865b !important;
+}
+
+/* Башкы сүрөттү даанараак көрсөтүү */
+.hero::before,
+.hero::after {
+  background: linear-gradient(
+    90deg,
+    rgba(8,30,58,0.62),
+    rgba(8,30,58,0.18) 65%,
+    rgba(8,30,58,0.06)
+  ) !important;
+}
+
+/* Баскычтар */
+.hero .button {
+  border-radius: 10px;
+  padding: 15px 25px;
+}
+
+/* Башкы беттин бийиктиги */
+.hero {
+  min-height: 620px;
+}
+
+@media (max-width: 850px) {
+  header {
+    background: #ffffff !important;
+  }
+  .hero {
+    min-height: 480px;
+  }
+}
+</style>
 </head>
 <body>
 
