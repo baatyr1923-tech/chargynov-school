@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОРТ — Кыймыл жана биргелешкен иш маселелери</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5f9;color:#263445;line-height:1.7}
+header{background:linear-gradient(135deg,#102b50,#174574);color:white;text-align:center;padding:30px 15px}
+header h1{margin:0;font-size:27px}
+header p{color:#dce8f5}
+.container{width:min(950px,94%);margin:25px auto}
+.card{background:white;padding:23px;border-radius:14px;margin-bottom:20px;box-shadow:0 3px 12px #0000000b}
+h2{color:#102b50;margin-top:0}
+h3{color:#16865b}
+.formula{background:#eaf4ff;padding:13px 17px;border-left:4px solid #16865b;border-radius:8px;margin:12px 0;font-weight:bold}
+.example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:15px;margin:13px 0}
+.task{padding:13px;border-bottom:1px solid #e2e8f0}
+.question{padding:17px;border:1px solid #e2e8f0;border-radius:10px;margin:15px 0}
+.question label{display:block;margin:7px 0;cursor:pointer}
+button{background:#16865b;color:white;border:0;border-radius:8px;padding:12px 20px;font-size:16px;cursor:pointer;margin:8px 5px 8px 0}
+button:hover{background:#116b48}
+.back{background:#102b50}
+#result{font-size:20px;font-weight:bold;margin-top:15px}
+footer{text-align:center;padding:20px;color:#64748b}
+@media(max-width:600px){header h1{font-size:22px}.card{padding:16px}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>📘 ОРТ — МАТЕМАТИКА</h1>
+<p>3-ай. 2-сабак. Кыймыл жана биргелешкен иш маселелери</p>
+</header>
+
+<main class="container">
+
+<section class="card">
+<h2>🎯 Сабактын максаты</h2>
+<p>Кыймылга жана биргелешкен ишке байланыштуу маселелерди математикалык формулалар аркылуу чыгарууну үйрөнүү.</p>
+<p><b>Сабактын бөлүктөрү:</b> теория, формулалар, чыгарылган мисалдар, практикалык тапшырмалар жана тест.</p>
+</section>
+
+<section class="card">
+<h2>1. Кыймыл маселелери</h2>
+<p>Кыймыл маселелеринде негизинен үч чоңдук колдонулат: жол, ылдамдык жана убакыт.</p>
+
+<div class="formula">
+S = v × t
+</div>
+<p><b>S</b> — жол (км), <b>v</b> — ылдамдык (км/саат), <b>t</b> — убакыт (саат).</p>
+
+<div class="formula">
+v = S / t
+</div>
+<p>Ылдамдыкты табуу үчүн жолду убакытка бөлөбүз.</p>
+
+<div class="formula">
+t = S / v
+</div>
+<p>Убакытты табуу үчүн жолду ылдамдыкка бөлөбүз.</p>
+
+<h3>Карама-каршы багытта кыймыл</h3>
+<p>Эки объект бири-бирине карай жүрсө, алардын жакындашуу ылдамдыгы кошулат.</p>
+<div class="formula">v = v₁ + v₂</div>
+
+<h3>Бир багытта кыймыл</h3>
+<p>Эки объект бир багытта жүрсө, салыштырмалуу ылдамдык чоң ылдамдыктан кичине ылдамдыкты кемитүү аркылуу табылат.</p>
+<div class="formula">v = v₁ − v₂</div>
+</section>
+
+<section class="card">
+<h2>2. Биргелешкен иш маселелери</h2>
+<p>Биргелешкен иш маселелеринде ар бир жумушчунун же механизмдин бир убакытта аткарган жумуш үлүшү эсептелет.</p>
+
+<div class="formula">
+Бир күндөгү иш = 1 / n
+</div>
+<p>Эгер жумушчу бүт жумушту n күндө аткарса, бир күндө жумуштун 1/n бөлүгүн аткарат.</p>
+
+<div class="formula">
+1/T = 1/t₁ + 1/t₂
+</div>
+<p>Эки жумушчу чогуу иштеген убакытты табуу формуласы. Бул жерде t₁ жана t₂ — алардын өз-өзүнчө иштөө убактысы, T — биргелешип иштөө убактысы.</p>
+<p>Бул формула эки жумушчу бир эле жумушту аткарганда жана алардын иштөө ылдамдыгы өзгөрбөгөндө колдонулат.</p>
+</section>
+
+<section class="card">
+<h2>3. Чыгарылган мисалдар</h2>
+
+<div class="example">
+<h3>Мисал 1. Ылдамдыкты табуу</h3>
+<p>Автомобиль 3 саатта 180 км жол жүрдү. Анын ылдамдыгын тапкыла.</p>
+<p><b>Чыгарылышы:</b></p>
+<p>v = S / t = 180 / 3 = 60 км/саат.</p>
+<b>Жообу: 60 км/саат.</b>
+</div>
+
+<div class="example">
+<h3>Мисал 2. Жолду табуу</h3>
+<p>Велосипедчи 15 км/саат ылдамдык менен 4 саат жүрдү. Ал канча жол жүрдү?</p>
+<p><b>Чыгарылышы:</b></p>
+<p>S = v × t = 15 × 4 = 60 км.</p>
+<b>Жообу: 60 км.</b>
+</div>
+
+<div class="example">
+<h3>Мисал 3. Карама-каршы багыттагы кыймыл</h3>
+<p>Эки шаардан бири-бирине карай эки автомобиль чыкты. Биринчисинин ылдамдыгы 60 км/саат, экинчисиники 40 км/саат. Шаарлардын аралыгы 200 км. Алар канча сааттан кийин жолугушат?</p>
+<p><b>Чыгарылышы:</b></p>
+<p>Жакындашуу ылдамдыгы: 60 + 40 = 100 км/саат.</p>
+<p>t = 200 / 100 = 2 саат.</p>
+<b>Жообу: 2 сааттан кийин.</b>
+</div>
+
+<div class="example">
+<h3>Мисал 4. Биргелешкен иш</h3>
+<p>Бир жумушчу жумушту 6 күндө, экинчиси 3 күндө бүтүрөт. Экөө чогуу иштесе, канча күндө бүтүрүшөт?</p>
+<p><b>Чыгарылышы:</b></p>
+<p>Биринчи жумушчу бир күндө 1/6 бөлүгүн аткарат.</p>
+<p>Экинчи жумушчу бир күндө 1/3 бөлүгүн аткарат.</p>
+<p>Экөө бир күндө: 1/6 + 1/3 = 1/2 бөлүгүн аткарышат.</p>
+<p>Демек, толук жумушту 1 / (1/2) = 2 күндө бүтүрүшөт.</p>
+<b>Жообу: 2 күндө.</b>
+</div>
+
+<div class="example">
+<h3>Мисал 5. Бир багыттагы кыймыл</h3>
+<p>Биринчи велосипедчи 20 км/саат, экинчиси 15 км/саат ылдамдыкта бир багытта жүрүп жатат. Алардын баштапкы аралыгы 10 км болсо, биринчи велосипедчи экинчисине канча саатта жетет?</p>
+<p><b>Чыгарылышы:</b></p>
+<p>Жакындашуу ылдамдыгы: 20 − 15 = 5 км/саат.</p>
+<p>t = 10 / 5 = 2 саат.</p>
+<b>Жообу: 2 саатта.</b>
+</div>
+</section>
+
+<section class="card">
+<h2>4. Практикалык тапшырмалар</h2>
+
+<div class="task">
+<b>1-маселе.</b> Поезд 70 км/саат ылдамдык менен 3 саат жүрдү. Канча жол жүрдү?
+</div>
+<div class="task">
+<b>2-маселе.</b> Автомобиль 240 км жолду 4 саатта басып өттү. Ылдамдыгын тапкыла.
+</div>
+<div class="task">
+<b>3-маселе.</b> Эки велосипедчи бири-бирине карай 12 км/саат жана 18 км/саат ылдамдык менен жүрүшөт. Баштапкы аралык 90 км болсо, канча саатта жолугушат?
+</div>
+<div class="task">
+<b>4-маселе.</b> Бир жумушчу жумушту 8 күндө, экинчиси 8 күндө бүтүрөт. Экөө чогуу канча күндө бүтүрүшөт?
+</div>
+<div class="task">
+<b>5-маселе.</b> Бир жумушчу ишти 12 күндө бүтүрөт. Ал 3 күндө жумуштун кандай бөлүгүн аткарат?
+</div>
+
+<h3>Жоопторду көрүү</h3>
+<details>
+<summary>Практикалык тапшырмалардын жооптору</summary>
+<ol>
+<li>210 км.</li>
+<li>60 км/саат.</li>
+<li>3 саат.</li>
+<li>4 күн.</li>
+<li>1/4 бөлүгүн.</li>
+</ol>
+</details>
+</section>
+
+<section class="card">
+<h2>5. Билимиңди текшер — тест</h2>
+<p>Ар бир суроого бир туура жоопту тандаңыз. Бардык суроолорго жооп бергенден кийин текшерүү баскычын басыңыз.</p>
+
+<form id="quiz">
+
+<div class="question">
+<b>1. Автомобиль 2 саатта 60 км жүрдү. Ылдамдыгы канча?</b>
+<label><input type="radio" name="q1" value="a"> 20 км/саат</label>
+<label><input type="radio" name="q1" value="b"> 30 км/саат</label>
+<label><input type="radio" name="q1" value="c"> 40 км/саат</label>
+</div>
+
+<div class="question">
+<b>2. Поезд 80 км/саат ылдамдык менен 3 саат жүрдү. Канча жол жүрдү?</b>
+<label><input type="radio" name="q2" value="a"> 160 км</label>
+<label><input type="radio" name="q2" value="b"> 200 км</label>
+<label><input type="radio" name="q2" value="c"> 240 км</label>
+</div>
+
+<div class="question">
+<b>3. 120 км жолду 40 км/саат ылдамдык менен канча убакытта өтөт?</b>
+<label><input type="radio" name="q3" value="a"> 2 саат</label>
+<label><input type="radio" name="q3" value="b"> 3 саат</label>
+<label><input type="radio" name="q3" value="c"> 4 саат</label>
+</div>
+
+<div class="question">
+<b>4. Эки автомобиль бири-бирине карай 60 жана 40 км/саат ылдамдык менен жүрөт. Жакындашуу ылдамдыгы канча?</b>
+<label><input type="radio" name="q4" value="a"> 20 км/саат</label>
+<label><input type="radio" name="q4" value="b"> 80 км/саат</label>
+<label><input type="radio" name="q4" value="c"> 100 км/саат</label>
+</div>
+
+<div class="question">
+<b>5. Эки жумушчу биргелешип иштегенде, биринчиси жумушту 6 күндө, экинчиси 3 күндө бүтүрөт. Экөө чогуу канча күндө бүтүрөт?</b>
+<label><input type="radio" name="q5" value="a"> 2 күн</label>
+<label><input type="radio" name="q5" value="b"> 3 күн</label>
+<label><input type="radio" name="q5" value="c"> 4 күн</label>
+</div>
+
+<div class="question">
+<b>6. Жумушчу ишти 5 күндө бүтүрөт. Ал бир күндө жумуштун канча бөлүгүн аткарат?</b>
+<label><input type="radio" name="q6" value="a"> 1/3</label>
+<label><input type="radio" name="q6" value="b"> 1/5</label>
+<label><input type="radio" name="q6" value="c"> 1/10</label>
+</div>
+
+<div class="question">
+<b>7. Эки объект бир багытта 70 жана 50 км/саат ылдамдык менен жүрөт. Салыштырмалуу ылдамдык канча?</b>
+<label><input type="radio" name="q7" value="a"> 20 км/саат</label>
+<label><input type="radio" name="q7" value="b"> 50 км/саат</label>
+<label><input type="radio" name="q7" value="c"> 120 км/саат</label>
+</div>
+
+<div class="question">
+<b>8. Суу түтүгү бассейнди 4 саатта толтурат. Бир саатта бассейндин канча бөлүгүн толтурат?</b>
+<label><input type="radio" name="q8" value="a"> 1/2</label>
+<label><input type="radio" name="q8" value="b"> 1/3</label>
+<label><input type="radio" name="q8" value="c"> 1/4</label>
+</div>
+
+<div class="question">
+<b>9. Эки жумушчу өз-өзүнчө бир жумушту 8 күндө бүтүрөт. Экөө чогуу канча күндө бүтүрөт?</b>
+<label><input type="radio" name="q9" value="a"> 2 күн</label>
+<label><input type="radio" name="q9" value="b"> 4 күн</label>
+<label><input type="radio" name="q9" value="c"> 8 күн</label>
+</div>
+
+<div class="question">
+<b>10. Жумушчу ишти 12 күндө бүтүрөт. 3 күндө жумуштун канча бөлүгүн аткарат?</b>
+<label><input type="radio" name="q10" value="a"> 1/2</label>
+<label><input type="radio" name="q10" value="b"> 1/3</label>
+<label><input type="radio" name="q10" value="c"> 1/4</label>
+</div>
+
+<button type="button" id="checkBtn">Жоопторду текшерүү</button>
+<button type="reset" class="back" id="resetBtn">Кайра баштоо</button>
+</form>
+
+<div id="result" aria-live="polite"></div>
+<div id="feedback"></div>
+</section>
+
+<section class="card">
+<h2>📌 Сабактын жыйынтыгы</h2>
+<p>Бул сабакта жол, ылдамдык, убакыт жана биргелешкен иш маселелерин чыгарууну үйрөндүк.</p>
+<p><b>Үй тапшырмасы:</b> Кыймылга байланыштуу 2 маселе жана биргелешкен ишке байланыштуу 2 маселе түзүп, теңдеме же формулалар менен чыгаргыла.</p>
+<button class="back" onclick="location.href='ort-math-month3.html'">← 3-айдын программасына кайтуу</button>
+</section>
+
+</main>
+
+<footer>
+ОРТ — Математика | 3-ай, 2-сабак
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+const answers = {
+ q1:"b",
+ q2:"c",
+ q3:"b",
+ q4:"c",
+ q5:"a",
+ q6:"b",
+ q7:"a",
+ q8:"c",
+ q9:"b",
+ q10:"c"
+};
+
+const form = document.getElementById("quiz");
+const result = document.getElementById("result");
+const feedback = document.getElementById("feedback");
+const checkBtn = document.getElementById("checkBtn");
+
+checkBtn.addEventListener("click", function(){
+ let score = 0;
+ let unanswered = 0;
+
+ for(const question in answers){
+  const selected = form.querySelector('input[name="' + question + '"]:checked');
+
+  if(!selected){
+   unanswered++;
+  }else if(selected.value === answers[question]){
+   score++;
+  }
+ }
+
+ if(unanswered > 0){
+  result.textContent = "Жооп берилбеген суроолор: " + unanswered + ". Бардык суроолорго жооп бериңиз.";
+  feedback.textContent = "";
+  return;
+ }
+
+ result.textContent = "Сиздин жыйынтыгыңыз: " + score + " / 10";
+
+ if(score >= 9){
+  feedback.textContent = "Азаматсыз! Эң жакшы жыйынтык!";
+ }else if(score >= 7){
+  feedback.textContent = "Жакшы! Дагы бир аз машыгыңыз.";
+ }else if(score >= 5){
+  feedback.textContent = "Канааттандырарлык. Теманы кайталаңыз.";
+ }else{
+  feedback.textContent = "Теорияны кайра окуп, тестти кайталап көрүңүз.";
+ }
+});
+
+form.addEventListener("reset", function(){
+ result.textContent = "";
+ feedback.textContent = "";
+});
+
+})();
+</script>
+
+</body>
+</html>
