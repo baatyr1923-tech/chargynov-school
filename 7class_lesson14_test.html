@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14-сабактын тести — 7-класс</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f6fa;color:#263238;line-height:1.6;margin:0}
+header{background:#1769aa;color:white;text-align:center;padding:22px 12px}
+main{max-width:850px;margin:25px auto;padding:22px;background:white;border-radius:12px}
+input[type=text]{width:100%;box-sizing:border-box;padding:12px;margin:7px 0 15px;border:1px solid #bbb;border-radius:6px}
+.question{padding:15px;margin:18px 0;background:#f5f8fc;border-radius:8px}
+.question label{display:block;padding:6px;cursor:pointer}
+button,.back{background:#1769aa;color:white;border:0;padding:12px 20px;border-radius:7px;cursor:pointer;text-decoration:none;display:inline-block;margin:8px 5px 8px 0}
+#result{font-size:20px;font-weight:bold;margin-top:20px;padding:15px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Информатика — 7-класс</h1>
+<h2 style="color:white">14-сабак: Мобилдик түзүлүштөрдүн коопсуздугу</h2>
+<p>Билимиңди текшер!</p>
+</header>
+<main>
+<h2>Окуучу жөнүндө маалымат</h2>
+<label>Аты-жөнү:</label>
+<input type="text" id="studentName" placeholder="Аты-жөнүңдү жаз">
+<label>Классы:</label>
+<input type="text" id="studentClass" placeholder="Мисалы: 7-А">
+
+<form id="quiz">
+<div class="question">
+<p><b>1. Мобилдик түзүлүштөрдүн коопсуздугу деген эмне?</b></p>
+<label><input type="radio" name="q1" value="a"> Телефонду кооздоо</label>
+<label><input type="radio" name="q1" value="b"> Түзүлүштөгү маалыматтарды жана программаларды коргоо</label>
+<label><input type="radio" name="q1" value="c"> Оюн ойноо</label>
+</div>
+
+<div class="question">
+<p><b>2. Фишинг деген эмне?</b></p>
+<label><input type="radio" name="q2" value="a"> Сүрөт тартуу ыкмасы</label>
+<label><input type="radio" name="q2" value="b"> Телефонду кубаттоо</label>
+<label><input type="radio" name="q2" value="c"> Жасалма сайт же билдирүү аркылуу маалыматты алдоо жолу менен алуу</label>
+</div>
+
+<div class="question">
+<p><b>3. Кайсы сырсөз коопсузураак?</b></p>
+<label><input type="radio" name="q3" value="a"> 123456</label>
+<label><input type="radio" name="q3" value="b"> Татаал, узун жана ар түрдүү белгилерден турган сырсөз</label>
+<label><input type="radio" name="q3" value="c"> 111111</label>
+</div>
+
+<div class="question">
+<p><b>4. Тиркемелерди кайдан жүктөө коопсуз?</b></p>
+<label><input type="radio" name="q4" value="a"> Расмий тиркеме дүкөндөрүнөн</label>
+<label><input type="radio" name="q4" value="b"> Белгисиз шилтемелерден</label>
+<label><input type="radio" name="q4" value="c"> Ар кандай белгисиз сайттардан</label>
+</div>
+
+<div class="question">
+<p><b>5. Белгисиз адам шилтеме жөнөтсө эмне кылуу керек?</b></p>
+<label><input type="radio" name="q5" value="a"> Дароо ачуу</label>
+<label><input type="radio" name="q5" value="b"> Бардык досторго жөнөтүү</label>
+<label><input type="radio" name="q5" value="c"> Шилтемени текшербей ачпоо</label>
+</div>
+
+<div class="question">
+<p><b>6. Жеке маалыматтарга кайсынысы кирет?</b></p>
+<label><input type="radio" name="q6" value="a"> Аба ырайы</label>
+<label><input type="radio" name="q6" value="b"> Сырсөз жана жеке кат алышуулар</label>
+<label><input type="radio" name="q6" value="c"> Жалпыга белгилүү маалымат</label>
+</div>
+
+<div class="question">
+<p><b>7. Коомдук Wi-Fi тармагын колдонууда эмне кылуу керек?</b></p>
+<label><input type="radio" name="q7" value="a"> Купуя маалыматтарды киргизүүдө этият болуу</label>
+<label><input type="radio" name="q7" value="b"> Бардык сырсөздөрдү жөнөтүү</label>
+<label><input type="radio" name="q7" value="c"> Белгисиз файлдарды жүктөө</label>
+</div>
+
+<div class="question">
+<p><b>8. Программалык камсыздоону жаңыртуу эмне үчүн керек?</b></p>
+<label><input type="radio" name="q8" value="a"> Экранды чоңойтуу үчүн гана</label>
+<label><input type="radio" name="q8" value="b"> Телефонду өчүрүү үчүн</label>
+<label><input type="radio" name="q8" value="c"> Коопсуздук кемчиликтерин оңдоо жана иштөөнү жакшыртуу үчүн</label>
+</div>
+
+<div class="question">
+<p><b>9. Телефон жоголуп кетсе эмне кылуу керек?</b></p>
+<label><input type="radio" name="q9" value="a"> Эч нерсе кылбоо</label>
+<label><input type="radio" name="q9" value="b"> Аккаунттарды коргоп, мүмкүн болсо түзүлүштү алыстан кулпулоо</label>
+<label><input type="radio" name="q9" value="c"> Сырсөздөрдү баарына айтуу</label>
+</div>
+
+<div class="question">
+<p><b>10. SMS аркылуу келген тастыктоо кодун кимге берүү керек?</b></p>
+<label><input type="radio" name="q10" value="a"> Эч кимге бербөө керек</label>
+<label><input type="radio" name="q10" value="b"> Белгисиз адамга берүү</label>
+<label><input type="radio" name="q10" value="c"> Интернеттеги баарына жөнөтүү</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Тестти текшерүү</button>
+<button type="reset" onclick="document.getElementById('result').innerHTML=''">Кайра баштоо</button>
+</form>
+
+<div id="result"></div>
+<a class="back" href="7class_lesson14.html">← Сабакка кайтуу</a>
+<a class="back" href="7class_online_full.html">Онлайн сабактар</a>
+</main>
+
+<script>
+function checkAnswers(){
+const name=document.getElementById("studentName").value.trim();
+const studentClass=document.getElementById("studentClass").value.trim();
+if(!name || !studentClass){
+alert("Аты-жөнүңдү жана классыңды толтур!");
+return;
+}
+const answers={
+q1:"b",q2:"c",q3:"b",q4:"a",q5:"c",
+q6:"b",q7:"a",q8:"c",q9:"b",q10:"a"
+};
+let score=0;
+let unanswered=0;
+for(let q in answers){
+const selected=document.querySelector('input[name="'+q+'"]:checked');
+if(!selected) unanswered++;
+else if(selected.value===answers[q]) score++;
+}
+if(unanswered>0){
+alert("Бардык суроолорго жооп бер! Жооп берилбеген суроолор: "+unanswered);
+return;
+}
+const grade=score>=9?5:score>=7?4:score>=5?3:2;
+document.getElementById("result").innerHTML=
+"Окуучу: "+name+"<br>Класс: "+studentClass+
+"<br>Туура жооп: "+score+"/10"+
+"<br>Жыйынтык: "+(score*10)+"%"+
+"<br>Баасы: "+grade;
+}
+</script>
+</body>
+</html>
