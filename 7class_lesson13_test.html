@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>13-сабактын тести — 7-класс</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f6fa;color:#263238;line-height:1.6;margin:0}
+header{background:#1769aa;color:white;text-align:center;padding:22px 12px}
+main{max-width:850px;margin:25px auto;padding:22px;background:white;border-radius:12px}
+input{width:100%;box-sizing:border-box;padding:12px;margin:7px 0 15px;border:1px solid #bbb;border-radius:6px}
+.question{padding:15px;margin:18px 0;background:#f5f8fc;border-radius:8px}
+label{display:block;padding:5px;cursor:pointer}
+button,.back{background:#1769aa;color:white;border:0;padding:12px 20px;border-radius:7px;cursor:pointer;text-decoration:none;display:inline-block;margin:8px 5px 8px 0}
+#result{font-size:20px;font-weight:bold;margin-top:20px;padding:15px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Информатика — 7-класс</h1>
+<h2>13-сабак: Мобилдик түзүлүштөр жана тиркемелер</h2>
+<p>Билимиңди текшер!</p>
+</header>
+<main>
+<h2>Окуучу жөнүндө маалымат</h2>
+<label>Аты-жөнү:</label>
+<input type="text" id="studentName" placeholder="Аты-жөнүңдү жаз">
+<label>Классы:</label>
+<input type="text" id="studentClass" placeholder="Мисалы: 7-А">
+
+<form id="quiz">
+<div class="question">
+<p><b>1. Мобилдик түзүлүш деген эмне?</b></p>
+<label><input type="radio" name="q1" value="a"> Китеп</label>
+<label><input type="radio" name="q1" value="b"> Алып жүрүүгө ыңгайлуу электрондук түзүлүш</label>
+<label><input type="radio" name="q1" value="c"> Кадимки стол</label>
+</div>
+
+<div class="question">
+<p><b>2. Смартфон эмне үчүн колдонулат?</b></p>
+<label><input type="radio" name="q2" value="a"> Бир гана убакытты көрсөтүү үчүн</label>
+<label><input type="radio" name="q2" value="b"> Бир гана сүрөт тартуу үчүн</label>
+<label><input type="radio" name="q2" value="c"> Байланыш, интернет жана тиркемелер үчүн</label>
+</div>
+
+<div class="question">
+<p><b>3. Планшеттин өзгөчөлүгү кайсы?</b></p>
+<label><input type="radio" name="q3" value="a"> Экран өлчөмү смартфонго караганда чоңураак</label>
+<label><input type="radio" name="q3" value="b"> Ал суу кайнатат</label>
+<label><input type="radio" name="q3" value="c"> Ал электр энергиясын өндүрөт</label>
+</div>
+
+<div class="question">
+<p><b>4. Акылдуу саат кандай кызмат аткарат?</b></p>
+<label><input type="radio" name="q4" value="a"> Документ басып чыгарат</label>
+<label><input type="radio" name="q4" value="b"> Убакытты көрсөтөт жана билдирүүлөрдү кабыл алат</label>
+<label><input type="radio" name="q4" value="c"> Компьютерди оңдойт</label>
+</div>
+
+<div class="question">
+<p><b>5. Тиркеме деген эмне?</b></p>
+<label><input type="radio" name="q5" value="a"> Телефондун кабы</label>
+<label><input type="radio" name="q5" value="b"> Электр зымы</label>
+<label><input type="radio" name="q5" value="c"> Белгилүү бир тапшырманы аткаруучу программа</label>
+</div>
+
+<div class="question">
+<p><b>6. WhatsApp кандай багыттагы тиркеме?</b></p>
+<label><input type="radio" name="q6" value="a"> Байланыш үчүн</label>
+<label><input type="radio" name="q6" value="b"> Сүрөт тартуу үчүн гана</label>
+<label><input type="radio" name="q6" value="c"> Навигация үчүн</label>
+</div>
+
+<div class="question">
+<p><b>7. Google Maps эмне үчүн колдонулат?</b></p>
+<label><input type="radio" name="q7" value="a"> Музыка угуу үчүн</label>
+<label><input type="radio" name="q7" value="b"> Жолду жана жайгашкан жерди аныктоо үчүн</label>
+<label><input type="radio" name="q7" value="c"> Текст терүү үчүн</label>
+</div>
+
+<div class="question">
+<p><b>8. Мобилдик түзүлүш интернетке кантип туташат?</b></p>
+<label><input type="radio" name="q8" value="a"> Принтер аркылуу гана</label>
+<label><input type="radio" name="q8" value="b"> Клавиатура аркылуу</label>
+<label><input type="radio" name="q8" value="c"> Wi-Fi же мобилдик тармак аркылуу</label>
+</div>
+
+<div class="question">
+<p><b>9. Тиркемелерди кайдан жүктөө коопсуз?</b></p>
+<label><input type="radio" name="q9" value="a"> Расмий тиркеме дүкөндөрүнөн</label>
+<label><input type="radio" name="q9" value="b"> Белгисиз шилтемелерден</label>
+<label><input type="radio" name="q9" value="c"> Ар кандай белгисиз сайттардан</label>
+</div>
+
+<div class="question">
+<p><b>10. Мобилдик түзүлүштөрдү туура колдонуу эмне үчүн маанилүү?</b></p>
+<label><input type="radio" name="q10" value="a"> Батареяны тез түгөтүү үчүн</label>
+<label><input type="radio" name="q10" value="b"> Маалымат алуу, байланышуу жана билим алуу үчүн</label>
+<label><input type="radio" name="q10" value="c"> Түзүлүштү бузуу үчүн</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Тестти текшерүү</button>
+<button type="reset" onclick="document.getElementById('result').innerHTML=''">Кайра баштоо</button>
+</form>
+
+<div id="result"></div>
+<a class="back" href="7class_lesson13.html">← Сабакка кайтуу</a>
+<a class="back" href="7class_online_full.html">Онлайн сабактар</a>
+</main>
+
+<script>
+function checkAnswers(){
+const name=document.getElementById("studentName").value.trim();
+const studentClass=document.getElementById("studentClass").value.trim();
+if(!name || !studentClass){
+alert("Аты-жөнүңдү жана классыңды толтур!");
+return;
+}
+const answers={
+q1:"b",q2:"c",q3:"a",q4:"b",q5:"c",
+q6:"a",q7:"b",q8:"c",q9:"a",q10:"b"
+};
+let score=0;
+let unanswered=0;
+for(let q in answers){
+const selected=document.querySelector('input[name="'+q+'"]:checked');
+if(!selected) unanswered++;
+else if(selected.value===answers[q]) score++;
+}
+if(unanswered>0){
+alert("Бардык суроолорго жооп бер! Жооп берилбеген суроолор: "+unanswered);
+return;
+}
+let percent=score*10;
+let grade=score>=9? "5":score>=7?"4":score>=5?"3":"2";
+document.getElementById("result").innerHTML=
+"Окуучу: "+name+"<br>Класс: "+studentClass+
+"<br>Туура жооп: "+score+"/10"+
+"<br>Жыйынтык: "+percent+"%"+
+"<br>Баасы: "+grade;
+}
+</script>
+</body>
+</html>
