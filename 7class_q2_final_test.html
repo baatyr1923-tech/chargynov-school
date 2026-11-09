@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-класс | II чейрек боюнча жыйынтыктоочу тест</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f1f5f9;font-family:Arial,sans-serif;color:#243447}
+.container{max-width:950px;margin:25px auto;padding:25px}
+header,.question,.result{background:white;padding:22px;border-radius:14px;margin-bottom:18px}
+h1{text-align:center;color:#173653}
+h2{font-size:19px}
+input[type=text],select{padding:13px;width:100%;margin:8px 0 15px;border:1px solid #bbb;border-radius:8px;font-size:16px}
+.question label{display:block;padding:12px;margin:8px 0;background:#f4f7fb;border-radius:8px;cursor:pointer}
+.question label:hover{background:#e5eef8}
+button,.link{display:inline-block;background:#1769aa;color:white;padding:14px 22px;border:0;border-radius:9px;font-size:16px;text-decoration:none;cursor:pointer;margin:8px 5px 8px 0}
+button:hover,.link:hover{background:#124e80}
+#result{display:none}
+.score{font-size:23px;font-weight:bold;color:#1769aa}
+.small{color:#607080}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>7-КЛАСС</h1>
+<h2 style="text-align:center">II ЧЕЙРЕК БОЮНЧА ЖЫЙЫНТЫКТООЧУ ТЕСТ</h2>
+<p style="text-align:center">11–15-сабактар боюнча билимди текшерүү</p>
+<label>Окуучунун аты-жөнү:</label>
+<input type="text" id="student" placeholder="Аты-жөнүн жазыңыз">
+<label>Классы:</label>
+<select id="class">
+<option value="">Классты тандаңыз</option>
+<option>7-а</option><option>7-б</option><option>7-в</option>
+</select>
+<p class="small">25 суроо · Ар бир туура жоопко 1 упай · Убакыт чектөөсү жок</p>
+</header>
+
+<form id="quiz">
+<div id="questions"></div>
+<button type="submit">ТЕСТТИ ТЕКШЕРҮҮ</button>
+<button type="reset" onclick="resetTest()">КАЙРА БАШТОО</button>
+</form>
+
+<div class="result" id="result">
+<h2>ТЕСТТИН ЖЫЙЫНТЫГЫ</h2>
+<p id="studentResult"></p>
+<p class="score" id="score"></p>
+<p id="percent"></p>
+<p id="grade"></p>
+<p id="message"></p>
+<a class="link" href="7class_online_full.html">Онлайн сабактарга кайтуу</a>
+<button onclick="window.print()">Жыйынтыкты басып чыгаруу</button>
+</div>
+</div>
+
+<script>
+const questions = [
+["Операциялык система деген эмне?",["Компьютердин негизги программалык камсыздоосу","Сүрөт тартуучу программа","Оюн программасы","Интернет сайты"],0],
+["Төмөнкүлөрдүн кайсынысы операциялык система?",["Microsoft Word","Windows","Google Chrome","PowerPoint"],1],
+["Файл деген эмне?",["Компьютердин экраны","Маалымат сакталган аталышы бар объект","Компьютердин бөлүгү","Интернет байланышы"],1],
+["Папканын негизги милдети кайсы?",["Компьютерди өчүрүү","Интернетти тездетүү","Файлдарды топтоп сактоо","Текстти басып чыгаруу"],2],
+["Файлдын атын өзгөртүү үчүн кайсы аракет колдонулат?",["Rename (Атын өзгөртүү)","Copy (Көчүрүү)","Delete (Жок кылуу)","Paste (Коюу)"],0],
+
+["Enter баскычынын негизги милдети кайсы?",["Текстти өчүрүү","Буйрукту ырастоо же жаңы сапка өтүү","Тамгаларды чоңойтуу","Көчүрүү"],1],
+["Caps Lock баскычы эмне үчүн колдонулат?",["Сандарды жазуу","Текстти өчүрүү","Чоң тамгалар режимин күйгүзүү же өчүрүү","Курсорду жылдыруу"],2],
+["Backspace баскычы эмне кылат?",["Курсордун алдындагы символду өчүрөт","Курсордун сол жагындагы символду өчүрөт","Текстти сактайт","Жаңы сап ачат"],1],
+["Ctrl + C айкалышынын милдети кайсы?",["Коюу","Сактоо","Көчүрүү","Жок кылуу"],2],
+["Чычкан менен объектти бир жерден экинчи жерге сүйрөө кандай аталат?",["Басып чыгаруу","Drag and Drop","Көчүрүп алуу","Жаңыртуу"],1],
+
+["Смартфон деген эмне?",["Мобилдик операциялык системасы бар акылдуу телефон","Жөнөкөй калькулятор","Принтердин түрү","Компьютердин монитору"],0],
+["Планшеттин өзгөчөлүгү кайсы?",["Кагаз менен гана иштейт","Сенсордук экраны бар көчмө түзүлүш","Интернетке кошулбайт","Бир гана саат көрсөтөт"],1],
+["Мобилдик тиркеме деген эмне?",["Телефондун батареясы","Экрандын айнеги","Белгилүү бир кызматты аткаруучу программа","Телефондун кабы"],2],
+["Акылдуу сааттын мүмкүнчүлүгү кайсы?",["Документтерди гана басып чыгаруу","Интернет кабелин туташтыруу","Компьютерди оңдоо","Убакытты көрсөтүү жана дене активдүүлүгүн көзөмөлдөө"],3],
+["Мобилдик түзүлүштөргө кайсынысы кирет?",["Смартфон","Планшет","Акылдуу саат","Үчөө тең"],3],
+
+["Телефонго белгисиз тиркемени орнотуу эмнеси менен кооптуу?",["Экранды чоңойтот","Зыяндуу программа болушу мүмкүн","Батареяны сөзсүз толтурат","Интернетти өчүрөт"],1],
+["Телефонду кантип коргоого болот?",["Купуя сөздү баарына айтуу","Белгисиз шилтемелерди ачуу","Күчтүү сырсөз жана экран кулпусун колдонуу","Коргоо программаларын өчүрүү"],2],
+["SMS аркылуу келген текшерүү кодун кимге берүү керек?",["Эч кимге бербөө керек","Досторго берүү","Социалдык тармакка жарыялоо","Белгисиз адамга жөнөтүү"],0],
+["Программаларды жаңыртуунун мааниси эмнеде?",["Телефондун түсүн өзгөртүү","Экранды тазалоо","Коопсуздук кемчиликтерин оңдоо жана иштөөнү жакшыртуу","Бардык файлдарды өчүрүү"],2],
+["Телефон жоголуп кетсе эмне кылуу керек?",["Эч нерсе кылбоо","Аккаунттарды коргоп, мүмкүн болсо түзүлүштү алыстан кулпулоо","Сырсөздөрдү баарына айтуу","Купуя маалыматты жарыялоо"],1],
+
+["Жасалма интеллект деген эмне?",["Адамдын ой жүгүртүүсүнө окшош айрым милдеттерди аткара алган технология","Компьютердин клавиатурасы","Электр зымы","Жөнөкөй папка"],0],
+["Үн таануу технологиясы эмне кылат?",["Сүрөттү басып чыгарат","Үндү кабыл алып, аны текстке же буйрукка айландырат","Экранды өчүрөт","Файлды жок кылат"],1],
+["Чат-боттун милдети кайсы?",["Компьютерди оңдоо","Интернет кабелин туташтыруу","Колдонуучунун суроолоруна автоматтык жооп берүү","Телефонду кубаттоо"],2],
+["Издөө системаларынын мисалы кайсы?",["Paint","Калькулятор","Блокнот","Google"],3],
+["Жасалма интеллектти кантип колдонуу керек?",["Жоопторун текшербей кабыл алуу","Туура, коопсуз жана жоопкерчилик менен колдонуу","Жеке сырсөздөрдү берүү","Башкалардын маалыматтарын уруксатсыз алуу"],1]
+];
+
+const root=document.getElementById("questions");
+questions.forEach((q,i)=>{
+ const div=document.createElement("div");
+ div.className="question";
+ div.innerHTML=`<h2>${i+1}. ${q[0]}</h2>`+
+ q[1].map((a,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}. ${a}</label>`).join("");
+ root.appendChild(div);
+});
+
+document.getElementById("quiz").addEventListener("submit",function(e){
+ e.preventDefault();
+ const student=document.getElementById("student").value.trim();
+ const cls=document.getElementById("class").value;
+ if(!student||!cls){alert("Окуучунун аты-жөнүн жана классын толтуруңуз!");return;}
+ let correct=0;
+ questions.forEach((q,i)=>{
+ const answer=document.querySelector(`input[name="q${i}"]:checked`);
+ if(answer&&Number(answer.value)===q[2]) correct++;
+ });
+ const percent=Math.round(correct/25*100);
+ let grade=percent>=90?5:percent>=75?4:percent>=50?3:2;
+ document.getElementById("studentResult").textContent="Окуучу: "+student+" | Класс: "+cls;
+ document.getElementById("score").textContent="Туура жооп: "+correct+" / 25";
+ document.getElementById("percent").textContent="Жыйынтык: "+percent+"%";
+ document.getElementById("grade").textContent="Баасы: "+grade;
+ document.getElementById("message").textContent=percent>=90?"Азамат! Абдан жакшы жыйынтык!":percent>=75?"Жакшы! Дагы бир аз кайталаңыз.":percent>=50?"Канааттандырарлык. Темаларды кайталоо керек.":"Темаларды кайрадан окуп, тестти кайталап тапшырыңыз.";
+ document.getElementById("result").style.display="block";
+ document.getElementById("result").scrollIntoView({behavior:"smooth"});
+});
+function resetTest(){
+ setTimeout(()=>{
+ document.getElementById("result").style.display="none";
+ },0);
+}
+</script>
+</body>
+</html>
