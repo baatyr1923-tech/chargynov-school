@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15-сабактын тести — 7-класс</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f6fa;color:#263238;line-height:1.6;margin:0}
+header{background:#1769aa;color:white;text-align:center;padding:22px 12px}
+main{max-width:850px;margin:25px auto;padding:22px;background:white;border-radius:12px}
+input[type=text]{width:100%;box-sizing:border-box;padding:12px;margin:7px 0 15px;border:1px solid #bbb;border-radius:6px}
+.question{padding:15px;margin:18px 0;background:#f5f8fc;border-radius:8px}
+.question label{display:block;padding:6px;cursor:pointer}
+button,.back{background:#1769aa;color:white;border:0;padding:12px 20px;border-radius:7px;cursor:pointer;text-decoration:none;display:inline-block;margin:8px 5px 8px 0}
+#result{font-size:20px;font-weight:bold;margin-top:20px;padding:15px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Информатика — 7-класс</h1>
+<h2 style="color:white">15-сабак: Жасалма интеллект</h2>
+<p>Билимиңди текшер!</p>
+</header>
+<main>
+<h2>Окуучу жөнүндө маалымат</h2>
+<label>Аты-жөнү:</label>
+<input type="text" id="studentName" placeholder="Аты-жөнүңдү жаз">
+<label>Классы:</label>
+<input type="text" id="studentClass" placeholder="Мисалы: 7-А">
+
+<form id="quiz">
+<div class="question">
+<p><b>1. Жасалма интеллект деген эмне?</b></p>
+<label><input type="radio" name="q1" value="a"> Компьютердин экраны</label>
+<label><input type="radio" name="q1" value="b"> Адамдын акыл-эсине байланышкан айрым иштерди аткаруучу технология</label>
+<label><input type="radio" name="q1" value="c"> Клавиатуранын түрү</label>
+</div>
+
+<div class="question">
+<p><b>2. Үн таануу технологиясы эмне кылат?</b></p>
+<label><input type="radio" name="q2" value="a"> Үндү кабыл алып, сөздү тааныйт</label>
+<label><input type="radio" name="q2" value="b"> Телефонду кубаттайт</label>
+<label><input type="radio" name="q2" value="c"> Сүрөттү басып чыгарат</label>
+</div>
+
+<div class="question">
+<p><b>3. Чат-бот деген эмне?</b></p>
+<label><input type="radio" name="q3" value="a"> Компьютердин бөлүгү</label>
+<label><input type="radio" name="q3" value="b"> Электрондук оюн</label>
+<label><input type="radio" name="q3" value="c"> Адам менен сүйлөшүп, суроолорго жооп бере алган программа</label>
+</div>
+
+<div class="question">
+<p><b>4. Жасалма интеллект эмнеге жардам бере алат?</b></p>
+<label><input type="radio" name="q4" value="a"> Электр энергиясын өзү өндүрүүгө</label>
+<label><input type="radio" name="q4" value="b"> Маалымат табууга жана текст даярдоого</label>
+<label><input type="radio" name="q4" value="c"> Компьютерди сөзсүз өчүрүүгө</label>
+</div>
+
+<div class="question">
+<p><b>5. Котормо программаларынын милдети кандай?</b></p>
+<label><input type="radio" name="q5" value="a"> Бир тилдеги текстти башка тилге которуу</label>
+<label><input type="radio" name="q5" value="b"> Сүрөт тартуу</label>
+<label><input type="radio" name="q5" value="c"> Телефонду оңдоо</label>
+</div>
+
+<div class="question">
+<p><b>6. Навигациялык программалар эмнеге жардам берет?</b></p>
+<label><input type="radio" name="q6" value="a"> Музыка жазууга</label>
+<label><input type="radio" name="q6" value="b"> Текст терүүгө</label>
+<label><input type="radio" name="q6" value="c"> Жолду жана багытты аныктоого</label>
+</div>
+
+<div class="question">
+<p><b>7. Жасалма интеллекттин пайдалуу жагы кайсы?</b></p>
+<label><input type="radio" name="q7" value="a"> Ар дайым туура эмес маалымат берүү</label>
+<label><input type="radio" name="q7" value="b"> Маалыматты тез табууга жана ишти жеңилдетүүгө жардам берүү</label>
+<label><input type="radio" name="q7" value="c"> Интернетти сөзсүз өчүрүү</label>
+</div>
+
+<div class="question">
+<p><b>8. Жасалма интеллект берген жоопту эмне кылуу керек?</b></p>
+<label><input type="radio" name="q8" value="a"> Башка ишенимдүү булактардан текшерүү</label>
+<label><input type="radio" name="q8" value="b"> Текшербей көчүрүү</label>
+<label><input type="radio" name="q8" value="c"> Дароо өчүрүү</label>
+</div>
+
+<div class="question">
+<p><b>9. Жасалма интеллектке кайсы маалыматты берүүгө болбойт?</b></p>
+<label><input type="radio" name="q9" value="a"> Жалпы билим берүүчү суроо</label>
+<label><input type="radio" name="q9" value="b"> Математикалык мисал</label>
+<label><input type="radio" name="q9" value="c"> Жеке сырсөздөр жана купуя маалыматтар</label>
+</div>
+
+<div class="question">
+<p><b>10. Жасалма интеллектти кантип колдонуу керек?</b></p>
+<label><input type="radio" name="q10" value="a"> Жоопторун дайыма текшербей колдонуу</label>
+<label><input type="radio" name="q10" value="b"> Туура, коопсуз жана жоопкерчиликтүү колдонуу</label>
+<label><input type="radio" name="q10" value="c"> Башкалардын сырсөзүн алуу үчүн</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Тестти текшерүү</button>
+<button type="reset" onclick="document.getElementById('result').innerHTML=''">Кайра баштоо</button>
+</form>
+
+<div id="result"></div>
+<a class="back" href="7class_lesson15.html">← Сабакка кайтуу</a>
+<a class="back" href="7class_online_full.html">Онлайн сабактар</a>
+</main>
+
+<script>
+function checkAnswers(){
+const name=document.getElementById("studentName").value.trim();
+const studentClass=document.getElementById("studentClass").value.trim();
+if(!name || !studentClass){
+alert("Аты-жөнүңдү жана классыңды толтур!");
+return;
+}
+const answers={
+q1:"b",q2:"a",q3:"c",q4:"b",q5:"a",
+q6:"c",q7:"b",q8:"a",q9:"c",q10:"b"
+};
+let score=0;
+let unanswered=0;
+for(let q in answers){
+const selected=document.querySelector('input[name="'+q+'"]:checked');
+if(!selected) unanswered++;
+else if(selected.value===answers[q]) score++;
+}
+if(unanswered>0){
+alert("Бардык суроолорго жооп бер! Жооп берилбеген суроолор: "+unanswered);
+return;
+}
+const grade=score>=9?5:score>=7?4:score>=5?3:2;
+document.getElementById("result").innerHTML=
+"Окуучу: "+name+"<br>Класс: "+studentClass+
+"<br>Туура жооп: "+score+"/10"+
+"<br>Жыйынтык: "+(score*10)+"%"+
+"<br>Баасы: "+grade;
+}
+</script>
+</body>
+</html>
