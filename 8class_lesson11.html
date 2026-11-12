@@ -3,193 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>11-сабак | Чейректик кайталоо</title>
-
+<title>8-класс | 11-сабак | MySQL жана Microsoft Access</title>
 <style>
-body{
-    font-family:Arial,sans-serif;
-    margin:0;
-    background:#f4f7fb;
-    color:#222;
-}
-header{
-    background:#2563eb;
-    color:white;
-    padding:35px 20px;
-    text-align:center;
-}
-.container{
-    max-width:1000px;
-    margin:30px auto;
-    padding:0 20px;
-}
-.lesson{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-.lesson h2{
-    color:#2563eb;
-}
-.btn{
-    display:inline-block;
-    background:#2563eb;
-    color:white;
-    padding:10px 18px;
-    border-radius:8px;
-    text-decoration:none;
-    margin-top:10px;
-}
-.topic{
-    background:#f1f5f9;
-    padding:15px;
-    margin:10px 0;
-    border-radius:10px;
-}
-footer{
-    text-align:center;
-    color:#666;
-    padding:30px;
-}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222;line-height:1.65}
+header{background:#2563eb;color:#fff;text-align:center;padding:30px 18px}
+.container{max-width:950px;margin:25px auto;padding:0 16px}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:#2563eb;margin-top:0}h3{color:#174574}
+.note{background:#eaf3ff;border-left:5px solid #2563eb;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:#172033;color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto}
+.btn{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0}
+.back{display:inline-block;color:#2563eb;text-decoration:none;margin:5px 0 18px;font-weight:bold}
+table{width:100%;border-collapse:collapse;margin:12px 0}th,td{border:1px solid #dce5ef;padding:10px;text-align:left}th{background:#eaf1ff}
+li{margin:7px 0}
 </style>
 </head>
-
 <body>
-
 <header>
-<h1>🧠 8-класс | Информатика</h1>
-<h2>11-сабак: Чейректик кайталоо</h2>
-<p>1-чейректе өтүлгөн темаларды кайталоо жана билимди бекемдөө</p>
+<h1>11-сабак: MySQL жана Microsoft Access менен таанышуу</h1>
+<p>8-класс | Информатика</p>
 </header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар маалыматтар базасын башкаруу системаларынын милдетин түшүнүшөт, MySQL жана Microsoft Access программаларынын негизги өзгөчөлүктөрүн салыштырып, маалыматтар базасынын таблица, талаа жана жазуу түшүнүктөрүн өздөштүрүшөт.</p>
+<h3>Күтүлүүчү натыйжалар</h3>
+<ul>
+<li>МББС түшүнүгүн жана анын милдеттерин түшүндүрөт.</li>
+<li>MySQL менен Microsoft Accessтин айырмасын айтат.</li>
+<li>Таблица, талаа жана жазуу түшүнүктөрүн ажыратат.</li>
+<li>Форма, сурам жана отчеттун кызматын түшүндүрөт.</li>
+</ul>
+</section>
+<section class="card">
+<h2>1. МББС деген эмне?</h2>
+<p><strong>Маалыматтар базасын башкаруу системасы (МББС)</strong> — маалыматтарды түзүүгө, сактоого, издөөгө, өзгөртүүгө жана өчүрүүгө жардам берген программа.</p>
+<p>Мисалы, мектептин окуучуларынын аты-жөнүн, классын, туулган жылын жана бааларын бир системада сактоого болот.</p>
+<div class="note"><strong>Негизги түшүнүктөр:</strong> таблица — маалымат сакталган торчо; талаа — таблицанын мамычасы; жазуу — таблицанын бир сабы.</div>
+<table><thead><tr><th>№</th><th>Аты-жөнү</th><th>Классы</th><th>Туулган жылы</th></tr></thead><tbody>
+<tr><td>1</td><td>Айбек</td><td>8-А</td><td>2012</td></tr><tr><td>2</td><td>Алина</td><td>8-А</td><td>2012</td></tr><tr><td>3</td><td>Нурбек</td><td>8-Б</td><td>2011</td></tr>
+</tbody></table>
+<p>Бул мисалда 4 талаа жана 3 жазуу бар.</p>
+</section>
+<section class="card">
+<h2>2. MySQL программасы</h2>
+<p><strong>MySQL</strong> — реляциялык маалыматтар базасын башкаруу системасы. Ал маалыматтарды таблицаларда сактайт жана SQL тили аркылуу маалыматтарды башкарууга мүмкүндүк берет. Көп учурда веб-сайттарда, серверлерде жана маалымат көп болгон системаларда колдонулат.</p>
+<pre><code>CREATE DATABASE Mektep;
+USE Mektep;
 
-<div class="container">
-
-<div class="lesson">
-
-<h2>🎯 Сабактын максаты</h2>
-
-<p>
-Окуучулар 1-чейректе өтүлгөн негизги темаларды кайталап,
-билимдерин бекемдейт жана практикалык тапшырмаларды аткарат.
-</p>
-
-</div>
-
-<div class="lesson">
-
-<h2>📚 Кайталануучу темалар</h2>
-
-<div class="topic">
-<strong>1. Санак системалары</strong><br>
-Ондук, экилик, сегиздик жана он алтылык санак системалары.
-</div>
-
-<div class="topic">
-<strong>2. Сандарды санак системаларында көрсөтүү</strong><br>
-Ар түрдүү санак системаларындагы сандар.
-</div>
-
-<div class="topic">
-<strong>3. Санак системаларынын ортосунда конвертация</strong><br>
-Бир санак системасынан экинчисине сандарды которуу.
-</div>
-
-<div class="topic">
-<strong>4. Логикалык элементтер</strong><br>
-AND (ЖАНА), OR (ЖЕ), NOT (ЭМЕС).
-</div>
-
-<div class="topic">
-<strong>5. Логикалык схемалар</strong><br>
-Логикалык элементтерди колдонуп схемаларды түзүү жана талдоо.
-</div>
-
-<div class="topic">
-<strong>6. Логикалык туюнтмалар</strong><br>
-AND, OR, NOT амалдары менен логикалык туюнтмаларды эсептөө.
-</div>
-
-<div class="topic">
-<strong>7. Программалык камсыздоо жана лицензиялар</strong><br>
-Эркин жана эркин эмес программалык камсыздоо.
-</div>
-
-<div class="topic">
-<strong>8. Компьютердик моделдештирүү</strong><br>
-Моделдештирүү деген эмне, эмне үчүн жана кантип колдонулат.
-</div>
-
-<div class="topic">
-<strong>9. Маалыматтар базасы</strong><br>
-Маалыматтар базасынын түшүнүгү жана негиздери.
-</div>
-
-<div class="topic">
-<strong>10. Маалыматтар базасын башкаруу системалары</strong><br>
-Маалыматтар базасы менен иштөө.
-</div>
-
-</div>
-
-<div class="lesson">
-
-<h2>📝 Өзүн-өзү текшерүү</h2>
-
-<p>1. 1010₂ саны ондук системада канча болот?</p>
-
-<p>2. AND логикалык элементи качан 1 маанисин берет?</p>
-
-<p>3. OR логикалык элементинин негизги өзгөчөлүгү эмнеде?</p>
-
-<p>4. NOT логикалык элементи эмне кылат?</p>
-
-<p>5. Программалык камсыздоонун лицензиясы деген эмне?</p>
-
-<p>6. Компьютердик моделдештирүү эмне үчүн колдонулат?</p>
-
-<p>7. Маалыматтар базасы деген эмне?</p>
-
-<p>8. Маалыматтар базасы менен иштөөдө маалыматты издөө жана сорттоо эмне үчүн керек?</p>
-
-</div>
-
-<div class="lesson">
-
-<h2>💻 Практикалык тапшырмалар</h2>
-
-<p><strong>1-тапшырма.</strong> 1011₂ санын ондук системага өткөргүлө.</p>
-
-<p><strong>2-тапшырма.</strong> A=1, B=0 болсо, A AND B маанисин тапкыла.</p>
-
-<p><strong>3-тапшырма.</strong> A=0, B=1 болсо, A OR B маанисин тапкыла.</p>
-
-<p><strong>4-тапшырма.</strong> A=1 болсо, NOT A маанисин тапкыла.</p>
-
-<p><strong>5-тапшырма.</strong> Маалыматтар базасында окуучулардын аты-жөнү, классы жана баалары сакталган таблицаны түзүүнүн мисалын келтиргиле.</p>
-
-</div>
-
-<div class="lesson">
-
-<h2>📌 Жыйынтык</h2>
-
-<p>
-Чейректик кайталоо аркылуу окуучулар санак системалары,
-логикалык амалдар, программалык камсыздоо, моделдештирүү
-жана маалыматтар базасы боюнча алган билимдерин бекемдешет.
-</p>
-
-<a class="btn" href="8class_informatika.html">📚 Бардык сабактар</a>
-
-</div>
-
-</div>
-
-<footer>
-№35 Жумабек Чаргынов атындагы орто билим берүү мектеби
-</footer>
-
+CREATE TABLE Okuuchular (
+    id INT PRIMARY KEY,
+    aty VARCHAR(50),
+    klass VARCHAR(10)
+);</code></pre>
+<p>Бул мисалда Mektep аттуу база жана Okuuchular аттуу таблица түзүлөт.</p>
+</section>
+<section class="card">
+<h2>3. Microsoft Access программасы</h2>
+<p><strong>Microsoft Access</strong> — маалыматтар базасы менен иштөөчү программа. Ал таблицаларды, формаларды, сурамдарды жана отчетторду түзүүгө жардам берет.</p>
+<ul>
+<li><strong>Table (Таблица):</strong> маалыматтарды талаалар жана жазуулар түрүндө сактайт.</li>
+<li><strong>Form (Форма):</strong> маалыматтарды ыңгайлуу киргизүүгө жана көрүүгө жардам берет.</li>
+<li><strong>Query (Сурам):</strong> керектүү маалыматтарды шарт боюнча тандап алат.</li>
+<li><strong>Report (Отчет):</strong> маалыматтарды иреттүү көрсөтүп, басып чыгарууга даярдайт.</li>
+</ul>
+</section>
+<section class="card">
+<h2>4. MySQL жана Accessтин айырмасы</h2>
+<table><thead><tr><th>MySQL</th><th>Microsoft Access</th></tr></thead><tbody>
+<tr><td>Сервердик МББС катары кеңири колдонулат.</td><td>Көбүнчө жеке компьютерде же чакан иш чөйрөсүндө колдонулат.</td></tr>
+<tr><td>SQL сурамдары менен иштейт.</td><td>Таблица, форма, сурам жана отчет үчүн графикалык интерфейси бар.</td></tr>
+<tr><td>Веб-системаларда жана көп колдонуучулуу долбоорлордо ыңгайлуу.</td><td>Окуу жана чакан маалыматтар базасын түзүүдө ыңгайлуу.</td></tr>
+</tbody></table>
+<div class="note">Экөөнүн тең максаты — маалыматтарды уюшкан түрдө сактоо жана башкаруу. Алардын колдонуу чөйрөсү жана иштөө ыкмасы айырмаланат.</div>
+</section>
+<section class="card">
+<h2>5. Практикалык тапшырма</h2>
+<p>«Мектептин окуучулары» деген темада төмөнкү талаалардан турган таблицанын долбоорун түзгүлө: ID, аты-жөнү, классы, туулган жылы.</p>
+<ol>
+<li>Кайсы талаа ар бир окуучуну өзүнчө аныктоого жардам берет?</li>
+<li>Кайсы программада форма түзүп, маалыматты киргизүүгө болот?</li>
+<li>MySQL эмне үчүн SQL тилин колдонот?</li>
+<li>Access программасында отчет эмне үчүн керек?</li>
+</ol>
+</section>
+<section class="card">
+<h2>6. Бышыктоо суроолору</h2>
+<ol>
+<li>МББС деген эмне?</li><li>MySQL кандай максатта колдонулат?</li><li>Microsoft Accessтин негизги объекттери кайсылар?</li><li>Талаа менен жазуунун айырмасы эмнеде?</li><li>Форма, сурам жана отчет эмне үчүн керек?</li>
+</ol>
+<a class="btn" href="8class_lesson11_test.html">📝 11-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">Сабактар тизмесине кайтуу</a>
+</section>
+</main>
 </body>
 </html>
