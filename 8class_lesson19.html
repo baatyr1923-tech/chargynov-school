@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.4-сабак | Массивдер</title>
+<style>
+:root{--blue:#2563eb;--dark:#172033;--bg:#f4f7fb;--green:#16865b;--line:#dce5ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#222;line-height:1.65}
+header{background:var(--blue);color:#fff;text-align:center;padding:30px 18px}
+header h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}
+header p{margin:0}
+.container{max-width:950px;margin:25px auto;padding:0 16px}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:var(--blue);margin-top:0}
+h3{color:#174574}
+.note{background:#eaf3ff;border-left:5px solid var(--blue);padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:var(--dark);color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto;font-size:15px;line-height:1.5}
+code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:#eaf1ff;color:#173d7a}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0;font-weight:bold}
+.btn.secondary{background:var(--green)}
+.back{display:inline-block;color:var(--blue);text-decoration:none;margin:5px 0 18px;font-weight:bold}
+li{margin:7px 0}
+@media(max-width:600px){.card{padding:17px}pre{font-size:13px}th,td{padding:7px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>19-сабак: Массивдер</h1>
+<p>8-класс | Информатика | 2-чейрек | 2.4-тема</p>
+</header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар массив түшүнүгүн өздөштүрүшөт. Python тилиндеги list тизмеси аркылуу бир нече маанини сактоону, элементтерди киргизип-чыгарууну, иргөөнү, тизмени толтуруучу генераторлорду жана үзүмдөрдү колдонууну үйрөнүшөт.</p>
+<h3>Күтүлүүчү натыйжалар</h3>
+<ul>
+<li>Массивдин жана Python тизмесинин маанисин түшүндүрөт.</li>
+<li>Тизменин элементтерине индекси аркылуу кайрылат.</li>
+<li>Тизмени киргизет жана экранга чыгарат.</li>
+<li>Элементтерди өсүү жана кемүү тартибинде иреттейт.</li>
+<li>Тизмени толтуруучу генераторлорду колдонот.</li>
+<li>Үзүмдөр менен тизмеден бөлүк алат.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Массив деген эмне?</h2>
+<p><strong>Массив</strong> — бир аталыш менен бир нече маанини иреттүү түрдө сактоого мүмкүндүк берген маалымат түзүмү. Ар бир элементтин өзүнүн орду (индекси) болот.</p>
+<p>Python тилинде мектептик тапшырмаларда массивге окшош түзүм катары көбүнчө <strong>тизме (list)</strong> колдонулат. Тизме бир нече маанини бир өзгөрмөдө сактайт жана анын өлчөмү өзгөрө алат.</p>
+<pre><code>baalar = [5, 4, 5, 3, 4]
+atylar = ["Айжан", "Бек", "Нур"]
+
+print(baalar)
+print(atylar)</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>[5, 4, 5, 3, 4]
+['Айжан', 'Бек', 'Нур']</code></pre>
+<div class="note"><strong>Эсиңде болсун:</strong> Python тизмесинин элементтери ар кандай типте болушу мүмкүн, бирок бир типтеги маалыматтарды чогуу сактоо жана иштетүү көп учурда ыңгайлуу.</div>
+</section>
+
+<section class="card">
+<h2>2. Тизменин элементтери жана индекстер</h2>
+<p>Тизменин ар бир элементинин индекси бар. Python тилинде индекстер <strong>0дөн</strong> башталат.</p>
+<pre><code>san = [12, 25, 8, 40, 17]
+
+print(san[0])  # биринчи элемент
+print(san[2])  # үчүнчү элемент
+print(san[-1]) # акыркы элемент</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>12
+8
+17</code></pre>
+<table><thead><tr><th>Элемент</th><th>12</th><th>25</th><th>8</th><th>40</th><th>17</th></tr></thead><tbody>
+<tr><th>Индекс</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+</tbody></table>
+<p>Тизменин элементин өзгөртүүгө болот:</p>
+<pre><code>san = [12, 25, 8]
+san[1] = 30
+print(san)</code></pre>
+<p>Натыйжасы: <strong>[12, 30, 8]</strong>.</p>
+<p>Элементтердин санын билүү үчүн <code>len()</code> функциясы колдонулат:</p>
+<pre><code>print(len(san))</code></pre>
+<p>Натыйжасы: <strong>3</strong>.</p>
+</section>
+
+<section class="card">
+<h2>3. Массивдерди (тизмелерди) киргизүү жана чыгаруу</h2>
+<h3>Даяр маанилерди тизмеге жазуу</h3>
+<pre><code>san = [4, 7, 2, 9]
+print("Тизме:", san)
+
+for element in san:
+    print(element)</code></pre>
+<h3>Колдонуучудан бир сап менен сандарды киргизүү</h3>
+<p><code>split()</code> сапты боштук боюнча бөлөт, ал эми <code>map(int, ...)</code> алынган маанилерди бүтүн сандарга айландырат.</p>
+<pre><code>san = list(map(int, input(
+    "Сандарды боштук менен киргизиңиз: "
+).split()))
+
+print("Киргизилген тизме:", san)</code></pre>
+<p>Мисалы, колдонуучу <code>5 8 2 10</code> деп киргизсе, тизме <code>[5, 8, 2, 10]</code> болот.</p>
+<h3>Элементтерди цикл менен киргизүү</h3>
+<pre><code>n = int(input("Элементтердин саны: "))
+san = []
+
+for i in range(n):
+    x = int(input("Сан киргизиңиз: "))
+    san.append(x)
+
+print("Тизме:", san)</code></pre>
+<p><code>append()</code> жаңы элементти тизменин аягына кошот.</p>
+</section>
+
+<section class="card">
+<h2>4. Элементтерди иргөө (сорттоо)</h2>
+<p>Иргөө — тизмедеги элементтерди белгилүү бир тартипке келтирүү. Көбүнчө сандарды өсүү же кемүү тартибинде жайгаштырабыз.</p>
+<h3>sort() методу</h3>
+<p><code>sort()</code> тизмени ордунда өзгөртөт.</p>
+<pre><code>san = [7, 2, 9, 1, 5]
+
+san.sort()
+print(san)</code></pre>
+<p>Натыйжасы: <strong>[1, 2, 5, 7, 9]</strong>.</p>
+<p>Кемүү тартибинде иргөө:</p>
+<pre><code>san.sort(reverse=True)
+print(san)</code></pre>
+<p>Натыйжасы: <strong>[9, 7, 5, 2, 1]</strong>.</p>
+<h3>sorted() функциясы</h3>
+<p><code>sorted()</code> баштапкы тизмени өзгөртпөстөн, иреттелген жаңы тизме кайтарат.</p>
+<pre><code>san = [7, 2, 9, 1, 5]
+irgelgen = sorted(san)
+
+print("Баштапкы:", san)
+print("Иреттелген:", irgelgen)</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>Баштапкы: [7, 2, 9, 1, 5]
+Иреттелген: [1, 2, 5, 7, 9]</code></pre>
+<div class="warning"><strong>Айырмасын эстеп кал:</strong> <code>sort()</code> баштапкы тизмени өзгөртөт; <code>sorted()</code> жаңы иреттелген тизме берет.</div>
+</section>
+
+<section class="card">
+<h2>5. Тизмени толтуруучу генераторлор (list comprehension)</h2>
+<p>Тизмени толтуруучу генератор — белгилүү бир эрежеге ылайык жаңы тизме түзүүнүн кыска жолу. Ал <code>for</code> циклин бир сапта колдонууга мүмкүнчүлүк берет.</p>
+<pre><code>kvadrat = [x * x for x in range(1, 6)]
+print(kvadrat)</code></pre>
+<p>Натыйжасы: <strong>[1, 4, 9, 16, 25]</strong>.</p>
+<h3>Шарт менен тизме түзүү</h3>
+<pre><code>jup_sandar = [x for x in range(1, 11)
+              if x % 2 == 0]
+
+print(jup_sandar)</code></pre>
+<p>Натыйжасы: <strong>[2, 4, 6, 8, 10]</strong>.</p>
+<p>Жалпы жазылышы:</p>
+<pre><code>[туюнтма for элемент in тизмек if шарт]</code></pre>
+<p><code>if</code> шарты милдеттүү эмес. Шартсыз жазганда тизмектеги бардык элементтер иштетилет.</p>
+</section>
+
+<section class="card">
+<h2>6. Үзүмдөр (slicing)</h2>
+<p>Үзүм — тизмеден белгилүү бир бөлүгүн алуу. Ал үчүн төрт бурчтуу кашаанын ичинде башталыш, аяктоо жана кадам көрсөтүлөт.</p>
+<pre><code>san = [10, 20, 30, 40, 50, 60]
+
+print(san[1:4])
+print(san[:3])
+print(san[3:])
+print(san[::2])</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>[20, 30, 40]
+[10, 20, 30]
+[40, 50, 60]
+[10, 30, 50]</code></pre>
+<table><thead><tr><th>Жазылышы</th><th>Түшүндүрмө</th></tr></thead><tbody>
+<tr><td><code>san[1:4]</code></td><td>1-индекстен 4-индекске чейин, 4 кирбейт</td></tr>
+<tr><td><code>san[:3]</code></td><td>Башынан 3-индекске чейин</td></tr>
+<tr><td><code>san[3:]</code></td><td>3-индекстен аягына чейин</td></tr>
+<tr><td><code>san[::2]</code></td><td>Ар бир экинчи элемент</td></tr>
+<tr><td><code>san[::-1]</code></td><td>Тескери тартипте көчүрмө</td></tr>
+</tbody></table>
+<div class="note"><strong>Маанилүү:</strong> үзүмдө аяктоо индекси алынган бөлүккө кирбейт. Мисалы, <code>san[1:4]</code> 1, 2, 3 индекстеги элементтерди алат.</div>
+</section>
+
+<section class="card">
+<h2>7. Практикалык иштер</h2>
+<p>Тапшырмаларды Python чөйрөсүндө аткаргыла. Натыйжаларын текшерип, коддогу өзгөрмөлөрдүн маанилерин түшүндүргүлө.</p>
+<ol>
+<li><strong>Жеңил:</strong> беш сандан турган тизме түзүп, биринчи, үчүнчү жана акыркы элементтерин экранга чыгаргыла.</li>
+<li><strong>Орто:</strong> колдонуучудан бир сап менен 5 сан киргизип, алардын суммасын эсептегиле.</li>
+<li><strong>Орто:</strong> берилген сандар тизмесин өсүү жана кемүү тартибинде иргегиле. sort() менен sorted() айырмасын көрсөтгүлө.</li>
+<li><strong>Орто:</strong> list comprehension колдонуп, 1ден 20га чейинки так сандардан жаңы тизме түзгүлө.</li>
+<li><strong>Татаал:</strong> берилген тизмеден экинчи элементтен баштап төртүнчү элементке чейинки үзүмдү чыгаргыла. Андан соң тизмени тескери тартипте чыгаргыла.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>8. Сабакты бышыктоо</h2>
+<ol>
+<li>Массив деген эмне?</li>
+<li>Python тилинде массивге окшош түзүм катары эмне колдонулат?</li>
+<li>Тизменин индекстери кайсы сандан башталат?</li>
+<li>Элементтердин санын кайсы функция аныктайт?</li>
+<li>append() методу эмне кылат?</li>
+<li>sort() менен sorted() айырмасы эмнеде?</li>
+<li>List comprehension эмне үчүн колдонулат?</li>
+<li>Үзүмдө аяктоо индекси алынган бөлүккө киреби?</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>9. Үй тапшырма</h2>
+<p>Колдонуучудан 6 бүтүн сан киргизип, аларды тизме катары сактагыла. Тизмени экранга чыгаргыла, өсүү тартибинде иргегиле, жуп сандардан жаңы тизме түзгүлө жана баштапкы тизмени тескери тартипте үзүм аркылуу чыгаргыла.</p>
+<a class="btn secondary" href="8class_lesson19_test.html">📝 2.4-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">← Сабактар тизмесине кайтуу</a>
+</section>
+</main>
+</body>
+</html>
