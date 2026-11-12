@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.5-сабак | Саптар</title>
+<style>
+:root{--blue:#2563eb;--dark:#172033;--bg:#f4f7fb;--green:#16865b;--line:#dce5ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#222;line-height:1.65}
+header{background:var(--blue);color:#fff;text-align:center;padding:30px 18px}
+header h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}
+.container{max-width:950px;margin:25px auto;padding:0 16px}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:var(--blue);margin-top:0} h3{color:#174574}
+.note{background:#eaf3ff;border-left:5px solid var(--blue);padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:var(--dark);color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto;font-size:15px;line-height:1.5}
+code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:#eaf1ff;color:#173d7a}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0;font-weight:bold}
+.btn.secondary{background:var(--green)}
+.back{display:inline-block;color:var(--blue);text-decoration:none;margin:5px 0 18px;font-weight:bold}
+li{margin:7px 0}
+@media(max-width:600px){.card{padding:17px}pre{font-size:13px}th,td{padding:7px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>20-сабак: Саптар жана алар менен аткарылуучу амалдар</h1>
+<p>8-класс | Информатика | 2-чейрек | 2.5-тема</p>
+</header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар Python тилиндеги сап (string) түшүнүгүн өздөштүрүшөт. Саптагы символдорго индекс аркылуу кайрылууну, үзүм алууну, саптарды бириктирүүнү, салыштырууну жана негизги сап методдорун колдонууну үйрөнүшөт.</p>
+<h3>Күтүлүүчү натыйжалар</h3>
+<ul>
+<li>Саптык маалыматтын өзгөчөлүгүн түшүндүрөт.</li>
+<li>Саптын узундугун len() менен аныктайт.</li>
+<li>Символдорго индекс жана үзүм аркылуу кайрылат.</li>
+<li>Саптарды бириктирет жана салыштырат.</li>
+<li>upper(), lower(), strip(), replace(), split(), join() методдорун колдонот.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Сап (string) деген эмне?</h2>
+<p><strong>Сап</strong> — символдордун иреттелген тизмеги. Сапка тамгалар, цифралар, боштуктар жана атайын белгилер кириши мүмкүн. Python тилинде сап тырмакчага алынып жазылат.</p>
+<pre><code>aty = "Айжан"
+mektep = '№35 мектеп'
+kabар = "Python тилин үйрөнүп жатам!"
+
+print(aty)
+print(mektep)
+print(kabar)</code></pre>
+<div class="note"><strong>Эсиңде болсун:</strong> сапты бир тырмакча ('...') же кош тырмакча ("...") менен жазууга болот. Экөөнүн негизги кызматы бирдей.</div>
+</section>
+
+<section class="card">
+<h2>2. Саптын узундугу жана индекстери</h2>
+<p>Саптагы символдор белгилүү бир тартипте жайгашат. Python тилинде биринчи символдун индекси 0 болот. Терс индекс саптын аягынан санайт.</p>
+<pre><code>soz = "PYTHON"
+
+print(soz[0])   # P
+print(soz[2])   # T
+print(soz[-1])  # N
+print(len(soz)) # 6</code></pre>
+<table><thead><tr><th>Символ</th><th>P</th><th>Y</th><th>T</th><th>H</th><th>O</th><th>N</th></tr></thead><tbody><tr><th>Индекс</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr></tbody></table>
+<p><code>len()</code> функциясы саптагы символдордун санын эсептейт. Боштук да символ катары эсептелет.</p>
+<div class="warning"><strong>Маанилүү:</strong> саптар өзгөртүлбөй турган (immutable) маалымат тиби. Мисалы, <code>soz[0] = "B"</code> деп түздөн-түз өзгөртүү мүмкүн эмес. Өзгөртүлгөн жаңы сап түзүү керек.</div>
+</section>
+
+<section class="card">
+<h2>3. Саптан үзүм алуу (slicing)</h2>
+<p>Үзүм саптын белгилүү бөлүгүн алуу үчүн колдонулат. Жазылышы: <code>soz[башталышы:аягы:кадам]</code>. Аяктоо индекси алынган бөлүккө кирбейт.</p>
+<pre><code>soz = "INFORMATIKA"
+
+print(soz[0:4])  # INFO
+print(soz[4:8])  # RMAT
+print(soz[:5])   # INFOR
+print(soz[5:])   # MATIKA
+print(soz[::2])  # I F R A I A белгилеринин ар бир экинчиси</code></pre>
+<p>Сапты тескери тартипте алуу:</p>
+<pre><code>soz = "PYTHON"
+print(soz[::-1])</code></pre>
+<p>Натыйжасы: <strong>NOHTYP</strong>.</p>
+</section>
+
+<section class="card">
+<h2>4. Саптарды бириктирүү жана кайталоо</h2>
+<p><code>+</code> оператору саптарды бириктирет, ал эми <code>*</code> оператору сапты көрсөтүлгөн санда кайталайт.</p>
+<pre><code>aty = "Айжан"
+familiya = "Осмонова"
+
+toluk_aty = aty + " " + familiya
+print(toluk_aty)
+
+print("Салам! " * 3)</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>Айжан Осмонова
+Салам! Салам! Салам!</code></pre>
+</section>
+
+<section class="card">
+<h2>5. Саптар менен иштөөчү негизги методдор</h2>
+<p>Метод — белгилүү бир объект менен иш аткаруучу функция. Сап методдору саптын абалын текшерүүгө же анын негизинде жаңы сап түзүүгө жардам берет.</p>
+<table><thead><tr><th>Метод</th><th>Кызматы</th><th>Мисал</th></tr></thead><tbody>
+<tr><td><code>upper()</code></td><td>Бардык тамгаларды баш тамгага өткөрөт</td><td><code>"Salam".upper()</code> → SALAM</td></tr>
+<tr><td><code>lower()</code></td><td>Бардык тамгаларды кичине тамгага өткөрөт</td><td><code>"SALAM".lower()</code> → salam</td></tr>
+<tr><td><code>title()</code></td><td>Ар бир сөздүн баш тамгасын чоңойтот</td><td><code>"hello world".title()</code> → Hello World</td></tr>
+<tr><td><code>strip()</code></td><td>Башындагы жана аягындагы боштуктарды алып салат</td><td><code>"  test  ".strip()</code> → test</td></tr>
+<tr><td><code>replace(a,b)</code></td><td>Саптагы a бөлүгүн b менен алмаштырат</td><td><code>"көк".replace("к","ж")</code> → жөж</td></tr>
+<tr><td><code>find()</code></td><td>Изделген бөлүктүн биринчи индексин табат; табылбаса -1 берет</td><td><code>"мектеп".find("к")</code> → 2</td></tr>
+<tr><td><code>count()</code></td><td>Белги же бөлүк канча жолу кездешерин санайт</td><td><code>"апа".count("а")</code> → 2</td></tr>
+</tbody></table>
+<pre><code>soz = "  Python тили  "
+
+print(soz.strip())
+print(soz.upper())
+print(soz.lower())
+
+tekst = "Мен Python үйрөнөм"
+print(tekst.replace("Python", "программалоону"))</code></pre>
+<div class="note">Методдор баштапкы сапты өзгөртпөйт, адатта натыйжа катары жаңы сап кайтарат. Натыйжаны сактоо үчүн аны өзгөрмөгө ыйгаргыла.</div>
+</section>
+
+<section class="card">
+<h2>6. Сапты бөлүү жана кайра бириктирүү</h2>
+<p><code>split()</code> сапты бөлүктөргө бөлүп, тизме кайтарат. <code>join()</code> тизмедеги саптарды бириктирет.</p>
+<pre><code>аты-жөнү = "Айбек Токтосунов"
+бөлүктөр = аты-жөнү.split()
+
+print(бөлүктөр)
+print("-".join(бөлүктөр))</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>['Айбек', 'Токтосунов']
+Айбек-Токтосунов</code></pre>
+<p>Мисалы, боштук менен берилген сөздөрдү үтүр аркылуу бириктирүүгө болот:</p>
+<pre><code>сөздөр = ["Python", "маанилүү", "тил"]
+текст = ", ".join(сөздөр)
+print(текст)</code></pre>
+</section>
+
+<section class="card">
+<h2>7. Саптарды салыштыруу жана иргөө</h2>
+<p>Саптарды <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code> операторлору менен салыштырууга болот. Салыштыруу символдордун коддору жана тартиби боюнча жүргүзүлөт. Чоң жана кичине тамгалар айырмаланат.</p>
+<pre><code>print("alma" == "alma")  # True
+print("alma" != "Alma")  # True
+print("abc" < "abd")     # True</code></pre>
+<p>Сөздөр тизмесин алфавиттик тартипке келтирүү үчүн <code>sort()</code> же <code>sorted()</code> колдонулат.</p>
+<pre><code>sozder = ["алма", "өрүк", "банан"]
+sozder.sort()
+print(sozder)</code></pre>
+<div class="warning"><strong>Эскертүү:</strong> саптарды салыштырууда тамгалардын регистри эске алынат. Кыргыз тамгалары бар тексттерди алфавит боюнча так иргөөдө атайын эрежелер талап кылынышы мүмкүн.</div>
+</section>
+
+<section class="card">
+<h2>8. Практикалык иштер</h2>
+<ol>
+<li><strong>Жеңил:</strong> аты-жөнүңөрдү сап катары сактап, экранга баш тамгалар менен жана кичине тамгалар менен чыгаргыла.</li>
+<li><strong>Орто:</strong> "ИНФОРМАТИКА" деген саптан биринчи 4 символду жана акыркы 5 символду өз-өзүнчө чыгаргыла.</li>
+<li><strong>Орто:</strong> колдонуучудан сүйлөм алып, анын узундугун эсептегиле жана боштуктарды алып салган вариантын чыгаргыла.</li>
+<li><strong>Орто:</strong> "Мен Python үйрөнөм" сүйлөмүндөгү Python сөзүн программалоо деген сөзгө алмаштыргыла.</li>
+<li><strong>Татаал:</strong> колдонуучудан боштук менен бөлүнгөн үч сөз алып, split() аркылуу бөлүп, аларды дефис менен бириктиргиле.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>9. Сабакты бышыктоо</h2>
+<ol>
+<li>Сап деген эмне?</li>
+<li>Саптын биринчи символунун индекси канча?</li>
+<li>len() функциясы эмнени аныктайт?</li>
+<li>Саптан үзүм алуу үчүн кайсы жазылыш колдонулат?</li>
+<li>Эмне үчүн саптын символун түздөн-түз өзгөртүү мүмкүн эмес?</li>
+<li>upper() жана lower() методдорунун айырмасы эмнеде?</li>
+<li>split() жана join() эмне кылат?</li>
+<li>find() издеген символду таппаса эмне кайтарат?</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>10. Үй тапшырма</h2>
+<p>Колдонуучудан аты-жөнүн киргизгиле. Аны ашыкча боштуктардан тазалап, баш тамга менен жана кичине тамга менен чыгаргыла. Аты-жөнүн сөздөргө бөлүп, ортосуна дефис коюп кайра бириктиргиле. Андан соң саптын узундугун эсептеп, биринчи жана акыркы символун экранга чыгаргыла.</p>
+<a class="btn secondary" href="8class_lesson20_test.html">📝 2.5-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">← Сабактар тизмесине кайтуу</a>
+</section>
+</main>
+</body>
+</html>
