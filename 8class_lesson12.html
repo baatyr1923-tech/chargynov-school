@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>8-класс | MySQL жана Microsoft Access</title>
+<title>8-класс | 12-сабак | Маалыматтар базасында маалыматтар менен иштөө операциялары</title>
 <style>
 body{font-family:Arial,sans-serif;margin:0;background:#f4f7fb;color:#222;line-height:1.6}
 header{background:#2563eb;color:white;padding:30px 20px;text-align:center}
@@ -53,20 +53,27 @@ SELECT Аты FROM Okuuchular;</code></pre>
 <pre><code>SELECT * FROM Okuuchular
 ORDER BY Аты ASC;</code></pre>
 <p>ORDER BY командасы маалыматтарды иреттейт. ASC — өсүү тартибинде, DESC — кемүү тартибинде.</p>
-</ul>
 </div>
 
 <div class="lesson">
 <h2>4. Маалыматтарды өзгөртүү (UPDATE)</h2>
 <p>UPDATE командасы таблицадагы мурдагы маалыматтарды өзгөртүү үчүн колдонулат.</p>
-<pre><code>UPDATE Okuuсhular
+<pre><code>UPDATE Okuuchular
 SET Классы = 9
 WHERE Аты = 'Асан';</code></pre>
 <p>Бул команда Асан аттуу окуучунун классын 9-класска өзгөртөт.</p>
 </div>
 
 <div class="lesson">
-<h2>5. Практикалык тапшырма</h2>
+<h2>5. Маалыматтарды өчүрүү (DELETE)</h2>
+<p>DELETE командасы таблицадагы белгилүү жазууларды өчүрөт. Керектүү жазууну так көрсөтүү үчүн WHERE шарты колдонулат.</p>
+<pre><code>DELETE FROM Okuuchular
+WHERE Аты = 'Асан';</code></pre>
+<div class="note"><strong>Эскертүү:</strong> DELETE командасында WHERE шартын жазбай коюу бардык жазууларды өчүрүп салышы мүмкүн. Ар дайым шартты текшергиле.</div>
+</div>
+
+<div class="lesson">
+<h2>6. Практикалык тапшырма</h2>
 <p>«Мектептин окуучулары» деген маалыматтар базасынын үлгүсүн түзгүлө.</p>
 <table border="1" cellpadding="10" cellspacing="0" width="100%">
 <tr><th>№</th><th>Аты-жөнү</th><th>Классы</th><th>Туулган жылы</th></tr>
@@ -83,7 +90,7 @@ WHERE Аты = 'Асан';</code></pre>
 </div>
 
 <div class="lesson">
-<h2>6. Бышыктоо үчүн суроолор</h2>
+<h2>7. Бышыктоо үчүн суроолор</h2>
 <ol>
 <li>МББС деген эмне?</li>
 <li>MySQL кандай максатта колдонулат?</li>
@@ -94,7 +101,7 @@ WHERE Аты = 'Асан';</code></pre>
 </div>
 
 <div class="lesson">
-<h2>Үй тапшырмасы</h2>
+<h2>8. Үй тапшырмасы</h2>
 <p>«Менин мектебим» деген темада 5 окуучудан турган маалыматтар базасынын таблицасын түзгүлө. Таблицага аты-жөнүн, классын жана туулган жылын киргизгиле.</p>
 </div>
 
