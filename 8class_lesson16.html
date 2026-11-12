@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.1-сабак | Циклдик алгоритмдер</title>
+<style>
+:root{--blue:#2563eb;--dark:#172033;--bg:#f4f7fb;--green:#16865b;--line:#dce5ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#222;line-height:1.65}
+header{background:var(--blue);color:#fff;text-align:center;padding:30px 18px}
+header h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}
+header p{margin:0}
+.container{max-width:950px;margin:25px auto;padding:0 16px}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:var(--blue);margin-top:0}
+h3{color:#174574}
+.note{background:#eaf3ff;border-left:5px solid var(--blue);padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:var(--dark);color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto;font-size:15px;line-height:1.5}
+code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:#eaf1ff;color:#173d7a}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0;font-weight:bold}
+.btn.secondary{background:#16865b}
+.back{display:inline-block;color:var(--blue);text-decoration:none;margin:5px 0 18px;font-weight:bold}
+li{margin:7px 0}
+@media(max-width:600px){.card{padding:17px}pre{font-size:13px}th,td{padding:7px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>16-сабак: Циклдик алгоритмдер</h1>
+<p>8-класс | Информатика | 2-чейрек | 2.1-тема</p>
+</header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар циклдик алгоритмдин маанисин түшүнүшөт, Python тилиндеги while жана for циклдерин колдонушат, кайталоо аркылуу эсептерди чыгарып, жөнөкөй программаларды түзүшөт.</p>
+<h3>Күтүлүүчү натыйжалар</h3>
+<ul><li>Цикл жана циклдик алгоритм түшүнүктөрүн түшүндүрөт.</li><li>while циклинин шарт менен иштешин билет.</li><li>for циклин жана range() функциясын колдонот.</li><li>Циклдердин жардамы менен эсептөөчү программа түзөт.</li></ul>
+</section>
+<section class="card">
+<h2>1. Циклдик алгоритм деген эмне?</h2>
+<p><strong>Циклдик алгоритм</strong> — белгилүү бир аракеттерди бир нече жолу кайталап аткаруучу алгоритм. Мисалы, 1ден 100гө чейинки сандарды чыгаруу, сандардын суммасын эсептөө же көбөйтүү таблицасын түзүүдө цикл колдонулат.</p>
+<div class="note"><strong>Эсиңде болсун:</strong> бир эле команданы кайра-кайра жазуунун ордуна, аны циклдин ичине жайгаштырабыз. Ошондо программа кыска жана түшүнүктүү болот.</div>
+</section>
+<section class="card">
+<h2>2. while цикли</h2>
+<p>while цикли берилген шарт <strong>True</strong> (туура) болуп турганда командаларды кайталап аткарат. Шарт ар бир кайталоонун алдында текшерилет.</p>
+<pre><code>while шарт:
+    аткарылуучу_команда</code></pre>
+<h3>Мисал 1. 1ден 5ке чейинки сандарды чыгаруу</h3>
+<pre><code>i = 1
+
+while i &lt;= 5:
+    print(i)
+    i += 1</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>1
+2
+3
+4
+5</code></pre>
+<p><strong>Түшүндүрмө:</strong></p>
+<ol><li>i = 1 — баштапкы маани берилди.</li><li>i &lt;= 5 — циклдин шарты текшерилет.</li><li>print(i) — учурдагы сан экранга чыгарылат.</li><li>i += 1 — өзгөрмөнүн мааниси 1ге көбөйөт.</li></ol>
+<div class="warning"><strong>Эскертүү:</strong> while циклинде шартка таасир этүүчү өзгөрмө өзгөртүлбөсө, цикл чексиз кайталанып калышы мүмкүн.</div>
+</section>
+<section class="card">
+<h2>3. for цикли</h2>
+<p>for цикли белгилүү бир тизмектин же диапазондун элементтери боюнча кайталоо жүргүзөт. Кайталоолордун саны алдын ала белгилүү болгондо колдонуу ыңгайлуу.</p>
+<pre><code>for өзгөрмө in тизмек:
+    аткарылуучу_команда</code></pre>
+<h3>Мисал 2. 1ден 5ке чейинки сандарды чыгаруу</h3>
+<pre><code>for i in range(1, 6):
+    print(i)</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>1
+2
+3
+4
+5</code></pre>
+<p>range() функциясы сандардын диапазонун түзөт. Аяктоо чеги диапазонго кирбейт.</p>
+<table><thead><tr><th>Жазылышы</th><th>Алынган сандар</th></tr></thead><tbody>
+<tr><td>range(5)</td><td>0, 1, 2, 3, 4</td></tr>
+<tr><td>range(1, 6)</td><td>1, 2, 3, 4, 5</td></tr>
+<tr><td>range(2, 11, 2)</td><td>2, 4, 6, 8, 10</td></tr>
+<tr><td>range(10, 0, -1)</td><td>10, 9, 8, ..., 1</td></tr>
+</tbody></table>
+</section>
+<section class="card">
+<h2>4. while жана for циклдеринин айырмасы</h2>
+<table><thead><tr><th>while</th><th>for</th></tr></thead><tbody>
+<tr><td>Шарт туура болуп турганда иштейт.</td><td>Тизмектин же диапазондун элементтери боюнча иштейт.</td></tr>
+<tr><td>Кайталоолордун саны алдын ала белгисиз болгондо ыңгайлуу.</td><td>Кайталоолордун саны белгилүү болгондо ыңгайлуу.</td></tr>
+<tr><td>Шарттын өзгөрүшүн программист көзөмөлдөйт.</td><td>Кийинки элементке өтүүнү цикл өзү аткарат.</td></tr>
+</tbody></table>
+</section>
+<section class="card">
+<h2>5. Практикалык мисалдар</h2>
+<h3>Мисал 3. 1ден 10го чейинки сандардын суммасы</h3>
+<pre><code>s = 0
+
+for i in range(1, 11):
+    s += i
+
+print("Суммасы:", s)</code></pre>
+<p>Натыйжасы: <strong>Суммасы: 55</strong>.</p>
+<h3>Мисал 4. Киргизилген сан үчүн көбөйтүү таблицасы</h3>
+<pre><code>n = int(input("Санды киргизиңиз: "))
+
+for i in range(1, 11):
+    print(n, "*", i, "=", n * i)</code></pre>
+<p>Мисалы, 3 саны киргизилсе, программа 3 × 1ден 3 × 10го чейинки көбөйтүү таблицасын чыгарат.</p>
+<h3>Мисал 5. 10дон 1ге чейин тескери саноо</h3>
+<pre><code>i = 10
+
+while i &gt;= 1:
+    print(i)
+    i -= 1</code></pre>
+</section>
+<section class="card">
+<h2>6. Практикалык иштер</h2>
+<p>Тапшырмаларды Python чөйрөсүндө аткаргыла. Ар бир программа иштегенден кийин натыйжасын текшергиле.</p>
+<ol><li><strong>Жеңил:</strong> for циклин колдонуп 1ден 20га чейинки сандарды чыгаргыла.</li><li><strong>Орто:</strong> while циклин колдонуп 1ден 50гө чейинки жуп сандарды чыгаргыла.</li><li><strong>Орто:</strong> 1ден 100гө чейинки 3кө бөлүнгөн сандардын суммасын эсептегиле.</li><li><strong>Татаал:</strong> колдонуучу киргизген N санына чейин 1ден баштап бардык сандарды чыгарган программа түзгүлө.</li></ol>
+<div class="note"><strong>Кеңеш:</strong> жуп санды текшерүү үчүн i % 2 == 0, ал эми 3кө бөлүнүүнү текшерүү үчүн i % 3 == 0 шартын колдонсо болот.</div>
+</section>
+<section class="card">
+<h2>7. Сабакты бышыктоо</h2>
+<ol><li>Циклдик алгоритм деген эмне?</li><li>while цикли качан иштейт?</li><li>for циклинин милдети кандай?</li><li>range(5) кандай сандарды берет?</li><li>i += 1 командасы эмнени билдирет?</li></ol>
+</section>
+<section class="card">
+<h2>8. Үй тапшырма</h2>
+<p>1ден Nге чейинки сандардын суммасын эсептеген программа түзгүлө. N санын колдонуучу киргизсин. Программаны адегенде for, андан кийин while цикли менен жазып көргүлө.</p>
+<a class="btn secondary" href="8class_lesson16_test.html">📝 2.1-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">← Сабактар тизмесине кайтуу</a>
+</section>
+</main>
+</body>
+</html>
