@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.5-сабак: Саптар</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;padding:18px;line-height:1.6}
+.container{max-width:850px;margin:20px auto}.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 12px #00000010}
+h1{color:#2563eb}input[type=text]{width:100%;max-width:420px;box-sizing:border-box;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px}
+.question{background:#f1f5f9;padding:15px;margin:15px 0;border-radius:10px}label{display:block;padding:8px;cursor:pointer}
+button{background:#2563eb;color:white;border:0;padding:12px 20px;border-radius:8px;font-size:16px;cursor:pointer;margin:8px 8px 0 0}
+#result{font-size:18px;font-weight:bold;margin-top:18px}.back{color:#2563eb;text-decoration:none}
+</style>
+</head>
+<body><main class="container">
+<section class="card"><h1>📝 2.5-сабак: Саптар</h1><p>8-класс | Информатика | 2.5-тема</p>
+<label for="student"><strong>Окуучунун аты-жөнү:</strong></label>
+<input id="student" type="text" placeholder="Аты-жөнүңүздү жазыңыз">
+<p>Ар бир суроодон бир туура жоопту тандаңыз.</p></section>
+<form id="quiz" class="card">
+<div class="question"><strong>1. Python тилинде сап кандай маалыматты сактайт?</strong>
+<label><input type="radio" name="q1" value="a"> Бир гана бүтүн санды</label>
+<label><input type="radio" name="q1" value="b"> Символдордун иреттелген тизмегин</label>
+<label><input type="radio" name="q1" value="c"> Логикалык маанини гана</label></div>
+
+<div class="question"><strong>2. Python саптары кандай белгилердин ичинде жазылат?</strong>
+<label><input type="radio" name="q2" value="a"> Тырмакчалардын ичинде</label>
+<label><input type="radio" name="q2" value="b"> Тегерек кашаанын ичинде гана</label>
+<label><input type="radio" name="q2" value="c"> Фигуралык кашаанын ичинде</label></div>
+
+<div class="question"><strong>3. soz = "PYTHON" болсо, soz[0] эмнени берет?</strong>
+<label><input type="radio" name="q3" value="a"> Y</label>
+<label><input type="radio" name="q3" value="b"> N</label>
+<label><input type="radio" name="q3" value="c"> P</label></div>
+
+<div class="question"><strong>4. len("Салам") функциясы эмнени аныктайт?</strong>
+<label><input type="radio" name="q4" value="a"> Саптагы символдордун санын</label>
+<label><input type="radio" name="q4" value="b"> Сөздөгү үндүүлөрдү</label>
+<label><input type="radio" name="q4" value="c"> Саптын индексин</label></div>
+
+<div class="question"><strong>5. Саптан биринчи үч символду алуу үчүн кайсы жазылыш туура?</strong>
+<label><input type="radio" name="q5" value="a"> soz[1:3]</label>
+<label><input type="radio" name="q5" value="b"> soz[:3]</label>
+<label><input type="radio" name="q5" value="c"> soz[3:]</label></div>
+
+<div class="question"><strong>6. "Py" + "thon" туюнтмасынын натыйжасы кандай?</strong>
+<label><input type="radio" name="q6" value="a"> Py thon</label>
+<label><input type="radio" name="q6" value="b"> Python</label>
+<label><input type="radio" name="q6" value="c"> Py+thon</label></div>
+
+<div class="question"><strong>7. Сапты чоң тамгаларга айландыруучу метод кайсы?</strong>
+<label><input type="radio" name="q7" value="a"> lower()</label>
+<label><input type="radio" name="q7" value="b"> strip()</label>
+<label><input type="radio" name="q7" value="c"> upper()</label></div>
+
+<div class="question"><strong>8. Саптын башындагы жана аягындагы боштуктарды кайсы метод алып салат?</strong>
+<label><input type="radio" name="q8" value="a"> strip()</label>
+<label><input type="radio" name="q8" value="b"> replace()</label>
+<label><input type="radio" name="q8" value="c"> find()</label></div>
+
+<div class="question"><strong>9. split() методунун натыйжасы көбүнчө кандай тип болот?</strong>
+<label><input type="radio" name="q9" value="a"> Бүтүн сан</label>
+<label><input type="radio" name="q9" value="b"> Тизме</label>
+<label><input type="radio" name="q9" value="c"> Бөлчөк сан</label></div>
+
+<div class="question"><strong>10. find() издеген бөлүктү таппаса эмне кайтарат?</strong>
+<label><input type="radio" name="q10" value="a"> 0</label>
+<label><input type="radio" name="q10" value="b"> None</label>
+<label><input type="radio" name="q10" value="c"> -1</label></div>
+<button type="button" id="check">Тестти текшерүү</button>
+<button type="reset" id="reset">Кайра баштоо</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<a class="back" href="8class_lesson20.html">← Сабакка кайтуу</a>
+</main>
+<script>
+const answers={"q1":"b","q2":"a","q3":"c","q4":"a","q5":"b","q6":"b","q7":"c","q8":"a","q9":"b","q10":"c"};
+document.getElementById("check").addEventListener("click",()=>{
+ const student=document.getElementById("student").value.trim();
+ if(!student){alert("Окуучунун аты-жөнүн жазыңыз.");return;}
+ let score=0,missing=0;
+ for(let i=1;i<=10;i++){
+  const chosen=document.querySelector('input[name="q'+i+'"]:checked');
+  if(!chosen) missing++;
+  else if(chosen.value===answers["q"+i]) score++;
+ }
+ if(missing){alert("Бардык суроолорго жооп бериңиз. Жоопсуз суроолор: "+missing);return;}
+ const percent=Math.round(score/10*100);
+ const grade=percent>=90?5:percent>=70?4:percent>=50?3:2;
+ document.getElementById("result").textContent=student+": "+score+"/10 туура жооп ("+percent+"%). Баа: "+grade+".";
+});
+document.getElementById("reset").addEventListener("click",()=>{document.getElementById("result").textContent="";});
+</script></body></html>
