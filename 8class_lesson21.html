@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.6-сабак | Саптарды форматтоо</title>
+<style>
+:root{--blue:#2563eb;--dark:#172033;--bg:#f4f7fb;--green:#16865b;--line:#dce5ef}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#222;line-height:1.65}
+header{background:var(--blue);color:#fff;text-align:center;padding:30px 18px}header h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}
+.container{max-width:950px;margin:25px auto;padding:0 16px}.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:var(--blue);margin-top:0}h3{color:#174574}.note{background:#eaf3ff;border-left:5px solid var(--blue);padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:var(--dark);color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto;font-size:15px;line-height:1.5}code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0}th,td{border:1px solid var(--line);padding:10px;text-align:left}th{background:#eaf1ff;color:#173d7a}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0;font-weight:bold}.btn.secondary{background:var(--green)}
+.back{display:inline-block;color:var(--blue);text-decoration:none;margin:5px 0 18px;font-weight:bold}li{margin:7px 0}
+@media(max-width:600px){.card{padding:17px}pre{font-size:13px}th,td{padding:7px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>21-сабак: Саптарды форматтоо</h1>
+<p>8-класс | Информатика | 2-чейрек | 2.6-тема</p>
+</header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар сандык жана саптык маалыматтардын типтерин айырмалашат. Маалыматты бир типтен экинчи типке айландырууну жана саптарды форматтап, түшүнүктүү түрдө экранга чыгарууну үйрөнүшөт.</p>
+<h3>Күтүлүүчү натыйжалар</h3>
+<ul>
+<li>int, float жана str типтерин түшүндүрөт.</li>
+<li>int(), float(), str() функцияларын туура колдонот.</li>
+<li>input() функциясы киргизген маанинин сап экенин эске алат.</li>
+<li>f-string жана format() аркылуу сапты форматтайт.</li>
+<li>Сандарды белгилүү тактыкта чыгарууну билет.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Маалыматтардын типтери</h2>
+<p>Python тилинде ар бир маанинин өзүнүн тиби бар. Бул сабакта үч негизги типти колдонобуз.</p>
+<table><thead><tr><th>Тип</th><th>Мааниси</th><th>Мисал</th></tr></thead><tbody>
+<tr><td><code>int</code></td><td>Бүтүн сан</td><td><code>12, -5, 0</code></td></tr>
+<tr><td><code>float</code></td><td>Бөлчөк сан</td><td><code>3.14, -0.5, 7.0</code></td></tr>
+<tr><td><code>str</code></td><td>Саптык маалымат</td><td><code>"Салам", "2026"</code></td></tr>
+</tbody></table>
+<pre><code>a = 25
+b = 3.14
+c = "Python"
+
+print(type(a))
+print(type(b))
+print(type(c))</code></pre>
+<p><code>type()</code> функциясы өзгөрмөдөгү маанинин тибин көрсөтөт.</p>
+</section>
+
+<section class="card">
+<h2>2. input() функциясы жана типти өзгөртүү</h2>
+<p><code>input()</code> функциясы клавиатурадан маалымат кабыл алат жана алынган маанини сап (<code>str</code>) түрүндө берет. Эгер сан менен эсептөө керек болсо, аны тиешелүү типке айландыруу зарыл.</p>
+<h3>Бүтүн санга айландыруу — int()</h3>
+<pre><code>жаш = int(input("Жашыңызды жазыңыз: "))
+кийинки = жаш + 1
+
+print("Кийинки жылы жашыңыз:", кийинки)</code></pre>
+<h3>Бөлчөк санга айландыруу — float()</h3>
+<pre><code>баа = float(input("Бааны киргизиңиз: "))
+кошумча = баа * 0.1
+
+print("10 пайыз кошумча:", кошумча)</code></pre>
+<h3>Сапка айландыруу — str()</h3>
+<pre><code>жыл = 2026
+текст = "Жыл: " + str(жыл)
+
+print(текст)</code></pre>
+<div class="warning"><strong>Көп кездешкен ката:</strong> <code>input()</code> натыйжасын түз эле сан менен кошууга болбойт. Мисалы, <code>"5" + 2</code> ката берет. Керектүү учурда <code>int()</code> же <code>float()</code> колдонуңуз.</div>
+</section>
+
+<section class="card">
+<h2>3. Типтерди өзгөртүүнүн мисалдары</h2>
+<pre><code>сан_сап = "125"
+сан = int(сан_сап)
+print(сан + 5)       # 130
+
+бөлчөк_сап = "4.5"
+бөлчөк = float(бөлчөк_сап)
+print(бөлчөк * 2)    # 9.0
+
+сан = 48
+сап = str(сан)
+print("Жооп: " + сап)</code></pre>
+<p>Типти өзгөртүүдө берилген сап туура сандык жазылышта болушу керек. Мисалы, <code>int("abc")</code> аткарылганда ката чыгат.</p>
+</section>
+
+<section class="card">
+<h2>4. f-string аркылуу форматтоо</h2>
+<p><strong>Форматтоо</strong> — маалыматты экранга белгилүү бир тартипте, ыңгайлуу көрүнүштө чыгаруу. Python тилинде f-string колдонуу оңой: саптын алдына <code>f</code> тамгасы жазылып, өзгөрмөлөр фигуралык кашаага алынат.</p>
+<pre><code>аты = "Айдана"
+жашы = 14
+print(f"Менин атым {аты}, жашым {жашы} жашта.")</code></pre>
+<p>Натыйжасы: <strong>Менин атым Айдана, жашым 14 жашта.</strong></p>
+<p>Эсептөөнү да түз эле кашаанын ичинде жазууга болот:</p>
+<pre><code>a = 8
+b = 5
+print(f"{a} + {b} = {a + b}")</code></pre>
+<p>Натыйжасы: <strong>8 + 5 = 13</strong>.</p>
+</section>
+
+<section class="card">
+<h2>5. Сандарды белгилүү тактыкта чыгаруу</h2>
+<p>f-string аркылуу бөлчөк сандын үтүрдөн кийинки орундарын чектөөгө болот. Python кодунда бөлчөк сан чекит менен жазылат.</p>
+<pre><code>баа = 12.56789
+
+print(f"{баа:.2f}")  # 12.57
+print(f"{баа:.1f}")  # 12.6
+print(f"{баа:.0f}")  # 13</code></pre>
+<table><thead><tr><th>Формат</th><th>Түшүндүрмө</th><th>Мисал</th></tr></thead><tbody>
+<tr><td><code>{x:.2f}</code></td><td>Үтүрдөн кийин 2 орун</td><td>12.57</td></tr>
+<tr><td><code>{x:.1f}</code></td><td>Үтүрдөн кийин 1 орун</td><td>12.6</td></tr>
+<tr><td><code>{x:.0f}</code></td><td>Бүтүнгө жакындатылган көрүнүш</td><td>13</td></tr>
+<tr><td><code>{x:8.2f}</code></td><td>Жалпы туурасы 8 орун, 2 ондук орун</td><td>12.57</td></tr>
+</tbody></table>
+<div class="note">Форматтоодо сан өзгөрмөсүнүн баштапкы мааниси өзгөрбөйт. Болгону экранга чыгарылган көрүнүшү өзгөрөт.</div>
+</section>
+
+<section class="card">
+<h2>6. format() методу менен форматтоо</h2>
+<p>f-string'ден тышкары <code>format()</code> методу да колдонулат.</p>
+<pre><code>аты = "Бек"
+баа = 4.75
+
+текст = "Окуучу: {}, орточо баа: {:.1f}".format(аты, баа)
+print(текст)</code></pre>
+<p>Натыйжасы: <strong>Окуучу: Бек, орточо баа: 4.8</strong>.</p>
+<p>Жаңы программаларда f-string көп учурда кыска жана түшүнүктүү болгондуктан ыңгайлуу.</p>
+</section>
+
+<section class="card">
+<h2>7. Практикалык иштер</h2>
+<ol>
+<li><strong>Жеңил:</strong> колдонуучудан эки бүтүн сан алып, алардын суммасын эсептегиле.</li>
+<li><strong>Жеңил:</strong> колдонуучудан бир бөлчөк сан алып, анын тибин type() менен көрсөткүлө.</li>
+<li><strong>Орто:</strong> товар баасын жана санын киргизип, жалпы сумманы эсептеп, эки ондук орун менен чыгаргыла.</li>
+<li><strong>Орто:</strong> аты-жөнүн жана жашын киргизип, f-string аркылуу бир сүйлөм кылып чыгаргыла.</li>
+<li><strong>Татаал:</strong> үч сабактан алынган бааларды float тибинде киргизип, орточо маанисин эсептегиле жана бир ондук орун менен форматтагыла.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>8. Сабакты бышыктоо</h2>
+<ol>
+<li>int, float жана str эмнени билдирет?</li>
+<li>input() функциясы кайсы типтеги маанини кайтарат?</li>
+<li>Сапты бүтүн санга айландыруу үчүн кайсы функция колдонулат?</li>
+<li>Бөлчөк санга айландыруу үчүнчү?</li>
+<li>Санды сапка айландыруу үчүнчү?</li>
+<li>f-string кандайча жазылат?</li>
+<li>{x:.2f} форматындагы .2f эмнени билдирет?</li>
+<li>format() методу эмне үчүн колдонулат?</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>9. Үй тапшырма</h2>
+<p>Колдонуучудан эки сан киргизгиле. Бирин float, экинчисин int тибине айландырып, алардын суммасын жана көбөйтүндүсүн эсептегиле. Натыйжаларды f-string менен түшүнүктүү сүйлөм түрүндө чыгаргыла. Бөлчөк натыйжаны эки ондук орун менен форматтагыла.</p>
+<a class="btn secondary" href="8class_lesson21_test.html">📝 2.6-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">← Сабактар тизмесине кайтуу</a>
+</section>
+</main>
+</body>
+</html>
