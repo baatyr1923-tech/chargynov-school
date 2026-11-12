@@ -132,11 +132,11 @@ print(tekst.replace("Python", "программалоону"))</code></pre>
 <section class="card">
 <h2>6. Сапты бөлүү жана кайра бириктирүү</h2>
 <p><code>split()</code> сапты бөлүктөргө бөлүп, тизме кайтарат. <code>join()</code> тизмедеги саптарды бириктирет.</p>
-<pre><code>аты-жөнү = "Айбек Токтосунов"
-бөлүктөр = аты-жөнү.split()
+<pre><code>aty_jonu = "Айбек Токтосунов"
+boluktor = aty_jonu.split()
 
-print(бөлүктөр)
-print("-".join(бөлүктөр))</code></pre>
+print(boluktor)
+print("-".join(boluktor))</code></pre>
 <p>Натыйжасы:</p>
 <pre><code>['Айбек', 'Токтосунов']
 Айбек-Токтосунов</code></pre>
@@ -151,7 +151,7 @@ print(текст)</code></pre>
 <p>Саптарды <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code> операторлору менен салыштырууга болот. Салыштыруу символдордун коддору жана тартиби боюнча жүргүзүлөт. Чоң жана кичине тамгалар айырмаланат.</p>
 <pre><code>print("alma" == "alma")  # True
 print("alma" != "Alma")  # True
-print("abc" < "abd")     # True</code></pre>
+print("abc" &lt; "abd")     # True</code></pre>
 <p>Сөздөр тизмесин алфавиттик тартипке келтирүү үчүн <code>sort()</code> же <code>sorted()</code> колдонулат.</p>
 <pre><code>sozder = ["алма", "өрүк", "банан"]
 sozder.sort()
