@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.3-сабак | Функциялар</title>
+<style>
+:root{--blue:#2563eb;--dark:#172033;--bg:#f4f7fb;--green:#16865b;--line:#dce5ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#222;line-height:1.65}
+header{background:var(--blue);color:#fff;text-align:center;padding:30px 18px}
+header h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}
+header p{margin:0}
+.container{max-width:950px;margin:25px auto;padding:0 16px}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:var(--blue);margin-top:0}
+h3{color:#174574}
+.note{background:#eaf3ff;border-left:5px solid var(--blue);padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:var(--dark);color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto;font-size:15px;line-height:1.5}
+code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:#eaf1ff;color:#173d7a}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0;font-weight:bold}
+.btn.secondary{background:var(--green)}
+.back{display:inline-block;color:var(--blue);text-decoration:none;margin:5px 0 18px;font-weight:bold}
+li{margin:7px 0}
+@media(max-width:600px){.card{padding:17px}pre{font-size:13px}th,td{padding:7px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>18-сабак: Функциялар</h1>
+<p>8-класс | Информатика | 2-чейрек | 2.3-тема</p>
+</header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар Python тилиндеги функция түшүнүгүн өздөштүрүшөт, функцияны аныктап жана чакырууну үйрөнүшөт. Аргументтерди, локалдык жана глобалдык өзгөрмөлөрдү, return операторун жана lambda-функцияларды колдоно алышат.</p>
+<h3>Күтүлүүчү натыйжалар</h3>
+<ul>
+<li>Функциянын эмне үчүн колдонуларын түшүндүрөт.</li>
+<li>def ачкыч сөзү менен функция түзүп, аны чакырат.</li>
+<li>Параметр менен аргументтин айырмасын билет.</li>
+<li>Локалдык жана глобалдык өзгөрмөлөрдү айырмалайт.</li>
+<li>return аркылуу функциядан маани кайтарат.</li>
+<li>Жөнөкөй lambda-функция түзөт.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Функция деген эмне?</h2>
+<p><strong>Функция</strong> — белгилүү бир милдетти аткарган, аты бар жана программада кайра-кайра колдонууга боло турган код бөлүгү. Функциялар программаны бөлүктөргө бөлүп, кодду түшүнүктүү жана кайталап колдонууга ыңгайлуу кылат.</p>
+<div class="note"><strong>Мисал:</strong> эки сандын суммасын эсептөөчү функцияны бир жолу жазып, аны ар башка сандар менен көп жолу чакыра алабыз.</div>
+<h3>Функцияны аныктоо жана чакыруу</h3>
+<pre><code>def salamdash():
+    print("Саламатсыңарбы!")
+
+salamdash()</code></pre>
+<p>Бул жерде:</p>
+<ul>
+<li><strong>def</strong> — функцияны аныктоочу ачкыч сөз.</li>
+<li><strong>salamdash</strong> — функциянын аты.</li>
+<li><strong>()</strong> — параметрлер жазылуучу кашаалар.</li>
+<li><strong>:</strong> — функциянын денеси башталарын билдирет.</li>
+<li>Ичкери жылдырылган команда функциянын денесине кирет.</li>
+<li><strong>salamdash()</strong> — функцияны чакырат.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>2. Функциялар жана алардын аргументтери</h2>
+<p>Функция маалыматты параметрлер аркылуу кабыл алышы мүмкүн. <strong>Параметр</strong> — функцияны аныктоодо кашаанын ичинде көрсөтүлгөн өзгөрмө. <strong>Аргумент</strong> — функцияны чакырганда ошол параметрге берилген чыныгы маани.</p>
+<pre><code>def koshuu(a, b):
+    print(a + b)
+
+koshuu(4, 6)
+koshuu(10, 20)</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>10
+30</code></pre>
+<p>Бул мисалда <code>a</code> жана <code>b</code> — параметрлер, ал эми <code>4</code>, <code>6</code>, <code>10</code>, <code>20</code> — чакырууда берилген аргументтер.</p>
+
+<h3>Параметрлерге демейки маани берүү</h3>
+<pre><code>def salam(aty="окуучу"):
+    print("Салам,", aty)
+
+salam("Айжан")
+salam()</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>Салам, Айжан
+Салам, окуучу</code></pre>
+<p>Аргумент берилбесе, функция демейки маанини колдонот.</p>
+</section>
+
+<section class="card">
+<h2>3. Локалдык жана глобалдык өзгөрмөлөр</h2>
+<p><strong>Локалдык өзгөрмө</strong> функциянын ичинде түзүлөт жана негизинен ошол функциянын ичинде гана жеткиликтүү болот.</p>
+<pre><code>def esepte():
+    san = 15
+    print(san)
+
+esepte()</code></pre>
+<p>Бул мисалда <code>san</code> — локалдык өзгөрмө.</p>
+
+<p><strong>Глобалдык өзгөрмө</strong> функциялардын сыртында аныкталат жана программадагы тиешелүү аймактардан окула алат.</p>
+<pre><code>maalymat = "Информатика"
+
+def korsot():
+    print(maalymat)
+
+korsot()</code></pre>
+<p>Функция глобалдык өзгөрмөнүн маанисин окуй алат.</p>
+
+<h3>global ачкыч сөзү</h3>
+<p>Функциянын ичинде глобалдык өзгөрмөнүн маанисин өзгөртүү керек болсо, <code>global</code> ачкыч сөзү колдонулат.</p>
+<pre><code>san = 5
+
+def ozgort():
+    global san
+    san = 12
+
+ozgort()
+print(san)</code></pre>
+<p>Натыйжасы: <strong>12</strong>.</p>
+<div class="warning"><strong>Эскертүү:</strong> мүмкүн болушунча функцияга керектүү маанилерди параметр аркылуу берип, натыйжасын return менен кайтарган жакшы. Глобалдык өзгөрмөлөрдү көп колдонуу программаны түшүнүүнү жана текшерүүнү кыйындатышы мүмкүн.</div>
+</section>
+
+<section class="card">
+<h2>4. Функциядан маанилерди кайтаруу — return</h2>
+<p><strong>return</strong> оператору функциянын аткарылышын токтотуп, чакырган жерге натыйжаны кайтарат. Кайтарылган маанини өзгөрмөгө сактап, башка эсептөөлөрдө колдонсо болот.</p>
+<pre><code>def kvadrat(x):
+    return x * x
+
+natija = kvadrat(5)
+print(natija)</code></pre>
+<p>Натыйжасы: <strong>25</strong>.</p>
+<p>Эми функцияны print менен салыштыралы:</p>
+<pre><code>def birinchi():
+    print(8)
+
+def ekinchi():
+    return 8
+
+a = birinchi()
+b = ekinchi()
+
+print("a =", a)
+print("b =", b)</code></pre>
+<p>Натыйжасы:</p>
+<pre><code>8
+a = None
+b = 8</code></pre>
+<p>print маанини экранга чыгарат, ал эми return маанини функция чакырылган жерге кайтарат. Эгер функцияда return жок болсо, Python автоматтык түрдө <code>None</code> кайтарат.</p>
+</section>
+
+<section class="card">
+<h2>5. lambda-функциялар</h2>
+<p><strong>lambda-функция</strong> — аты жок, бир туюнтмадан турган кыска функция. Ал жөнөкөй аракеттерди кыска жазуу үчүн колдонулат.</p>
+<pre><code>kvadrat = lambda x: x * x
+
+print(kvadrat(6))</code></pre>
+<p>Натыйжасы: <strong>36</strong>.</p>
+<p>Кадимки функциянын ушундай түрү:</p>
+<pre><code>def kvadrat(x):
+    return x * x</code></pre>
+<p>Lambda түрү:</p>
+<pre><code>kvadrat = lambda x: x * x</code></pre>
+
+<h3>Эки аргументтүү lambda</h3>
+<pre><code>koshuu = lambda a, b: a + b
+
+print(koshuu(7, 3))</code></pre>
+<p>Натыйжасы: <strong>10</strong>.</p>
+<div class="note"><strong>Эсиңде болсун:</strong> lambda бир гана туюнтманы камтыйт. Бир нече командадан турган татаал функция үчүн def колдонуу ыңгайлуу.</div>
+</section>
+
+<section class="card">
+<h2>6. Практикалык иштер</h2>
+<p>Тапшырмаларды Python чөйрөсүндө аткаргыла. Ар бир программа үчүн киргизилген маанилерди жана алынган натыйжаны текшергиле.</p>
+<ol>
+<li><strong>Жеңил:</strong> атын аргумент катары кабыл алып, «Салам, [аты]!» деп чыгаруучу функция түзгүлө.</li>
+<li><strong>Орто:</strong> эки санды кабыл алып, алардын көбөйтүндүсүн <code>return</code> аркылуу кайтарган функция жазгыла.</li>
+<li><strong>Орто:</strong> санды кабыл алып, анын жуп же так экенин кайтарган функция түзгүлө.</li>
+<li><strong>Татаал:</strong> үч сандын эң чоңун кайтарган функция түзгүлө. Андан кийин ошол функцияны lambda эмес, def менен жазгыла.</li>
+<li><strong>Кошумча:</strong> эки санды кошкон lambda-функция түзүп, аны үч башка аргумент жубу менен чакыргыла.</li>
+</ol>
+<div class="note"><strong>Кеңеш:</strong> жуп санды текшерүүдө <code>n % 2 == 0</code> шартын колдонгула. Функциядан жыйынтык кайтаруу үчүн <code>return</code> операторун унутпагыла.</div>
+</section>
+
+<section class="card">
+<h2>7. Сабакты бышыктоо</h2>
+<ol>
+<li>Функция деген эмне жана ал эмне үчүн керек?</li>
+<li>Функцияны аныктоодо кайсы ачкыч сөз колдонулат?</li>
+<li>Параметр менен аргументтин айырмасы эмнеде?</li>
+<li>Локалдык өзгөрмө кайсы жерде жеткиликтүү?</li>
+<li>Глобалдык өзгөрмө кайсы жерде аныкталат?</li>
+<li>return оператору кандай милдет аткарат?</li>
+<li>print менен return эмнеси менен айырмаланат?</li>
+<li>lambda-функциянын негизги өзгөчөлүгү кандай?</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>8. Үй тапшырма</h2>
+<p>1ден берилген N санына чейинки сандардын суммасын эсептеген функция түзгүлө. Функция N санын аргумент катары кабыл алып, сумманы return менен кайтарсын. Андан соң эки санды салыштырып, чоңун кайтарган lambda-функция жазгыла.</p>
+<a class="btn secondary" href="8class_lesson18_test.html">📝 2.3-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">← Сабактар тизмесине кайтуу</a>
+</section>
+</main>
+</body>
+</html>
