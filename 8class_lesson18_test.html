@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.3-сабак | Тест: Функциялар</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;padding:18px;line-height:1.6}
+.container{max-width:850px;margin:20px auto}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 12px #00000010}
+h1{color:#2563eb}
+input[type=text]{width:100%;max-width:420px;box-sizing:border-box;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px}
+.question{background:#f1f5f9;padding:15px;margin:15px 0;border-radius:10px}
+label{display:block;padding:8px;cursor:pointer}
+button{background:#2563eb;color:white;border:0;padding:12px 20px;border-radius:8px;font-size:16px;cursor:pointer;margin:8px 8px 0 0}
+#result{font-size:18px;font-weight:bold;margin-top:18px}
+.back{color:#2563eb;text-decoration:none}
+</style>
+</head>
+<body>
+<main class="container">
+<section class="card">
+<h1>📝 2.3-сабак: Функциялар</h1>
+<p>8-класс | Информатика</p>
+<label for="student"><strong>Окуучунун аты-жөнү:</strong></label>
+<input id="student" type="text" placeholder="Аты-жөнүңүздү жазыңыз">
+<p>Ар бир суроодон бир туура жоопту тандаңыз.</p>
+</section>
+<form id="quiz" class="card">
+<div class="question"><strong>1. Python тилинде функцияны аныктоо үчүн кайсы ачкыч сөз колдонулат?</strong>
+<label><input type="radio" name="q1" value="a"> function</label>
+<label><input type="radio" name="q1" value="b"> def</label>
+<label><input type="radio" name="q1" value="c"> return</label></div>
+
+<div class="question"><strong>2. Функцияны чакыруу деген эмне?</strong>
+<label><input type="radio" name="q2" value="a"> Функциянын атын жазып, аны иштетүү</label>
+<label><input type="radio" name="q2" value="b"> Функциянын атын комментарийге жазуу</label>
+<label><input type="radio" name="q2" value="c"> Функцияны сөзсүз өчүрүү</label></div>
+
+<div class="question"><strong>3. Төмөнкү коддо параметрлер кайсылар? def koshuu(a, b):</strong>
+<label><input type="radio" name="q3" value="a"> koshuu гана</label>
+<label><input type="radio" name="q3" value="b"> a жана b</label>
+<label><input type="radio" name="q3" value="c"> def жана return</label></div>
+
+<div class="question"><strong>4. Функция чакырылганда ага берилген чыныгы маанилер эмне деп аталат?</strong>
+<label><input type="radio" name="q4" value="a"> Аргументтер</label>
+<label><input type="radio" name="q4" value="b"> Циклдер</label>
+<label><input type="radio" name="q4" value="c"> Комментарийлер</label></div>
+
+<div class="question"><strong>5. Локалдык өзгөрмө кайсы жерде аныкталат?</strong>
+<label><input type="radio" name="q5" value="a"> Функциянын сыртында гана</label>
+<label><input type="radio" name="q5" value="b"> Функциянын ичинде</label>
+<label><input type="radio" name="q5" value="c"> Файлдын аталышында</label></div>
+
+<div class="question"><strong>6. Функциянын ичинде глобалдык өзгөрмөнүн маанисин өзгөртүү үчүн кайсы ачкыч сөз колдонулат?</strong>
+<label><input type="radio" name="q6" value="a"> local</label>
+<label><input type="radio" name="q6" value="b"> outer</label>
+<label><input type="radio" name="q6" value="c"> global</label></div>
+
+<div class="question"><strong>7. return операторунун негизги милдети кандай?</strong>
+<label><input type="radio" name="q7" value="a"> Функциядан маанини кайтаруу жана анын аткарылышын токтотуу</label>
+<label><input type="radio" name="q7" value="b"> Маалыматты экранга гана чыгаруу</label>
+<label><input type="radio" name="q7" value="c"> Циклди башынан кайталоо</label></div>
+
+<div class="question"><strong>8. Бул коддун натыйжасы кандай? def f(x): return x * 2; print(f(4))</strong>
+<label><input type="radio" name="q8" value="a"> 4</label>
+<label><input type="radio" name="q8" value="b"> 8</label>
+<label><input type="radio" name="q8" value="c"> 6</label></div>
+
+<div class="question"><strong>9. lambda-функциянын туура өзгөчөлүгүн тандагыла.</strong>
+<label><input type="radio" name="q9" value="a"> Бир нече блоктон турган толук программа түзөт</label>
+<label><input type="radio" name="q9" value="b"> Циклди автоматтык түрдө токтотот</label>
+<label><input type="radio" name="q9" value="c"> Бир туюнтмадан турган кыска анонимдүү функция түзөт</label></div>
+
+<div class="question"><strong>10. Бул коддо экранга эмне чыгат? kvadrat = lambda x: x * x; print(kvadrat(5))</strong>
+<label><input type="radio" name="q10" value="a"> 10</label>
+<label><input type="radio" name="q10" value="b"> 25</label>
+<label><input type="radio" name="q10" value="c"> 5</label></div>
+
+<button type="button" id="check">Тестти текшерүү</button>
+<button type="reset" id="reset">Кайра баштоо</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<a class="back" href="8class_lesson18.html">← Сабакка кайтуу</a>
+</main>
+<script>
+const answers={q1:"b",q2:"a",q3:"b",q4:"a",q5:"b",q6:"c",q7:"a",q8:"b",q9:"c",q10:"b"};
+document.getElementById("check").addEventListener("click",()=>{
+ const student=document.getElementById("student").value.trim();
+ if(!student){alert("Окуучунун аты-жөнүн жазыңыз.");return;}
+ let score=0,missing=0;
+ for(let i=1;i<=10;i++){
+  const chosen=document.querySelector('input[name="q'+i+'"]:checked');
+  if(!chosen) missing++;
+  else if(chosen.value===answers["q"+i]) score++;
+ }
+ if(missing){alert("Бардык суроолорго жооп бериңиз. Жоопсуз суроолор: "+missing);return;}
+ const percent=score*10;
+ const grade=score>=9?5:score>=7?4:score>=5?3:2;
+ document.getElementById("result").textContent=student+": "+score+"/10 туура жооп ("+percent+"%). Баа: "+grade+".";
+});
+document.getElementById("reset").addEventListener("click",()=>{
+ document.getElementById("result").textContent="";
+});
+</script>
+</body>
+</html>
