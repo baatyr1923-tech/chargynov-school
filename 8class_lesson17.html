@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ky"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 2.2-сабак | Ички шарттуу операторлор жана циклдер</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222;line-height:1.65}
+header{background:#2563eb;color:#fff;text-align:center;padding:30px 18px}header h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}
+.container{max-width:950px;margin:25px auto;padding:0 16px}.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:#2563eb;margin-top:0}h3{color:#174574}.note{background:#eaf3ff;border-left:5px solid #2563eb;padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:#172033;color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto;font-size:15px;line-height:1.5}code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;margin:12px 0}th,td{border:1px solid #dce5ef;padding:10px;text-align:left}th{background:#eaf1ff;color:#173d7a}
+.btn{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0;font-weight:bold}.btn.secondary{background:#16865b}
+.back{display:inline-block;color:#2563eb;text-decoration:none;margin:5px 0 18px;font-weight:bold}li{margin:7px 0}
+@media(max-width:600px){.card{padding:17px}pre{font-size:13px}th,td{padding:7px;font-size:14px}}
+</style></head><body>
+<header><h1>17-сабак: Ички шарттуу операторлор жана циклдер</h1><p>8-класс | Информатика | 2-чейрек | 2.2-тема</p></header>
+<main class="container"><a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+<section class="card"><h2>Сабактын максаты</h2>
+<p>Окуучулар ички шарттуу операторлорду жана ички циклдерди колдонушат. break жана continue операторлору аркылуу циклдин аткарылышын башкара алышат.</p>
+<h3>Күтүлүүчү натыйжалар</h3><ul><li>Ички шарттуу операторду түшүндүрөт.</li><li>Бир циклдин ичинде экинчи циклди колдонот.</li><li>break жана continue операторлорунун айырмасын билет.</li><li>Python тилинде жөнөкөй программа түзөт.</li></ul></section>
+<section class="card"><h2>1. Ички шарттуу операторлор</h2>
+<p>Шарттуу операторлор программанын аткарылышын шартка жараша башкарат. Бир if операторунун ичинде дагы бир if операторун жазууга болот. Бул ички шарттуу оператор деп аталат.</p>
+<pre><code>if шарт:
+    команда
+elif башка_шарт:
+    команда
+else:
+    команда</code></pre>
+<h3>Мисал 1. Сандын оң жана жуп экенин текшерүү</h3>
+<pre><code>n = int(input("Санды киргизиңиз: "))
+
+if n > 0:
+    if n % 2 == 0:
+        print("Оң жуп сан")
+    else:
+        print("Оң так сан")
+else:
+    print("Сан оң эмес")</code></pre>
+<p>Адегенде сан оңбу деп текшерилет. Эгер оң болсо, экинчи шарт анын жуп же так экенин аныктайт.</p></section>
+<section class="card"><h2>2. Ички циклдер (Nested loops)</h2>
+<p>Бир циклдин ичинде экинчи цикл жайгашса, ал ички цикл деп аталат. Сырткы циклдин ар бир кадамында ички цикл толук аткарылат.</p>
+<pre><code>for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)</code></pre>
+<p>Натыйжасы:</p><pre><code>1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3</code></pre>
+<ul><li>Сырткы цикл i өзгөрмөсүн башкарат.</li><li>Ар бир i үчүн ички цикл j өзгөрмөсүн 1ден 3кө чейин өзгөртөт.</li><li>Ички цикл бүткөндөн кийин сырткы цикл кийинки кадамга өтөт.</li></ul>
+<h3>Мисал 2. Жылдызчалардан үч бурчтук түзүү</h3>
+<pre><code>for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()</code></pre>
+<p>Натыйжасы:</p><pre><code>*
+**
+***
+****
+*****</code></pre></section>
+<section class="card"><h2>3. break оператору</h2>
+<p><strong>break</strong> оператору өзү жайгашкан циклдин аткарылышын дароо токтотот.</p>
+<pre><code>for i in range(1, 11):
+    if i == 5:
+        break
+    print(i)</code></pre>
+<p>Натыйжасы:</p><pre><code>1
+2
+3
+4</code></pre>
+<p>i 5ке барабар болгондо цикл токтойт.</p></section>
+<section class="card"><h2>4. continue оператору</h2>
+<p><strong>continue</strong> учурдагы кайталоонун калган бөлүгүн өткөрүп, циклдин кийинки кадамына өтөт.</p>
+<pre><code>for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i)</code></pre>
+<p>Натыйжасы:</p><pre><code>1
+2
+3
+4
+6
+7
+8
+9
+10</code></pre>
+<div class="note"><strong>Эсиңде болсун:</strong> break — циклди толук токтотот; continue — бир кайталоону өткөрүп жиберет.</div></section>
+<section class="card"><h2>5. Ички циклдеги break</h2>
+<p>break жана continue адатта өзү жазылган эң жакын циклге таасир этет.</p>
+<pre><code>for i in range(1, 4):
+    for j in range(1, 5):
+        if j == 3:
+            break
+        print(i, j)</code></pre>
+<p>Бул мисалда j 3 болгондо ички цикл токтойт, бирок сырткы цикл кийинки i маанисине өтөт.</p></section>
+<section class="card"><h2>6. Практикалык иштер</h2>
+<ol><li><strong>Жеңил:</strong> 1ден 10го чейинки сандарды чыгарып, 7ге жеткенде break менен токтоткула.</li>
+<li><strong>Орто:</strong> 1ден 20га чейинки жуп сандарды continue колдонуп өткөрүп жибергиле. Экранга так сандар гана чыксын.</li>
+<li><strong>Орто:</strong> ички циклди колдонуп, 1ден 5ке чейин жылдызчалардан үч бурчтук түзгүлө.</li>
+<li><strong>Татаал:</strong> ички циклдерди колдонуп, 1ден 10го чейинки көбөйтүү таблицасын чыгаргыла.</li></ol>
+<div class="note"><strong>Кеңеш:</strong> жуп санды текшерүү үчүн i % 2 == 0 шартын колдонгула.</div></section>
+<section class="card"><h2>7. Сабакты бышыктоо</h2><ol><li>Ички цикл деген эмне?</li><li>Сырткы циклдин бир кадамында ички цикл кандай иштейт?</li><li>break эмне кылат?</li><li>continue эмне кылат?</li><li>break менен continue эмнеси менен айырмаланат?</li></ol></section>
+<section class="card"><h2>8. Үй тапшырма</h2><p>Ички циклдерди колдонуп, 1ден 5ке чейинки сандардын көбөйтүү таблицасын түзгүлө. Ошондой эле 1ден 20га чейинки 3кө бөлүнгөн сандарды гана чыгаруучу программа жазгыла.</p>
+<a class="btn secondary" href="8class_lesson17_test.html">📝 2.2-сабактын тестин тапшыруу</a><a class="btn" href="8class_informatika.html">← Сабактар тизмесине кайтуу</a></section>
+</main></body></html>
