@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-класс | 14-сабак | Практикалык иш — МББС жана SQL</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222;line-height:1.65}
+header{background:#2563eb;color:#fff;text-align:center;padding:30px 18px}
+.container{max-width:950px;margin:25px auto;padding:0 16px}
+.card{background:#fff;padding:24px;margin-bottom:18px;border-radius:15px;box-shadow:0 4px 14px #0000000d}
+h2{color:#2563eb;margin-top:0}h3{color:#174574}
+.note{background:#eaf3ff;border-left:5px solid #2563eb;padding:14px 16px;border-radius:8px;margin:15px 0}
+.warning{background:#fff7e6;border-left:5px solid #e6a23c;padding:14px 16px;border-radius:8px;margin:15px 0}
+pre{background:#172033;color:#f4f7fb;padding:16px;border-radius:10px;overflow-x:auto}
+.btn{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;margin:7px 7px 0 0}
+.back{display:inline-block;color:#2563eb;text-decoration:none;margin:5px 0 18px;font-weight:bold}
+li{margin:7px 0}
+</style>
+</head>
+<body>
+<header><h1>14-сабак: Практикалык иш — МББС жана SQL сурамдары</h1><p>8-класс | Информатика</p></header>
+<main class="container">
+<a class="back" href="8class_informatika.html">← 8-класстын сабактарына кайтуу</a>
+<section class="card">
+<h2>Сабактын максаты</h2>
+<p>Окуучулар маалыматтар базасынын таблицасы менен иштеп, SQL тилинин негизги командаларын практикалык мисалдарда колдонушат: таблица түзүү, маалымат кошуу, тандоо, өзгөртүү жана өчүрүү.</p>
+<p>Керектүү каражаттар: компьютер жана MySQL же SQL менен иштөөгө ылайыктуу окуу чөйрөсү. Мүмкүнчүлүк болбосо, тапшырмаларды дептерге жазып аткарууга болот.</p>
+</section>
+<section class="card">
+<h2>1. Практикалык иштин шарты</h2>
+<p>«Mektep» маалыматтар базасында окуучулар тууралуу маалымат сактайбыз. Ар бир окуучуга ID, аты-жөнү жана классы берилет.</p>
+</section>
+<section class="card">
+<h2>2. Маалыматтар базасын жана таблицаны түзүү</h2>
+<pre><code>CREATE DATABASE Mektep;
+USE Mektep;
+
+CREATE TABLE Okuuchular (
+    id INT PRIMARY KEY,
+    aty VARCHAR(50),
+    klass VARCHAR(10)
+);</code></pre>
+<p><code>CREATE DATABASE</code> база түзөт, <code>CREATE TABLE</code> таблица түзөт. <code>PRIMARY KEY</code> ар бир жазууну өзүнчө аныктоочу негизги ачкычты көрсөтөт.</p>
+</section>
+<section class="card">
+<h2>3. Маалыматтарды кошуу — INSERT</h2>
+<pre><code>INSERT INTO Okuuchular (id, aty, klass)
+VALUES
+(1, 'Айбек', '8-А'),
+(2, 'Алина', '8-А'),
+(3, 'Нурбек', '8-Б');</code></pre>
+<p>Бул команда таблицага үч окуучунун маалыматын кошот.</p>
+</section>
+<section class="card">
+<h2>4. Маалыматтарды тандоо — SELECT</h2>
+<pre><code>-- Бардык маалыматтарды көрсөтүү
+SELECT * FROM Okuuchular;
+
+-- 8-А класстын окуучуларын тандоо
+SELECT * FROM Okuuchular
+WHERE klass = '8-А';
+
+-- Аты боюнча иреттөө
+SELECT * FROM Okuuchular
+ORDER BY aty ASC;</code></pre>
+</section>
+<section class="card">
+<h2>5. Маалыматты өзгөртүү — UPDATE</h2>
+<pre><code>UPDATE Okuuchular
+SET klass = '8-Б'
+WHERE id = 2;</code></pre>
+<p>ID номери 2 болгон окуучунун классы өзгөрөт.</p>
+</section>
+<section class="card">
+<h2>6. Маалыматты өчүрүү — DELETE</h2>
+<pre><code>DELETE FROM Okuuchular
+WHERE id = 3;</code></pre>
+<div class="warning"><strong>Коопсуздук эрежеси:</strong> UPDATE жана DELETE командаларында WHERE шартын туура көрсөтүү керек. WHERE жок болсо, таблицадагы бардык жазуулар өзгөрүп же өчүп калышы мүмкүн. Чыныгы маалыматтар базасында иштөөдөн мурда маалыматтын көчүрмөсүн сактагыла.</div>
+</section>
+<section class="card">
+<h2>7. Өз алдынча аткарылуучу тапшырмалар</h2>
+<ol>
+<li>Okuuchular таблицасына дагы эки окуучуну кошуучу INSERT командасын жазгыла.</li>
+<li>8-Б класстын окуучуларын гана көрсөтүүчү SELECT сурамын түзгүлө.</li>
+<li>ID номери 1 болгон окуучунун классын 8-В кылып өзгөрткүлө.</li>
+<li>ID номери 2 болгон окуучунун жазуусун өчүрүүчү команданы жазгыла.</li>
+<li>Бардык окуучуларды аты боюнча кемүү тартибинде иргегиле.</li>
+</ol>
+</section>
+<section class="card">
+<h2>8. Иштин жыйынтыгы</h2>
+<p>Практикалык иштин аягында окуучу CREATE TABLE, INSERT, SELECT, WHERE, ORDER BY, UPDATE жана DELETE командаларынын кызматын түшүндүрүп, жөнөкөй сурамдарды өз алдынча түзө алышы керек.</p>
+<a class="btn" href="8class_lesson14_test.html">📝 14-сабактын тестин тапшыруу</a>
+<a class="btn" href="8class_informatika.html">Сабактар тизмесине кайтуу</a>
+</section>
+</main>
+</body>
+</html>
