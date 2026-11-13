@@ -21,4 +21,5 @@ body{font-family:Arial,sans-serif;background:#f4f7fb;color:#222;margin:0;padding
 const answers={q1:"a",q2:"b",q3:"a",q4:"b",q5:"a",q6:"a",q7:"b",q8:"b",q9:"a",q10:"b"};
 document.getElementById("check").addEventListener("click",()=>{const student=document.getElementById("student").value.trim();if(!student){alert("Окуучунун аты-жөнүн жазыңыз.");return;}let score=0,missing=0;for(let i=1;i<=10;i++){const chosen=document.querySelector('input[name="q'+i+'"]:checked');if(!chosen)missing++;else if(chosen.value===answers["q"+i])score++;}if(missing){alert("Бардык суроолорго жооп бериңиз. Жоопсуз суроолор: "+missing);return;}const grade=score>=9?5:score>=7?4:score>=5?3:2;document.getElementById("result").textContent=student+": "+score+"/10 туура жооп. Баа: "+grade+".";});
 document.getElementById("reset").addEventListener("click",()=>{document.getElementById("result").textContent="";});
-</script></body></html>
+</script><script src="test-journal.js"></script>
+</body></html>
