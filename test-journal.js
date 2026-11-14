@@ -30,7 +30,8 @@
   function pageInfo(){
     const title=(document.title||"Онлайн тест").trim();
     const heading=($("h1")?.innerText||$("h2")?.innerText||title).trim();
-    const isOrt=/ort/i.test(location.pathname);\n    const isTechnology=/technology/i.test(location.pathname);
+    const isOrt=/ort/i.test(location.pathname);
+    const isTechnology=/technology/i.test(location.pathname);
     const direction=isOrt?( /кыргыз/i.test(title+" "+heading)?"Кыргыз тили":/аралаш|mixed/i.test(title+" "+heading)?"Аралаш":"Математика"):(isTechnology?"Технология":"Информатика");
     const classMatch=(title+" "+heading+" "+location.pathname).match(/([789])\s*[-–]?\s*класс/i);
     return {title:heading||title,category:isOrt?"ОРТ даярдоо":(isTechnology?"Технология":"Информатика"),direction,defaultClass:classMatch?classMatch[1]+"-класс":(isOrt?"ОРТ даярдоо":"")};
