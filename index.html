@@ -423,6 +423,184 @@ header nav a {
   }
 }
 </style>
+
+<style>
+/* Башкы беттин жаңы, үч аудиторияга ылайык дизайны */
+:root {
+  --blue: #102b50;
+  --blue2: #174574;
+  --green: #16865b;
+  --light: #f3f7fb;
+}
+body { background: #f5f8fc; }
+header {
+  background: rgba(255,255,255,.97) !important;
+  color: var(--blue) !important;
+  border-bottom: 1px solid #e7edf3;
+  backdrop-filter: blur(12px);
+}
+header .brand strong, header .brand span, header nav a { color: var(--blue) !important; }
+header nav a { border-radius: 999px; padding: 9px 12px; font-weight: 700; }
+header nav a:hover { background: #eaf5ef; color: var(--green) !important; }
+.hero {
+  min-height: min(660px, calc(100vh - 80px));
+  position: relative;
+  isolation: isolate;
+  background: #102b50;
+}
+.hero > img {
+  z-index: -2;
+  object-position: center 45%;
+  filter: saturate(.88);
+}
+.hero:before {
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(7,25,47,.92) 0%, rgba(7,25,47,.78) 48%, rgba(7,25,47,.28) 100%) !important;
+}
+.hero-content {
+  width: min(1160px, 92%);
+  max-width: 1160px;
+  margin: 0 auto !important;
+  padding: 88px 0 !important;
+  text-shadow: none !important;
+}
+.hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  color: #b9f0d2;
+  letter-spacing: 1.5px;
+}
+.hero h1 {
+  max-width: 780px;
+  margin: 20px 0 14px !important;
+  font-size: clamp(38px, 5.2vw, 66px) !important;
+  line-height: 1.08 !important;
+  color: #fff;
+}
+.hero p {
+  max-width: 690px;
+  color: #edf4fb;
+  font-size: clamp(16px, 1.7vw, 20px);
+}
+.hero .hero-school-name {
+  margin: 0 0 10px;
+  color: #d5e7f7;
+  font-size: 16px;
+  font-weight: 700;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.hero .button {
+  margin: 0 !important;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+}
+.hero .button:hover { background: #0f704b; transform: translateY(-1px); }
+.hero .button-outline {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: none;
+}
+.hero .button-outline:hover { background: rgba(255,255,255,.18); }
+.audience-section { padding: 72px 0 34px; background: #fff; }
+.section-heading { max-width: 760px; margin-bottom: 28px; }
+.section-heading h2, .quick-heading h2 { margin-bottom: 10px; }
+.section-heading .lead { margin: 0; }
+.audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.audience-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 27px;
+  border: 1px solid #e2eaf1;
+  border-radius: 20px;
+  color: var(--blue);
+  text-decoration: none;
+  background: linear-gradient(145deg,#fff,#f7fafc);
+  box-shadow: 0 8px 26px rgba(16,43,80,.07);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.audience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(16,43,80,.12);
+  border-color: #b8d9c7;
+}
+.audience-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  border-radius: 17px;
+  background: #e8f4ed;
+  font-size: 29px;
+}
+.teacher-card .audience-icon { background: #eaf1fb; }
+.parent-card .audience-icon { background: #fff4df; }
+.audience-card h3 { margin: 0 0 8px; font-size: 21px; }
+.audience-card p { margin: 0 0 20px; color: #5b6b7d; line-height: 1.65; }
+.audience-link { margin-top: auto; color: var(--green); font-weight: 800; }
+.quick-section { padding: 28px 0 72px; background: #fff; }
+.quick-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+.quick-heading p { max-width: 390px; margin: 0 0 12px; color: #667789; }
+.quick-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 155px;
+  padding: 21px;
+  border: 1px solid #e3eaf1;
+  border-radius: 16px;
+  background: #f8fafc;
+  color: var(--blue);
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+.quick-card:hover { background: #edf6f0; transform: translateY(-3px); }
+.quick-card > span { font-size: 27px; }
+.quick-card strong { font-size: 16px; line-height: 1.35; }
+.quick-card small { color: #6b7b8b; font-size: 13px; }
+@media (max-width: 1000px) {
+  .container.nav { width: 94%; }
+  header nav { gap: 2px; }
+  header nav a { padding: 8px 9px; font-size: 12px; }
+  .audience-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .quick-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 850px) {
+  .hero { min-height: 500px; }
+  .hero-content { width: 90%; padding: 58px 0 !important; }
+  .hero:before { background: linear-gradient(90deg,rgba(7,25,47,.88),rgba(7,25,47,.55)) !important; }
+  .quick-heading { display: block; }
+  .quick-heading p { margin-top: 8px; }
+}
+@media (max-width: 600px) {
+  .audience-section { padding: 48px 0 22px; }
+  .audience-grid, .quick-grid { grid-template-columns: 1fr; }
+  .audience-card { min-height: 215px; padding: 23px; }
+  .quick-section { padding: 20px 0 48px; }
+  .hero { min-height: 520px; }
+  .hero-content { text-align: left; }
+  .hero h1 { font-size: clamp(32px,9vw,42px) !important; }
+  .hero-actions { align-items: stretch; flex-direction: column; }
+  .hero-actions .button { width: fit-content; text-align: center; }
+}
+</style>
+
 </head>
 <body>
 
@@ -436,16 +614,13 @@ header nav a {
       </div>
     </div>
     <button class="menu" id="menuButton" aria-label="Меню">☰</button>
-    <nav id="mainNav">
+    <nav id="mainNav" aria-label="Негизги меню">
       <a href="#home">Башкы бет</a>
-      <a href="#about">Мектеп жөнүндө</a>
+      <a href="#online-lessons">Окуучулар</a>
       <a href="#teachers">Мугалимдер</a>
-      <a href="#subject-tips">Предметтик сунуштар</a>
-      <a href="#announcement">Кулактандыруу</a>
+      <a href="#announcement">Ата-энелер</a>
       <a href="#news">Жаңылыктар</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#ort">ОРТ</a>
-      <a href="#online-lessons">Сабактар</a>
+      <a href="#about">Мектеп жөнүндө</a>
       <a href="#contact">Байланыш</a>
     </nav>
   </div>
@@ -453,13 +628,64 @@ header nav a {
 
 <main>
 <section class="hero" id="home">
-  <img src="Мектептин суроту жаны1.png" alt="№35 мектептин имараты">
+  <img src="Мектептин суроту жаны1.png" alt="№35 Жумабек Чаргынов атындагы мектептин имараты">
   <div class="container hero-content">
     <p class="eyebrow">Билим • Тарбия • Келечек</p>
-    <h1>№35 Жумабек Чаргынов атындагы орто билим берүү мектеби</h1>
-    <p>Ар бир окуучунун билим алуусуна, өнүгүүсүнө жана келечегине кең жол ачабыз.</p>
-    <a class="button" href="#about">Мектеп жөнүндө</a>
-    <a class="button" href="#ort">ОРТга даярдануу</a>
+    <h1>Келечек билимден башталат!</h1>
+    <p class="hero-school-name">№35 Жумабек Чаргынов атындагы орто билим берүү мектеби</p>
+    <p>Окуучулар үчүн билим алуу мүмкүнчүлүктөрү, мугалимдер үчүн тажрыйба алмашуу, ата-энелер үчүн ишенимдүү маалымат — баары бир жерде.</p>
+    <div class="hero-actions">
+      <a class="button" href="#online-lessons">🎓 Окуу ресурстары</a>
+      <a class="button button-outline" href="#about">Мектеп жөнүндө</a>
+    </div>
+  </div>
+</section>
+
+<section class="audience-section" id="who-we-serve">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Мектептин санариптик мейкиндиги</span>
+      <h2>Ар бир адам үчүн пайдалуу мүмкүнчүлүктөр</h2>
+      <p class="lead">Керектүү маалыматты жана окуу ресурстарын өзүңүзгө ылайык бөлүмдөн табыңыз.</p>
+    </div>
+    <div class="audience-grid">
+      <a class="audience-card student-card" href="#online-lessons">
+        <span class="audience-icon">🎓</span>
+        <h3>Окуучулар үчүн</h3>
+        <p>Онлайн сабактар, тесттер, ОРТга даярдык жана олимпиадалык тапшырмалар.</p>
+        <span class="audience-link">Окуу ресурстарына өтүү <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="audience-card teacher-card" href="#subject-tips">
+        <span class="audience-icon">👩‍🏫</span>
+        <h3>Мугалимдер үчүн</h3>
+        <p>Методикалык сунуштар, сабак материалдары жана кесиптик тажрыйба.</p>
+        <span class="audience-link">Мугалимдер бөлүмүнө өтүү <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="audience-card parent-card" href="#announcement">
+        <span class="audience-icon">👨‍👩‍👧</span>
+        <h3>Ата-энелер үчүн</h3>
+        <p>Кулактандыруулар, мектеп жаңылыктары, иш-чаралар жана байланыш.</p>
+        <span class="audience-link">Маалыматтарды көрүү <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="quick-section" id="quick-access">
+  <div class="container">
+    <div class="quick-heading">
+      <div>
+        <span class="section-label">Тез жетүү</span>
+        <h2>Керектүү бөлүмдү тандаңыз</h2>
+      </div>
+      <p>Эң көп колдонулуучу ресурстар бир кадам алыстыкта.</p>
+    </div>
+    <div class="quick-grid">
+      <a class="quick-card" href="#online-lessons"><span>💻</span><strong>Информатика сабактары</strong><small>7–9-класстар үчүн</small></a>
+      <a class="quick-card" href="#ort"><span>📝</span><strong>ОРТга даярдык</strong><small>Тесттер жана окуу планы</small></a>
+      <a class="quick-card" href="#news"><span>📰</span><strong>Мектеп жаңылыктары</strong><small>Акыркы маалыматтар</small></a>
+      <a class="quick-card" href="#teachers"><span>🤝</span><strong>Мугалимдер жамааты</strong><small>Биздин мектептин мугалимдери</small></a>
+    </div>
   </div>
 </section>
 
