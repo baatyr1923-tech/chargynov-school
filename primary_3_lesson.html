@@ -33,13 +33,18 @@ const lessons = {
 };
 const id=Number(new URLSearchParams(location.search).get("lesson"));
 const item=lessons[id];
-const materialsNotice=document.getElementById("materialsNotice");
-if(id===1){materialsNotice.className="actions";materialsNotice.innerHTML='<a class="btn" href="3_klass_temperatura_sabak_plan.html">Толук сабактын иштелмесин ачуу</a>';}else{materialsNotice.textContent="Бул сабактын толук файлдары даярдалууда.";}
 if(item){
  document.title=id+"-сабак. "+item.title+" | №35 мектеп";
  document.getElementById("title").textContent=id+"-сабак. "+item.title;
  document.getElementById("subtitle").textContent="Сабактын түшүндүрмөсү, тапшырмасы жана күтүлүүчү натыйжасы";
- document.getElementById("lesson").innerHTML='<h2>Кыскача түшүндүрмө</h2><p>'+item.desc+'</p><h2>Окуучунун тапшырмасы</h2><p>'+item.task+'</p><h2>Күтүлүүчү натыйжа</h2><p>'+item.outcome+'</p><div class="notice" id="materialsNotice">Толук материалдар даярдалууда.</div>';
+ document.getElementById("lesson").innerHTML='<h2>Кыскача түшүндүрмө</h2><p>'+item.desc+'</p><h2>Окуучунун тапшырмасы</h2><p>'+item.task+'</p><h2>Күтүлүүчү натыйжа</h2><p>'+item.outcome+'</p><div class="notice" id="materialsNotice"></div>';
+ const materialsNotice=document.getElementById("materialsNotice");
+ if(id===1){
+  materialsNotice.className="actions";
+  materialsNotice.innerHTML='<a class="btn" href="3_klass_temperatura_sabak_plan.html">Толук сабактын иштелмесин ачуу</a>';
+ }else{
+  materialsNotice.textContent="Бул сабактын толук файлдары даярдалууда.";
+ }
 }else{
  document.getElementById("lesson").innerHTML='<h2>Сабак табылган жок</h2><p>Сабактардын тизмесинен керектүү теманы тандаңыз.</p>';
 }
