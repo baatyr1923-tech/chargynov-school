@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ky"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5-класс. Кыргыз адабияты — тест</title>
+<style>
+:root{--blue:#102b50;--green:#16865b;--bg:#f3f7fb;--ink:#263445}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{width:min(820px,92%);margin:auto}header{background:white;padding:17px 0;border-bottom:1px solid #e3eaf1}a{color:var(--green);font-weight:700;text-decoration:none}
+.hero{background:linear-gradient(120deg,#102b50,#20527a);color:white;padding:35px 0}.hero h1{margin:0;font-size:clamp(27px,5vw,38px)}.hero p{margin:7px 0;color:#e3edf7}
+main{padding:26px 0 50px}.question{background:white;border:1px solid #e1e9f0;border-radius:13px;padding:19px;margin:14px 0}.question h3{margin:0 0 12px;color:var(--blue);font-size:18px}
+.option{display:block;padding:10px 12px;border:1px solid #dce5ed;border-radius:9px;margin:8px 0;cursor:pointer}.option:hover{background:#f0f7f3}.option input{margin-right:9px}
+button{background:var(--green);color:white;border:0;border-radius:9px;padding:13px 22px;font-size:16px;font-weight:700;cursor:pointer}button:hover{background:#106c49}
+#result{display:none;background:white;border:2px solid var(--green);border-radius:13px;padding:20px;margin-top:20px}#result h2{color:var(--blue);margin-top:0}.muted{color:#647487;font-size:14px}
+</style></head><body>
+<header><div class="wrap"><a href="literature_5_lesson1.html">← Сабактын иштелмесине кайтуу</a></div></header>
+<section class="hero"><div class="wrap"><h1>Билимиңди текшер!</h1><p>5-класс • Кыргыз адабияты • «Китеп жана адам»</p><p>6 суроо • Ар бир туура жоопко 1 упай</p></div></section>
+<main class="wrap"><form id="quiz">
+<div class="question"><h3>1. Адабият деген эмне?</h3>
+<label class="option"><input type="radio" name="q1" value="a">Сөз өнөрү</label><label class="option"><input type="radio" name="q1" value="b">Спорттун түрү</label><label class="option"><input type="radio" name="q1" value="c">Эсеп чыгаруу ыкмасы</label></div>
+<div class="question"><h3>2. Китеп окуу кайсы жөндөмдү өнүктүрүүгө жардам берет?</h3>
+<label class="option"><input type="radio" name="q2" value="a">Сөз байлыгын жана ой жүгүртүүнү</label><label class="option"><input type="radio" name="q2" value="b">Боюнун өсүшүн гана</label><label class="option"><input type="radio" name="q2" value="c">Уктоо убактысын</label></div>
+<div class="question"><h3>3. Адабият башка искусство түрлөрүнөн негизинен эмнеси менен айырмаланат?</h3>
+<label class="option"><input type="radio" name="q3" value="a">Көркөм сөз аркылуу таасир берет</label><label class="option"><input type="radio" name="q3" value="b">Боёк менен гана сүрөт тартат</label><label class="option"><input type="radio" name="q3" value="c">Үнсүз кыймыл менен гана көрсөтөт</label></div>
+<div class="question"><h3>4. Көркөм чыгарма окуучуга эмнени түшүнүүгө жардам берет?</h3>
+<label class="option"><input type="radio" name="q4" value="a">Каармандардын сезимин жана тандоосун</label><label class="option"><input type="radio" name="q4" value="b">Бир гана математикалык формуланы</label><label class="option"><input type="radio" name="q4" value="c">Аба ырайын так айтууну</label></div>
+<div class="question"><h3>5. Топтук иште «Китеп окуган адам…» деген сүйлөмдү кантип улантуу керек?</h3>
+<label class="option"><input type="radio" name="q5" value="a">Жүйө жана мисал келтирип</label><label class="option"><input type="radio" name="q5" value="b">Жоопту көчүрүп гана</label><label class="option"><input type="radio" name="q5" value="c">Башкалардын оюн укпай</label></div>
+<div class="question"><h3>6. Окуган чыгарма тууралуу ой бөлүшкөндө эмне маанилүү?</h3>
+<label class="option"><input type="radio" name="q6" value="a">Өз оюңду мисал менен негиздөө</label><label class="option"><input type="radio" name="q6" value="b">Каармандын атын гана айтуу</label><label class="option"><input type="radio" name="q6" value="c">Суроого жооп бербөө</label></div>
+<button type="submit">Жоопторду текшерүү</button>
+</form><section id="result" aria-live="polite"><h2>Тесттин жыйынтыгы</h2><p id="score"></p><div id="feedback"></div><button type="button" onclick="location.reload()">Кайра тапшыруу</button></section>
+<p class="muted">Бул тест «Китеп жана адам» сабагын бышыктоо үчүн түзүлгөн автордук калыптандыруучу тапшырма. Мугалим окуучулардын жоопторун талкуу менен толуктай алат.</p></main>
+<script>
+const answers={q1:"a",q2:"a",q3:"a",q4:"a",q5:"a",q6:"a"};
+document.getElementById("quiz").addEventListener("submit",function(e){e.preventDefault();let score=0,unanswered=[];for(let i=1;i<=6;i++){const chosen=this.querySelector('input[name="q'+i+'"]:checked');if(!chosen)unanswered.push(i);else if(chosen.value===answers["q"+i])score++;}if(unanswered.length){alert("Бардык суроолорго жооп бериңиз. Жооп берилбеген суроолор: "+unanswered.join(", "));return;}document.getElementById("score").textContent="Сиздин упайыңыз: "+score+" / 6";document.getElementById("feedback").textContent=score===6?"Азамат! Бардык жооп туура.":score>=4?"Жакшы! Теманы дагы бир жолу кайталап көр.":"Сабактын материалын кайра окуп, тестти кайталап тапшыр.";document.getElementById("result").style.display="block";document.getElementById("result").scrollIntoView({behavior:"smooth"});});
+</script></body></html>
