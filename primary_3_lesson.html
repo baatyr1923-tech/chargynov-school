@@ -45,8 +45,12 @@ if(item){
  }else if(id===2){
   materialsNotice.className="actions";
   materialsNotice.innerHTML='<a class="btn" href="3_klass_aba_yrayy_sabak_plan.html">Толук сабактын иштелмесин ачуу</a> <a class="btn" href="3_klass_aba_yrayy_prezentatsiya.html">Презентацияны ачуу</a> <a class="btn" href="3_klass_aba_yrayy_ish_baragy.html">Окуучунун иш барагын ачуу</a>';
+ }else if(id>=3 && id<=14){
+  materialsNotice.className="actions";
+  const resourcePage="3_klass_sabak_"+id+"_materialdary.html";
+  materialsNotice.innerHTML='<a class="btn" href="'+resourcePage+'#plan">Толук сабактын иштелмеси</a> <a class="btn" href="'+resourcePage+'#slides">Презентация</a> <a class="btn" href="'+resourcePage+'#worksheet">Окуучунун иш барагы</a>';
  }else{
-  materialsNotice.textContent="Бул сабактын толук файлдары даярдалууда.";
+  materialsNotice.textContent="Бул сабактын материалдары даярдалууда.";
  }
 }else{
  document.getElementById("lesson").innerHTML='<h2>Сабак табылган жок</h2><p>Сабактардын тизмесинен керектүү теманы тандаңыз.</p>';
