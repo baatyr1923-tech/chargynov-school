@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="№35 Жумабек Чаргынов атындагы мектептин окуучулары үчүн онлайн сабактар, Python, практикалык иштер, санариптик коопсуздук жана ОРТга даярдык.">
+<title>Окуучулар үчүн | №35 мектеп</title>
+<style>
+:root{--blue:#102b50;--blue2:#174574;--green:#16865b;--light:#f3f7fb;--text:#263445}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--light);line-height:1.7}
+.container{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid #e5ebf1;position:sticky;top:0;z-index:10}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{color:var(--blue);font-weight:800;text-decoration:none}
+.brand small{display:block;color:#64758a;font-weight:400}
+.back{color:var(--green);font-weight:700;text-decoration:none}
+.hero{background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff;padding:65px 0}
+.eyebrow{color:#a9e8c8;font-weight:700;letter-spacing:1px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.15;margin:10px 0}
+.hero p{max-width:720px;color:#e1edf7;font-size:18px}
+main{padding:45px 0 70px}
+.intro{max-width:760px;margin-bottom:28px}
+h2{color:var(--blue);font-size:clamp(25px,3vw,32px);margin:0 0 12px}
+.lead{color:#5b6b7d}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:#fff;border:1px solid #e2eaf1;border-radius:18px;padding:25px;box-shadow:0 8px 25px #102b500d}
+.card h3{color:var(--blue);margin:8px 0}
+.icon{font-size:34px}
+.card p{color:#5b6b7d;margin:8px 0 16px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.action{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:10px 15px;border-radius:9px;font-weight:700}
+.action.secondary{background:#eaf3ee;color:#126b49}
+.action:hover{filter:brightness(.94)}
+.note{margin-top:25px;background:#eaf1f7;border-radius:14px;padding:20px}
+.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+.tip{background:#f7fafc;border:1px solid #e5edf3;border-radius:12px;padding:15px}
+footer{background:#0b203a;color:#d9e5f1;text-align:center;padding:25px}
+@media(max-width:650px){.grid,.tips{grid-template-columns:1fr}.hero{padding:48px 0}.card{padding:20px}.nav{min-height:64px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="brand" href="index.html">№35 — Жумабек Чаргынов атындагы мектеп<small>Окуучулар үчүн билим мейкиндиги</small></a>
+  <a class="back" href="index.html">← Башкы бетке</a>
+ </div>
+</header>
+<section class="hero">
+ <div class="container">
+  <div class="eyebrow">БИЛИМ • ИЗДЕНҮҮ • ЖЕТИШКЕНДИК</div>
+  <h1>Окуучулар үчүн</h1>
+  <p>Бул бөлүмдөн сабак материалдарын, практикалык тапшырмаларды, санариптик коопсуздук боюнча кеңештерди жана ОРТга даярдык ресурстарын таба аласың.</p>
+ </div>
+</section>
+<main class="container">
+ <div class="intro">
+  <h2>Керектүү багытты танда</h2>
+  <p class="lead">Ар бир бөлүмдү ачып, өзүңө керектүү материалдарды колдон. Жаңы сабактар жана тапшырмалар этап-этабы менен кошулуп турат.</p>
+ </div>
+ <div class="grid">
+  <article class="card" id="informatics">
+   <div class="icon">💻</div>
+   <h3>1. Информатика жана Python</h3>
+   <p>7–9-класстар үчүн информатика сабактары, программалоо, Python жана Scratch боюнча материалдар.</p>
+   <div class="links">
+    <a class="action" href="7class_informatika.html">7-класс</a>
+    <a class="action" href="8class_informatika.html">8-класс</a>
+    <a class="action" href="9class_quarter2.html">9-класс</a>
+    <a class="action secondary" href="8class_engineering_lessons.html">Python жана Scratch курсу</a>
+   </div>
+  </article>
+  <article class="card" id="practice">
+   <div class="icon">🛠️</div>
+   <h3>2. Техникалык жана практикалык иштер</h3>
+   <p>Технологиялык процесстер, долбоордук иштер, техникалык графика жана практикалык тапшырмалар.</p>
+   <div class="links">
+    <a class="action" href="9class_technology_quarter2.html">9-класс: технология</a>
+    <a class="action secondary" href="8class_engineering_lessons.html">8-класс: практикалык курс</a>
+   </div>
+  </article>
+  <article class="card" id="digital-safety">
+   <div class="icon">🛡️</div>
+   <h3>3. Санариптик медиасабаттуулук</h3>
+   <p>Интернетте коопсуз жүрүү, маалыматтын ишенимдүүлүгүн текшерүү жана жеке маалыматтарды коргоо боюнча негизги эрежелер.</p>
+   <div class="tips">
+    <div class="tip"><strong>🔐 Жеке маалымат</strong><br>Сырсөздү жана жеке маалыматтарды бейтааныш адамдарга бербе.</div>
+    <div class="tip"><strong>🔎 Маалыматты текшер</strong><br>Маалыматтын булагын, авторун жана жарыяланган күнүн кара.</div>
+    <div class="tip"><strong>⚠️ Шектүү шилтеме</strong><br>Белгисиз шилтемелерди ачпа жана күмөндүү файлдарды жүктөбө.</div>
+    <div class="tip"><strong>🤝 Онлайн этика</strong><br>Башкаларды сыйла, уруксатсыз сүрөт же маалымат таратпа.</div>
+   </div>
+  </article>
+  <article class="card" id="ort">
+   <div class="icon">🎓</div>
+   <h3>4. ОРТга даярдык</h3>
+   <p>Математика, кыргыз тили, логикалык тапшырмалар, видео сабактар жана сыноо тесттери.</p>
+   <div class="links">
+    <a class="action" href="index.html#ort">ОРТ материалдарын ачуу</a>
+    <a class="action secondary" href="ort-plan.html">Даярдык планы</a>
+   </div>
+  </article>
+ </div>
+ <div class="note">
+  <strong>📌 Эсиңде болсун!</strong>
+  <p>Билимди күн сайын аз-аздан бекемде: сабакты оку, тапшырманы аткар, анан өзүңдү тест аркылуу текшер.</p>
+ </div>
+</main>
+<footer>© 2026 №35 Жумабек Чаргынов атындагы орто билим берүү мектеби</footer>
+</body>
+</html>
