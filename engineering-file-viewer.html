@@ -13,12 +13,15 @@ a.btn.alt{background:#16845b}
 iframe{width:100%;height:100%;border:0}
 .note{font-size:14px;color:#5b6c7d}
 </style></head><body>
-<header><div class="wrap"><h1 id="title">Материалды көрүү</h1><div class="muted">№35 Жумабек Чаргынов атындагы мектеп · 8-класс</div></div></header>
-<main class="wrap"><div class="toolbar"><a class="btn" href="8class_engineering_lessons.html">← Сабактарга кайтуу</a><a class="btn alt" id="download" href="#">Файлды жүктөп алуу</a></div>
+<header><div class="wrap"><h1 id="title">Материалды көрүү</h1><div class="muted">№35 Жумабек Чаргынов атындагы мектеп · <span id="gradeLabel">8-класс</span></div></div></header>
+<main class="wrap"><div class="toolbar"><a class="btn" id="backLink" href="8class_engineering_lessons.html">← Сабактарга кайтуу</a><a class="btn alt" id="download" href="#">Файлды жүктөп алуу</a></div>
 <div class="viewer"><iframe id="frame" title="Документти көрүү" allowfullscreen></iframe></div>
-<p class="note">Эгер көрүү терезеси ачылбаса, файлды жүктөп алуу шилтемесин колдонуңуз. Көрүү кызматы тышкы Microsoft Office сервери аркылуу иштейт.</p></main>
+<p class="note">Эгер көрүү терезеси ачылбаса, файлды жүктөп алуу шилтемесин колдонуңуз. Көрүү кызматы Microsoft Office Online аркылуу иштейт.</p></main>
 <script>
-const params=new URLSearchParams(location.search),file=params.get('file')||'';
+const params=new URLSearchParams(location.search),file=params.get('file')||'',grade=params.get('grade')||'8',back=params.get('back')||'8class_engineering_lessons.html',course=params.get('course')||'Инженердик технологиялар';
+document.getElementById('gradeLabel').textContent=grade+'-класс';
+document.getElementById('backLink').href=back;
+document.querySelector('.muted').textContent='№35 Жумабек Чаргынов атындагы мектеп · '+grade+'-класс · '+course;
 const safe=/^[A-Za-z0-9_().% -]+\.(pptx|docx)$/i.test(file);
 if(!safe){document.getElementById('title').textContent='Файл табылган жок';document.getElementById('frame').remove();}
 else{
