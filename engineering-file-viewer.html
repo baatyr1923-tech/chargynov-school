@@ -16,7 +16,7 @@ iframe{width:100%;height:100%;border:0}
 <header><div class="wrap"><h1 id="title">Материалды көрүү</h1><div class="muted">№35 Жумабек Чаргынов атындагы мектеп · 8-класс</div></div></header>
 <main class="wrap"><div class="toolbar"><a class="btn" href="8class_engineering_lessons.html">← Сабактарга кайтуу</a><a class="btn alt" id="download" href="#">Файлды жүктөп алуу</a></div>
 <div class="viewer"><iframe id="frame" title="Документти көрүү" allowfullscreen></iframe></div>
-<p class="note">Эгер көрүү терезеси ачылбаса, «Файлды жүктөп алуу» шилтемесин колдонуңуз.</p></main>
+<p class="note">Эгер көрүү терезеси ачылбаса, файлды жүктөп алуу шилтемесин колдонуңуз. Көрүү кызматы тышкы Microsoft Office сервери аркылуу иштейт.</p></main>
 <script>
 const params=new URLSearchParams(location.search),file=params.get('file')||'';
 const safe=/^[A-Za-z0-9_().% -]+\.(pptx|docx)$/i.test(file);
@@ -25,6 +25,6 @@ else{
  const url=new URL(file,location.href).href;
  document.getElementById('title').textContent=decodeURIComponent(file.replace(/\+/g,' '));
  document.getElementById('download').href=url;
- document.getElementById('frame').src='https://docs.google.com/gview?embedded=1&url='+encodeURIComponent(url);
+ document.getElementById('frame').src='https://view.officeapps.live.com/op/embed.aspx?src='+encodeURIComponent(url);
 }
 </script></body></html>
